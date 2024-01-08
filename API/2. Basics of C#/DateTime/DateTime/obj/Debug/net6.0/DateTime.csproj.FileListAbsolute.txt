@@ -1,0 +1,14 @@
+C:\Users\KRINSHI\OneDrive\Documents\RKIT\C#\DateTime\DateTime\bin\Debug\net6.0\DateTime.exe
+C:\Users\KRINSHI\OneDrive\Documents\RKIT\C#\DateTime\DateTime\bin\Debug\net6.0\DateTime.deps.json
+C:\Users\KRINSHI\OneDrive\Documents\RKIT\C#\DateTime\DateTime\bin\Debug\net6.0\DateTime.runtimeconfig.json
+C:\Users\KRINSHI\OneDrive\Documents\RKIT\C#\DateTime\DateTime\bin\Debug\net6.0\DateTime.dll
+C:\Users\KRINSHI\OneDrive\Documents\RKIT\C#\DateTime\DateTime\bin\Debug\net6.0\DateTime.pdb
+C:\Users\KRINSHI\OneDrive\Documents\RKIT\C#\DateTime\DateTime\obj\Debug\net6.0\DateTime.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\KRINSHI\OneDrive\Documents\RKIT\C#\DateTime\DateTime\obj\Debug\net6.0\DateTime.AssemblyInfoInputs.cache
+C:\Users\KRINSHI\OneDrive\Documents\RKIT\C#\DateTime\DateTime\obj\Debug\net6.0\DateTime.AssemblyInfo.cs
+C:\Users\KRINSHI\OneDrive\Documents\RKIT\C#\DateTime\DateTime\obj\Debug\net6.0\DateTime.csproj.CoreCompileInputs.cache
+C:\Users\KRINSHI\OneDrive\Documents\RKIT\C#\DateTime\DateTime\obj\Debug\net6.0\DateTime.dll
+C:\Users\KRINSHI\OneDrive\Documents\RKIT\C#\DateTime\DateTime\obj\Debug\net6.0\refint\DateTime.dll
+C:\Users\KRINSHI\OneDrive\Documents\RKIT\C#\DateTime\DateTime\obj\Debug\net6.0\DateTime.pdb
+C:\Users\KRINSHI\OneDrive\Documents\RKIT\C#\DateTime\DateTime\obj\Debug\net6.0\DateTime.genruntimeconfig.cache
+C:\Users\KRINSHI\OneDrive\Documents\RKIT\C#\DateTime\DateTime\obj\Debug\net6.0\ref\DateTime.dll
