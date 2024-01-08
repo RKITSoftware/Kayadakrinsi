@@ -1,5 +1,0 @@
-Hello ! 
-And...
-Welcome👋
-Appended Line One.
-Appended Line Two.
