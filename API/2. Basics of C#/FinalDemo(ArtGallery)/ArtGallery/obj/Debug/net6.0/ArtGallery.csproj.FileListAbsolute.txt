@@ -1,0 +1,14 @@
+C:\Users\KRINSHI\OneDrive\Documents\RKIT\C#\ArtGallery\ArtGallery\bin\Debug\net6.0\ArtGallery.exe
+C:\Users\KRINSHI\OneDrive\Documents\RKIT\C#\ArtGallery\ArtGallery\bin\Debug\net6.0\ArtGallery.deps.json
+C:\Users\KRINSHI\OneDrive\Documents\RKIT\C#\ArtGallery\ArtGallery\bin\Debug\net6.0\ArtGallery.runtimeconfig.json
+C:\Users\KRINSHI\OneDrive\Documents\RKIT\C#\ArtGallery\ArtGallery\bin\Debug\net6.0\ArtGallery.dll
+C:\Users\KRINSHI\OneDrive\Documents\RKIT\C#\ArtGallery\ArtGallery\bin\Debug\net6.0\ArtGallery.pdb
+C:\Users\KRINSHI\OneDrive\Documents\RKIT\C#\ArtGallery\ArtGallery\obj\Debug\net6.0\ArtGallery.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\KRINSHI\OneDrive\Documents\RKIT\C#\ArtGallery\ArtGallery\obj\Debug\net6.0\ArtGallery.AssemblyInfoInputs.cache
+C:\Users\KRINSHI\OneDrive\Documents\RKIT\C#\ArtGallery\ArtGallery\obj\Debug\net6.0\ArtGallery.AssemblyInfo.cs
+C:\Users\KRINSHI\OneDrive\Documents\RKIT\C#\ArtGallery\ArtGallery\obj\Debug\net6.0\ArtGallery.csproj.CoreCompileInputs.cache
+C:\Users\KRINSHI\OneDrive\Documents\RKIT\C#\ArtGallery\ArtGallery\obj\Debug\net6.0\ArtGallery.dll
+C:\Users\KRINSHI\OneDrive\Documents\RKIT\C#\ArtGallery\ArtGallery\obj\Debug\net6.0\refint\ArtGallery.dll
+C:\Users\KRINSHI\OneDrive\Documents\RKIT\C#\ArtGallery\ArtGallery\obj\Debug\net6.0\ArtGallery.pdb
+C:\Users\KRINSHI\OneDrive\Documents\RKIT\C#\ArtGallery\ArtGallery\obj\Debug\net6.0\ArtGallery.genruntimeconfig.cache
+C:\Users\KRINSHI\OneDrive\Documents\RKIT\C#\ArtGallery\ArtGallery\obj\Debug\net6.0\ref\ArtGallery.dll
