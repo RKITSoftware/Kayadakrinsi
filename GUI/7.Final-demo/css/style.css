@@ -1,0 +1,454 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
+}
+
+section {
+    height: 100vh;
+}
+
+.heading {
+    text-align: center;
+    padding: 1%;
+    padding-bottom: 5%;
+    font-size: xx-large;
+    font-style: italic;
+    font-weight: bolder;
+    text-shadow: 2px 2px 5px rgb(161, 205, 255);
+}
+
+#sideBar {
+    position: fixed;
+    left: 0;
+    display: none;
+    width: 25vw;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+    background: linear-gradient(rgb(222, 241, 255), rgb(177, 226, 248), rgb(186, 211, 255), rgb(193, 204, 255));
+}
+
+.menu-link,
+.menu-item {
+    padding: 6%;
+}
+
+.menu {
+    padding: 5%;
+    text-align: center;
+}
+
+i {
+    padding-right: 5%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li {
+    list-style-type: none;
+}
+
+.navbar {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgb(49, 49, 49);
+}
+
+#togglerBtn {
+    padding: 1%;
+    padding-left: 2%;
+    background: none;
+    border: none;
+}
+
+#togglerIcon {
+    font-size: x-large;
+    color: white;
+}
+
+#togglerIcon:hover {
+    cursor: pointer;
+}
+
+.navbarList {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+}
+
+.nav-item {
+    padding: 1%;
+    padding-left: 5%;
+}
+
+.nav-link {
+    letter-spacing: 1px;
+    font-size: larger;
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+}
+
+.cards {
+    padding-top: 5.5%;
+    width: 100vw;
+    height: 85.7vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    grid-gap: 2% 2%;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    height: 25vh;
+    width: 60%;
+    border-radius: 25%;
+    background: linear-gradient(rgb(222, 241, 255), rgb(177, 226, 248), rgb(186, 211, 255), rgb(193, 204, 255));
+    padding-top: 10%;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-link {
+    margin-top: 5%;
+    padding-top: 5%;
+    font-size: large;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardTitle {
+    margin-top: 5%;
+    padding-top: 10%;
+}
+
+#recordsTbl {
+    display: none;
+}
+
+#banking {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5%;
+}
+
+#businessOverview {
+    padding-top: 5%;
+}
+
+#viewRecords {
+    height: 8vh;
+    width: 15vw;
+    font-size: x-large;
+    background: linear-gradient(rgb(222, 241, 255), rgb(177, 226, 248), rgb(186, 211, 255), rgb(193, 204, 255));
+    border-radius: 5%;
+    border: none;
+}
+
+#viewRecords:hover {
+    cursor: pointer;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+#recordsTbl,
+#recordHeader,
+.recordFeild,
+#customersTbl,
+#customerHeader,
+.customerFeild {
+    overflow: hidden;
+    margin: 2%;
+    padding: 2%;
+    width: 100vw;
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: large;
+}
+
+#recordHeader,
+#customerHeader {
+    background: linear-gradient(rgb(222, 241, 255), rgb(177, 226, 248));
+}
+
+#bookKeeping {
+    padding-top: 5%;
+}
+
+.formContainer {
+    border-radius: 3%;
+    width: 40vw;
+    margin: auto;
+    box-shadow: 0 9px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.formContainer:hover {
+    box-shadow: 5px 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+#insertRecord,
+.inputFeild {
+    margin: 1%;
+    font-size: large;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.inputBtn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#submitBtn {
+    width: 10vw;
+    height: 5vh;
+    background-color: rgb(193, 204, 255);
+    border: none;
+    background: linear-gradient(rgb(159, 215, 254), rgb(83, 199, 253));
+    font-size: large;
+    font-weight: 700;
+    border-radius: 5%;
+}
+
+#resetBtn {
+    width: 10vw;
+    height: 5vh;
+    background-color: rgb(193, 204, 255);
+    border: none;
+    background: linear-gradient(rgb(135, 135, 135), rgb(99, 99, 99));
+    font-size: large;
+    font-weight: 700;
+    border-radius: 5%;
+}
+
+#submitBtn:hover,
+#resetBtn:hover {
+    cursor: pointer;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.furtherActions {
+    margin: 3%;
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.furtherActions a {
+    color: rgb(1, 119, 255);
+    text-decoration: underline;
+    padding: 2%;
+}
+
+#myChart {
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+}
+
+#customers {
+    margin-top: 15%;
+    padding-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.error {
+    outline: 2px solid red;
+}
+
+@media (min-width:650px) and (max-width:800px) {
+    #sideBar {
+        width: 30vw;
+        font-size: smaller;
+    }
+
+    .menu {
+        padding-top: 17%;
+    }
+
+    #togglerIcon {
+        font-size: medium;
+    }
+
+    .navbar {
+        padding: 2%;
+    }
+
+    .nav-link {
+        font-size: medium;
+    }
+
+    #home {
+        padding-top: 10%;
+    }
+
+    .card {
+        height: 20vh;
+    }
+
+    .card-link {
+        font-size: smaller;
+    }
+
+    .heading {
+        padding: 5%;
+        font-size: larger;
+    }
+
+    #viewRecords {
+        height: 7vh;
+        width: 20vw;
+        font-size: large;
+    }
+
+    #recordsTbl {
+        margin: 0%;
+        padding: 0%;
+        margin-top: 5%;
+    }
+
+    #recordsTbl,
+    #recordHeader,
+    .recordFeild,
+    #customersTbl,
+    #customerHeader,
+    .customerFeild {
+        padding: 1.75%;
+        font-size: smaller;
+    }
+
+    .formContainer {
+        width: 60vw;
+    }
+
+    #insertRecord,
+    .inputFeild {
+        font-size: small;
+    }
+
+    #submitBtn,
+    #resetBtn {
+        font-size: medium;
+    }
+
+}
+
+@media (min-width:450px) and (max-width:650px) {
+    section {
+        width: 100vw;
+    }
+
+    #sideBar {
+        width: 40vw;
+        font-size: smaller;
+    }
+
+    .menu {
+        padding-top: 15%;
+    }
+
+    #togglerIcon {
+        font-size: medium;
+    }
+
+    .navbar {
+        padding: 2%;
+    }
+
+    .nav-link {
+        font-size: small;
+    }
+
+    #home {
+        padding-top: 10%;
+    }
+
+    .card {
+        height: 20vh;
+        width: 25vw;
+    }
+
+    .card-link {
+        font-size: smaller;
+    }
+
+    .heading {
+        padding: 5%;
+        font-size: larger;
+    }
+
+    #viewRecords {
+        height: 7vh;
+        width: 20vw;
+        font-size: large;
+    }
+
+    #recordsTbl {
+        margin: 0%;
+        padding: 0%;
+        margin-top: 5%;
+    }
+
+    #recordsTbl,
+    #recordHeader,
+    .recordFeild,
+    #customersTbl,
+    #customerHeader,
+    .customerFeild {
+        padding: 1.75%;
+        font-size: smaller;
+    }
+
+    .formContainer {
+        width: 60vw;
+    }
+
+    #insertRecord,
+    .inputFeild {
+        font-size: small;
+    }
+
+    #submitBtn,
+    #resetBtn {
+        margin-top: 5%;
+        height: 4vh;
+        width: 12vw;
+        font-size: small;
+    }
+
+}

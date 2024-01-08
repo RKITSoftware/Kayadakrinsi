@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <div id="container">
+
+        <section id="sideBar">
+
+            <div class="menuContainer">
+
+                <h3 class="menu">Menu</h3>
+
+                <ul class="menuList">
+                    <li class="menu-item">
+                        <a href="#home" class="menu-link"><i class="fa-solid fa-house"></i> Home</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#businessOverview" class="menu-link"><i class="fa-solid fa-chart-column"></i> Business
+                            overview</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#banking" class="menu-link"><i class="fa-solid fa-building-columns"></i> Banking</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#bookKeeping" class="menu-link"><i class="fa-sharp fa-solid fa-pen-to-square"></i> Book
+                            keeping</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#customers" class="menu-link"><i class="fa-solid fa-users"></i> Customers</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#home" class="menu-link"><i class="fa-solid fa-list-ul"></i> More</a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </section>
+
+        <nav class="navbar">
+
+            <button type="button" id="togglerBtn">
+                <i id="togglerIcon" class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul class="navbarList">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../html/gallery.html">Our Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact us</a>
+                </li>
+            </ul>
+
+        </nav>
+
+        <div class="content">
+
+            <section id="home">
+
+                <div class="cards">
+
+                    <div class="card">
+                        <a href="#home" class="card-link"><i class="fa-solid fa-house" style="font-size: xx-large;"></i>
+                            <p class="cardTitle">Home</p>
+                        </a>
+                    </div>
+
+                    <div class="card">
+                        <a href="#businessOverview" class="card-link"><i class="fa-solid fa-chart-column"
+                                style="font-size: xx-large;"></i>
+                            <p class="cardTitle">Business Overview</p>
+                        </a>
+                    </div>
+
+                    <div class="card">
+                        <a href="#banking" class="card-link"><i class="fa-solid fa-building-columns"
+                                style="font-size: xx-large;"></i>
+                            <p class="cardTitle">Banking</p>
+                        </a>
+                    </div>
+
+                    <div class="card">
+                        <a href="#bookKeeping" class="card-link"><i class="fa-sharp fa-solid fa-pen-to-square"
+                                style="font-size: xx-large;"></i>
+                            <p class="cardTitle">Book keeping</p>
+                        </a>
+                    </div>
+
+                    <div class="card">
+                        <a href="#customers" class="card-link"><i class="fa-solid fa-users"
+                                style="font-size: xx-large;"></i>
+                            <p class="cardTitle">Customers</p>
+                        </a>
+                    </div>
+
+                    <div class="card">
+                        <a href="#home" class="card-link"><i class="fa-solid fa-list-ul"
+                                style="font-size: xx-large;"></i>
+                            <p class="cardTitle">More</p>
+                        </a>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section id="businessOverview">
+
+                <h1 class="heading">--- Business Overview ---</h1>
+
+                <canvas id="myChart"></canvas>
+
+            </section>
+
+            <section id="banking">
+
+                <h1 class="heading">--- Banking ---</h1>
+
+                <button type="button" id="viewRecords">View records</button>
+
+                <table id="recordsTbl">
+                    <tr id="recordHeader">
+                        <th class="recordFeild">Account No.*</th>
+                        <th class="recordFeild">Name*</th>
+                        <th class="recordFeild">Date*</th>
+                        <th class="recordFeild">Trade Partner*</th>
+                        <th class="recordFeild">Action*</th>
+                        <th class="recordFeild">Amount in ₹*</th>
+                        <th class="recordFeild">Remark</th>
+                    </tr>
+                </table>
+
+            </section>
+
+            <section id="bookKeeping">
+
+                <h1 class="heading">--- Book keeping ---</h1>
+
+                <div class="formContainer">
+
+                    <form id="insertRecord">
+
+                        <div class="inputFeild">
+                            <label for="accountNo">Account Number* : </label>
+                            <input type="text" name="accountNo" id="accountNo" required>
+                            <span class="validationMessages" id="validationMessage1">Invalid account number  name !!</span>
+                        </div>
+
+                        <div class="inputFeild">
+                            <label for="customerNameTxt">Customer Name* :</label>
+                            <input type="text" name="customerNameTxt" id="customerNameTxt" required>
+                            <span class="validationMessages" id="validationMessage2">Invalid customer name !!</span>
+                        </div>
+
+                        <div class="inputFeild">
+                            <label for="date">Date* : </label>
+                            <input type="date" name="date" id="date" required>
+                            <span class="validationMessages" id="validationMessage3">Enter valid date !!</span>
+                        </div>
+
+                        <div class="inputFeild">
+                            <label for="tradePartnerNameTxt">Trader Name* : </label>
+                            <input type="text" name="tradePartnerNameTxt" id="tradePartnerNameTxt" required>
+                            <span class="validationMessages" id="validationMessage4">Invalid trader name !!</span>
+                        </div>
+
+                        <div class="inputFeild">
+                            <label for="actionScl">Select Action* : </label>
+                            <select id="actionScl" required>
+                                <option selected>Debit</option>
+                                <option>Credit</option>
+                            </select>
+                            <span class="validationMessages" id="validationMessage5"></span>
+                        </div>
+
+                        <div class="inputFeild">
+                            <label for="amountAmnt">Amount* :</label>
+                            <input type="number" name="amountAmnt" id="amountAmnt" required>
+                            <span class="validationMessages" id="validationMessage6">Enter amount in range of 1-1000000 !!</span>
+                        </div>
+
+                        <div class="inputFeild">
+                            <label for="remarkTxt">Remark : </label>
+                            <input type="text" name="remarkTxt" id="remarkTxt">
+                            <span class="validationMessages" id="validationMessage7"></span>
+                        </div>
+
+                        <div class="inputBtn">
+                            <input type="submit" value="Insert" id="submitBtn">
+                            <input type="reset" value="Cancel" id="resetBtn">
+                        </div>
+
+                        <div class="furtherActions">
+                            <a href="#bookKeeping">Insert another record</a>
+                            <a href="#banking">View history</a>
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </section>
+
+            <section id="customers">
+
+                <h1 class="heading">--- Customers ---</h1>
+
+                <table id="customersTbl">
+                    <tr id="customerHeader">
+                        <th class="customerFeild">User name</th>
+                        <th class="customerFeild">User id</th>
+                        <th class="customerFeild">Name</th>
+                        <th class="customerFeild">Email</th>
+                    </tr>
+                </table>
+
+            </section>
+
+        </div>
+
+    </div>
+
+    <script src="https://kit.fontawesome.com/b5b5cd7730.js" crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+    <script type="module" src="../js/script.js"></script>
+
+</body>
+
+</html>

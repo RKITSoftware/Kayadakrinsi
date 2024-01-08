@@ -1,0 +1,136 @@
+body {
+    background-image: linear-gradient(black,rgb(53, 53, 53),gray,black);
+    color: aliceblue;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.container {
+    width: 50%;
+    margin: auto;
+}
+
+.heading {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bolder;
+    letter-spacing: 2px;
+}
+
+.heading:hover {
+    text-shadow: 2px 2px 3px rgb(0, 192, 245);
+}
+
+form {
+    border: 2px dotted gray;
+    padding: 4%;
+    
+}
+
+legend {
+    text-align: center;
+    font-size: larger;
+    margin: 2%;
+}
+
+fieldset {
+    margin: 2%;
+    padding: 6%;
+}
+
+.inputFeild {
+    margin: 1%;
+    padding: 1%;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 50%;
+    margin:auto;
+}
+
+#submit , #reset {
+    height: 6vh;
+    width: 7vw;
+    font-size: large;
+}
+
+#submit {
+    background-color: rgba(4, 4, 174,0.8);
+    color: aliceblue;
+    border: 2px solid gray;
+    border-radius: 10%;
+} 
+
+#submit:hover , #reset:hover {
+    cursor: pointer;
+    box-shadow: 3px 3px 5px gray;
+}
+
+#reset {
+    background-color: rgba(3, 219, 3, 0.8);
+    color: aliceblue;
+    border: 2px solid gray;
+    border-radius: 10%;
+}
+
+input , textarea , select {
+    margin: 1%;
+    text-align: center;
+}
+
+input:focus , textarea:focus , select:focus {
+    border: 1.5px solid rgb(0, 153, 255);
+    outline: 1px solid rgb(0, 153, 255);
+    background-color: rgb(251, 251, 2);
+}
+ 
+label::after {
+    content: " ";
+}
+
+.rate , .middle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    margin:auto;
+    font-size: xx-large;
+}
+
+hr {
+    margin: 4%;
+}
+
+footer {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    font-size: large;
+    margin-bottom: 2%;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(0, 153, 255);
+}
+
+a:hover {
+    text-shadow: 2px 2px 3px gray;
+}
+
+a:active {
+    color: aqua;
+}
+
+a:visited {
+    color: blueviolet;
+}
+
+a:link {
+    color: rgb(0, 153, 255);
+}
+

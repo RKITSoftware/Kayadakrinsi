@@ -1,0 +1,13 @@
+div{
+    padding: 5%;
+    margin: auto;
+}
+.grandparent{
+    background-color: blue;
+}
+.parent{
+    background-color: blueviolet;
+}
+.child{
+    background-color: violet;
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+    <title>Registration Form</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="heading">Register...</h1>
+        <form action="/" method="post" id="regForm">
+
+            <fieldset>
+                <legend>Personal Information : </legend>
+
+                <div class="inputFeild">
+
+                    <label for="firstNameTxt">First Name* : </label>
+                    <input type="text" name="firstNameTxt" id="firstNameTxt" placeholder="name" autofocus
+                        pattern="[a-zA-Z]{1,}" required>
+                </div>
+
+                <div class="inputFeild">
+
+                    <label for="lastNameTxt">Last Name* : </label>
+                    <input type="text" name="lastNameTxt" id="lastNameTxt" placeholder="surname" pattern="[a-zA-Z]{1,}"
+                        required>
+                </div>
+
+                <div class="inputFeild">
+
+                    <label for="dateOfBirth"> Date Of Birth : </label>
+                    <input type="date" name="dateOfBirth" id="dateOfBirth">
+                </div>
+
+                <div class="inputFeild">
+
+                    <label for="genderRb"> Gender : </label>
+                    <input type="radio" name="genderRb" id="genderFemale" checked><label for="gender"> Female</label>
+                    <input type="radio" name="genderRb" id="genderMale"> <label for="gender"> Male </label>
+                </div>
+
+                <div class="inputFeild">
+
+                    <label for="email"> Email* : </label>
+                    <input type="email" name="email" id="email" placeholder="abcdeerfv@gmail.com" required>
+                </div>
+
+                <div class="inputFeild">
+
+                    <label for="mobileNumber"> Mobile no. : </label>
+                    <input type="tel" name="mobileNumber" id="mobileNumber" pattern="[0-9]{10}" value="1234567890">
+                </div>
+
+                <div class="inputFeild">
+
+                    <label for="address"> address : </label>
+                    <textarea name="address" id="address" rols="10" cols="40" placeholder="optional"></textarea>
+                </div>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Extra Informations : </legend>
+
+                <div class="inputFeild">
+
+                    <label for="dropDownScl">Choose information you want to give : </label>
+                    <select name="dropDownScl" id="dropDownScl">
+                        <option value="HobbiesOpt" selected>Hobbies</option>
+                        <option value="ResumeOpt">Resume</option>
+                    </select>
+                </div>
+
+                <div class="inputFeild">
+
+                    <label for="hobbyChk">Hobbies :</label>
+                    <input type="checkbox" name="hobbyChk" id="hobby1" checked><label for="hobbyChk">Dance</label>
+                    <input type="checkbox" name="hobbyChk" id="hobby2"><label for="hobbyChk">Paint</label>
+                    <input type="checkbox" name="hobbyChk" id="hobby3"><label for="hobbyChk">Spports</label>
+                </div>
+
+                <div class="inputFeild">
+
+                    <label for="resumeFile">Resume :</label>
+                    <input type="file" name="resumeFile" id="resumeFile" accept=".pdf,image/*" multiple>
+                </div>
+
+            </fieldset>
+
+            <div>
+
+                <input type="submit" value="Submit" id="submitBtn">
+                <input type="reset" value="Reset" id="resetBtn">
+
+            </div>
+
+        </form>
+    </div>
+
+    <hr>
+
+    <div class="rate">
+        <label for="rateRng">Rate Us : </label>
+        <input type="range" name="rateRng" id="rateRng" min="10" max="50" step="10" value="30">
+    </div>
+
+    <div class="middle" style="margin-top: 2%;">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ZygN0hJH1v4" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+    </div>
+
+    <hr>
+
+    <footer>
+        <pre>
+            &copy; All rights reserved by ABC Company.
+            <a href="https://www.google.com/" target="_blank">go to google</a>
+        </pre>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body class="bg-secondary text-light">
+    <nav class="navbar navbar-expand-sm bg-dark text-white justify-content-center navbar-dark">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="#sideBar" class="nav-link active">Sidebar</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Dropdown</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Sidebar</a>
+                    <a class="dropdown-item" href="#">Main</a>
+                    <a class="dropdown-item" href="#">To Do</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a href="#todoTable" class="nav-link">To Do</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link disabled">Disabled</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="container-fluid d-flex flex-wrap">
+        <div class="row">
+            <div class="col-2 border border-dark"  id="sideBar">
+                <h2 class="mt-2 text-break">sideBar :</h2>
+                <p class="text-break">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab earum nam enim aut soluta magni.</p>
+            </div>
+            <div class="col-7 border border-dark" id="mainContent">
+                <h1 class="mt-2">Main :</h1>
+                <p class="text-break text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, cupiditate officia.
+                    Maxime eum cum similique ratione magnam natus asperiores voluptatibus quia, eveniet alias.
+                    Temporibus nemo illum tempore soluta? Qui deserunt, aspernatur nobis recusandae asperiores possimus
+                    velit cum fugit amet vitae, debitis fugiat harum, unde delectus dolores. Eos omnis architecto
+                    mollitia?</p>
+                <div id="toolip" data-toggle="toolip" title="Image Hovered !">
+                    <img src="./images/Image.jpg" alt="Image" class="img-fluid mx-auto d-block shadow rounded-circle">
+                </div>
+                <p class="lead text-break mt-3 text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, cupiditate officia.
+                    Maxime eum cum similique ratione magnam natus asperiores voluptatibus quia, eveniet alias.
+                    Temporibus nemo illum tempore soluta? Qui deserunt, aspernatur nobis recusandae asperiores possimus
+                    velit cum fugit amet vitae, debitis fugiat harum, unde delectus dolores. Eos omnis architecto
+                    mollitia?</p>
+            </div>
+            <div class="col-3 border border-dark" id="todoTable">
+                <h2 class="pl-3 mt-2">TO DO :</h2>
+                <table class="table table-responsive table-hover mt-3 pl-4">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Sr.</th>
+                            <th>Task</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <th>1</th>
+                        <th>HTML</th>
+                        <th>Done</th>
+                    </tr>
+                    <tr>
+                        <th>2</th>
+                        <th>CSS</th>
+                        <th>Done</th>
+                    </tr>
+                    <tr>
+                        <th>3</th>
+                        <th>Bootstrap</th>
+                        <th>Working</th>
+                    </tr>
+                    <tr>
+                        <th>4</th>
+                        <th>JavaScript</th>
+                        <th>Working</th>
+                    </tr>
+                    <tr>
+                        <th>5</th>
+                        <th>JQuery</th>
+                        <th>Pending</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+
+</body>
+
+</html>
