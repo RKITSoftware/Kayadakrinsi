@@ -1,0 +1,14 @@
+C:\Users\KRINSHI\OneDrive\Documents\RKIT\C#\DataTable\DataTable\bin\Debug\net6.0\DataTable.exe
+C:\Users\KRINSHI\OneDrive\Documents\RKIT\C#\DataTable\DataTable\bin\Debug\net6.0\DataTable.deps.json
+C:\Users\KRINSHI\OneDrive\Documents\RKIT\C#\DataTable\DataTable\bin\Debug\net6.0\DataTable.runtimeconfig.json
+C:\Users\KRINSHI\OneDrive\Documents\RKIT\C#\DataTable\DataTable\bin\Debug\net6.0\DataTable.dll
+C:\Users\KRINSHI\OneDrive\Documents\RKIT\C#\DataTable\DataTable\bin\Debug\net6.0\DataTable.pdb
+C:\Users\KRINSHI\OneDrive\Documents\RKIT\C#\DataTable\DataTable\obj\Debug\net6.0\DataTable.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\KRINSHI\OneDrive\Documents\RKIT\C#\DataTable\DataTable\obj\Debug\net6.0\DataTable.AssemblyInfoInputs.cache
+C:\Users\KRINSHI\OneDrive\Documents\RKIT\C#\DataTable\DataTable\obj\Debug\net6.0\DataTable.AssemblyInfo.cs
+C:\Users\KRINSHI\OneDrive\Documents\RKIT\C#\DataTable\DataTable\obj\Debug\net6.0\DataTable.csproj.CoreCompileInputs.cache
+C:\Users\KRINSHI\OneDrive\Documents\RKIT\C#\DataTable\DataTable\obj\Debug\net6.0\DataTable.dll
+C:\Users\KRINSHI\OneDrive\Documents\RKIT\C#\DataTable\DataTable\obj\Debug\net6.0\refint\DataTable.dll
+C:\Users\KRINSHI\OneDrive\Documents\RKIT\C#\DataTable\DataTable\obj\Debug\net6.0\DataTable.pdb
+C:\Users\KRINSHI\OneDrive\Documents\RKIT\C#\DataTable\DataTable\obj\Debug\net6.0\DataTable.genruntimeconfig.cache
+C:\Users\KRINSHI\OneDrive\Documents\RKIT\C#\DataTable\DataTable\obj\Debug\net6.0\ref\DataTable.dll
