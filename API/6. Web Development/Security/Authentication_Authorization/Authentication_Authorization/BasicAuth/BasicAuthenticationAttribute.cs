@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Security.Claims;
 using System.Security.Principal;
 using System.Text;
 using System.Threading;
@@ -14,6 +15,8 @@ namespace Authentication_Authorization.BasicAuth
 {
     public class BasicAuthenticationAttribute : AuthorizationFilterAttribute
     {
+        public object CliamTypes { get; private set; }
+
         public override void OnAuthorization(HttpActionContext actionContext)
         {
             try
@@ -36,11 +39,27 @@ namespace Authentication_Authorization.BasicAuth
                     if(ValidateUser.Login(username, password))
                     {
                         var userDetails = ValidateUser.GetUserDetails(username, password);
+                        var identity = new GenericIdentity(username);
+                        identity.AddClaim(new Claim(ClaimTypes.Name,userDetails.UserName));
+                        identity.AddClaim(new Claim("Id",Convert.ToString(userDetails.Id)));    
+
+                        IPrincipal principal = new GenericPrincipal(identity,userDetails.Roles.Split(','));
+
+                        Thread.CurrentPrincipal = principal;
+                        if(HttpContext.Current != null)
+                        {
+                            HttpContext.Current.User = principal;
+                        }
+                        else
+                        {
+                            actionContext.Response = actionContext.Request
+                            .CreateErrorResponse(HttpStatusCode.Unauthorized, "Authorization Denied");
+                        }
                     }
                     else
                     {
                         actionContext.Response = actionContext.Request
-                            .CreateErrorResponse(HttpStatusCode.Unauthorized, "Login failed");
+                            .CreateErrorResponse(HttpStatusCode.Unauthorized, "Invalid Creditentials");
                     }
                 }
             }

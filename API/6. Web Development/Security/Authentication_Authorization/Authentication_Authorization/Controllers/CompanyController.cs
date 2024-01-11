@@ -10,12 +10,32 @@ using System.Web.Http;
 namespace Authentication_Authorization.Controllers
 {
     //[Authorize]
+    [Route("api/Company")]
     [BasicAuthenticationAttribute]
     public class CompanyController : ApiController
     {
-        public List<Company> GetCompanies()
+        // Get few compnies
+        [Route("GetFewCompanies")]
+        [BasicAuthorizationAttribute(Roles="User")]
+        public HttpResponseMessage GetFewCompanies()
         {
-            return Company.GetCompnies();
+            return Request.CreateResponse(HttpStatusCode.OK,Company.GetCompnies().Where(c => c.Id < 2));
+        }
+
+        // Get more compnies
+        [Route("GetMoreCompanies")]
+        [BasicAuthorizationAttribute(Roles = "Admin")]
+        public HttpResponseMessage GetMoreCompanies()
+        {
+            return Request.CreateResponse(HttpStatusCode.OK, Company.GetCompnies().Where(c => c.Id < 3));
+        }
+
+        // Get all compnies
+        [Route("GetAllCompanies")]
+        [BasicAuthorizationAttribute(Roles = "SuperAdmin")]
+        public HttpResponseMessage GetAllCompanies()
+        {
+            return Request.CreateResponse(HttpStatusCode.OK, Company.GetCompnies());
         }
     }
 }

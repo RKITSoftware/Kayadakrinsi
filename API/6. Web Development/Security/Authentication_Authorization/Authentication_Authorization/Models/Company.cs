@@ -26,7 +26,9 @@ namespace Authentication_Authorization.Models
             List<Company> compnies = new List<Company> {
                 new Company(1,"TATA","Jamshedpur","Production",1028000),
                 new Company(2,"Microsoft","Washington","IT",221000),
-                new Company(3,"Google","California","IT",156000)
+                new Company(3,"Google","California","IT",156000),
+                new Company(4,"RKIT","Rajkot","IT",200),
+                new Company(5,"Sugar Cosmetics","Mumbai","Production",600)
             };
             return compnies;
         }
