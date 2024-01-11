@@ -10,7 +10,7 @@ using System.Web.Http;
 namespace Authentication_Authorization.Controllers
 {
     //[Authorize]
-    [Route("api/Company")]
+    [RoutePrefix("api/Company")]
     [BasicAuthenticationAttribute]
     public class CompanyController : ApiController
     {
@@ -19,7 +19,7 @@ namespace Authentication_Authorization.Controllers
         [BasicAuthorizationAttribute(Roles="User")]
         public HttpResponseMessage GetFewCompanies()
         {
-            return Request.CreateResponse(HttpStatusCode.OK,Company.GetCompnies().Where(c => c.Id < 2));
+            return Request.CreateResponse(HttpStatusCode.OK,Company.GetCompnies().Where(c => c.Id <= 2));
         }
 
         // Get more compnies
@@ -27,7 +27,7 @@ namespace Authentication_Authorization.Controllers
         [BasicAuthorizationAttribute(Roles = "Admin")]
         public HttpResponseMessage GetMoreCompanies()
         {
-            return Request.CreateResponse(HttpStatusCode.OK, Company.GetCompnies().Where(c => c.Id < 3));
+            return Request.CreateResponse(HttpStatusCode.OK, Company.GetCompnies().Where(c => c.Id <= 3));
         }
 
         // Get all compnies

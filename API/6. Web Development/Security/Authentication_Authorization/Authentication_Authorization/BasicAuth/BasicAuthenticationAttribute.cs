@@ -15,7 +15,6 @@ namespace Authentication_Authorization.BasicAuth
 {
     public class BasicAuthenticationAttribute : AuthorizationFilterAttribute
     {
-        public object CliamTypes { get; private set; }
 
         public override void OnAuthorization(HttpActionContext actionContext)
         {
@@ -24,7 +23,7 @@ namespace Authentication_Authorization.BasicAuth
                 if (actionContext.Request.Headers.Authorization==null)
                 {
                     actionContext.Response = actionContext.Request
-                        .CreateErrorResponse(HttpStatusCode.Unauthorized, "Login failed");
+                        .CreateErrorResponse(HttpStatusCode.Unauthorized,"Login failed");
                 }
                 else
                 {
