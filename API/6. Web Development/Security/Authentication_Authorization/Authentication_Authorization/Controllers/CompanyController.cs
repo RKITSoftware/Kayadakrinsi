@@ -14,12 +14,13 @@ namespace Authentication_Authorization.Controllers
     [BasicAuthenticationAttribute]
     public class CompanyController : ApiController
     {
+        List<Company> companies = Company.GetCompanies();
         // Get few compnies
         [Route("GetFewCompanies")]
-        [BasicAuthorizationAttribute(Roles="User")]
+        [BasicAuthorizationAttribute(Roles = "User")]
         public HttpResponseMessage GetFewCompanies()
         {
-            return Request.CreateResponse(HttpStatusCode.OK,Company.GetCompnies().Where(c => c.Id <= 2));
+            return Request.CreateResponse(HttpStatusCode.OK, companies.Where(c => c.Id <= 2));
         }
 
         // Get more compnies
@@ -27,15 +28,84 @@ namespace Authentication_Authorization.Controllers
         [BasicAuthorizationAttribute(Roles = "Admin")]
         public HttpResponseMessage GetMoreCompanies()
         {
-            return Request.CreateResponse(HttpStatusCode.OK, Company.GetCompnies().Where(c => c.Id <= 3));
+            return Request.CreateResponse(HttpStatusCode.OK, companies.Where(c => c.Id <= 3));
         }
+
+
+        //[Route("PostCompany")]
+        //[BasicAuthorizationAttribute(Roles = "Admin")]
+        //public HttpResponseMessage PostCompany(int id,Company newCompany){
+        //    var company = companies.Find(x => x.Id == id);
+        //    try
+        //    {
+        //        if (company == null)
+        //        {
+        //            companies.Add(newCompany);
+        //            return Request.CreateResponse(HttpStatusCode.OK, companies.Where(c => c.Id <= 3));
+        //        }
+        //        else
+        //        {
+        //            return Request.CreateResponse(HttpStatusCode.BadRequest, "Company with given id is already exist!");
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return Request.CreateResponse(HttpStatusCode.Ambiguous, ex.Message);
+        //    }
+        //}
 
         // Get all compnies
         [Route("GetAllCompanies")]
         [BasicAuthorizationAttribute(Roles = "SuperAdmin")]
         public HttpResponseMessage GetAllCompanies()
         {
-            return Request.CreateResponse(HttpStatusCode.OK, Company.GetCompnies());
+            return Request.CreateResponse(HttpStatusCode.OK, Company.GetCompanies());
         }
+
+        //[Route("PutCompany")]
+        //[BasicAuthorizationAttribute(Roles = "Admin")]
+        //public HttpResponseMessage PutCompany(int id,Company editedCompany)
+        //{
+        //    var company = companies.Find(x => x.Id == id);
+        //    try
+        //    {
+        //        if (company != null)
+        //        {
+        //            companies[id]=editedCompany;
+        //            return Request.CreateResponse(HttpStatusCode.OK, companies);
+        //        }
+        //        else
+        //        {
+        //            return Request.CreateResponse(HttpStatusCode.NotFound, "Company with given id not found!");
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return Request.CreateResponse(HttpStatusCode.Ambiguous, ex.Message);
+        //    }
+        //}
+
+        //[Route("DeleteCompany")]
+        //[BasicAuthorizationAttribute(Roles = "Admin")]
+        //public HttpResponseMessage DeleteCompany(int id)
+        //{
+        //    var company = companies.Find(x => x.Id == id);
+        //    try
+        //    {
+        //        if (company != null)
+        //        {
+        //            companies.RemoveAt(id);
+        //            return Request.CreateResponse(HttpStatusCode.OK, companies);
+        //        }
+        //        else
+        //        {
+        //            return Request.CreateResponse(HttpStatusCode.NotFound, "Company with given id not found!");
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return Request.CreateResponse(HttpStatusCode.Ambiguous, ex.Message);
+        //    }
+        //}
     }
 }
