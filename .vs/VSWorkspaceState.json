@@ -1,7 +1,9 @@
 {
-  "PreviewInSolutionExplorer": false,
   "ExpandedNodes": [
-    ""
+    "",
+    "\\API",
+    "\\API\\6. Web Development"
   ],
-  "SelectedNode": "\\String.sln"
+  "SelectedNode": "\\API\\6. Web Development\\V",
+  "PreviewInSolutionExplorer": false
 }
