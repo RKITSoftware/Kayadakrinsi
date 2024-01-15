@@ -8,6 +8,7 @@ using System.Web.Http;
 
 namespace HTTP_Caching.Controllers
 {
+    [BLCacheFilter(TimeDuration = 100)]
     /// <summary>
     /// Defines custom controller
     /// </summary>
