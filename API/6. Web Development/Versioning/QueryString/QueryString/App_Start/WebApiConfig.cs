@@ -22,7 +22,7 @@ namespace QueryString
                 defaults: new { id = RouteParameter.Optional }
             );
 
-            config.Services.Replace(typeof(IHttpControllerSelector),new CustomSelectorController(config));
+            config.Services.Replace(typeof(IHttpControllerSelector),new CLCustomSelectorController(config));
         }
     }
 }

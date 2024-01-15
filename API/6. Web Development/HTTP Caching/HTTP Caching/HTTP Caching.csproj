@@ -85,8 +85,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="CacheFilter.cs" />
-    <Compile Include="Controllers\DataController.cs" />
+    <Compile Include="BLCacheFilter.cs" />
+    <Compile Include="Controllers\CLDataController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

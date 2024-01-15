@@ -85,14 +85,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\CompanyV1Controller.cs" />
-    <Compile Include="Controllers\CompanyV2Controller.cs" />
-    <Compile Include="Controllers\CustomSelectorController.cs" />
+    <Compile Include="Controllers\CLCompanyV1Controller.cs" />
+    <Compile Include="Controllers\CLCompanyV2Controller.cs" />
+    <Compile Include="Controllers\CLCustomSelectorController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\CompanyV1.cs" />
-    <Compile Include="Models\CompanyV2.cs" />
+    <Compile Include="Models\CMP01.cs" />
+    <Compile Include="Models\CMP02.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

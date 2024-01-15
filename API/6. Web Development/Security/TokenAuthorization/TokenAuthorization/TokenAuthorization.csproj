@@ -107,15 +107,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\CompanyController.cs" />
+    <Compile Include="Controllers\CLCompanyController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Company.cs" />
-    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\CMP01.cs" />
+    <Compile Include="Models\USR01.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Provider\AppAuthorizationServerProvider.cs" />
-    <Compile Include="Startup.cs" />
+    <Compile Include="BLStartup.cs" />
     <Compile Include="UserRepository\UserRepo.cs" />
   </ItemGroup>
   <ItemGroup>

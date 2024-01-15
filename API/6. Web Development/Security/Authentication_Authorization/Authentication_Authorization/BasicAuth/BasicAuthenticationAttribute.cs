@@ -13,9 +13,17 @@ using System.Web.Http.Filters;
 
 namespace Authentication_Authorization.BasicAuth
 {
+    /// <summary>
+    /// Custom authentication filter attribute
+    /// </summary>
     public class BasicAuthenticationAttribute : AuthorizationFilterAttribute
     {
+        #region Public Methods
 
+        /// <summary>
+        /// Authenticates user with username, password and authorizes further
+        /// </summary>
+        /// <param name="actionContext">Information of excuting context</param>
         public override void OnAuthorization(HttpActionContext actionContext)
         {
             try
@@ -35,14 +43,14 @@ namespace Authentication_Authorization.BasicAuth
                     string username = usernamepassword[0];
                     string password = usernamepassword[1];
 
-                    if(ValidateUser.Login(username, password))
+                    if(BLValidateUser.Login(username, password))
                     {
-                        var userDetails = ValidateUser.GetUserDetails(username, password);
+                        var userDetails = BLValidateUser.GetUserDetails(username, password);
                         var identity = new GenericIdentity(username);
-                        identity.AddClaim(new Claim(ClaimTypes.Name,userDetails.UserName));
-                        identity.AddClaim(new Claim("Id",Convert.ToString(userDetails.Id)));    
+                        identity.AddClaim(new Claim(ClaimTypes.Name,userDetails.R01F02));
+                        identity.AddClaim(new Claim("Id",Convert.ToString(userDetails.R01F01)));    
 
-                        IPrincipal principal = new GenericPrincipal(identity,userDetails.Roles.Split(','));
+                        IPrincipal principal = new GenericPrincipal(identity,userDetails.R01F04.Split(','));
 
                         Thread.CurrentPrincipal = principal;
                         if(HttpContext.Current != null)
@@ -69,5 +77,7 @@ namespace Authentication_Authorization.BasicAuth
             }
                 
         }
+
+        #endregion
     }
 }

@@ -9,8 +9,17 @@ using System.Web.Http.Controllers;
 
 namespace Authentication_Authorization.BasicAuth
 {
+    /// <summary>
+    /// Authorization filter attribute
+    /// </summary>
     public class BasicAuthorizationAttribute : AuthorizeAttribute
     {
+        #region Protected Methods
+
+        /// <summary>
+        /// Authorizes user
+        /// </summary>
+        /// <param name="actionContext">Information of excuting context</param>
         protected override void HandleUnauthorizedRequest(HttpActionContext actionContext)
         {
             if(HttpContext.Current.User.Identity.IsAuthenticated) 
@@ -22,5 +31,7 @@ namespace Authentication_Authorization.BasicAuth
                 actionContext.Response = new HttpResponseMessage(HttpStatusCode.Forbidden);
             }
         }
+
+        #endregion
     }
 }
