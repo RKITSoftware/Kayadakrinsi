@@ -81,3 +81,17 @@ F:\Krinsi - 379\Training\API\6. Web Development\HospitalAPI\HospitalAPI\obj\Debu
 F:\Krinsi - 379\Training\API\6. Web Development\HospitalAPI\HospitalAPI\obj\Debug\HospitalAPI.csproj.CopyComplete
 F:\Krinsi - 379\Training\API\6. Web Development\HospitalAPI\HospitalAPI\obj\Debug\HospitalAPI.dll
 F:\Krinsi - 379\Training\API\6. Web Development\HospitalAPI\HospitalAPI\obj\Debug\HospitalAPI.pdb
+F:\Krinsi - 379\Training\API\6. Web Development\HospitalAPI\HospitalAPI\bin\Microsoft.Owin.Cors.dll
+F:\Krinsi - 379\Training\API\6. Web Development\HospitalAPI\HospitalAPI\bin\Microsoft.Owin.dll
+F:\Krinsi - 379\Training\API\6. Web Development\HospitalAPI\HospitalAPI\bin\Microsoft.Owin.Host.SystemWeb.dll
+F:\Krinsi - 379\Training\API\6. Web Development\HospitalAPI\HospitalAPI\bin\Microsoft.Owin.Security.dll
+F:\Krinsi - 379\Training\API\6. Web Development\HospitalAPI\HospitalAPI\bin\Microsoft.Owin.Security.OAuth.dll
+F:\Krinsi - 379\Training\API\6. Web Development\HospitalAPI\HospitalAPI\bin\Owin.dll
+F:\Krinsi - 379\Training\API\6. Web Development\HospitalAPI\HospitalAPI\bin\Microsoft.Owin.xml
+F:\Krinsi - 379\Training\API\6. Web Development\HospitalAPI\HospitalAPI\bin\Microsoft.Owin.Cors.xml
+F:\Krinsi - 379\Training\API\6. Web Development\HospitalAPI\HospitalAPI\bin\Microsoft.Owin.Host.SystemWeb.xml
+F:\Krinsi - 379\Training\API\6. Web Development\HospitalAPI\HospitalAPI\bin\Microsoft.Owin.Security.xml
+F:\Krinsi - 379\Training\API\6. Web Development\HospitalAPI\HospitalAPI\bin\Microsoft.Owin.Security.OAuth.xml
+F:\Krinsi - 379\Training\API\6. Web Development\HospitalAPI\HospitalAPI\bin\Microsoft.Web.Infrastructure.dll
+F:\Krinsi - 379\Training\API\6. Web Development\HospitalAPI\HospitalAPI\bin\Swashbuckle.Core.dll
+F:\Krinsi - 379\Training\API\6. Web Development\HospitalAPI\HospitalAPI\bin\WebActivatorEx.dll

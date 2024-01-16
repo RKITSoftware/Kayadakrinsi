@@ -68,7 +68,8 @@ namespace HospitalAPI.Models
 
         public static List<RCD01> GetRecords()
         {
-            var records = new List<RCD01> { 
+            var records = new List<RCD01> {
+                new RCD01(0,"KIRTAN KOHLI","JIGNESH ANSARI","DRY EYE",new DateTime(2023,12,31),new DateTime(2024,01,11),2024.24),
                 new RCD01(1,"NILESH RAY","SWETA SHARMA","CANCER",new DateTime(2023,10,10),new DateTime(2023,12,08),1345.45),
                 new RCD01(2,"ROHIT SHAH","KIRIT KANANI","TYPHOID",new DateTime(2023,10,12),new DateTime(2023,11,11),1245.33),
                 new RCD01(3,"SAKINA MEMAN","RAJESH SINHA","CHOLERA",new DateTime(2023,10,20),new DateTime(2023,11,20),4561.12),
@@ -77,10 +78,7 @@ namespace HospitalAPI.Models
                 new RCD01(6,"SUMIT SINGH","ISHA GUPTA","DEPRESSION",new DateTime(2023,11,19),new DateTime(2023,12,01),1512.61),
                 new RCD01(7,"NISHA SHARMA","PRAFUL ARORA","PNEUMONIA",new DateTime(2023,11,21),new DateTime(2023,12,11),2152.21),
                 new RCD01(8,"VIMAL VERMA","SHAILESH SHAH","HEART DIEASES",new DateTime(2023,12,10),new DateTime(2023,12,25),6321.2),
-                new RCD01(9,"JAY PATEL","BIPIN PAL","ALZER",new DateTime(2023,12,25),new DateTime(2023,12,30),2031.11),
-                new RCD01(10,"KIRTAN KOHLI","JIGNESH ANSARI","DRY EYE",new DateTime(2023,12,31),new DateTime(2024,01,11),2024.24)
-
-
+                new RCD01(9,"JAY PATEL","BIPIN PAL","ALZER",new DateTime(2023,12,25),new DateTime(2023,12,30),2031.11)
             };
             return  records;
         }
