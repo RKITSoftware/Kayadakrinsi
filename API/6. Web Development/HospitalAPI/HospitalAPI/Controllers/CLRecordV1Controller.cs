@@ -45,7 +45,7 @@ namespace HospitalAPI.Controllers
         /// <returns>List of compaines which can be access by admin</returns>
         public IHttpActionResult GetMoreRecords()
         {
-            return Ok(records.FindAll(r => r.D01F01 <= 6));
+                return Ok(records.FindAll(r => r.D01F01 <= 6));
         }
 
         [BasicAuthorizationAttribute(Roles = "SuperAdmin")]
