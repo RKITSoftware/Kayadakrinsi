@@ -23,15 +23,16 @@ namespace URI
             config.Routes.MapHttpRoute(
                             name: "CompanyV1",
                             routeTemplate: "api/v1/company/{id}",
-                            defaults: new { controller = "CompanyV1", id = RouteParameter.Optional }
+                            defaults: new { controller = "CLCompanyV1", id = RouteParameter.Optional }
                         );
 
             config.Routes.MapHttpRoute(
                 name: "CompanyV2",
                 routeTemplate: "api/v2/company/{id}",
-                defaults: new { controller = "CompanyV2", id = RouteParameter.Optional }
+                defaults: new { controller = "CLCompanyV2", id = RouteParameter.Optional }
             );
 
         }
     }
 }
+ 

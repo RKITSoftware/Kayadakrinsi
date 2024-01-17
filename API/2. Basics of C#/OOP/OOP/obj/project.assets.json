@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\KRINSHI\\.nuget\\packages\\": {}
+    "C:\\Users\\krinsi.k\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\KRINSHI\\OneDrive\\Documents\\RKIT\\API\\Basics of C#\\OOP\\OOP\\OOP.csproj",
+      "projectUniqueName": "F:\\Krinsi - 379\\Training\\API\\2. Basics of C#\\OOP\\OOP\\OOP.csproj",
       "projectName": "OOP",
-      "projectPath": "C:\\Users\\KRINSHI\\OneDrive\\Documents\\RKIT\\API\\Basics of C#\\OOP\\OOP\\OOP.csproj",
-      "packagesPath": "C:\\Users\\KRINSHI\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\KRINSHI\\OneDrive\\Documents\\RKIT\\API\\Basics of C#\\OOP\\OOP\\obj\\",
+      "projectPath": "F:\\Krinsi - 379\\Training\\API\\2. Basics of C#\\OOP\\OOP\\OOP.csproj",
+      "packagesPath": "C:\\Users\\krinsi.k\\.nuget\\packages\\",
+      "outputPath": "F:\\Krinsi - 379\\Training\\API\\2. Basics of C#\\OOP\\OOP\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\KRINSHI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\krinsi.k\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -61,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Http;
+﻿using System.Web.Http;
+using Country.BusinessLogic;
 using Country.Models;
 
 namespace Country.Controllers
@@ -12,40 +9,19 @@ namespace Country.Controllers
     /// </summary>
     public class CLCountryController : ApiController
     {
-        #region Public Members
-
-        /// <summary>
-        /// Maintains list of countries
-        /// </summary>
-        public static List<CON01> countries;
-
-        #endregion
-
-        #region Constructors 
-
-        /// <summary>
-        /// Initializes list of countries statically
-        /// </summary>
-        static CLCountryController()
-        {
-                countries = new List<CON01> {
-                    new CON01(1, "India", 91, 1428),
-                    new CON01(2, "Australia", 61, 25.77)
-                };
-        }
-
-        #endregion
 
         #region Public Methods
 
-        [HttpGet]
         /// <summary>
         /// Handles get request 
         /// </summary>
-        /// <returns>all countries with ok response</returns>
-        public IHttpActionResult GetCountries()
+        /// <returns>list of countries</returns>
+        [HttpGet]
+        [Route("api/CLCountry/GetALlCountries")]
+        public IHttpActionResult GetAllCountries()
         {
-            return Ok(countries);
+            var lstCON01 = BLCountry.GetCountries();
+            return Ok(lstCON01);
         }
 
         /// <summary>
@@ -53,104 +29,66 @@ namespace Country.Controllers
         /// </summary>
         /// <param name="id">For searching particular country with given id</param>
         /// <returns>returns country with given id if exist</returns>
-        public IHttpActionResult GetById(int id)
+        [Route("api/CLCountry/GetCountryById")]
+        public IHttpActionResult GetCountryById(int id)
         {
-            var country = countries.Find(x => x.N01F01 == id);
-            try
+            var objCON01 = BLCountry.GetById(id);
+            if(objCON01 == null)
             {
-                if (country == null)
-                {
-                    return NotFound();
-                }
+                return BadRequest();
             }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-            return Ok(country);
+            return Ok(objCON01);
         }
 
-        [HttpPost]
         /// <summary>
         /// Handles post request
         /// </summary>
-        /// <param name="id">id of new element</param>
-        /// <param name="newCountry">new country which is object of type Country</param>
+        /// <param name="objCON01">new country which is object of type Country</param>
         /// <returns>List of counties if request is ok</returns>
-        public IHttpActionResult AddCountry(int id, CON01 newCountry)
+        [HttpPost]
+        [Route("api/CLCountry/AddCountry")]
+        public IHttpActionResult AddCountry(CON01 objCON01)
         {
-            var country = countries.Find(x => x.N01F01 == id);
-            try
+            var lstCON01 = BLCountry.AddCountry(objCON01);
+            if (lstCON01 == null)
             {
-                if (country == null)
-                {
-                    countries.Add(newCountry);
-                    return Ok(countries);
-                }
-                else
-                {
-                    return Ok("Id is already exist ; try again with different id");
-                }
+                return BadRequest();
             }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            return Ok(lstCON01);
         }
 
-        [HttpPut]
         /// <summary>
         /// Handles put request
         /// </summary>
-        /// <param name="id">id of country which is being edited</param>
-        /// <param name="changedCountry">edited country which is also object of class Country</param>
+        /// <param name="objCON01">edited country which is also object of class Country</param>
         /// <returns>List of counties if request is ok</returns>
-        public IHttpActionResult EditCountry(int id, CON01 changedCountry)
+        [HttpPut]
+        [Route("api/CLCountry/EditCountry")]
+        public IHttpActionResult EditCountry(CON01 objCON01)
         {
-            var country = countries.Find(x => x.N01F01 == id);
-            try
+            var lstCON01 = BLCountry.EditCountry(objCON01);
+            if (lstCON01 == null)
             {
-                if (country == null)
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    country = changedCountry;
-                }
+                return BadRequest();
             }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-            return Ok(countries);
+            return Ok(lstCON01);
         }
 
-        [HttpDelete]
         /// <summary>
         /// Handles delete request
         /// </summary>
         /// <param name="id">id of element to be delete</param>
         /// <returns>List of counties if request is ok</returns>
+        [HttpDelete]
+        [Route("api/CLCountry/DeleteCountry")]
         public IHttpActionResult DeleteCountry(int id)
         {
-            var country = countries.Find(x => x.N01F01 == id);
-            try
+            var lstCON01 = BLCountry.DeleteCountry(id);
+            if (lstCON01 == null)
             {
-                if (country == null)
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    countries.Remove(country);
-                }
+                return BadRequest();
             }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-            return Ok(countries);
+            return Ok(lstCON01);
         }
 
         #endregion
