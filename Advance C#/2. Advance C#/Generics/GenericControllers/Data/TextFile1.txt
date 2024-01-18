@@ -1,0 +1,13 @@
+﻿<--Album title,Artist name-->
+
+"The Dark Side of the Moon","Pink Floyd"
+"The Bodyguard","Whitney Houston"
+"Their Greatest Hits","Eagles"
+"Bat Out of Hell","Meat Loaf"
+
+
+<--Book title,Author-->
+"The Golden Bowl","Henry James"
+"Gone with the Wind","Margaret Mitchell"
+"The Grapes of Wrath","John Steinbeck"
+"Great Work of Time","John Crowley"

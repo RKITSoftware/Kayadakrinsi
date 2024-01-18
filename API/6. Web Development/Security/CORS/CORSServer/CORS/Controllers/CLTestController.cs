@@ -18,6 +18,8 @@ namespace WebService.Controllers
         /// Handles get request
         /// </summary>
         /// <returns>Sample string message using HttpResponseMessage</returns>
+        [HttpGet]
+        [Route("api/CLTest/get")]
         public HttpResponseMessage Get()
         {
             return new HttpResponseMessage()
@@ -30,6 +32,8 @@ namespace WebService.Controllers
         /// Handles post request
         /// </summary>
         /// <returns>Sample string message using HttpResponseMessage</returns>
+        [HttpPost]
+        [Route("api/CLTest/post")]
         public HttpResponseMessage Post()
         {
             return new HttpResponseMessage()
@@ -42,6 +46,9 @@ namespace WebService.Controllers
         /// Handles put request
         /// </summary>
         /// <returns>Sample string message using HttpResponseMessage</returns>
+        [HttpPut]
+        [Route("api/CLTest/put")]
+        [DisableCors]
         public HttpResponseMessage Put()
         {
             return new HttpResponseMessage()
