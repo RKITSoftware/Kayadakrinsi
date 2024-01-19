@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
+﻿using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using TokenAuthorization.Models;
+using TokenAuthorization.BusinessLogic;
 
 namespace TokenAuthorization.Controllers
 {
@@ -13,15 +10,6 @@ namespace TokenAuthorization.Controllers
     /// </summary>
     public class CLCompanyController : ApiController
     {
-        #region Public Members
-
-        /// <summary>
-        /// List of companies
-        /// </summary>
-        public List<CMP01> companies = CMP01.GetCompanies();
-
-        #endregion
-
         #region Public Methods
 
         [Authorize(Roles = ("User"))] // Authorize user with user rights
@@ -33,8 +21,7 @@ namespace TokenAuthorization.Controllers
         /// <returns>Company with given id</returns>
         public HttpResponseMessage GetCompanyById(int id)
         {
-            var company = companies.FirstOrDefault(c => c.P01F01 == id);
-            return Request.CreateResponse(HttpStatusCode.OK, company);
+            return Request.CreateResponse(HttpStatusCode.OK, BLCompany.GetCompanyById(id));
         }
 
         [Authorize(Roles = ("Admin,SuperAdmin"))]
@@ -45,8 +32,7 @@ namespace TokenAuthorization.Controllers
         /// <returns>List of companies with id less than five</returns>
         public HttpResponseMessage GetSomeCompany()
         {
-            var company = companies.FirstOrDefault(c => c.P01F01 <= 4);
-            return Request.CreateResponse(HttpStatusCode.OK, company);
+            return Request.CreateResponse(HttpStatusCode.OK, BLCompany.GetSomeCompanies());
         }
 
         [Authorize(Roles = ("SuperAdmin"))]
@@ -57,7 +43,7 @@ namespace TokenAuthorization.Controllers
         /// <returns>List of all companies using HttpResponseMessage</returns>
         public HttpResponseMessage GetAllCompany()
         {
-            return Request.CreateResponse(HttpStatusCode.OK, companies);
+            return Request.CreateResponse(HttpStatusCode.OK, BLCompany.lstCompanies);
         }
 
         #endregion

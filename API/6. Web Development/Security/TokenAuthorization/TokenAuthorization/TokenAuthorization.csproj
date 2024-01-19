@@ -107,6 +107,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="BusinessLogic\BLCompany.cs" />
     <Compile Include="Controllers\CLCompanyController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -115,7 +116,7 @@
     <Compile Include="Models\USR01.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Provider\AppAuthorizationServerProvider.cs" />
-    <Compile Include="BLStartup.cs" />
+    <Compile Include="BusinessLogic\BLStartup.cs" />
     <Compile Include="UserRepository\UserRepo.cs" />
   </ItemGroup>
   <ItemGroup>

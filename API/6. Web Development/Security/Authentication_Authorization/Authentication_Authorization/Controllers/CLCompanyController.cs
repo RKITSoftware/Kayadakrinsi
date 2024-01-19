@@ -1,11 +1,6 @@
-﻿using Authentication_Authorization.BasicAuth;
-using Authentication_Authorization.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
+﻿using System.Web.Http;
+using Authentication_Authorization.BasicAuth;
+using Authentication_Authorization.BusinessLogic;
 
 namespace Authentication_Authorization.Controllers
 {
@@ -18,14 +13,6 @@ namespace Authentication_Authorization.Controllers
     /// </summary>
     public class CLCompanyController : ApiController
     {
-        #region Public Members
-
-        /// <summary>
-        /// List of companies
-        /// </summary>
-        public List<CMP01> companies = CMP01.GetCompanies();
-
-        #endregion
 
         #region Public Methods
 
@@ -35,9 +22,9 @@ namespace Authentication_Authorization.Controllers
         /// Handles get request of normal user
         /// </summary>
         /// <returns>List of compaines which can be access by normal user</returns>
-        public HttpResponseMessage GetFewCompanies()
+        public IHttpActionResult GetFewCompanies()
         {
-            return Request.CreateResponse(HttpStatusCode.OK, companies.Where(c => c.P01F01 <= 2));
+            return Ok(BLCompany.GetFewCompanies());
         }
 
         [Route("GetMoreCompanies")]
@@ -46,9 +33,9 @@ namespace Authentication_Authorization.Controllers
         /// Handles get request of admin
         /// </summary>
         /// <returns>List of compaines which can be access by admin</returns>
-        public HttpResponseMessage GetMoreCompanies()
+        public IHttpActionResult GetMoreCompanies()
         {
-            return Request.CreateResponse(HttpStatusCode.OK, companies.Where(c => c.P01F01 <= 3));
+            return Ok(BLCompany.GetMoreCompanies());
         }
 
         [Route("GetAllCompanies")]
@@ -57,9 +44,9 @@ namespace Authentication_Authorization.Controllers
         /// Handles get request of super admin
         /// </summary>
         /// <returns>List of compaines which can be access by super admin</returns>
-        public HttpResponseMessage GetAllCompanies()
+        public IHttpActionResult GetAllCompanies()
         {
-            return Request.CreateResponse(HttpStatusCode.OK, CMP01.GetCompanies());
+            return Ok(BLCompany.lstCompanies);
         }
 
         //[Route("PostCompany")]

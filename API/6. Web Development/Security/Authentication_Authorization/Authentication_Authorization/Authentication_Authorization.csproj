@@ -87,6 +87,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="BasicAuth\BasicAuthenticationAttribute.cs" />
     <Compile Include="BasicAuth\BasicAuthorizationAttribute.cs" />
+    <Compile Include="BusinessLogic\BLCompany.cs" />
     <Compile Include="Controllers\CLCompanyController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
