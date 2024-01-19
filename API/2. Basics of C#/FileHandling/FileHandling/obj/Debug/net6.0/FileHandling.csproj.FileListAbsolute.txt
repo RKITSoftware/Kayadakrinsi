@@ -12,3 +12,18 @@ C:\Users\KRINSHI\OneDrive\Documents\RKIT\C#\FileHandling\FileHandling\obj\Debug\
 C:\Users\KRINSHI\OneDrive\Documents\RKIT\C#\FileHandling\FileHandling\obj\Debug\net6.0\FileHandling.pdb
 C:\Users\KRINSHI\OneDrive\Documents\RKIT\C#\FileHandling\FileHandling\obj\Debug\net6.0\FileHandling.genruntimeconfig.cache
 C:\Users\KRINSHI\OneDrive\Documents\RKIT\C#\FileHandling\FileHandling\obj\Debug\net6.0\ref\FileHandling.dll
+F:\Krinsi - 379\Training\API\2. Basics of C#\FileHandling\FileHandling\bin\Debug\net6.0\FileHandling.exe
+F:\Krinsi - 379\Training\API\2. Basics of C#\FileHandling\FileHandling\bin\Debug\net6.0\FileHandling.deps.json
+F:\Krinsi - 379\Training\API\2. Basics of C#\FileHandling\FileHandling\bin\Debug\net6.0\FileHandling.runtimeconfig.json
+F:\Krinsi - 379\Training\API\2. Basics of C#\FileHandling\FileHandling\bin\Debug\net6.0\FileHandling.dll
+F:\Krinsi - 379\Training\API\2. Basics of C#\FileHandling\FileHandling\bin\Debug\net6.0\FileHandling.pdb
+F:\Krinsi - 379\Training\API\2. Basics of C#\FileHandling\FileHandling\obj\Debug\net6.0\FileHandling.csproj.AssemblyReference.cache
+F:\Krinsi - 379\Training\API\2. Basics of C#\FileHandling\FileHandling\obj\Debug\net6.0\FileHandling.GeneratedMSBuildEditorConfig.editorconfig
+F:\Krinsi - 379\Training\API\2. Basics of C#\FileHandling\FileHandling\obj\Debug\net6.0\FileHandling.AssemblyInfoInputs.cache
+F:\Krinsi - 379\Training\API\2. Basics of C#\FileHandling\FileHandling\obj\Debug\net6.0\FileHandling.AssemblyInfo.cs
+F:\Krinsi - 379\Training\API\2. Basics of C#\FileHandling\FileHandling\obj\Debug\net6.0\FileHandling.csproj.CoreCompileInputs.cache
+F:\Krinsi - 379\Training\API\2. Basics of C#\FileHandling\FileHandling\obj\Debug\net6.0\FileHandling.dll
+F:\Krinsi - 379\Training\API\2. Basics of C#\FileHandling\FileHandling\obj\Debug\net6.0\refint\FileHandling.dll
+F:\Krinsi - 379\Training\API\2. Basics of C#\FileHandling\FileHandling\obj\Debug\net6.0\FileHandling.pdb
+F:\Krinsi - 379\Training\API\2. Basics of C#\FileHandling\FileHandling\obj\Debug\net6.0\FileHandling.genruntimeconfig.cache
+F:\Krinsi - 379\Training\API\2. Basics of C#\FileHandling\FileHandling\obj\Debug\net6.0\ref\FileHandling.dll
