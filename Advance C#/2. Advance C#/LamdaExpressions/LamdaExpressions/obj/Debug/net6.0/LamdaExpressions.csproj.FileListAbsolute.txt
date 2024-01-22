@@ -1,0 +1,15 @@
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\LamdaExpressions\LamdaExpressions\obj\Debug\net6.0\LamdaExpressions.csproj.AssemblyReference.cache
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\LamdaExpressions\LamdaExpressions\obj\Debug\net6.0\LamdaExpressions.GeneratedMSBuildEditorConfig.editorconfig
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\LamdaExpressions\LamdaExpressions\obj\Debug\net6.0\LamdaExpressions.AssemblyInfoInputs.cache
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\LamdaExpressions\LamdaExpressions\obj\Debug\net6.0\LamdaExpressions.AssemblyInfo.cs
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\LamdaExpressions\LamdaExpressions\obj\Debug\net6.0\LamdaExpressions.csproj.CoreCompileInputs.cache
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\LamdaExpressions\LamdaExpressions\bin\Debug\net6.0\LamdaExpressions.exe
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\LamdaExpressions\LamdaExpressions\bin\Debug\net6.0\LamdaExpressions.deps.json
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\LamdaExpressions\LamdaExpressions\bin\Debug\net6.0\LamdaExpressions.runtimeconfig.json
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\LamdaExpressions\LamdaExpressions\bin\Debug\net6.0\LamdaExpressions.dll
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\LamdaExpressions\LamdaExpressions\bin\Debug\net6.0\LamdaExpressions.pdb
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\LamdaExpressions\LamdaExpressions\obj\Debug\net6.0\LamdaExpressions.dll
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\LamdaExpressions\LamdaExpressions\obj\Debug\net6.0\refint\LamdaExpressions.dll
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\LamdaExpressions\LamdaExpressions\obj\Debug\net6.0\LamdaExpressions.pdb
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\LamdaExpressions\LamdaExpressions\obj\Debug\net6.0\LamdaExpressions.genruntimeconfig.cache
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\LamdaExpressions\LamdaExpressions\obj\Debug\net6.0\ref\LamdaExpressions.dll
