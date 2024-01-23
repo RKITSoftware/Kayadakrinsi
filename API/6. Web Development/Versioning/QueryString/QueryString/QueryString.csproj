@@ -85,6 +85,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="BusiessLogic\BLCompany.cs" />
     <Compile Include="Controllers\CLCompanyV1Controller.cs" />
     <Compile Include="Controllers\CLCompanyV2Controller.cs" />
     <Compile Include="Controllers\CLCustomSelectorController.cs" />

@@ -15,40 +15,18 @@ namespace TokenAuthorization.UserRepository
         /// <summary>
         /// List of users
         /// </summary>
-        public static List<USR01> users = GetUsers();
+        public static List<USR01> lstUSR01 = new List<USR01> 
+        {
+                new USR01 { R01F01 = 1,R01F02="krinsi",R01F03="kayada",R01F04="SuperAdmin" },
+                new USR01 { R01F01 = 2, R01F02 = "deep", R01F03 = "patel", R01F04 = "Admin" },
+                new USR01 { R01F01 = 3, R01F02 = "extra", R01F03 = "12345", R01F04 = "User" }
+        };
 
         #endregion
 
         #region Public Methods
-        /// <summary>
-        /// Creates object of user with id, user name, password, role
-        /// </summary>
-        /// <param name="id">Defines id of user</param>
-        /// <param name="userName">Defines user name of user</param>
-        /// <param name="password">Defines password of user</param>
-        /// <param name="role">Defines role of user</param>
-        public static USR01 NewUser(int id, string userName, string password, string role)
-        {
-            var objUSR01 = new USR01();
-            objUSR01.R01F01 = id;
-            objUSR01.R01F02 = userName;
-            objUSR01.R01F03 = password;
-            objUSR01.R01F04 = role;
-            return objUSR01;
-        }
 
-        /// <summary>
-        /// Creates list of users
-        /// </summary>
-        /// <returns>List of users</returns>
-        public static List<USR01> GetUsers()
-        {
-            var users = new List<USR01>();
-            users.Add(NewUser(1, "krinsi", "kayada", "SuperAdmin"));
-            users.Add(NewUser(2, "deep", "patel", "Admin"));
-            users.Add(NewUser(3, "extra", "12345", "User"));
-            return users;
-        }
+
         /// <summary>
         /// vdates user
         /// </summary>
@@ -56,7 +34,7 @@ namespace TokenAuthorization.UserRepository
         /// <param name="password">Defines password of user</param>
         /// <returns>Object of USR01</returns>
         public static USR01 ValidateUser(string username,string password) {
-            return users.FirstOrDefault(user => user.R01F02.Equals(username, StringComparison.OrdinalIgnoreCase) && user.R01F03 == password);
+            return lstUSR01.FirstOrDefault(user => user.R01F02.Equals(username, StringComparison.OrdinalIgnoreCase) && user.R01F03 == password);
         }
 
         /// <summary>
@@ -64,7 +42,7 @@ namespace TokenAuthorization.UserRepository
         /// </summary>
         public static void Dispose()
         {
-            users.Clear();
+            lstUSR01.Clear();
         }
 
         #endregion

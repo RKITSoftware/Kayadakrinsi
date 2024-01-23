@@ -1,7 +1,6 @@
-﻿using System.Collections.Generic;
-using System.Web.Http;
+﻿using System.Web.Http;
 using HospitalAPI.Auth;
-using HospitalAPI.Models;
+using HospitalAPI.BusinesLogic;
 
 
 namespace HospitalAPI.Controllers
@@ -17,45 +16,39 @@ namespace HospitalAPI.Controllers
     /// </summary>
     public class CLRecordV1Controller : ApiController
     {
-        #region Public Members
-
-        /// <summary>
-        /// List of records
-        /// </summary>
-        public List<RCD01> records = RCD01.GetRecords();
-
-        #endregion
-
         #region Public Methods
 
-        [BasicAuthorizationAttribute(Roles = "User")] // Custom filter attribute for authorization with role of user
         /// <summary>
         /// Handles get request of normal user
         /// </summary>
         /// <returns>List of compaines which can be access by normal user</returns>
+        [HttpGet]
+        [BasicAuthorizationAttribute(Roles = "User")] // Custom filter attribute for authorization with role of user
         public IHttpActionResult GetFewRecords()
         {
-            return Ok(records.FindAll(r => r.D01F01 <= 3));
+            return Ok(BLRecord.GetSomeRecords());
         }
 
-        [BasicAuthorizationAttribute(Roles = "SuperAdmin,Admin")]
         /// <summary>
         /// Handles get request of admin
         /// </summary>
         /// <returns>List of compaines which can be access by admin</returns>
+        [HttpGet]
+        [BasicAuthorizationAttribute(Roles = "SuperAdmin,Admin")]
         public IHttpActionResult GetMoreRecords()
         {
-                return Ok(records.FindAll(r => r.D01F01 <= 6));
+                return Ok(BLRecord.GetMoreRecords());
         }
 
-        [BasicAuthorizationAttribute(Roles = "SuperAdmin")]
         /// <summary>
         /// Handles get request of super admin
         /// </summary>
         /// <returns>List of compaines which can be access by super admin</returns>
+        [HttpGet]
+        [BasicAuthorizationAttribute(Roles = "SuperAdmin")]
         public IHttpActionResult GetAllRecords()
         {
-            return Ok(records);
+            return Ok(BLRecord.lstRCD01);
         }
 
         #endregion

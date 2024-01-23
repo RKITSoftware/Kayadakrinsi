@@ -6,6 +6,7 @@ using System.Net;
 using System.Web;
 using System.Web.Http;
 using URI.Models;
+using URI.BusinessLogic;
 
 namespace URI.Controllers
 {
@@ -14,14 +15,6 @@ namespace URI.Controllers
     /// </summary>
     public class CLCompanyV1Controller : ApiController
     {
-        #region Public Members
-
-        /// <summary>
-        /// List of companies of type CMP01
-        /// </summary>
-        public List<CMP01> companies = CMP01.GetCompanies();
-
-        #endregion
 
         #region Public Methods
 
@@ -31,7 +24,7 @@ namespace URI.Controllers
         /// <returns>List of companies of type CMP01</returns>
         public HttpResponseMessage Get()
         {
-            return Request.CreateResponse(HttpStatusCode.OK, companies);
+            return Request.CreateResponse(HttpStatusCode.OK, BLCompany.lstCMP01);
         }
 
         #endregion

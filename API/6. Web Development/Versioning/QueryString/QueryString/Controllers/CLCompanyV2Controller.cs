@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using QueryString.BusiessLogic;
 using QueryString.Models;
 
 namespace QueryString.Controllers
@@ -13,15 +14,6 @@ namespace QueryString.Controllers
     /// </summary>
     public class CLCompanyV2Controller : ApiController
     {
-        #region Public Members
-
-        /// <summary>
-        /// List of companies of type CMP02
-        /// </summary>
-        public List<CMP02> companies = CMP02.GetCompanies();
-
-        #endregion
-
         #region Public Methods
 
         /// <summary>
@@ -30,7 +22,7 @@ namespace QueryString.Controllers
         /// <returns>List of companies of type CMP02</returns>
         public HttpResponseMessage Get()
         {
-            return Request.CreateResponse(HttpStatusCode.OK, companies);
+            return Request.CreateResponse(HttpStatusCode.OK, BLCompany.lstCMP02);
         }
 
         #endregion

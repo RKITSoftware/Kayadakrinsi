@@ -141,9 +141,10 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Auth\AuthenticationAttribute.cs" />
     <Compile Include="Auth\AuthorizationAttribute.cs" />
-    <Compile Include="BLCacheFilter.cs" />
-    <Compile Include="BLStartup.cs" />
-    <Compile Include="BLValidateUser.cs" />
+    <Compile Include="BusinesLogic\BLCacheFilter.cs" />
+    <Compile Include="BusinesLogic\BLRecord.cs" />
+    <Compile Include="BusinesLogic\BLStartup.cs" />
+    <Compile Include="BusinesLogic\BLValidateUser.cs" />
     <Compile Include="Controllers\CLCustomSelectorController.cs" />
     <Compile Include="Controllers\CLRecordV1Controller.cs" />
     <Compile Include="Controllers\CLRecordV2Controller.cs" />

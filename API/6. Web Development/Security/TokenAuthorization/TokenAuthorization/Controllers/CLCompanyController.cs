@@ -13,7 +13,7 @@ namespace TokenAuthorization.Controllers
         #region Public Methods
 
         [Authorize(Roles = ("User"))] // Authorize user with user rights
-        [Route("api/Company/GetCompanyById")]
+        [Route("api/CLCompany/GetCompanyById/{id}")]
         /// <summary>
         /// Handles get request of normal user
         /// </summary>
@@ -25,7 +25,7 @@ namespace TokenAuthorization.Controllers
         }
 
         [Authorize(Roles = ("Admin,SuperAdmin"))]
-        [Route("api/Company/GetSomeCompany")]
+        [Route("api/CLCompany/GetSomeCompany")]
         /// <summary>
         /// Handles get request of admin, super admin
         /// </summary>
@@ -36,7 +36,7 @@ namespace TokenAuthorization.Controllers
         }
 
         [Authorize(Roles = ("SuperAdmin"))]
-        [Route("api/Company/GetAllCompany")]
+        [Route("api/CLCompany/GetAllCompany")]
         /// <summary>
         /// Handles get request of super admin
         /// </summary>

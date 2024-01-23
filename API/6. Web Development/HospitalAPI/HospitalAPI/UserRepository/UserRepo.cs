@@ -15,7 +15,12 @@ namespace HospitalAPI.UserRepository
         /// <summary>
         /// List of users
         /// </summary>
-        public static List<USR01> users = USR01.GetUsers();
+        public static List<USR01> lstUSR01 = new List<USR01>
+        {
+                new USR01 { R01F01 = 1,R01F02="krinsi",R01F03="kayada",R01F04="SuperAdmin" },
+                new USR01 { R01F01 = 2, R01F02 = "deep", R01F03 = "patel", R01F04 = "Admin" },
+                new USR01 { R01F01 = 3, R01F02 = "extra", R01F03 = "12345", R01F04 = "User" }
+        };
 
         #endregion
 
@@ -29,7 +34,7 @@ namespace HospitalAPI.UserRepository
         /// <returns>Object of USR01</returns>
         public static USR01 ValidateUser(string username, string password)
         {
-            return users.FirstOrDefault(user => user.R01F02.Equals(username, StringComparison.OrdinalIgnoreCase) && user.R01F03 == password);
+            return lstUSR01.FirstOrDefault(user => user.R01F02.Equals(username, StringComparison.OrdinalIgnoreCase) && user.R01F03 == password);
         }
 
         /// <summary>
@@ -37,7 +42,7 @@ namespace HospitalAPI.UserRepository
         /// </summary>
         public static void Dispose()
         {
-            users.Clear();
+            lstUSR01.Clear();
         }
 
         #endregion

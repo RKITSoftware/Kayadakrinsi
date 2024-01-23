@@ -15,35 +15,19 @@ namespace TokenAuthorization.BusinessLogic
         public static List<CMP01> lstCompanies = GetCompanies();
 
         /// <summary>
-        /// Creates object of CMP01 with id, name, city, type, number of employees
-        /// </summary>
-        /// <param name="id">Defines id of company</param>
-        /// <param name="name">Defines nane of company</param>
-        /// <param name="city">Defines city  of company</param>
-        /// <param name="type">Defines type  of company</param>
-        /// <param name="noEmp">Defines number of employees in company</param>
-        public static CMP01 NewCompany(int id, string name, string city, string type, int noEmp)
-        {
-            var objCMP01 = new CMP01();
-            objCMP01.P01F01 = id;
-            objCMP01.P01F02 = name;
-            objCMP01.P01F03 = city;
-            objCMP01.P01F04 = type;
-            objCMP01.P01F05 = noEmp;
-            return objCMP01;
-        }
-        /// <summary>
         /// Creates list of companies
         /// </summary>
         /// <returns>List of companies</returns>
         public static List<CMP01> GetCompanies()
         {
-            var list = new List<CMP01>();
-            list.Add(NewCompany(1, "TATA", "Jamshedpur", "Production", 1028000));
-            list.Add(NewCompany(2, "Microsoft", "Washington", "IT", 221000));
-            list.Add(NewCompany(3, "Google", "California", "IT", 156000));
-            list.Add(NewCompany(4, "RKIT", "Rajkot", "IT", 200));
-            list.Add(NewCompany(5, "Sugar Cosmetics", "Mumbai", "Production", 600));
+            var list = new List<CMP01>
+            {
+                new CMP01 { P01F01=1, P01F02 = "TATA", P01F03 = "Jamshedpur", P01F04 = "Production", P01F05 = 1028000 },
+                new CMP01 { P01F01=2, P01F02 = "Microsoft", P01F03 = "Washington", P01F04 = "IT", P01F05 = 221000 },
+                new CMP01 { P01F01=3, P01F02 = "Google", P01F03 = "California", P01F04 = "IT", P01F05 = 156000 },
+                new CMP01 { P01F01=4, P01F02 = "RKIT", P01F03 = "Rajkot", P01F04 = "IT", P01F05 = 200 },
+                new CMP01 { P01F01 = 5, P01F02 = "Sugar Cosmetics", P01F03 = "Mumbai", P01F04 = "Production", P01F05 = 600 }
+            };
             return list;
         }
 
