@@ -1,0 +1,15 @@
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\Cryptography\Cryptography\bin\Debug\net6.0\Cryptography.exe
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\Cryptography\Cryptography\bin\Debug\net6.0\Cryptography.deps.json
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\Cryptography\Cryptography\bin\Debug\net6.0\Cryptography.runtimeconfig.json
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\Cryptography\Cryptography\bin\Debug\net6.0\Cryptography.dll
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\Cryptography\Cryptography\bin\Debug\net6.0\Cryptography.pdb
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\Cryptography\Cryptography\obj\Debug\net6.0\Cryptography.csproj.AssemblyReference.cache
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\Cryptography\Cryptography\obj\Debug\net6.0\Cryptography.GeneratedMSBuildEditorConfig.editorconfig
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\Cryptography\Cryptography\obj\Debug\net6.0\Cryptography.AssemblyInfoInputs.cache
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\Cryptography\Cryptography\obj\Debug\net6.0\Cryptography.AssemblyInfo.cs
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\Cryptography\Cryptography\obj\Debug\net6.0\Cryptography.csproj.CoreCompileInputs.cache
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\Cryptography\Cryptography\obj\Debug\net6.0\Cryptography.dll
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\Cryptography\Cryptography\obj\Debug\net6.0\refint\Cryptography.dll
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\Cryptography\Cryptography\obj\Debug\net6.0\Cryptography.pdb
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\Cryptography\Cryptography\obj\Debug\net6.0\Cryptography.genruntimeconfig.cache
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\Cryptography\Cryptography\obj\Debug\net6.0\ref\Cryptography.dll
