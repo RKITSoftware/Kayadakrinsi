@@ -1,0 +1,15 @@
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\BaseLibrary\BaseLibrary\obj\Debug\net6.0\BaseLibrary.csproj.AssemblyReference.cache
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\BaseLibrary\BaseLibrary\obj\Debug\net6.0\BaseLibrary.GeneratedMSBuildEditorConfig.editorconfig
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\BaseLibrary\BaseLibrary\obj\Debug\net6.0\BaseLibrary.AssemblyInfoInputs.cache
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\BaseLibrary\BaseLibrary\obj\Debug\net6.0\BaseLibrary.AssemblyInfo.cs
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\BaseLibrary\BaseLibrary\obj\Debug\net6.0\BaseLibrary.csproj.CoreCompileInputs.cache
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\BaseLibrary\BaseLibrary\bin\Debug\net6.0\BaseLibrary.exe
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\BaseLibrary\BaseLibrary\bin\Debug\net6.0\BaseLibrary.deps.json
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\BaseLibrary\BaseLibrary\bin\Debug\net6.0\BaseLibrary.runtimeconfig.json
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\BaseLibrary\BaseLibrary\bin\Debug\net6.0\BaseLibrary.dll
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\BaseLibrary\BaseLibrary\bin\Debug\net6.0\BaseLibrary.pdb
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\BaseLibrary\BaseLibrary\obj\Debug\net6.0\BaseLibrary.dll
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\BaseLibrary\BaseLibrary\obj\Debug\net6.0\refint\BaseLibrary.dll
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\BaseLibrary\BaseLibrary\obj\Debug\net6.0\BaseLibrary.pdb
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\BaseLibrary\BaseLibrary\obj\Debug\net6.0\BaseLibrary.genruntimeconfig.cache
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\BaseLibrary\BaseLibrary\obj\Debug\net6.0\ref\BaseLibrary.dll

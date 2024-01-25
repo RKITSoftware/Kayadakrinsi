@@ -1,0 +1,5 @@
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\BaseClient\BaseLibrary\obj\Debug\net6.0\BaseLibrary.csproj.AssemblyReference.cache
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\BaseClient\BaseLibrary\obj\Debug\net6.0\BaseLibrary.GeneratedMSBuildEditorConfig.editorconfig
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\BaseClient\BaseLibrary\obj\Debug\net6.0\BaseLibrary.AssemblyInfoInputs.cache
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\BaseClient\BaseLibrary\obj\Debug\net6.0\BaseLibrary.AssemblyInfo.cs
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\BaseClient\BaseLibrary\obj\Debug\net6.0\BaseLibrary.csproj.CoreCompileInputs.cache

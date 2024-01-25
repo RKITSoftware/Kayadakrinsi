@@ -23,8 +23,26 @@
             Console.WriteLine($"Name : {flower.Name}, Color : {flower.Color}");
         }
     }
+    public static void QuerySort()
+    {
+        var data = from flower in lstFlower
+                   orderby flower.Name.Length,flower.Color descending
+                   select flower;
+        foreach (var flower in data)
+        {
+            Console.WriteLine($"Name : {flower.Name}, Color : {flower.Color}");
+        }
+    }
     private static void Main(string[] args)
     {
         QueryColorFlower("Yellow");
+        QuerySort();
+        
+        Console.WriteLine($"Element at 1 : {lstFlower.ElementAt(1).Name}");
+        Console.WriteLine($"First element : {lstFlower.First().Name}");
+        Console.WriteLine($"Last element : {lstFlower.Last().Name}");
+        Console.WriteLine($"Total number of elements : {lstFlower.LongCount()}");
+
+
     }
 }
