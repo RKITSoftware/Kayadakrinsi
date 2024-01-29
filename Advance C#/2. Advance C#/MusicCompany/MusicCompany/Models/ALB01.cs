@@ -33,6 +33,6 @@ namespace MusicCompany.Models
         /// Artist id
         /// </summary>
         [References(typeof(ART01))]
-        public List<int> B01F05 { get; set;}
+        public int B01F05 { get; set;}
     }
 }

@@ -5,11 +5,34 @@ using System.Text;
 
 namespace MusicCompany.BusinessLogic
 {
+    /// <summary>
+    /// Handles logic for encrypting and decrypting password
+    /// </summary>
     public class BLSecurity
     {
+        #region Public Members
+
+        /// <summary>
+        /// Static key
+        /// </summary>
         public static readonly string key = "0123456789ABCDEF0123456789ABCDEF";
+
+        /// <summary>
+        /// Static initialization vector
+        /// </summary>
         public static readonly string iv = "0123456789ABCDEF";
 
+        #endregion
+
+        #region Public Methods 
+
+        /// <summary>
+        /// Encrypts string using AES
+        /// </summary>
+        /// <param name="plaintext">Text to be encrypted</param>
+        /// <param name="key">Key to be used</param>
+        /// <param name="iv">IV to be used</param>
+        /// <returns>Encrypted string</returns>
         public static string EncryptAes(string plaintext, string key, string iv)
         {
             using (AesManaged aesAlg = new AesManaged())
@@ -35,6 +58,13 @@ namespace MusicCompany.BusinessLogic
             }
         }
 
+        /// <summary>
+        /// Decrypts string using AES
+        /// </summary>
+        /// <param name="encryptedString">Encrypted text</param>
+        /// <param name="key">Key to be used</param>
+        /// <param name="iv">IV to be used</param>
+        /// <returns></returns>
         public static string DecryptAes(string encryptedString, string key, string iv)
         {
             using (AesManaged aesAlg = new AesManaged())
@@ -57,5 +87,7 @@ namespace MusicCompany.BusinessLogic
                 }
             }
         }
+
+        #endregion
     }
 }

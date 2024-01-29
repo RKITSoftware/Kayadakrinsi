@@ -10,6 +10,9 @@ using ServiceStack.OrmLite;
 
 namespace MusicCompany.BusinessLogic
 {
+    /// <summary>
+    /// Handles logic for user controller
+    /// </summary>
     public class BLUser
     {
         #region Private Members
@@ -24,6 +27,9 @@ namespace MusicCompany.BusinessLogic
         /// </summary>
         private static readonly MySqlConnection _connection;
 
+        /// <summary>
+        /// Declares Db factory instance
+        /// </summary>
         private readonly static IDbConnectionFactory _dbFactory;
     
         #endregion
@@ -83,13 +89,12 @@ namespace MusicCompany.BusinessLogic
         #endregion
 
         #region Public Methods
-
         /// <summary>
         /// Creates table statement
         /// </summary>
+        /// <returns>Appropriate message</returns>
         public static string CreateTable()
         {
-
             using (var db = _dbFactory.OpenDbConnection())
             {
 
@@ -102,6 +107,10 @@ namespace MusicCompany.BusinessLogic
             }
         }
 
+        /// <summary>
+        /// Checks weather table exist or not in MySqlConnection
+        /// </summary>
+        /// <returns>True if table exists else false</returns>
         public static bool TableExists()
         {
             try
@@ -132,6 +141,7 @@ namespace MusicCompany.BusinessLogic
         /// Insert statement
         /// </summary>
         /// <param name="objUSR01">object of class USR01</param>
+        /// <returns>Appropriate message</returns>
         public static string Insert(USR01 objUSR01)
         {
             objUSR01.R01F03 = BLSecurity.EncryptAes(objUSR01.R01F03, BLSecurity.key, BLSecurity.iv);
@@ -150,6 +160,8 @@ namespace MusicCompany.BusinessLogic
         /// <summary>
         /// Update statement
         /// </summary>
+        /// <param name="objUSR01">object of class USR01</param>
+        /// <returns>Appropriate message</returns>
         public static string Update(USR01 objUSR01)
         {
             using (var db = _dbFactory.OpenDbConnection())
@@ -171,6 +183,8 @@ namespace MusicCompany.BusinessLogic
         /// <summary>
         /// Delete statement
         /// </summary>
+        /// <param name="id">User id to be delete</param>
+        /// <returns>Appropriate message</returns>
         public static string Delete(int id)
         {
             if (!TableExists())
@@ -192,6 +206,7 @@ namespace MusicCompany.BusinessLogic
         /// <summary>
         /// Select statement
         /// </summary>
+        /// <returns>List of users</returns>
         public static List<USR01> Select()
         {
             if (!TableExists())
@@ -200,7 +215,7 @@ namespace MusicCompany.BusinessLogic
             }
             string query = "SELECT * FROM USR01";
 
-            List<USR01> lstOrders = new List<USR01>();
+            List<USR01> lstusr01 = new List<USR01>();
             //Open connection
             if (OpenConnection() == true)
             {
@@ -218,7 +233,7 @@ namespace MusicCompany.BusinessLogic
                     var password = BLSecurity.DecryptAes((string)dataReader[2], BLSecurity.key, BLSecurity.iv);
                     objUSR01.R01F03 = password;
                     objUSR01.R01F04 = (string)dataReader[3];
-                    lstOrders.Add(objUSR01);
+                    lstusr01.Add(objUSR01);
                 }
 
                 //close Data Reader
@@ -227,11 +242,69 @@ namespace MusicCompany.BusinessLogic
                 //close Connection
                 CloseConnection();
             }
-            return lstOrders;
+            return lstusr01;
         }
 
+        /// <summary>
+        /// Selects record of album with producer and artist details
+        /// </summary>
+        /// <returns>List of album details</returns>
+        public static dynamic SelectAllDetails()
+        {
+            string query = "SELECT " +
+                "B01F01 AS ALBUM_ID," +
+                "B01F02 AS ALBUM_NAME," +
+                "B01F03 AS TOTAL_SONGS," +
+                "O01F02 AS PRODUCER_NAME," +
+                "O01F03 AS PRODUCING_COMPANY," +
+                "T01F02 AS ARTIST " +
+                "FROM ALB01 " +
+                "JOIN " +
+                "PRO01 " +
+                "ON " +
+                "ALB01.B01F04 = PRO01.O01F01 " +
+                "JOIN " +
+                "ART01 " +
+                "ON " +
+                "ALB01.B01F05=ART01.T01F01";
+
+            //List<object>[] lstDetails = new List<object>[6];
+            List<object> lstDetail = new List<object>();
+
+            if (!TableExists())
+            {
+                return "Table not exist!";
+            }
+            //Open connection
+            if (OpenConnection() == true)
+            {
+                //Create Command
+                MySqlCommand command = new MySqlCommand(query, _connection);
+                //Create a data reader and Execute the command
+                MySqlDataReader dataReader = command.ExecuteReader();
+
+
+               while(dataReader.Read())
+                {
+                    lstDetail.Add(new
+                    {
+                       Album_Id = dataReader[0],
+                       Album_name = dataReader[1],
+                       TotalNoOfSongs = dataReader[2],
+                       Producer_Name = dataReader[3],
+                       Producing_Company = dataReader[4],
+                       Artist_Name = dataReader[5]
+                    });
+                }
+
+                dataReader.Close();
+
+                //close Connection
+                CloseConnection();
+            }
+            return lstDetail;
+        }
 
         #endregion
-
     }
-}
+} 

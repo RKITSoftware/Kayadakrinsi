@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Linq;
 using MusicCompany.Models;
-using ServiceStack;
-using ServiceStack.Data;
-using ServiceStack.OrmLite;
 
 namespace MusicCompany.BusinessLogic
 {
@@ -13,6 +7,7 @@ namespace MusicCompany.BusinessLogic
     /// For validating user
     /// </summary>
     public class BLValidateUser { 
+
         #region Public Methods
 
         /// <summary>
@@ -43,5 +38,6 @@ namespace MusicCompany.BusinessLogic
         }
 
         #endregion
+
     }
 }

@@ -9,16 +9,45 @@ using ServiceStack.OrmLite;
 
 namespace MusicCompany.BusinessLogic
 {
+    /// <summary>
+    /// Handles logic for album controller
+    /// </summary>
     public class BLAlbum
     {
-        public static string path = HttpContext.Current.Server.MapPath("~/App_Data") + "\\" + DateTime.Now.ToShortDateString() + "Album.txt";
+        #region Private Members
 
+        /// <summary>
+        /// Path of file in which album data will be written
+        /// </summary>
+        private readonly static string path = HttpContext.Current.Server.MapPath("~/App_Data") + 
+                                              "\\" + DateTime.Now.ToShortDateString() + "Album.txt";
+
+        /// <summary>
+        /// Declares Db factory instance
+        /// </summary>
         private readonly static IDbConnectionFactory _dbFactory;
 
+        #endregion
+
+        #region Constructors
+
+        /// <summary>
+        /// Intializes db factory instance
+        /// </summary>
         static BLAlbum()
         {
             _dbFactory = HttpContext.Current.Application["dbFactory"] as IDbConnectionFactory;
         }
+
+        #endregion
+
+        #region Public Methods
+
+        /// <summary>
+        /// Insert album
+        /// </summary>
+        /// <param name="objALB01">object of ALB01 class</param>
+        /// <returns>Appropriate Message</returns>
         public static string Insert(ALB01 objALB01)
         {
             using (var db = _dbFactory.OpenDbConnection())
@@ -32,6 +61,11 @@ namespace MusicCompany.BusinessLogic
             }
         }
 
+        /// <summary>
+        /// Update album
+        /// </summary>
+        /// <param name="objALB01">object of ALB01 class</param>
+        /// <returns>Appropriate Message</returns>
         public static string Update(ALB01 objALB01)
         {
             using (var db = _dbFactory.OpenDbConnection())
@@ -46,6 +80,11 @@ namespace MusicCompany.BusinessLogic
             }
         }
 
+        /// <summary>
+        /// Delete album
+        /// </summary>
+        /// <param name="id">album id to be delete</param>
+        /// <returns>Appropriate Message</returns>
         public static string Delete(int id)
         {
             using (var db = _dbFactory.OpenDbConnection())
@@ -60,6 +99,10 @@ namespace MusicCompany.BusinessLogic
             }
         }
 
+        /// <summary>
+        /// Select data from ALB01
+        /// </summary>
+        /// <returns>Serialized string or appropriate message</returns>
         public static string Select()
         {
             using (var db = _dbFactory.OpenDbConnection())
@@ -73,6 +116,10 @@ namespace MusicCompany.BusinessLogic
             }
         }
 
+        /// <summary>
+        /// Selects data from database and Writes data into file
+        /// </summary>
+        /// <returns>Appropriate Message</returns>
         public static string WriteData()
         {
             using (StreamWriter sw = new StreamWriter(path))
@@ -82,6 +129,10 @@ namespace MusicCompany.BusinessLogic
             return "File created successfully 🙌";
         }
 
+        /// <summary>
+        /// Download file
+        /// </summary>
+        /// <returns>HttpResponseMessage with file</returns>
         public static HttpResponseMessage Download()
         {
             // Check if the file exists
@@ -110,5 +161,7 @@ namespace MusicCompany.BusinessLogic
 
             return response;
         }
+
+        #endregion
     }
 }

@@ -9,16 +9,44 @@ using ServiceStack.OrmLite;
 
 namespace MusicCompany.BusinessLogic
 {
+    /// <summary>
+    /// Handles logic for artist controller
+    /// </summary>
     public class BLArtist
     {
+        #region Private Members
+
+        /// <summary>
+        /// Path of file in which album data will be written
+        /// </summary>
         public static string path = HttpContext.Current.Server.MapPath("~/App_Data") + "\\" + DateTime.Now.ToShortDateString() + "Artist.txt";
 
-        private readonly static IDbConnectionFactory _dbFactory ;
+        /// <summary>
+        /// Declares Db factory instance
+        /// </summary>
+        private readonly static IDbConnectionFactory _dbFactory;
 
+        #endregion
+
+        #region Constructors
+
+        /// <summary>
+        /// Intializes db factory instance
+        /// </summary>
         static BLArtist()
         {
             _dbFactory = HttpContext.Current.Application["dbFactory"] as IDbConnectionFactory;
         }
+
+        #endregion
+
+        #region Public Methods
+
+        /// <summary>
+        /// Inserts artist
+        /// </summary>
+        /// <param name="objART01">object of class ART01</param>
+        /// <returns>Appropriate Message</returns>
         public static string Insert(ART01 objART01)
         {
             using (var db = _dbFactory.OpenDbConnection())
@@ -32,6 +60,11 @@ namespace MusicCompany.BusinessLogic
             }
         }
 
+        /// <summary>
+        /// Updates artist
+        /// </summary>
+        /// <param name="objART01">object of class ART01</param>
+        /// <returns>Appropriate Message</returns>
         public static string Update(ART01 objART01)
         {
             using(var db = _dbFactory.OpenDbConnection())
@@ -46,6 +79,11 @@ namespace MusicCompany.BusinessLogic
             }
         }
 
+        /// <summary>
+        /// Delete artist
+        /// </summary>
+        /// <param name="id">id orf artist to be deleted</param>
+        /// <returns>Appropriate Message</returns>
         public static string Delete(int id)
         {
             using(var db=_dbFactory.OpenDbConnection())
@@ -60,6 +98,10 @@ namespace MusicCompany.BusinessLogic
             }
         }
 
+        /// <summary>
+        /// Selects data of artist
+        /// </summary>
+        /// <returns>Serialized string or appropriate message</returns>
         public static string Select()
         {
             using(var db = _dbFactory.OpenDbConnection())
@@ -73,6 +115,10 @@ namespace MusicCompany.BusinessLogic
             }
         }
 
+        /// <summary>
+        /// Selects data from database and Writes data into file
+        /// </summary>
+        /// <returns>Appropriate Message</returns>
         public static string WriteData()
         {
             using (StreamWriter sw = new StreamWriter(path))
@@ -82,6 +128,10 @@ namespace MusicCompany.BusinessLogic
             return "File created successfully 🙌";
         }
 
+        /// <summary>
+        /// Download file
+        /// </summary>
+        /// <returns>HttpResponseMessage with file</returns>
         public static HttpResponseMessage Download()
         {
             // Check if the file exists
@@ -110,5 +160,7 @@ namespace MusicCompany.BusinessLogic
 
             return response;
         }
+
+        #endregion
     }
 }
