@@ -2,6 +2,17 @@
 {
     public int Id { get; set; }
     public string Name { get; set; }
+
+    public static void Print(dynamic obj)
+    {
+        dynamic objDynamic = obj;
+        Console.WriteLine("{0}",objDynamic.GetType().ToString());
+    }
+
+    public static dynamic Show(dynamic obj)
+    {
+        return obj;
+    }
     public static void Main(string[] args)
     {
         dynamic objDynamic;
@@ -16,5 +27,7 @@
         objDynamic.Id = 1;
         objDynamic.Name = "test";
         Console.WriteLine($"Id : {objDynamic.Id}, Name : {objDynamic.Name}");
+        var returned = Show(objDynamic);
+        Print(returned);
     }
 }
