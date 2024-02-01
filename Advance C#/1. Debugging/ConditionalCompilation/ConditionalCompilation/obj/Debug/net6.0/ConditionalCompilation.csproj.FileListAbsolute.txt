@@ -1,0 +1,15 @@
+F:\Krinsi - 379\Training\Advance C#\1. Debugging\ConditionalCompilation\ConditionalCompilation\bin\Debug\net6.0\ConditionalCompilation.exe
+F:\Krinsi - 379\Training\Advance C#\1. Debugging\ConditionalCompilation\ConditionalCompilation\bin\Debug\net6.0\ConditionalCompilation.deps.json
+F:\Krinsi - 379\Training\Advance C#\1. Debugging\ConditionalCompilation\ConditionalCompilation\bin\Debug\net6.0\ConditionalCompilation.runtimeconfig.json
+F:\Krinsi - 379\Training\Advance C#\1. Debugging\ConditionalCompilation\ConditionalCompilation\bin\Debug\net6.0\ConditionalCompilation.dll
+F:\Krinsi - 379\Training\Advance C#\1. Debugging\ConditionalCompilation\ConditionalCompilation\bin\Debug\net6.0\ConditionalCompilation.pdb
+F:\Krinsi - 379\Training\Advance C#\1. Debugging\ConditionalCompilation\ConditionalCompilation\obj\Debug\net6.0\ConditionalCompilation.csproj.AssemblyReference.cache
+F:\Krinsi - 379\Training\Advance C#\1. Debugging\ConditionalCompilation\ConditionalCompilation\obj\Debug\net6.0\ConditionalCompilation.GeneratedMSBuildEditorConfig.editorconfig
+F:\Krinsi - 379\Training\Advance C#\1. Debugging\ConditionalCompilation\ConditionalCompilation\obj\Debug\net6.0\ConditionalCompilation.AssemblyInfoInputs.cache
+F:\Krinsi - 379\Training\Advance C#\1. Debugging\ConditionalCompilation\ConditionalCompilation\obj\Debug\net6.0\ConditionalCompilation.AssemblyInfo.cs
+F:\Krinsi - 379\Training\Advance C#\1. Debugging\ConditionalCompilation\ConditionalCompilation\obj\Debug\net6.0\ConditionalCompilation.csproj.CoreCompileInputs.cache
+F:\Krinsi - 379\Training\Advance C#\1. Debugging\ConditionalCompilation\ConditionalCompilation\obj\Debug\net6.0\ConditionalCompilation.dll
+F:\Krinsi - 379\Training\Advance C#\1. Debugging\ConditionalCompilation\ConditionalCompilation\obj\Debug\net6.0\refint\ConditionalCompilation.dll
+F:\Krinsi - 379\Training\Advance C#\1. Debugging\ConditionalCompilation\ConditionalCompilation\obj\Debug\net6.0\ConditionalCompilation.pdb
+F:\Krinsi - 379\Training\Advance C#\1. Debugging\ConditionalCompilation\ConditionalCompilation\obj\Debug\net6.0\ConditionalCompilation.genruntimeconfig.cache
+F:\Krinsi - 379\Training\Advance C#\1. Debugging\ConditionalCompilation\ConditionalCompilation\obj\Debug\net6.0\ref\ConditionalCompilation.dll

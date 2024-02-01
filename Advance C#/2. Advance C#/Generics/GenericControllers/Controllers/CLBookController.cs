@@ -1,5 +1,4 @@
-﻿using System.Web.Http;
-using GenericControllers.Interface;
+﻿using GenericControllers.Interface;
 using GenericControllers.Models;
 
 namespace GenericControllers.Controllers

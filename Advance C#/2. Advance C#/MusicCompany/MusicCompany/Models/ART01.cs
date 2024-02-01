@@ -9,6 +9,7 @@ namespace MusicCompany.Models
         /// ID of artist
         /// </summary>
         [PrimaryKey]
+        [AutoIncrement]
         public int T01F01 { get; set; }
 
         /// <summary>

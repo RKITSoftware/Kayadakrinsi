@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using System.Net.Http;
@@ -101,17 +102,16 @@ namespace MusicCompany.BusinessLogic
         /// <summary>
         /// Selects data of artist
         /// </summary>
-        /// <returns>Serialized string or appropriate message</returns>
-        public static string Select()
+        /// <returns>List of artist</returns>
+        public static List<ART01> Select()
         {
-            using(var db = _dbFactory.OpenDbConnection())
+            using (var db = _dbFactory.OpenDbConnection())
             {
                 if (!db.TableExists<ART01>())
                 {
                     db.CreateTable<ART01>();
-                    return "No records are founded!";
                 }
-                return BLSerialize.Serialize(db.Select<ART01>());
+                return db.Select<ART01>();
             }
         }
 
@@ -123,7 +123,16 @@ namespace MusicCompany.BusinessLogic
         {
             using (StreamWriter sw = new StreamWriter(path))
             {
-                sw.WriteLine(Select());
+                var lstART01 = Select();
+                sw.WriteLine("Artist id, Artist name, User id");
+                foreach(var obj in lstART01)
+                {
+                    sw.Write(obj.T01F01+", ");
+                    sw.Write(obj.T01F02+", ");
+                    sw.Write(obj.T01F03);
+                    sw.WriteLine();
+                }
+                
             }
             return "File created successfully 🙌";
         }

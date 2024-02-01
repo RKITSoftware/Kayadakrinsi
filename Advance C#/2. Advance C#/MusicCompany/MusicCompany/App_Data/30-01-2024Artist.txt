@@ -1,0 +1,3 @@
+Artist id, Artist name, User id
+1, Arijit singh, 2
+2, Atif aslam, 3

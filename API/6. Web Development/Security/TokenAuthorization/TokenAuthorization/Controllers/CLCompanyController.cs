@@ -12,35 +12,35 @@ namespace TokenAuthorization.Controllers
     {
         #region Public Methods
 
-        [Authorize(Roles = ("User"))] // Authorize user with user rights
-        [Route("api/CLCompany/GetCompanyById/{id}")]
         /// <summary>
         /// Handles get request of normal user
         /// </summary>
         /// <param name="id">Defines id of company user want to access</param>
         /// <returns>Company with given id</returns>
+        [Route("api/CLCompany/GetCompanyById/{id}")]
+        [Authorize(Roles = ("User"))] // Authorize user with user rights
         public HttpResponseMessage GetCompanyById(int id)
         {
             return Request.CreateResponse(HttpStatusCode.OK, BLCompany.GetCompanyById(id));
         }
 
-        [Authorize(Roles = ("Admin,SuperAdmin"))]
-        [Route("api/CLCompany/GetSomeCompany")]
         /// <summary>
         /// Handles get request of admin, super admin
         /// </summary>
         /// <returns>List of companies with id less than five</returns>
+        [Route("api/CLCompany/GetSomeCompany")]
+        [Authorize(Roles = ("Admin,SuperAdmin"))]
         public HttpResponseMessage GetSomeCompany()
         {
             return Request.CreateResponse(HttpStatusCode.OK, BLCompany.GetSomeCompanies());
         }
 
-        [Authorize(Roles = ("SuperAdmin"))]
-        [Route("api/CLCompany/GetAllCompany")]
         /// <summary>
         /// Handles get request of super admin
         /// </summary>
         /// <returns>List of all companies using HttpResponseMessage</returns>
+        [Route("api/CLCompany/GetAllCompany")]
+        [Authorize(Roles = ("SuperAdmin"))]
         public HttpResponseMessage GetAllCompany()
         {
             return Request.CreateResponse(HttpStatusCode.OK, BLCompany.lstCompanies);
