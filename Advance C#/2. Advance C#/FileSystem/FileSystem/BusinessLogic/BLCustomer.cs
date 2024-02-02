@@ -4,46 +4,54 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
-using System.Threading.Tasks;
 using System.Web;
-using System.Web.Hosting;
 using System.Web.Http;
 using FileSystem.Models;
 
 namespace FileSystem.BusinessLogic
 {
+    /// <summary>
+    /// Handle logic for customer controller
+    /// </summary>
     public class BLCustomer : ApiController
     {
-        public static List<CUS01> lstCustomers = new List<CUS01>();
+        /// <summary>
+        /// List of customers
+        /// </summary>
+        public static List<CUS01> lstCustomers = new List<CUS01>
+        {
+            new CUS01{S01F01=0,S01F02="Wipro",S01F03=12345,S01F04=200},
+            new CUS01{S01F01=1,S01F02="Cognizant",S01F03=234,S01F04=500},
+            new CUS01{S01F01=2,S01F02="Burbberry",S01F03=234,S01F04=455}
+        };
 
+        /// <summary>
+        /// Current directory
+        /// </summary>
         public static string currentDirectory = Directory.GetCurrentDirectory();
+
+        /// <summary>
+        /// Dynamic path to data folder
+        /// </summary>
         public static string path = HttpContext.Current.Server.MapPath("~/Data") +"\\"+ DateTime.Now.ToShortDateString() + ".txt";
-      
-        public static CUS01 NewCustomer(int id,string name,double debit,double credit)
-        {
-            var objCUS01 = new CUS01();
-            objCUS01.S01F01 = id;
-            objCUS01.S01F02 = name;
-            objCUS01.S01F03 = debit;
-            objCUS01.S01F04 = credit;
-            return objCUS01;
-        }
 
-        public static List<CUS01> GetCustomers()
-        {
-            lstCustomers.Add(NewCustomer(0, "Wipro", 12345, 200));
-            lstCustomers.Add(NewCustomer(1, "Cognizant", 234, 500));
-            lstCustomers.Add(NewCustomer(2, "Burbberry", 2345, 455));
-            return lstCustomers;
-        }
-
-        public static CUS01 GetCustomerById(int id)
+        /// <summary>
+        /// Returns customer with particular id
+        /// </summary>
+        /// <param name="id">id of customer</param>
+        /// <returns>object of class CUS01</returns>
+        public CUS01 GetCustomerById(int id)
         {
             var objCUS01 = lstCustomers.FirstOrDefault(c => c.S01F01 == id);
             return objCUS01;
         }
 
-        public static List<CUS01> AddCustomer(CUS01 objCUS01)
+        /// <summary>
+        /// Adds new customer to list
+        /// </summary>
+        /// <param name="objCUS01">object of class CUS01 will be added</param>
+        /// <returns>List of customers</returns>
+        public List<CUS01> AddCustomer(CUS01 objCUS01)
         {
             var objCUS01Temp = lstCustomers.FirstOrDefault(c => c.S01F01 == objCUS01.S01F01);
             if(objCUS01Temp == null)
@@ -53,7 +61,12 @@ namespace FileSystem.BusinessLogic
             return lstCustomers;
         }
 
-        public static List<CUS01> UpdateCustomer(CUS01 objCUS01)
+        /// <summary>
+        /// Edits customer 
+        /// </summary>
+        /// <param name="objCUS01">object of class CUS01 will be edited</param>
+        /// <returns>List of customers</returns>
+        public List<CUS01> UpdateCustomer(CUS01 objCUS01)
         {
             var objCUS01Temp = lstCustomers.FirstOrDefault(c => c.S01F01 == objCUS01.S01F01);
             if (objCUS01Temp != null)
@@ -63,13 +76,22 @@ namespace FileSystem.BusinessLogic
             return lstCustomers;
         }
 
-        public static List<CUS01> DeleteCustomer(int id)
+        /// <summary>
+        /// Deletes customer
+        /// </summary>
+        /// <param name="id">id of customer</param>
+        /// <returns>List of customers</returns>
+        public List<CUS01> DeleteCustomer(int id)
         {
             lstCustomers.RemoveAt(id); 
             return lstCustomers;
         }
 
-        public static string WriteData()
+        /// <summary>
+        /// Writes customer's details to a file
+        /// </summary>
+        /// <returns>Appropriate message</returns>
+        public string WriteData()
         {
             using (StreamWriter sw = new StreamWriter(path))
             {
@@ -82,7 +104,11 @@ namespace FileSystem.BusinessLogic
             return "File created successfully 🙌";
         }
 
-        public static HttpResponseMessage Download()
+        /// <summary>
+        /// Downloads file with customer details
+        /// </summary>
+        /// <returns>File</returns>
+        public HttpResponseMessage Download()
         {
             // Check if the file exists
             if (!File.Exists(path))
@@ -110,7 +136,7 @@ namespace FileSystem.BusinessLogic
 
             return response;
         }
-
+        
     }
     
 }

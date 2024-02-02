@@ -3,44 +3,17 @@ using GenericControllers.Models;
 
 namespace GenericControllers.Controllers
 {
+    /// <summary>
+    /// Inherits generic controller with type BOK01
+    /// </summary>
     public class CLBookController : CLGenericController<BOK01>
     {
+        /// <summary>
+        /// Defines service interface type to BOK01
+        /// </summary>
+        /// <param name="service">object of interface service</param>
         public CLBookController(IServices<BOK01> service) : base(service)
         {
         }
-
-        //[HttpGet]
-        //[Route("api/CLBook/GetBooks")]
-        //public IHttpActionResult GetBooks()
-        //{
-        //    return Ok(base.GetAllData());
-        //}
-
-        //[Route("api/CLBook/GetBookById")]
-        //public IHttpActionResult GetBookByID(int id)
-        //{
-        //    return Ok(base.GetById(id));
-        //}
-
-        //[HttpPost]
-        //[Route("api/CLBook/AddBook")]
-        //public IHttpActionResult AddBook(BOK01 book)
-        //{
-        //    return Ok(base.AddData(book));
-        //}
-
-        //[HttpPut]
-        //[Route("api/CLBook/UpdateBook")]
-        //public IHttpActionResult UpdateBook(BOK01 book) 
-        //{ 
-        //    return Ok(base.UpdateData(book));
-        //}
-
-        //[HttpDelete]
-        //[Route("api/CLBook/DeleteBook")]
-        //public IHttpActionResult DeleteBook(int id)
-        //{
-        //    return Ok(base.DeleteById(id));
-        //}
     }
 }

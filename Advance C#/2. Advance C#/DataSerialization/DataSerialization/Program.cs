@@ -1,21 +1,43 @@
 ﻿using System.Runtime.Serialization.Formatters.Binary;
 using System.Runtime.Serialization.Json;
 using System.Text;
-using System.Text.Encodings.Web;
 using Newtonsoft.Json;
 
+/// <summary>
+/// Class of flower
+/// </summary>
 [Serializable]
 public class Flower
 {
+    /// <summary>
+    /// Id of flower
+    /// </summary>
     public int Id { get; set; }
+
+    /// <summary>
+    /// Name of flower
+    /// </summary>
     public string Name { get; set; }
+
+    /// <summary>
+    /// Color of flower
+    /// </summary>
     public string Color { get; set; }
+
+    /// <summary>
+    /// Constructor of flower class
+    /// </summary>
+    /// <param name="id">id of flower</param>
+    /// <param name="name">name of flower</param>
+    /// <param name="color">color of flower</param>
     public Flower(int id, string name, string color)
     {
         Id = id;
         Name = name;
         Color = color;
     }
+
+
     public static void Main(string[] args)
     {
         // Binary serialization
@@ -23,6 +45,8 @@ public class Flower
         MemoryStream memStream = new MemoryStream();
         BinaryFormatter formatter = new BinaryFormatter();
         formatter.Serialize(memStream, objFlower);
+
+        // Prints binary array of serialized 
         //byte[] arr = memStream.ToArray();
         //foreach (byte b in arr)
         //{
@@ -57,6 +81,7 @@ public class Flower
         string jsonData = JsonConvert.SerializeObject(objFlower);
         Console.WriteLine(jsonData);
 
+        // Json deserialization using .net
         Flower objFlower3 = JsonConvert.DeserializeObject<Flower>(jsonData);
         Console.WriteLine(objFlower3.Color);
     }

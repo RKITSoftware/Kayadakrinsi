@@ -1,52 +1,49 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Generics.GenericItems;
 using Generics.Models;
 
 namespace Generics.BusinessLogic
 {
+    /// <summary>
+    /// Defines logic for user controller
+    /// </summary>
     public class BLUsers
     {
+        /// <summary>
+        /// List of users
+        /// </summary>
         public static List<object> lstUserData = new List<object>();
 
-        public static USR01 NewUsr01(int id,string username,string password)
-        {
-            var objUSR01 = new USR01();
-            objUSR01.R01F01 = id;
-            objUSR01.R01F02 = username;
-            objUSR01.R01F03 = password;
-            objUSR01.R01F04 = "user";
-            return objUSR01;
-        }
-
-        public static ADM01 NewAdmin(int id, string username, string password)
-        {
-            var objADM01 = new ADM01();
-            objADM01.M01F01 = id;
-            objADM01.M01F02 = username;
-            objADM01.M01F03 = password;
-            objADM01.M01F04 = "admin";
-            return objADM01;
-        }
-
+        /// <summary>
+        /// Add users
+        /// </summary>
+        /// <returns>List of users</returns>
         public static GenericClass<object> Users()
         {
             GenericClass<object> lstUsers = new GenericClass<object>();
-            lstUsers.AddItem(NewUsr01(0, "sonu", "sood"));
-            lstUsers.AddItem(NewUsr01(1, "rahul", "verma"));
-            lstUsers.AddItem(NewUsr01(2, "arjun", "rathi"));
+            lstUsers.AddItem(new USR01 {R01F01 = 0, R01F02 = "sonu", R01F03 = "sood", R01F04 = "user" });
+            lstUsers.AddItem(new USR01 { R01F01 = 1, R01F02 = "rahul", R01F03 = "verma", R01F04 = "user" });
+            lstUsers.AddItem(new USR01 { R01F01 = 2, R01F02 = "arjun", R01F03 = "rathi", R01F04 = "user" });
             return lstUsers;
         }
 
+        /// <summary>
+        /// Add admins
+        /// </summary>
+        /// <returns>List of admins</returns>
         public static GenericClass<object> Admins()
         {
             GenericClass<object> lstAdmins = new GenericClass<object>();
-            lstAdmins.AddItem(NewAdmin(0, "priyanka", "chopara"));
-            lstAdmins.AddItem(NewAdmin(1, "rani", "laxmi"));
-            lstAdmins.AddItem(NewAdmin(2, "kalpana", "chawala"));
+            lstAdmins.AddItem(new ADM01 { M01F01 = 0, M01F02 = "priyanka", M01F03 = "chopara", M01F04 = "admin" });
+            lstAdmins.AddItem(new ADM01 { M01F01 = 1, M01F02 = "rani", M01F03 = "laxmi", M01F04 = "admin" });
+            lstAdmins.AddItem(new ADM01 { M01F01 = 2, M01F02 = "kalpana", M01F03 = "chawala", M01F04 = "admin" });
             return lstAdmins;
         }      
-
+        
+        /// <summary>
+        /// Combines users
+        /// </summary>
+        /// <returns>List of all users</returns>
         public static GenericClass<object> AllUsers()
         {
             GenericClass<object> lstAllUsers = new GenericClass<object>();

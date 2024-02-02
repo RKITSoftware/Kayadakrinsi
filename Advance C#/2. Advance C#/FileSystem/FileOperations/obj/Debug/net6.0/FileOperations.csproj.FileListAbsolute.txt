@@ -1,0 +1,15 @@
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\FileSystem\FileOperations\bin\Debug\net6.0\FileOperations.exe
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\FileSystem\FileOperations\bin\Debug\net6.0\FileOperations.deps.json
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\FileSystem\FileOperations\bin\Debug\net6.0\FileOperations.runtimeconfig.json
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\FileSystem\FileOperations\bin\Debug\net6.0\FileOperations.dll
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\FileSystem\FileOperations\bin\Debug\net6.0\FileOperations.pdb
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\FileSystem\FileOperations\obj\Debug\net6.0\FileOperations.csproj.AssemblyReference.cache
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\FileSystem\FileOperations\obj\Debug\net6.0\FileOperations.GeneratedMSBuildEditorConfig.editorconfig
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\FileSystem\FileOperations\obj\Debug\net6.0\FileOperations.AssemblyInfoInputs.cache
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\FileSystem\FileOperations\obj\Debug\net6.0\FileOperations.AssemblyInfo.cs
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\FileSystem\FileOperations\obj\Debug\net6.0\FileOperations.csproj.CoreCompileInputs.cache
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\FileSystem\FileOperations\obj\Debug\net6.0\FileOperations.dll
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\FileSystem\FileOperations\obj\Debug\net6.0\refint\FileOperations.dll
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\FileSystem\FileOperations\obj\Debug\net6.0\FileOperations.pdb
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\FileSystem\FileOperations\obj\Debug\net6.0\FileOperations.genruntimeconfig.cache
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\FileSystem\FileOperations\obj\Debug\net6.0\ref\FileOperations.dll

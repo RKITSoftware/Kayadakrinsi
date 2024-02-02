@@ -1,18 +1,35 @@
 ﻿public class Program
 {
+    /// <summary>
+    /// Id of object
+    /// </summary>
     public int Id { get; set; }
+
+    /// <summary>
+    /// Name of object
+    /// </summary>
     public string Name { get; set; }
 
+    /// <summary>
+    /// Prints object type (Dynamic type as function parameter)
+    /// </summary>
+    /// <param name="obj">dynamic object</param>
     public static void Print(dynamic obj)
     {
         dynamic objDynamic = obj;
         Console.WriteLine("{0}",objDynamic.GetType().ToString());
     }
 
+    /// <summary>
+    /// Dynamic as return type
+    /// </summary>
+    /// <param name="obj">dynamic object</param>
+    /// <returns>dynamic object</returns>
     public static dynamic Show(dynamic obj)
     {
         return obj;
     }
+
     public static void Main(string[] args)
     {
         dynamic objDynamic;

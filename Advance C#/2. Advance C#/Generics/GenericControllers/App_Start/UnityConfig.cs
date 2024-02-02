@@ -17,6 +17,7 @@ namespace GenericControllers
             // it is NOT necessary to register your controllers
 
             container.RegisterType<IServices<BOK01>, BLBook>();
+            container.RegisterType<IServices<ALB01>, BLAlbum>();
 
             GlobalConfiguration.Configuration.DependencyResolver = new UnityDependencyResolver(container);
         }

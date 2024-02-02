@@ -1,9 +1,17 @@
 ﻿using LibExtentionMethod;
 namespace CallerExtentionMethod
 {
+    /// <summary>
+    /// Extended class
+    /// </summary>
     public static class Extend
     {
-        public static void Color(this Animal animal,string color)
+        /// <summary>
+        /// Extens class animal to print color of animal
+        /// </summary>
+        /// <param name="objAnimal">reference to Animal class with it's object</param>
+        /// <param name="color">color of animal</param>
+        public static void Color(this Animal objAnimal,string color)
         {
             Console.WriteLine($"Color : {color}");
         }

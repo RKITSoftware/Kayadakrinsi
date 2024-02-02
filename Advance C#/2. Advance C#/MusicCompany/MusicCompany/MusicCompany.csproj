@@ -196,9 +196,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\Album\" />
-    <Folder Include="App_Data\Artist\" />
-    <Folder Include="App_Data\Producer\" />
+    <Folder Include="Album\" />
+    <Folder Include="App_Data\" />
+    <Folder Include="Artist\" />
+    <Folder Include="Producer\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

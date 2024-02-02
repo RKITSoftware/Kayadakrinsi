@@ -2,6 +2,10 @@
 
 internal class Program
 {
+    /// <summary>
+    /// Creates data table for order detail
+    /// </summary>
+    /// <returns>data table</returns>
     public static DataTable CreateOrderDetailTable()
     {
         DataTable ORD01 = new DataTable("ORD01");
@@ -20,6 +24,11 @@ internal class Program
         ORD01.PrimaryKey = new DataColumn[] { ORD01.Columns["D01F01"] };
         return ORD01;
     }
+
+    /// <summary>
+    /// Inserts data into data table
+    /// </summary>
+    /// <param name="ORD01">data table in which data will be inserted</param>
     public static void InsertOrderDetails(DataTable ORD01)
     {
         // Used an Object array to insert all the rows .
@@ -39,6 +48,11 @@ internal class Program
             ORD01.Rows.Add(row);
         }
     }
+
+    /// <summary>
+    /// Prints data
+    /// </summary>
+    /// <param name="data">Query result</param>
     public static void Print(EnumerableRowCollection data)
     {
         Console.WriteLine($"\nId, Product, Unit Price, Qunty., Total");
@@ -51,6 +65,11 @@ internal class Program
                 $"{row.Field<decimal>("D01F05")} ");
         }
     }
+
+    /// <summary>
+    /// Returns order details whoose total is in range of 20k-60k
+    /// </summary>
+    /// <param name="dt">data table</param>
     public static void QueryRange(DataTable dt)
     {
         var data = from row in dt.AsEnumerable()
@@ -60,6 +79,10 @@ internal class Program
         Print(data);
     }
 
+    /// <summary>
+    /// Returns data sorted by product name
+    /// </summary>
+    /// <param name="dt">data table</param>
     public static void QuerySort(DataTable dt)
     {
         var data = from row in dt.AsEnumerable()
@@ -68,23 +91,36 @@ internal class Program
         Print(data);
     }
 
+    /// <summary>
+    /// Prints average unit price
+    /// </summary>
+    /// <param name="dt">data table</param>
     public static void QueryAverage(DataTable dt)
     {
         var data = dt.AsEnumerable().Average(row => row.Field<decimal>("D01F03"));
         Console.WriteLine($"\nAverage price : {System.Math.Round(data,2)}");
     }
 
+    /// <summary>
+    /// Prints maximum quantity 
+    /// </summary>
+    /// <param name="dt">data table</param>
     public static void QueryMax(DataTable dt)
     {
         var data = dt.AsEnumerable().Max(row => row.Field<Int32>("D01F04"));
         Console.WriteLine($"\nMax quantity : {data}");
     }
 
+    /// <summary>
+    /// Prints count whoose price in range of 1200-1350
+    /// </summary>
+    /// <param name="dt"></param>
     public static void QueryCount(DataTable dt)
     {
         var data = dt.AsEnumerable().Count(row => row.Field<decimal>("D01F03") > 1200 && row.Field<decimal>("D01F03") < 1350);
-        Console.WriteLine($"\nCount where price in range of 20-30 : {data}");
+        Console.WriteLine($"\nCount where price in range of 1200-1350 : {data}");
     }
+
     public static void Main(string[] args)
     {
         DataTable ORD01 = CreateOrderDetailTable();

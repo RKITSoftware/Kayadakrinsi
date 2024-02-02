@@ -20,8 +20,8 @@ namespace MusicCompany.BusinessLogic
         /// <summary>
         /// Path of file in which album data will be written
         /// </summary>
-        private readonly static string path = HttpContext.Current.Server.MapPath("~/App_Data") + 
-                                              "\\" + DateTime.Now.ToShortDateString() + "Album.txt";
+        private readonly static string path = HttpContext.Current.Server.MapPath("~/Album") + 
+                                              "\\" + DateTime.Now.ToShortDateString() + ".txt";
 
         /// <summary>
         /// Declares Db factory instance
