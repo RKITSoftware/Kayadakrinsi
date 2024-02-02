@@ -6,6 +6,7 @@ namespace ExceptionFilter.Controllers
 {
     public class CLCompanyController : ApiController
     {
+        public BLCompany objBLCompany;
         /// <summary>
         /// Handles get request of normal user
         /// </summary>
@@ -14,7 +15,8 @@ namespace ExceptionFilter.Controllers
         [Route("api/CLCompany/GetFewCompanies")]
         public IHttpActionResult GetFewCompanies()
         {
-            return Ok(BLCompany.GetFewCompanies());
+            objBLCompany = new BLCompany();
+            return Ok(objBLCompany.GetFewCompanies());
         }
 
         /// <summary>
@@ -25,7 +27,8 @@ namespace ExceptionFilter.Controllers
         [Route("api/CLCompany/GetMoreCompanies")]
         public IHttpActionResult GetMoreCompanies()
         {
-            return Ok(BLCompany.GetMoreCompanies());
+            objBLCompany = new BLCompany();
+            return Ok(objBLCompany.GetMoreCompanies());
         }
 
         /// <summary>

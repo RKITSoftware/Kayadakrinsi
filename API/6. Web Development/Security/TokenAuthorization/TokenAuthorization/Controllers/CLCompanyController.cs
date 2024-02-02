@@ -10,6 +10,14 @@ namespace TokenAuthorization.Controllers
     /// </summary>
     public class CLCompanyController : ApiController
     {
+        public BLCompany objBLCompany;
+
+        public CLCompanyController() 
+        { 
+            objBLCompany = new BLCompany();
+        }
+
+
         #region Public Methods
 
         /// <summary>
@@ -21,7 +29,7 @@ namespace TokenAuthorization.Controllers
         [Authorize(Roles = ("User"))] // Authorize user with user rights
         public HttpResponseMessage GetCompanyById(int id)
         {
-            return Request.CreateResponse(HttpStatusCode.OK, BLCompany.GetCompanyById(id));
+            return Request.CreateResponse(HttpStatusCode.OK, objBLCompany.GetCompanyById(id));
         }
 
         /// <summary>
@@ -32,7 +40,7 @@ namespace TokenAuthorization.Controllers
         [Authorize(Roles = ("Admin,SuperAdmin"))]
         public HttpResponseMessage GetSomeCompany()
         {
-            return Request.CreateResponse(HttpStatusCode.OK, BLCompany.GetSomeCompanies());
+            return Request.CreateResponse(HttpStatusCode.OK, objBLCompany.GetSomeCompanies());
         }
 
         /// <summary>

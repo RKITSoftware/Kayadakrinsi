@@ -16,9 +16,9 @@ namespace HospitalAPI
         /// </summary>
         public static List<USR01> lstUSR01 = new List<USR01>
         {
-                new USR01 { R01F01 = 1,R01F02="krinsi",R01F03="kayada",R01F04="SuperAdmin" },
-                new USR01 { R01F01 = 2, R01F02 = "deep", R01F03 = "patel", R01F04 = "Admin" },
-                new USR01 { R01F01 = 3, R01F02 = "extra", R01F03 = "12345", R01F04 = "User" }
+                new USR01 { R01F01 = 1, R01F02 = "owner", R01F03 = "12345", R01F04 = "SuperAdmin" },
+                new USR01 { R01F01 = 2, R01F02 = "doctor", R01F03 = "12345", R01F04 = "Admin" },
+                new USR01 { R01F01 = 3, R01F02 = "helper", R01F03 = "12345", R01F04 = "User" }
         };
 
         #endregion

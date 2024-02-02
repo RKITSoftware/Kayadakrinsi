@@ -36,7 +36,7 @@ namespace HospitalAPI.BusinesLogic
         /// Handles get request for records whoose id is less than four
         /// </summary>
         /// <returns>List of records</returns>
-        public static List<RCD01> GetSomeRecords()
+        public List<RCD01> GetSomeRecords()
         {
             return lstRCD01.FindAll(c => c.D01F01 < 4);
         }
@@ -45,7 +45,7 @@ namespace HospitalAPI.BusinesLogic
         /// Handles get request for records whoose id is less than seven 
         /// </summary>
         /// <returns>List of records</returns>
-        public static List<RCD01> GetMoreRecords()
+        public List<RCD01> GetMoreRecords()
         {
             return lstRCD01.FindAll(c => c.D01F01 < 7);
         }
@@ -55,7 +55,7 @@ namespace HospitalAPI.BusinesLogic
         /// </summary>
         /// <param name="objRCD01">Object to be add</param>
         /// <returns>List of records</returns>
-        public static List<RCD01> AddRecord(RCD01 objRCD01)
+        public List<RCD01> AddRecord(RCD01 objRCD01)
         {
             var record = lstRCD01.Find(r => r.D01F01 == objRCD01.D01F01);
             if (record == null)
@@ -70,7 +70,7 @@ namespace HospitalAPI.BusinesLogic
         /// </summary>
         /// <param name="objRCD01">record to be edit</param>
         /// <returns>List of records</returns>
-        public static List<RCD01> EditRecord(RCD01 objRCD01)
+        public List<RCD01> EditRecord(RCD01 objRCD01)
         {
             var record = lstRCD01.Find(r => r.D01F01 == objRCD01.D01F01);
             if (record != null)
@@ -85,7 +85,7 @@ namespace HospitalAPI.BusinesLogic
         /// </summary>
         /// <param name="id">id of record to be delete</param>
         /// <returns>List of records</returns>
-        public static List<RCD01> DeleteRecord(int id)
+        public List<RCD01> DeleteRecord(int id)
         {
             var record = lstRCD01.Find(r => r.D01F01 == id);
             if (record != null)

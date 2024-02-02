@@ -9,6 +9,13 @@ namespace HospitalAPI.Controllers
     /// </summary>
     public class CLRecordV2Controller : ApiController
     {
+        public BLRecord objBLRecord;
+
+        public CLRecordV2Controller()
+        {
+            objBLRecord = new BLRecord();
+        }
+
         #region Public Methods
 
         /// <summary>
@@ -19,7 +26,7 @@ namespace HospitalAPI.Controllers
         [Authorize(Roles = ("User"))]
         public IHttpActionResult GetSomeRecords()
         {
-            return Ok(BLRecord.GetSomeRecords());
+            return Ok(objBLRecord.GetSomeRecords());
         }
 
         ///// <summary>
@@ -30,7 +37,7 @@ namespace HospitalAPI.Controllers
         [Authorize(Roles = ("Admin,SuperAdmin"))]
         public IHttpActionResult GetMoreRecords()
         {
-            return Ok(BLRecord.GetMoreRecords());
+            return Ok(objBLRecord.GetMoreRecords());
         }
 
         ///// <summary>
@@ -54,7 +61,7 @@ namespace HospitalAPI.Controllers
         [Authorize(Roles = ("Admin,SuperAdmin"))]
         public IHttpActionResult AddRecord(RCD01 objRCD01)
         {
-            return Ok(BLRecord.AddRecord(objRCD01));
+            return Ok(objBLRecord.AddRecord(objRCD01));
         }
 
         [HttpPut]
@@ -67,7 +74,7 @@ namespace HospitalAPI.Controllers
         /// <returns>List of records</returns>
         public IHttpActionResult EditRecord(RCD01 objRCD01)
         {
-            return Ok(BLRecord.EditRecord(objRCD01));
+            return Ok(objBLRecord.EditRecord(objRCD01));
         }
 
         /// <summary>
@@ -79,7 +86,7 @@ namespace HospitalAPI.Controllers
         [Authorize(Roles = ("SuperAdmin"))]
         public IHttpActionResult DeleteRecord(int id)
         {
-            return Ok(BLRecord.DeleteRecord(id));
+            return Ok(objBLRecord.DeleteRecord(id));
         }
 
         #endregion

@@ -12,6 +12,13 @@ namespace cutomToken.Controllers
     /// </summary>
     public class CLCompanyController : ApiController
     {
+        public BLCompany objBLCompany;
+
+        public CLCompanyController()
+        {
+            objBLCompany = new BLCompany();
+        }
+
         #region Public Methods
 
         [HttpPost]
@@ -43,7 +50,7 @@ namespace cutomToken.Controllers
         [Authorize(Roles = ("User"))] // Authorize user with user rights
         public HttpResponseMessage GetCompanyById(int id)
         {
-            return Request.CreateResponse(HttpStatusCode.OK, BLCompany.GetCompanyById(id));
+            return Request.CreateResponse(HttpStatusCode.OK, objBLCompany.GetCompanyById(id));
         }
         
 
@@ -57,7 +64,7 @@ namespace cutomToken.Controllers
         [Authorize(Roles = ("Admin"))]
         public HttpResponseMessage GetSomeCompany()
         {
-            return Request.CreateResponse(HttpStatusCode.OK, BLCompany.GetSomeCompanies());
+            return Request.CreateResponse(HttpStatusCode.OK, objBLCompany.GetSomeCompanies());
         }
 
 

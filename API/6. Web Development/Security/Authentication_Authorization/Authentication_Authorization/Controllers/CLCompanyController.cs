@@ -1,10 +1,12 @@
-﻿using System.Web.Http;
+﻿using System;
+using System.Linq;
+using System.Web.Http;
 using Authentication_Authorization.BasicAuth;
 using Authentication_Authorization.BusinessLogic;
+using Authentication_Authorization.Models;
 
 namespace Authentication_Authorization.Controllers
 {
-    //[Authorize]
     [RoutePrefix("api/Company")]
     [BasicAuthenticationAttribute]
 
@@ -48,74 +50,6 @@ namespace Authentication_Authorization.Controllers
         {
             return Ok(BLCompany.lstCompanies);
         }
-
-        //[Route("PostCompany")]
-        //[BasicAuthorizationAttribute(Roles = "Admin")]
-        //public HttpResponseMessage PostCompany(int id,Company newCompany){
-        //    var company = companies.Find(x => x.Id == id);
-        //    try
-        //    {
-        //        if (company == null)
-        //        {
-        //            companies.Add(newCompany);
-        //            return Request.CreateResponse(HttpStatusCode.OK, companies.Where(c => c.Id <= 3));
-        //        }
-        //        else
-        //        {
-        //            return Request.CreateResponse(HttpStatusCode.BadRequest, "Company with given id is already exist!");
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return Request.CreateResponse(HttpStatusCode.Ambiguous, ex.Message);
-        //    }
-        //}
-
-        //[Route("PutCompany")]
-        //[BasicAuthorizationAttribute(Roles = "Admin")]
-        //public HttpResponseMessage PutCompany(int id,Company editedCompany)
-        //{
-        //    var company = companies.Find(x => x.Id == id);
-        //    try
-        //    {
-        //        if (company != null)
-        //        {
-        //            companies[id]=editedCompany;
-        //            return Request.CreateResponse(HttpStatusCode.OK, companies);
-        //        }
-        //        else
-        //        {
-        //            return Request.CreateResponse(HttpStatusCode.NotFound, "Company with given id not found!");
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return Request.CreateResponse(HttpStatusCode.Ambiguous, ex.Message);
-        //    }
-        //}
-
-        //[Route("DeleteCompany")]
-        //[BasicAuthorizationAttribute(Roles = "Admin")]
-        //public HttpResponseMessage DeleteCompany(int id)
-        //{
-        //    var company = companies.Find(x => x.Id == id);
-        //    try
-        //    {
-        //        if (company != null)
-        //        {
-        //            companies.RemoveAt(id);
-        //            return Request.CreateResponse(HttpStatusCode.OK, companies);
-        //        }
-        //        else
-        //        {
-        //            return Request.CreateResponse(HttpStatusCode.NotFound, "Company with given id not found!");
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return Request.CreateResponse(HttpStatusCode.Ambiguous, ex.Message);
-        //    }
-        //}
 
         #endregion
     }

@@ -8,14 +8,20 @@ namespace HospitalAPI.Controllers
     //// To enable croos origin server request 
     //[EnableCors(origins: "https://localhost:44380", headers: "*", methods: "*")]
 
-    [BLCacheFilter(TimeDuration = 100)]
-    [AuthenticationAttribute]
 
     /// <summary>
     /// Custom cntroller for handling requests
     /// </summary>
+    [BLCacheFilter(TimeDuration = 100)]
+    [AuthenticationAttribute]
     public class CLRecordV1Controller : ApiController
     {
+        public BLRecord objBLRecord;
+
+        public CLRecordV1Controller()
+        {
+            objBLRecord = new BLRecord();
+        }
         #region Public Methods
 
         /// <summary>
@@ -26,7 +32,7 @@ namespace HospitalAPI.Controllers
         [BasicAuthorizationAttribute(Roles = "User")] // Custom filter attribute for authorization with role of user
         public IHttpActionResult GetFewRecords()
         {
-            return Ok(BLRecord.GetSomeRecords());
+            return Ok(objBLRecord.GetSomeRecords());
         }
 
         /// <summary>
@@ -37,7 +43,7 @@ namespace HospitalAPI.Controllers
         [BasicAuthorizationAttribute(Roles = "SuperAdmin,Admin")]
         public IHttpActionResult GetMoreRecords()
         {
-                return Ok(BLRecord.GetMoreRecords());
+                return Ok(objBLRecord.GetMoreRecords());
         }
 
         /// <summary>

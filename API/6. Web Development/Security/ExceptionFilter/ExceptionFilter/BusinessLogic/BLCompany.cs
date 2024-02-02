@@ -25,7 +25,7 @@ namespace ExceptionFilter.BusinessLogic
         /// Handles request of user
         /// </summary>
         /// <returns>List of companies whoose id is less than three</returns>
-        public static List<CMP01> GetFewCompanies()
+        public List<CMP01> GetFewCompanies()
         {
             return lstCompanies.Where(c => c.P01F01 <= 2).ToList();
         }
@@ -34,7 +34,7 @@ namespace ExceptionFilter.BusinessLogic
         ///  Handles request of admin
         /// </summary>
         /// <returns>List of companies whoose id is less than four</returns>
-        public static List<CMP01> GetMoreCompanies()
+        public List<CMP01> GetMoreCompanies()
         {
             return lstCompanies.Where(c => c.P01F01 <= 3).ToList();
         }
