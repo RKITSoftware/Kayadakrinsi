@@ -24,8 +24,8 @@ namespace ExceptionFilter.BusinessLogic
                 };
                 using (StreamWriter sw = new StreamWriter(path))
                 {
-                    sw.Write(DateTime.Now);
-                    sw.Write(context.Exception.StackTrace);
+                    sw.WriteLine(DateTime.Now);
+                    sw.WriteLine(context.Exception.StackTrace);
                     sw.WriteLine('\n');
                 }
             }

@@ -1,9 +1,6 @@
-﻿using System;
-using System.Linq;
-using System.Web.Http;
+﻿using System.Web.Http;
 using Authentication_Authorization.BasicAuth;
 using Authentication_Authorization.BusinessLogic;
-using Authentication_Authorization.Models;
 
 namespace Authentication_Authorization.Controllers
 {
