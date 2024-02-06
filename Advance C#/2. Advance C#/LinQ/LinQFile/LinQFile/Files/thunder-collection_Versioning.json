@@ -1,0 +1,107 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Versioning",
+    "dateExported": "2024-02-05T09:13:16.735Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "1ba8e309-ded8-4e9c-b75a-f1d0dc12fff4",
+            "colId": "743da671-3c53-4330-ae5d-72098d96f9a7",
+            "containerId": "",
+            "name": "Query(v1)",
+            "url": "https://localhost:44351/api/CLCompany?version=1",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-01-16T06:20:28.176Z",
+            "modified": "2024-01-23T07:19:26.599Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Basic dXNlcjoxMjM0NQ=="
+                }
+            ],
+            "params": [
+                {
+                    "name": "version",
+                    "value": "1",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "fc33b426-e1d6-44e9-ae35-94744d057173",
+            "colId": "743da671-3c53-4330-ae5d-72098d96f9a7",
+            "containerId": "",
+            "name": "Query(v2)",
+            "url": "https://localhost:44351/api/CLCompany?version=2",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-01-16T06:20:46.031Z",
+            "modified": "2024-01-23T07:16:27.952Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "version",
+                    "value": "2",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "7cf4bb99-6191-4038-adef-18cea535ce38",
+            "colId": "743da671-3c53-4330-ae5d-72098d96f9a7",
+            "containerId": "",
+            "name": "Versoning Get(v2)",
+            "url": "https://localhost:44380/api/v2/company/Get",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-01-16T06:20:57.033Z",
+            "modified": "2024-01-16T06:20:57.033Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "527efc45-280f-4b8c-9a49-3e2215886f39",
+            "colId": "743da671-3c53-4330-ae5d-72098d96f9a7",
+            "containerId": "",
+            "name": "Versoning Get(v1)",
+            "url": "https://localhost:44380/api/v1/company/Get",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-01-16T06:21:02.823Z",
+            "modified": "2024-01-17T06:23:49.170Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "0523e626-a17e-41cf-807d-a0e2cd231dd0",
+            "colId": "743da671-3c53-4330-ae5d-72098d96f9a7",
+            "containerId": "",
+            "name": "Custom Header(v1)",
+            "url": "https://localhost:44351/api/CLCompany?X-Company-Version=1&X-Company-Version=1",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2024-01-16T06:21:09.167Z",
+            "modified": "2024-01-23T07:20:48.995Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "X-Company-Version",
+                    "value": "1",
+                    "isPath": false
+                },
+                {
+                    "name": "X-Company-Version",
+                    "value": "1",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        }
+    ]
+}

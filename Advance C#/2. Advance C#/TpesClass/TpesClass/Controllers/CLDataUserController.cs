@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Web.Http;
+using TpesClass.BusinessLogic;
 using TpesClass.Models;
 
 namespace TpesClass.Controllers
@@ -9,15 +10,6 @@ namespace TpesClass.Controllers
     /// </summary>
     public partial class CLDataController : ApiController
     {
-        #region Static Members
-
-        /// <summary>
-        /// List of users
-        /// </summary>
-        static List<USR01> users = USR01.GetData();
-
-        #endregion
-
         #region Public Methods
 
         [HttpGet]
@@ -28,7 +20,7 @@ namespace TpesClass.Controllers
         /// <returns>List of users</returns>
         public IHttpActionResult GetUsers()
         {
-            return Ok(users);
+            return Ok(BLUser.users);
         }
 
         [HttpPost]
@@ -39,13 +31,13 @@ namespace TpesClass.Controllers
         /// <param name="id">id of new user</param>
         /// <param name="newUser">Details of new user</param>
         /// <returns>List of users</returns>
-        public IHttpActionResult AddUser(int id, USR01 newUser)
+        public IHttpActionResult AddUser(USR01 newUser)
         {
-            var user = users.Find(u => u.R01F01 == id);
+            var user = BLUser.users.Find(u => u.R01F01 == newUser.R01F01);
             if (user == null)
             {
-                users.Add(newUser);
-                return Ok(users);
+                BLUser.users.Add(newUser);
+                return Ok(BLUser.users);
             }
             return BadRequest();
         }

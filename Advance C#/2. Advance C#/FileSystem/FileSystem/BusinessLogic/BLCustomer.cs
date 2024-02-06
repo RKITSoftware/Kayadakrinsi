@@ -136,7 +136,18 @@ namespace FileSystem.BusinessLogic
 
             return response;
         }
-        
+
+        public string GetUniqueFileName(string directory, string fileName)
+        {
+            int count = 1;
+            string uniqueFileName = fileName;
+            while (File.Exists(Path.Combine(directory, uniqueFileName)))
+            {
+                uniqueFileName = Path.GetFileNameWithoutExtension(fileName) + "_" + count + Path.GetExtension(fileName);
+                count++;
+            }
+            return uniqueFileName;
+        }
     }
     
 }

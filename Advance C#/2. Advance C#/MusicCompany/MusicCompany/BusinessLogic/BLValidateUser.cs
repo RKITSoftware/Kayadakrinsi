@@ -18,11 +18,14 @@ namespace MusicCompany.BusinessLogic
         /// <returns>User is valid or not</returns>
         public static bool Login(string username, string password)
         {
-            var test = BLUser.Select().FirstOrDefault(user => user.R01F02.Equals(username) && user.R01F03 == password);
+            var test = BLUser.Select().FirstOrDefault(user => user.R01F02.Equals(username) 
+                       && user.R01F03 == password);
+
             if (test != null)
             {
                 return true;
             }
+
             return false;
         }
 
@@ -34,7 +37,8 @@ namespace MusicCompany.BusinessLogic
         /// <returns>User with given username and password if exist</returns>
         public static USR01 GetUserDetails(string username, string password)
         {
-            return (USR01)BLUser.Select().FirstOrDefault(user => user.R01F02.Equals(username) && user.R01F03 == password);
+            return (USR01)BLUser.Select().FirstOrDefault(user => user.R01F02.Equals(username) 
+                    && user.R01F03 == password);
         }
 
         #endregion

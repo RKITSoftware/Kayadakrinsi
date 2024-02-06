@@ -1,0 +1,416 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Hospital API",
+    "dateExported": "2024-02-05T09:13:22.763Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "0196b750-8500-4d57-980b-03bbb3c57e85",
+            "colId": "ca76d429-8d6d-43a2-a3fd-f0441ce7a3b0",
+            "containerId": "",
+            "name": "Token super admin",
+            "url": "https://localhost:44328/token",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-01-16T06:23:40.132Z",
+            "modified": "2024-01-16T06:26:51.654Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "username",
+                        "value": "krinsi"
+                    },
+                    {
+                        "name": "password",
+                        "value": "kayada"
+                    },
+                    {
+                        "name": "grant_type",
+                        "value": "password"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "d410ae33-9675-43dc-996b-c10c983e9025",
+            "colId": "ca76d429-8d6d-43a2-a3fd-f0441ce7a3b0",
+            "containerId": "",
+            "name": "Token admin",
+            "url": "https://localhost:44328/token",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-01-16T06:24:53.191Z",
+            "modified": "2024-01-16T06:24:53.191Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "username",
+                        "value": "admin"
+                    },
+                    {
+                        "name": "password",
+                        "value": "12345"
+                    },
+                    {
+                        "name": "grant_type",
+                        "value": "password"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "27501d0f-9db5-44c1-9e11-095171e203c7",
+            "colId": "ca76d429-8d6d-43a2-a3fd-f0441ce7a3b0",
+            "containerId": "",
+            "name": "Token user",
+            "url": "https://localhost:44328/token",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-01-16T06:28:10.313Z",
+            "modified": "2024-01-16T06:28:10.313Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "username",
+                        "value": "user"
+                    },
+                    {
+                        "name": "password",
+                        "value": "12345"
+                    },
+                    {
+                        "name": "grant_type",
+                        "value": "password"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "cdb972d4-3008-4c77-ac44-c9f87873be4a",
+            "colId": "ca76d429-8d6d-43a2-a3fd-f0441ce7a3b0",
+            "containerId": "",
+            "name": "GetFewRecords user",
+            "url": "https://localhost:44328/api/CLRecord/GetFewRecords?version=1",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-01-16T06:29:46.618Z",
+            "modified": "2024-02-01T10:21:37.623Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "version",
+                    "value": "1",
+                    "isPath": false
+                }
+            ],
+            "auth": {
+                "type": "basic",
+                "basic": {
+                    "username": "helper",
+                    "password": "12345"
+                }
+            },
+            "tests": []
+        },
+        {
+            "_id": "74afbc4e-c26a-493d-8c35-d7638f1da48e",
+            "colId": "ca76d429-8d6d-43a2-a3fd-f0441ce7a3b0",
+            "containerId": "",
+            "name": "GetMoreRecords user",
+            "url": "https://localhost:44328/api/CLRecord/GetMoreRecords?version=1",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2024-01-16T06:31:05.188Z",
+            "modified": "2024-02-01T10:22:09.401Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "version",
+                    "value": "1",
+                    "isPath": false
+                }
+            ],
+            "auth": {
+                "type": "basic",
+                "basic": {
+                    "username": "helper",
+                    "password": "12345"
+                }
+            },
+            "tests": []
+        },
+        {
+            "_id": "01bd6685-9197-4b74-8606-c77117d13300",
+            "colId": "ca76d429-8d6d-43a2-a3fd-f0441ce7a3b0",
+            "containerId": "",
+            "name": "GetMoreRecords admin",
+            "url": "https://localhost:44328/api/CLRecord/GetMoreRecords?version =1",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2024-01-16T06:32:04.157Z",
+            "modified": "2024-02-01T10:30:52.509Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "version",
+                    "value": "1",
+                    "isPath": false
+                }
+            ],
+            "auth": {
+                "type": "basic",
+                "basic": {
+                    "username": "doctor",
+                    "password": "12345"
+                }
+            },
+            "tests": []
+        },
+        {
+            "_id": "94021a1b-0ce3-4373-afeb-ff83fedef7e4",
+            "colId": "ca76d429-8d6d-43a2-a3fd-f0441ce7a3b0",
+            "containerId": "",
+            "name": "GetAllRecords super admin",
+            "url": "https://localhost:44328/api/CLRecord/GetAllRecords?version=1",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2024-01-16T06:33:26.095Z",
+            "modified": "2024-02-01T10:22:50.456Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "version",
+                    "value": "1",
+                    "isPath": false
+                }
+            ],
+            "auth": {
+                "type": "basic",
+                "basic": {
+                    "username": "owner",
+                    "password": "12345"
+                }
+            },
+            "tests": []
+        },
+        {
+            "_id": "9cea2d80-10cf-4608-8343-92830ba82c81",
+            "colId": "ca76d429-8d6d-43a2-a3fd-f0441ce7a3b0",
+            "containerId": "",
+            "name": "GetSomeRecords user token",
+            "url": "https://localhost:44328/api/CLRecord/GetSomeRecords?version=2",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2024-01-16T06:35:45.025Z",
+            "modified": "2024-02-01T10:30:47.710Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "version",
+                    "value": "2",
+                    "isPath": false
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "OT-MRq8mE6Cno-RadS4z_CYN5vIZHffKCDeUwcyMm_UHggdu43mz9Wcm0czTkSZcoE-mQ9yyuMkjvvTFUFtz60EFIDbRN6ASHJ_umeOgVFwgnV-3Mz6_TWtBk-Rgx1nNeR3StagVroIkS1hz6JpBhCDtzCn0rwjNBYjgyZxHDfDhl3Qt9Eqy3kBxhwM9PQu7Gb-HbOHaCxEqyxo1OTkv_QDWI91pjwdZ8U9KPRHapCh63Zj4laEFjHLwsZDlM26DMK-DXr6D8awqAtM3JHR-ezgcLIgd8zQZDaA0Z8HC-bA"
+            },
+            "tests": []
+        },
+        {
+            "_id": "260a5937-c914-4b6a-a118-7b48bd582e84",
+            "colId": "ca76d429-8d6d-43a2-a3fd-f0441ce7a3b0",
+            "containerId": "",
+            "name": "GetMoreRecords admin token",
+            "url": "https://localhost:44328/api/CLRecord/GetMoreRecords?version=2",
+            "method": "GET",
+            "sortNum": 90000,
+            "created": "2024-01-16T06:37:04.107Z",
+            "modified": "2024-01-16T06:37:04.107Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "version",
+                    "value": "2",
+                    "isPath": false
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "69e_6K2RuaDUFXUDh84foIWloQKMZNR2R9aiJdb0hW9hSB-GTXziaBlWfUhqdr3CsvGPhf9eSVp6pz8QvVn8Nd_rGOKkFC5skxXQrPKGLc7_Ba9bE_vpmMn_aOdpIdzqgnO0w9NM1ZspdDYQ5DFXo92m41E9fZt9I-koOeD8D8_xpE_M3eGNUrrQBKSnVIRQXEPo_-RNdvWARxmbB84IDQjjljwRIim5fM59DPqetkqGqwlmtNSlDNvQYmvRRam7S4NsLCYISTy9d3eIKMxl2dl9MlQA_UYAduhm4r8rowo"
+            },
+            "tests": []
+        },
+        {
+            "_id": "757a86ee-29ef-4d9f-9bc0-59491e234176",
+            "colId": "ca76d429-8d6d-43a2-a3fd-f0441ce7a3b0",
+            "containerId": "",
+            "name": "GetAllRecords super admin token",
+            "url": "https://localhost:44328/api/CLRecord/GetAllRecords?version=2",
+            "method": "GET",
+            "sortNum": 100000,
+            "created": "2024-01-16T06:38:44.965Z",
+            "modified": "2024-02-01T09:50:12.624Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "version",
+                    "value": "2",
+                    "isPath": false
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "dyiLgncE8U0x72gDmJmTDEDGF2qPXYcYUBYi33xnJOG9hv4PeqxdnEeckj5UuZm2ae9JmC6ElwIPxlXrr5-EmJQvuMKBYmCZ7pGV_sBSHX-sZNgZYPUHB8KcGdgXZxWPja1UJw1MT1puPPaL9OlcL59Y83kA9AsD38Mn0x85IGIEc4py5weXFSBWwHbDOQIwv7MRrkurzOSiOft8ITdkFm_S0ZE-urs0kD4_99S6_0LKlIhKqwNu-HPdvRjulp6aEQapC0E2vaHxstOXujiZm56AzvazTUvxcneeNwtu9x21C2uvafH_tBb6C6RDOjy1"
+            },
+            "tests": []
+        },
+        {
+            "_id": "a0a4e6af-b589-426a-818c-922841e5b289",
+            "colId": "ca76d429-8d6d-43a2-a3fd-f0441ce7a3b0",
+            "containerId": "",
+            "name": "AddRecordAdmin",
+            "url": "https://localhost:44328/api/CLRecord/AddRecordAdmin?version=2&id=11",
+            "method": "POST",
+            "sortNum": 110000,
+            "created": "2024-01-16T06:48:11.087Z",
+            "modified": "2024-01-16T06:48:11.087Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "version",
+                    "value": "2",
+                    "isPath": false
+                },
+                {
+                    "name": "id",
+                    "value": "11",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"D01F01\": 11,\n  \"D01F02\": \"Anjan Singh\",\n  \"D01F03\": \"Jay Rathod\",\n  \"D01F04\": \"CORONA\",\n  \"D01F05\": \"2024-01-16T06:41:30.229Z\",\n  \"D01F06\": \"2024-01-16T06:41:30.229Z\",\n  \"D01F07\": 1234.55\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "S3WEtR6YcAK5wqzBHRChEGWNPwROjPg19DrPo0Moj6yPJuIwm_lR3yN9K1XK7ilh5tU-ICBNFzTHw76XhGeb00r4fgxRyKCH03RnoV8XxsVAdij0wnTqVgSs4kjEIVvEyzAyKu-0BDeP1BzwPnmbm6B1dQ_9UaoG6bHt2i2coWhE71k1Qz2OGASISgbMESEbBJN70SPj_ZziRKQAwpNioHO-BQB9x0Z95gGxCgjXUzc4HIckJP5dyyp_fvSRsaMIZC9unn4OMTR7Y27ledzFSKn0gev9xZeTlYLDCxA2D1Y"
+            },
+            "tests": []
+        },
+        {
+            "_id": "53f986fd-920c-467a-a87a-f7b6d7e3d905",
+            "colId": "ca76d429-8d6d-43a2-a3fd-f0441ce7a3b0",
+            "containerId": "",
+            "name": "AddRecord ",
+            "url": "https://localhost:44328/api/CLRecord/AddRecord?version=2&id=12",
+            "method": "POST",
+            "sortNum": 120000,
+            "created": "2024-01-16T06:54:33.196Z",
+            "modified": "2024-01-23T07:55:32.031Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "version",
+                    "value": "2",
+                    "isPath": false
+                },
+                {
+                    "name": "id",
+                    "value": "12",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"D01F01\": 12,\n  \"D01F02\": \"Ram Singh\",\n  \"D01F03\": \"Jay Rathod\",\n  \"D01F04\": \"CORONA\",\n  \"D01F05\": \"2024-01-16T06:41:30.229Z\",\n  \"D01F06\": \"2024-01-16T06:41:30.229Z\",\n  \"D01F07\": 34.55\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "0lWj7JSJJkRcF7Iw-_SI6RxTDTcnp9BhHZzrDksnnnq8KoYUC9dtMPNPwucWTxSBzF82CVOFSukAmWnxN8YMcBxRr8DxKn1ZnkT-ec92aTIeXD8Mzd9t3o7TuQnN8rbbfGud-99XnYhQqT8Mbsk2hw-RYN48W2v--2eqbYnBSkI4CdHlhz_oyRu9AuSFQQFdtE-GmLSHZ31atRrNFPDXpzeF0uHxKn1UE5_3WcF_pfuXtIHEJ_Wg-SNedJUBBPKnbNfB8iWzZovCITSajjs2tPbW5bICOtt4oLVOFZj-dYYfBnI4cyMv2CwfC5XF7dcA"
+            },
+            "tests": []
+        },
+        {
+            "_id": "2a82ef2f-9e8b-4087-a1f3-affacccb63a0",
+            "colId": "ca76d429-8d6d-43a2-a3fd-f0441ce7a3b0",
+            "containerId": "",
+            "name": "EditRecord ",
+            "url": "https://localhost:44328/api/CLRecord/EditRecord?version=2&id=10",
+            "method": "PUT",
+            "sortNum": 130000,
+            "created": "2024-01-16T07:01:49.333Z",
+            "modified": "2024-01-16T07:01:49.333Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "version",
+                    "value": "2",
+                    "isPath": false
+                },
+                {
+                    "name": "id",
+                    "value": "10",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"D01F01\": 10,\n  \"D01F02\": \"Ram Singh\",\n  \"D01F03\": \"Jay Rathod\",\n  \"D01F04\": \"CORONA\",\n  \"D01F05\": \"2024-01-16T06:41:30.229Z\",\n  \"D01F06\": \"2024-01-16T06:41:30.229Z\",\n  \"D01F07\": 134.55\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "KpMAADy-eG3xjv5fyrCCgnovBcqQZQ2yKGYFs0qXJQ6lRpSpGN7rj3L28pKbOI_vDEMvwG7tY1DXEdoq_v-rI0cC6vSJcDIzocXxoeQHChMOWHFvk2Fu6499uueycwg9veLO8yROLU3y1IubTy45KaXs0q89IJyRnM-5l6tjRkLK4aYHBm39O-5xafiu_Ym6fK1KnUiQcAMrEtmsNmAiev5B9j9KscftiexvG83l7RHiVInn9XYedCinH696AEZeBRbu3iRIT-gChHnx_Ewz17Od02Q96WeowWaw7x_Bg7w"
+            },
+            "tests": []
+        },
+        {
+            "_id": "33ce12f5-dacf-455b-ae7e-d86b0f9ac62b",
+            "colId": "ca76d429-8d6d-43a2-a3fd-f0441ce7a3b0",
+            "containerId": "",
+            "name": "DeleteRecord",
+            "url": "https://localhost:44328/api/CLRecord/DeleteRecord?version=2&id=8",
+            "method": "DELETE",
+            "sortNum": 140000,
+            "created": "2024-01-16T07:03:57.681Z",
+            "modified": "2024-01-16T07:03:57.681Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "version",
+                    "value": "2",
+                    "isPath": false
+                },
+                {
+                    "name": "id",
+                    "value": "8",
+                    "isPath": false
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "KpMAADy-eG3xjv5fyrCCgnovBcqQZQ2yKGYFs0qXJQ6lRpSpGN7rj3L28pKbOI_vDEMvwG7tY1DXEdoq_v-rI0cC6vSJcDIzocXxoeQHChMOWHFvk2Fu6499uueycwg9veLO8yROLU3y1IubTy45KaXs0q89IJyRnM-5l6tjRkLK4aYHBm39O-5xafiu_Ym6fK1KnUiQcAMrEtmsNmAiev5B9j9KscftiexvG83l7RHiVInn9XYedCinH696AEZeBRbu3iRIT-gChHnx_Ewz17Od02Q96WeowWaw7x_Bg7w"
+            },
+            "tests": []
+        }
+    ]
+}

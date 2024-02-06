@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Web.Http;
+using TpesClass.BusinessLogic;
 using TpesClass.Models;
 
 namespace TpesClass.Controllers
@@ -9,15 +10,6 @@ namespace TpesClass.Controllers
     /// </summary>
     public partial class CLDataController : ApiController
     {
-        #region Static Members
-
-        /// <summary>
-        /// List of admins
-        /// </summary>
-        static List<ADM01> admins = ADM01.GetData();
-
-        #endregion
-
         #region Public Methods
 
         /// <summary>
@@ -28,7 +20,7 @@ namespace TpesClass.Controllers
         [Route("api/CLData/GetAdmins")]
         public IHttpActionResult GetAdmins()
         {
-            return Ok(admins);
+            return Ok(BLAdmin.admins);
         }
 
         #endregion

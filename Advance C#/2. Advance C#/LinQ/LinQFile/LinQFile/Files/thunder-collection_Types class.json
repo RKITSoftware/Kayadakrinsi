@@ -1,0 +1,90 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Types class",
+    "dateExported": "2024-02-05T09:13:27.413Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "438ab462-83b0-4193-b57b-5273f40600f8",
+            "colId": "051893f6-8422-434c-b39e-5fa9629747ed",
+            "containerId": "",
+            "name": "Partial post user",
+            "url": "https://localhost:44396/api/CLData/AddUser?id=4",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-01-17T06:30:25.597Z",
+            "modified": "2024-01-17T06:30:25.597Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "id",
+                    "value": "4",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"L01F01\" : 4,\n  \"L01F02\" : \"hello\",\n  \"L01F03\" : \"world\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "5a8b3f0f-f6af-4f34-8e4c-6aa9d4575af0",
+            "colId": "051893f6-8422-434c-b39e-5fa9629747ed",
+            "containerId": "",
+            "name": "Partial get admins",
+            "url": "https://localhost:44396/api/CLData/GetAdmins",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-01-17T06:30:45.003Z",
+            "modified": "2024-01-17T06:30:45.003Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "e18cebbe-5a1f-4cc3-805d-90de26b731ac",
+            "colId": "051893f6-8422-434c-b39e-5fa9629747ed",
+            "containerId": "",
+            "name": "Partial get users",
+            "url": "https://localhost:44396/api/CLData/GetUsers",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-01-17T06:31:01.284Z",
+            "modified": "2024-01-17T06:31:01.284Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "98355aec-e720-4e6e-867d-6a1672af6f89",
+            "colId": "051893f6-8422-434c-b39e-5fa9629747ed",
+            "containerId": "",
+            "name": "Abstract v1 get",
+            "url": "https://localhost:44300/api/v1/company/Get",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-01-17T06:31:56.251Z",
+            "modified": "2024-01-17T06:31:56.251Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "c108c79b-3bbd-4fec-a198-b88f22ef0057",
+            "colId": "051893f6-8422-434c-b39e-5fa9629747ed",
+            "containerId": "",
+            "name": "Abstract v2 get",
+            "url": "https://localhost:44300/api/v2/company/Get",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2024-01-17T06:32:39.567Z",
+            "modified": "2024-01-17T06:32:39.567Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

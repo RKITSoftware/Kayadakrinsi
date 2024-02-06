@@ -42,6 +42,7 @@ namespace MusicCompany.Controllers
         /// <returns>Appropriate Message</returns>
         [HttpPost]
         [BasicAuthorizationAttribute(Roles = "Admin")]
+
         [Route("api/CLUser/AddUser")]
         public IHttpActionResult AddUser(USR01 objUSR01)
         {

@@ -1,0 +1,338 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "MusicCompany",
+    "dateExported": "2024-02-05T09:13:32.332Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "bc975d3c-b088-44fd-bc34-bc028cc4e0a0",
+            "colId": "5fa1e51f-e9ee-4531-8374-c900a961e8c8",
+            "containerId": "",
+            "name": "Getusers admin",
+            "url": "https://localhost:44327/api/CLUser/GetUsers",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-01-29T07:35:17.529Z",
+            "modified": "2024-01-29T07:35:17.529Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "basic",
+                "basic": {
+                    "username": "krinsi",
+                    "password": "kayada"
+                }
+            },
+            "tests": []
+        },
+        {
+            "_id": "73fe2dd3-a893-4dbc-884a-cd7f31eab56f",
+            "colId": "5fa1e51f-e9ee-4531-8374-c900a961e8c8",
+            "containerId": "",
+            "name": "admin",
+            "url": "https://localhost:44327/api/CLUser/GetUsers",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-01-29T07:35:23.590Z",
+            "modified": "2024-01-29T07:35:23.591Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"R01F01\": 1,\n    \"R01F02\": \"Arijit\",\n    \"R01F03\": \"singh\",\n    \"R01F04\": \"Artist\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "basic",
+                "basic": {
+                    "username": "krinsi",
+                    "password": "kayada"
+                }
+            },
+            "tests": []
+        },
+        {
+            "_id": "d909ea54-f465-4628-8265-27c5828c57b5",
+            "colId": "5fa1e51f-e9ee-4531-8374-c900a961e8c8",
+            "containerId": "",
+            "name": "add artist",
+            "url": "https://localhost:44327/api/CLArtist/AddArtist",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-01-29T07:42:46.196Z",
+            "modified": "2024-01-29T07:42:46.196Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"T01F01\" : 1,\n  \"T01F02\": \"Arijit\",\n  \"T01F03\" : 2\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "basic",
+                "basic": {
+                    "username": "krinsi",
+                    "password": "kayada"
+                }
+            },
+            "tests": []
+        },
+        {
+            "_id": "7d61a258-f745-4ce8-902f-241b431462b4",
+            "colId": "5fa1e51f-e9ee-4531-8374-c900a961e8c8",
+            "containerId": "",
+            "name": "get artist",
+            "url": "https://localhost:44327/api/CLArtist/GetArtist",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-01-29T07:43:10.083Z",
+            "modified": "2024-01-29T07:43:10.083Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "basic",
+                "basic": {
+                    "username": "krinsi",
+                    "password": "kayada"
+                }
+            },
+            "tests": []
+        },
+        {
+            "_id": "86074521-ac09-4bc6-9a7c-26eccf83ef03",
+            "colId": "5fa1e51f-e9ee-4531-8374-c900a961e8c8",
+            "containerId": "",
+            "name": "get artist",
+            "url": "https://localhost:44327/api/CLArtist/GetArtist",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2024-01-29T09:17:29.483Z",
+            "modified": "2024-01-29T09:17:29.483Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "basic",
+                "basic": {
+                    "username": "krinsi",
+                    "password": "kayada"
+                }
+            },
+            "tests": []
+        },
+        {
+            "_id": "3f63c8a9-69ae-4b72-b28b-f5ceacfaf5df",
+            "colId": "5fa1e51f-e9ee-4531-8374-c900a961e8c8",
+            "containerId": "",
+            "name": "add producer",
+            "url": "https://localhost:44327/api/CLProducer/AddProducer",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2024-01-29T09:17:58.793Z",
+            "modified": "2024-01-29T09:17:58.793Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"O01F01\":1,\n  \"O01F02\":\"Bhushan kumar\",\n  \"O01F03\":\"T-series\",\n  \"O01F04\": 5\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "basic",
+                "basic": {
+                    "username": "krinsi",
+                    "password": "kayada"
+                }
+            },
+            "tests": []
+        },
+        {
+            "_id": "cfb686fa-7543-4ec0-add6-82dc04730e78",
+            "colId": "5fa1e51f-e9ee-4531-8374-c900a961e8c8",
+            "containerId": "",
+            "name": "get producers",
+            "url": "https://localhost:44327/api/CLProducer/GetProducer",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2024-01-29T09:18:18.035Z",
+            "modified": "2024-01-29T09:18:18.035Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"O01F01\":1,\n  \"O01F02\":\"Bhushan kumar\",\n  \"O01F03\":\"T-series\",\n  \"O01F04\": 5\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "basic",
+                "basic": {
+                    "username": "krinsi",
+                    "password": "kayada"
+                }
+            },
+            "tests": []
+        },
+        {
+            "_id": "3cb4c31e-f12b-4ca0-b312-db952bf15a5a",
+            "colId": "5fa1e51f-e9ee-4531-8374-c900a961e8c8",
+            "containerId": "",
+            "name": "edit artist",
+            "url": "https://localhost:44327/api/CLArtist/EditArtist",
+            "method": "PUT",
+            "sortNum": 80000,
+            "created": "2024-01-29T09:18:39.459Z",
+            "modified": "2024-01-29T09:18:39.459Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"T01F01\" : 2,\n  \"T01F02\" : \"Atif aslam\",\n  \"T01F03\" : 3\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "basic",
+                "basic": {
+                    "username": "krinsi",
+                    "password": "kayada"
+                }
+            },
+            "tests": []
+        },
+        {
+            "_id": "44efb793-b45a-4c42-a501-71f2bf5eb846",
+            "colId": "5fa1e51f-e9ee-4531-8374-c900a961e8c8",
+            "containerId": "",
+            "name": "write producers",
+            "url": "https://localhost:44327/api/CLProducer/WriteFile",
+            "method": "POST",
+            "sortNum": 90000,
+            "created": "2024-01-29T09:38:29.308Z",
+            "modified": "2024-01-29T09:38:29.308Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "basic",
+                "basic": {
+                    "username": "bhushan",
+                    "password": "kumar"
+                }
+            },
+            "tests": []
+        },
+        {
+            "_id": "a9265eeb-3b31-4eec-9d1d-f1c8fe20309b",
+            "colId": "5fa1e51f-e9ee-4531-8374-c900a961e8c8",
+            "containerId": "",
+            "name": "add album",
+            "url": "https://localhost:44327/api/CLAlbum/AddAlbum",
+            "method": "POST",
+            "sortNum": 100000,
+            "created": "2024-01-29T09:38:46.204Z",
+            "modified": "2024-01-29T09:38:46.204Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"B01F01\":1,\n  \"B01F02\":\"Ready\",\n  \"B01F03\":7,\n  \"B01F04\":2,\n  \"B01F05\":2\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "basic",
+                "basic": {
+                    "username": "bhushan",
+                    "password": "kumar"
+                }
+            },
+            "tests": []
+        },
+        {
+            "_id": "a3edaa38-9196-432c-a0eb-2bf62391af2f",
+            "colId": "5fa1e51f-e9ee-4531-8374-c900a961e8c8",
+            "containerId": "",
+            "name": "get album",
+            "url": "https://localhost:44327/api/CLAlbum/GetAlbum",
+            "method": "GET",
+            "sortNum": 110000,
+            "created": "2024-01-29T09:39:01.643Z",
+            "modified": "2024-01-29T09:39:01.643Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"B01F01\":1,\n  \"B01F02\":\"Ready\",\n  \"B01F03\":7,\n  \"B01F04\":2,\n  \"B01F05\":2\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "basic",
+                "basic": {
+                    "username": "bhushan",
+                    "password": "kumar"
+                }
+            },
+            "tests": []
+        },
+        {
+            "_id": "9b5dfdab-e915-4f4b-ba3b-fe0352e03e19",
+            "colId": "5fa1e51f-e9ee-4531-8374-c900a961e8c8",
+            "containerId": "",
+            "name": "write album",
+            "url": "https://localhost:44327/api/CLAlbum/WriteFile",
+            "method": "POST",
+            "sortNum": 120000,
+            "created": "2024-01-29T09:39:19.132Z",
+            "modified": "2024-01-29T09:39:19.132Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "basic",
+                "basic": {
+                    "username": "bhushan",
+                    "password": "kumar"
+                }
+            },
+            "tests": []
+        },
+        {
+            "_id": "fdfc3c0d-a2da-4720-9ce5-de048773c614",
+            "colId": "5fa1e51f-e9ee-4531-8374-c900a961e8c8",
+            "containerId": "",
+            "name": "get album file",
+            "url": "https://localhost:44327/api/CLAlbum/GetAlbumFile",
+            "method": "GET",
+            "sortNum": 130000,
+            "created": "2024-01-29T09:39:39.965Z",
+            "modified": "2024-01-29T09:39:39.965Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "basic",
+                "basic": {
+                    "username": "bhushan",
+                    "password": "kumar"
+                }
+            },
+            "tests": []
+        },
+        {
+            "_id": "c3e84e1f-bd18-44b2-aed4-5511fd063b90",
+            "colId": "5fa1e51f-e9ee-4531-8374-c900a961e8c8",
+            "containerId": "",
+            "name": "write artist",
+            "url": "https://localhost:44327/api/CLArtist/WriteFile",
+            "method": "POST",
+            "sortNum": 140000,
+            "created": "2024-01-30T05:59:34.676Z",
+            "modified": "2024-01-30T05:59:34.676Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "basic",
+                "basic": {
+                    "username": "krinsi",
+                    "password": "kayada"
+                }
+            },
+            "tests": []
+        }
+    ]
+}

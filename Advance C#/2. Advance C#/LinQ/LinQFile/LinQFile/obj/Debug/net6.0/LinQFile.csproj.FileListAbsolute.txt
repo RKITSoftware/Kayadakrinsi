@@ -1,0 +1,30 @@
+F:\Krinsi - 379\Training\LinQFile\LinQFile\bin\Debug\net6.0\LinQFile.exe
+F:\Krinsi - 379\Training\LinQFile\LinQFile\bin\Debug\net6.0\LinQFile.deps.json
+F:\Krinsi - 379\Training\LinQFile\LinQFile\bin\Debug\net6.0\LinQFile.runtimeconfig.json
+F:\Krinsi - 379\Training\LinQFile\LinQFile\bin\Debug\net6.0\LinQFile.dll
+F:\Krinsi - 379\Training\LinQFile\LinQFile\bin\Debug\net6.0\LinQFile.pdb
+F:\Krinsi - 379\Training\LinQFile\LinQFile\obj\Debug\net6.0\LinQFile.csproj.AssemblyReference.cache
+F:\Krinsi - 379\Training\LinQFile\LinQFile\obj\Debug\net6.0\LinQFile.GeneratedMSBuildEditorConfig.editorconfig
+F:\Krinsi - 379\Training\LinQFile\LinQFile\obj\Debug\net6.0\LinQFile.AssemblyInfoInputs.cache
+F:\Krinsi - 379\Training\LinQFile\LinQFile\obj\Debug\net6.0\LinQFile.AssemblyInfo.cs
+F:\Krinsi - 379\Training\LinQFile\LinQFile\obj\Debug\net6.0\LinQFile.csproj.CoreCompileInputs.cache
+F:\Krinsi - 379\Training\LinQFile\LinQFile\obj\Debug\net6.0\LinQFile.dll
+F:\Krinsi - 379\Training\LinQFile\LinQFile\obj\Debug\net6.0\refint\LinQFile.dll
+F:\Krinsi - 379\Training\LinQFile\LinQFile\obj\Debug\net6.0\LinQFile.pdb
+F:\Krinsi - 379\Training\LinQFile\LinQFile\obj\Debug\net6.0\LinQFile.genruntimeconfig.cache
+F:\Krinsi - 379\Training\LinQFile\LinQFile\obj\Debug\net6.0\ref\LinQFile.dll
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\LinQ\LinQFile\LinQFile\bin\Debug\net6.0\LinQFile.exe
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\LinQ\LinQFile\LinQFile\bin\Debug\net6.0\LinQFile.deps.json
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\LinQ\LinQFile\LinQFile\bin\Debug\net6.0\LinQFile.runtimeconfig.json
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\LinQ\LinQFile\LinQFile\bin\Debug\net6.0\LinQFile.dll
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\LinQ\LinQFile\LinQFile\bin\Debug\net6.0\LinQFile.pdb
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\LinQ\LinQFile\LinQFile\obj\Debug\net6.0\LinQFile.csproj.AssemblyReference.cache
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\LinQ\LinQFile\LinQFile\obj\Debug\net6.0\LinQFile.GeneratedMSBuildEditorConfig.editorconfig
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\LinQ\LinQFile\LinQFile\obj\Debug\net6.0\LinQFile.AssemblyInfoInputs.cache
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\LinQ\LinQFile\LinQFile\obj\Debug\net6.0\LinQFile.AssemblyInfo.cs
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\LinQ\LinQFile\LinQFile\obj\Debug\net6.0\LinQFile.csproj.CoreCompileInputs.cache
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\LinQ\LinQFile\LinQFile\obj\Debug\net6.0\LinQFile.dll
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\LinQ\LinQFile\LinQFile\obj\Debug\net6.0\refint\LinQFile.dll
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\LinQ\LinQFile\LinQFile\obj\Debug\net6.0\LinQFile.pdb
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\LinQ\LinQFile\LinQFile\obj\Debug\net6.0\LinQFile.genruntimeconfig.cache
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\LinQ\LinQFile\LinQFile\obj\Debug\net6.0\ref\LinQFile.dll

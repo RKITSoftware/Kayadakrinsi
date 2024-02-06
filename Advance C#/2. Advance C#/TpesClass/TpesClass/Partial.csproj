@@ -85,6 +85,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="BusinessLogic\BLAdmin.cs" />
+    <Compile Include="BusinessLogic\BLUser.cs" />
     <Compile Include="Controllers\CLDataAdminController.cs" />
     <Compile Include="Controllers\CLDataUserController.cs" />
     <Compile Include="Global.asax.cs">

@@ -1,0 +1,3 @@
+﻿Hello everyone!
+
+This is a text file to perform LinQ queries on files.

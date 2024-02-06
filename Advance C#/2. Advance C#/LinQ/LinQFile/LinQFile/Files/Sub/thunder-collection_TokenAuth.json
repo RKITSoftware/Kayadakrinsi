@@ -1,0 +1,109 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "TokenAuth",
+    "dateExported": "2024-02-05T09:13:07.680Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "e1d5ca18-578a-4d24-a2e1-fedc2dab4915",
+            "colId": "d896ef0d-c6d1-4365-a76f-2aa5ffd566f5",
+            "containerId": "",
+            "name": "GetSomeCompany(sper admin)",
+            "url": "https://localhost:44335/api/CLCompany/GetSomeCompany",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-01-16T06:21:22.447Z",
+            "modified": "2024-02-01T10:43:59.502Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "8ugUZqJnu57my03liQWRoEQP-jij45430Tv86NaOJTTT58pw0KJqrotnvq47CMRqWjGmATVbleJkz1x1AZCWTIwyqcdV_RVGlACM17ba5DyAIQliQ7E8yCjIQ-91DHYRXymScnn1pBMG5r_tVMpa5GaBbo1Ip2arZUD1MYeRST1MBozrRxGYxemu_PAPOranVE8EaxOppBcjMylf1eyEOhfCQLhm42uVP3H6NvJAUBZiyZNR6vAwEfC2nfVGKDLYMIWi9lUPuPhbxO22EiAluCw0UA54lILp5q9RizxLbDj3V9eVSPpALtZWzonlV0Kz"
+            },
+            "tests": []
+        },
+        {
+            "_id": "bf7adbce-dccc-4f88-b73f-4e92b138da54",
+            "colId": "d896ef0d-c6d1-4365-a76f-2aa5ffd566f5",
+            "containerId": "",
+            "name": "GetToken(super admin)",
+            "url": "https://localhost:44335/token",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-01-16T06:21:27.999Z",
+            "modified": "2024-01-23T06:42:13.868Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "username",
+                        "value": "krinsi"
+                    },
+                    {
+                        "name": "password",
+                        "value": "kayada"
+                    },
+                    {
+                        "name": "grant_type",
+                        "value": "password"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "35d653bb-29b6-4571-ba1e-d168dc4d4185",
+            "colId": "d896ef0d-c6d1-4365-a76f-2aa5ffd566f5",
+            "containerId": "",
+            "name": "GetCompanyById(user)",
+            "url": "https://localhost:44335/api/CLCompany/GetCompanyById/1",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-01-16T06:21:36.416Z",
+            "modified": "2024-02-05T07:29:50.005Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "iaqxitJeRmo4BCh3K7nn-gjTjEg__f8IXcX4V15CyVGfdNDmSBk_faWDK0bqHpmiR2o36B0nuv7D5d4dJ_cYFZMJSCH0EpvH_6lEqe9FMT-DDYFjfRGRLsn40o0AEfjxl0gtqCVL9Gry_FVtkIaoBUzbwHtrsYUhk64hyR2gkjUAZI64TDCbFQH0R9Y7INJZ72JXkpxRlrMypBJxis3NORMEBRdtCVrv6DJbIY58sSHTtWOYX8niSZxr7URprTXyeDjz6j7iWT_bxWnnjfZiVAUhFIExD0HIJSIqOqo43BI"
+            },
+            "tests": []
+        },
+        {
+            "_id": "6a584749-0fe8-4308-9958-28f0b655edeb",
+            "colId": "d896ef0d-c6d1-4365-a76f-2aa5ffd566f5",
+            "containerId": "",
+            "name": "Get token user",
+            "url": "https://localhost:44335/token",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2024-01-23T06:46:27.970Z",
+            "modified": "2024-01-23T06:46:27.970Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "username",
+                        "value": "extra"
+                    },
+                    {
+                        "name": "password",
+                        "value": "12345"
+                    },
+                    {
+                        "name": "grant_type",
+                        "value": "password"
+                    }
+                ]
+            },
+            "tests": []
+        }
+    ]
+}
