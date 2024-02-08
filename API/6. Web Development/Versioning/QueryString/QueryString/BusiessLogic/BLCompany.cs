@@ -14,7 +14,7 @@ namespace QueryString.BusiessLogic
             new CMP02{P02F01=2,P02F02="Microsoft",P02F03="U.S.A.",P02F04="IT",P02F05=221000},
             new CMP02{P02F01=3,P02F02="Google",P02F03="U.S.A.",P02F04="IT",P02F05=156000},
             new CMP02{P02F01=4,P02F02="RKIT",P02F03="India",P02F04="IT",P02F05=200},
-            new CMP02{P02F01=5,P02F02="Sugar Cosmetics",P02F03="India",P02F04="",P02F05=600}
+            new CMP02{P02F01=5,P02F02="Sugar Cosmetics",P02F03="India",P02F04="Production",P02F05=600}
         };
 
         /// <summary>

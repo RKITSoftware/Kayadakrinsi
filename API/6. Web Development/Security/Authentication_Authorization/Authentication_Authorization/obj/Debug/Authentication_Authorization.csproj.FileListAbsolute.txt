@@ -132,3 +132,6 @@ F:\Krinsi - 379\Training\API\6. Web Development\Security\Authentication_Authoriz
 F:\Krinsi - 379\Training\API\6. Web Development\Security\Authentication_Authorization\Authentication_Authorization\bin\System.Web.Http.WebHost.xml
 F:\Krinsi - 379\Training\API\6. Web Development\Security\Authentication_Authorization\Authentication_Authorization\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 F:\Krinsi - 379\Training\API\6. Web Development\Security\Authentication_Authorization\Authentication_Authorization\obj\Debug\Authentication_Authorization.csproj.CopyComplete
+F:\Krinsi - 379\Training\API\6. Web Development\Security\Authentication_Authorization\Authentication_Authorization\bin\Microsoft.Web.Infrastructure.dll
+F:\Krinsi - 379\Training\API\6. Web Development\Security\Authentication_Authorization\Authentication_Authorization\bin\Swashbuckle.Core.dll
+F:\Krinsi - 379\Training\API\6. Web Development\Security\Authentication_Authorization\Authentication_Authorization\bin\WebActivatorEx.dll

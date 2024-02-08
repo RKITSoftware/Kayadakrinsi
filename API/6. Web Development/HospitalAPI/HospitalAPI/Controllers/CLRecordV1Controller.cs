@@ -5,23 +5,26 @@ using HospitalAPI.BusinesLogic;
 
 namespace HospitalAPI.Controllers
 {
-    //// To enable croos origin server request 
-    //[EnableCors(origins: "https://localhost:44380", headers: "*", methods: "*")]
-
-
     /// <summary>
     /// Custom cntroller for handling requests
     /// </summary>
-    [BLCacheFilter(TimeDuration = 100)]
-    [AuthenticationAttribute]
+    //[BLCacheFilter(TimeDuration = 100)]
+    [BasicAuthenticationAttribute]
     public class CLRecordV1Controller : ApiController
     {
+        /// <summary>
+        /// Declares object of BLRecord class
+        /// </summary>
         public BLRecord objBLRecord;
 
+        /// <summary>
+        /// Initializes object of BLRecord class
+        /// </summary>
         public CLRecordV1Controller()
         {
             objBLRecord = new BLRecord();
         }
+
         #region Public Methods
 
         /// <summary>
@@ -32,7 +35,9 @@ namespace HospitalAPI.Controllers
         [BasicAuthorizationAttribute(Roles = "User")] // Custom filter attribute for authorization with role of user
         public IHttpActionResult GetFewRecords()
         {
-            return Ok(objBLRecord.GetSomeRecords());
+            var data = objBLRecord.GetSomeRecords();
+            BLRecord.objCache.Insert("SomeRecords v1", data);
+            return Ok(data);
         }
 
         /// <summary>
@@ -43,7 +48,9 @@ namespace HospitalAPI.Controllers
         [BasicAuthorizationAttribute(Roles = "SuperAdmin,Admin")]
         public IHttpActionResult GetMoreRecords()
         {
-                return Ok(objBLRecord.GetMoreRecords());
+            var data = objBLRecord.GetMoreRecords();
+            BLRecord.objCache.Insert("MoreRecords v1", data);
+            return Ok(data);
         }
 
         /// <summary>
@@ -54,7 +61,9 @@ namespace HospitalAPI.Controllers
         [BasicAuthorizationAttribute(Roles = "SuperAdmin")]
         public IHttpActionResult GetAllRecords()
         {
-            return Ok(BLRecord.lstRCD01);
+            var data = BLRecord.lstRCD01;
+            BLRecord.objCache.Insert("AllRecords v2", data);
+            return Ok(data);
         }
 
         #endregion

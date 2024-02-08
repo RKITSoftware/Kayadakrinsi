@@ -16,6 +16,7 @@ namespace QueryString.Controllers
         /// Handles request for version two
         /// </summary>
         /// <returns>List of companies of type CMP02</returns>
+        [HttpGet]
         public HttpResponseMessage Get()
         {
             return Request.CreateResponse(HttpStatusCode.OK, BLCompany.lstCMP02);

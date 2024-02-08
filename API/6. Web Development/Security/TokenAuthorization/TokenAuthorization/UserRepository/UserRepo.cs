@@ -34,15 +34,8 @@ namespace TokenAuthorization.UserRepository
         /// <param name="password">Defines password of user</param>
         /// <returns>Object of USR01</returns>
         public static USR01 ValidateUser(string username,string password) {
-            return lstUSR01.FirstOrDefault(user => user.R01F02.Equals(username, StringComparison.OrdinalIgnoreCase) && user.R01F03 == password);
-        }
-
-        /// <summary>
-        /// For code cleanup
-        /// </summary>
-        public static void Dispose()
-        {
-            lstUSR01.Clear();
+            return lstUSR01.FirstOrDefault(user => user.R01F02.Equals(username, StringComparison.OrdinalIgnoreCase) 
+                    && user.R01F03 == password);
         }
 
         #endregion

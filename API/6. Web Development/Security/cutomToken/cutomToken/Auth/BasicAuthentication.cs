@@ -24,9 +24,10 @@ namespace cutomToken.Auth
 
             if (authHeader == null)
             {
-                actionContext.Response = actionContext.Request.CreateErrorResponse(HttpStatusCode.Unauthorized, "invalid headers");
+                actionContext.Response = actionContext.Request.CreateErrorResponse(HttpStatusCode.Unauthorized, 
+                                         "invalid headers");
             }
-            else if (authHeader.Scheme != "Bearer")
+            else if (authHeader.Scheme == "Basic")
             {
                 string authToken = authHeader.Parameter;
 
@@ -48,7 +49,8 @@ namespace cutomToken.Auth
 
                     if (principal == null)
                     {
-                        actionContext.Response = actionContext.Request.CreateResponse(HttpStatusCode.Unauthorized, "Invalid token");
+                        actionContext.Response = actionContext.Request.CreateResponse(HttpStatusCode.Unauthorized, 
+                                                 "Invalid token");
                     }
 
                     //Set the current principal for the request

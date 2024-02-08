@@ -35,7 +35,8 @@ namespace cutomToken.Auth
             // if jwt is invalid (corrupted-jwt or jwt-expired) then return unauthorized
             if (!isValid)
             {
-                actionContext.Response = actionContext.Request.CreateErrorResponse(HttpStatusCode.Unauthorized, "Enter valid token");
+                actionContext.Response = actionContext.Request.CreateErrorResponse(HttpStatusCode.Unauthorized, 
+                                         "Enter valid token");
             }
             else
             {
@@ -74,7 +75,8 @@ namespace cutomToken.Auth
                 }
                 else
                 {
-                    actionContext.Response = actionContext.Request.CreateErrorResponse(HttpStatusCode.Unauthorized, "Authorization denied");
+                    actionContext.Response = actionContext.Request.CreateErrorResponse(HttpStatusCode.Unauthorized, 
+                                             "Authorization denied");
                 }
             }
         }

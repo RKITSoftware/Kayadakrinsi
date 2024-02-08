@@ -16,7 +16,7 @@ namespace URI.Controllers
         /// <summary>
         /// Handles request of version one
         /// </summary>
-        /// <returns>List of companies of type CMP01</returns>
+        /// <returns>List of companies of type CMP01</returns
         public HttpResponseMessage Get()
         {
             return Request.CreateResponse(HttpStatusCode.OK, BLCompany.lstCMP01);

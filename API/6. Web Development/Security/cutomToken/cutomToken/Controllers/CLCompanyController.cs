@@ -14,7 +14,7 @@ namespace cutomToken.Controllers
     {
         public BLCompany objBLCompany;
 
-        public CLCompanyController()
+        public CLCompanyController()  
         {
             objBLCompany = new BLCompany();
         }

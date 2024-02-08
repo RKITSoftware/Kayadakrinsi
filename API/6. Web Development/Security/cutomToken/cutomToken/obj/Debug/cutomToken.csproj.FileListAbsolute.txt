@@ -93,3 +93,6 @@ F:\Krinsi - 379\Training\API\6. Web Development\Security\cutomToken\cutomToken\o
 F:\Krinsi - 379\Training\API\6. Web Development\Security\cutomToken\cutomToken\obj\Debug\cutomToken.csproj.CopyComplete
 F:\Krinsi - 379\Training\API\6. Web Development\Security\cutomToken\cutomToken\obj\Debug\cutomToken.dll
 F:\Krinsi - 379\Training\API\6. Web Development\Security\cutomToken\cutomToken\obj\Debug\cutomToken.pdb
+F:\Krinsi - 379\Training\API\6. Web Development\Security\cutomToken\cutomToken\bin\Microsoft.Web.Infrastructure.dll
+F:\Krinsi - 379\Training\API\6. Web Development\Security\cutomToken\cutomToken\bin\Swashbuckle.Core.dll
+F:\Krinsi - 379\Training\API\6. Web Development\Security\cutomToken\cutomToken\bin\WebActivatorEx.dll

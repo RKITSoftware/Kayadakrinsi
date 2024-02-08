@@ -1,6 +1,4 @@
 ﻿using System.Web.Http;
-using QueryString.Controllers;
-using System.Web.Http.Dispatcher;
 
 namespace HospitalAPI
 {
@@ -20,7 +18,8 @@ namespace HospitalAPI
                 defaults: new { id = RouteParameter.Optional }
             );
 
-            config.Services.Replace(typeof(IHttpControllerSelector), new CLCustomSelectorController(config));
+            //config.Services.Replace(typeof(IHttpControllerSelector), new CLCustomSelectorController(config));
+            
         }
     }
 }

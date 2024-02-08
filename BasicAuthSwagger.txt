@@ -1,0 +1,32 @@
+public class SwaggerUIOperationFilter : IOperationFilter
+    {
+        public void Apply(Operation operation, SchemaRegistry schemaRegistry, ApiDescription apiDescription)
+        {
+            // Apply security definition to all operations
+            operation.security = new List<IDictionary<string, IEnumerable<string>>>
+            {
+                new Dictionary<string, IEnumerable<string>>
+                {
+                    { "basic", new string[] {} }
+                }
+            };
+        }
+    }
+
+
+swaggerConfig.cs 
+protected void Application_Start()
+{
+    GlobalConfiguration.Configuration.EnableSwagger(c =>
+    {
+        c.SingleApiVersion("v1", "Your API Name");
+
+        c.BasicAuth("basic").Description("Basic HTTP Authentication");
+
+        c.OperationFilter<SwaggerUIOperationFilter>(); // Custom operation filter for adding security definition
+
+    })
+    .EnableSwaggerUi(c =>
+    {
+    });
+}

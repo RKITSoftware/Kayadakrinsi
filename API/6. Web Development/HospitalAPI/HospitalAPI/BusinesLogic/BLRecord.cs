@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Web.Caching;
 using HospitalAPI.Models;
 
 namespace HospitalAPI.BusinesLogic
@@ -27,6 +28,11 @@ namespace HospitalAPI.BusinesLogic
                 new RCD01{D01F01=8,D01F02="VIMAL VERMA",D01F03="SHAILESH SHAH",D01F04="HEART DIEASES",D01F05=new DateTime(2023,12,10),D01F06=new DateTime(2023,12,25),D01F07=6321.2 },
                 new RCD01{D01F01=9,D01F02="JAY PATEL",D01F03="BIPIN PAL",D01F04="ALZER",D01F05=new DateTime(2023,12,25),D01F06=new DateTime(2023,12,30),D01F07=2031.11 }
         };
+
+        /// <summary>
+        /// Object of Cache class
+        /// </summary>
+        public static Cache objCache = new Cache();
 
         #endregion
 

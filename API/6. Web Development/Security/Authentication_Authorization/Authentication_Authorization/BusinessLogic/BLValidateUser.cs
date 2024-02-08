@@ -19,8 +19,8 @@ namespace Authentication_Authorization
             var users = new List<USR01>
             {
                 new USR01 { R01F01 = 1,R01F02="krinsi",R01F03="kayada",R01F04="SuperAdmin" },
-                new USR01 { R01F01 = 2, R01F02 = "deep", R01F03 = "patel", R01F04 = "Admin" },
-                new USR01 { R01F01 = 3, R01F02 = "extra", R01F03 = "12345", R01F04 = "User" }
+                new USR01 { R01F01 = 2, R01F02 = "admin", R01F03 = "12345", R01F04 = "Admin" },
+                new USR01 { R01F01 = 3, R01F02 = "user", R01F03 = "12345", R01F04 = "User" }
             };
             return users;
         }

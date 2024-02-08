@@ -132,3 +132,6 @@ F:\Krinsi - 379\Training\API\6. Web Development\Versioning\QueryString\QueryStri
 F:\Krinsi - 379\Training\API\6. Web Development\Versioning\QueryString\QueryString\obj\Debug\QueryString.csproj.CopyComplete
 F:\Krinsi - 379\Training\API\6. Web Development\Versioning\QueryString\QueryString\obj\Debug\QueryString.dll
 F:\Krinsi - 379\Training\API\6. Web Development\Versioning\QueryString\QueryString\obj\Debug\QueryString.pdb
+F:\Krinsi - 379\Training\API\6. Web Development\Versioning\QueryString\QueryString\bin\Microsoft.Web.Infrastructure.dll
+F:\Krinsi - 379\Training\API\6. Web Development\Versioning\QueryString\QueryString\bin\Swashbuckle.Core.dll
+F:\Krinsi - 379\Training\API\6. Web Development\Versioning\QueryString\QueryString\bin\WebActivatorEx.dll

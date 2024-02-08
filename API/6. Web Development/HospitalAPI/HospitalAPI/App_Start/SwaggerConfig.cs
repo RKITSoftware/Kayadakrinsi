@@ -1,9 +1,12 @@
+using System.Collections.Generic;
+using System.Globalization;
 using System.Web.Http;
-using WebActivatorEx;
+using System.Web.Http.Description;
 using HospitalAPI;
 using Swashbuckle.Application;
+using Swashbuckle.Swagger;
 
-[assembly: PreApplicationStartMethod(typeof(SwaggerConfig), "Register")]
+[assembly: System.Web.PreApplicationStartMethod(typeof(SwaggerConfig), "Register")]
 
 namespace HospitalAPI
 {
@@ -32,7 +35,7 @@ namespace HospitalAPI
                         // hold additional metadata for an API. Version and title are required but you can also provide
                         // additional fields by chaining methods off SingleApiVersion.
                         //
-                        c.SingleApiVersion("v1", "HospitalAPI");
+                        //c.SingleApiVersion("v1", "HospitalAPI");
 
                         // If you want the output Swagger docs to be indented properly, enable the "PrettyPrint" option.
                         //
@@ -50,7 +53,24 @@ namespace HospitalAPI
                         //        vc.Version("v2", "Swashbuckle Dummy API V2");
                         //        vc.Version("v1", "Swashbuckle Dummy API V1");
                         //    });
+                        c.MultipleApiVersions(
+                        (apiDesc, version) =>
+                        {
+                            var controllerNamespace = apiDesc.ActionDescriptor.ControllerDescriptor.ControllerType.FullName;
+                            if (CultureInfo.InvariantCulture.CompareInfo.IndexOf(controllerNamespace, string.Format("{0}Controller", version), CompareOptions.IgnoreCase) >= 0)
+                            {
+                                return true;
+                            }
 
+                            return false;
+                        },
+                        (vc) =>
+                        {
+                            vc.Version("v2", "Records");
+                            vc.Version("v1", "Records");
+                        }
+                        );
+                        c.OperationFilter<BasicAuthOperationFilter>();
                         // You can use "BasicAuth", "ApiKey" or "OAuth2" options to describe security schemes for the API.
                         // See https://github.com/swagger-api/swagger-spec/blob/master/versions/2.0.md for more details.
                         // NOTE: These only define the schemes and need to be coupled with a corresponding "security" property
@@ -61,7 +81,7 @@ namespace HospitalAPI
                         //c.BasicAuth("basic")
                         //    .Description("Basic HTTP Authentication");
                         //
-						// NOTE: You must also configure 'EnableApiKeySupport' below in the SwaggerUI section
+                        // NOTE: You must also configure 'EnableApiKeySupport' below in the SwaggerUI section
                         //c.ApiKey("apiKey")
                         //    .Description("API Key Authentication")
                         //    .Name("apiKey")
@@ -250,6 +270,25 @@ namespace HospitalAPI
                         //
                         //c.EnableApiKeySupport("apiKey", "header");
                     });
+        }
+    }
+    public class BasicAuthOperationFilter : IOperationFilter
+    {
+        public void Apply(Operation operation, SchemaRegistry schemaRegistry, ApiDescription apiDescription)
+        {
+            // Check if the controller namespace contains "v1"
+            if (apiDescription.ActionDescriptor.ControllerDescriptor.ControllerType.FullName.Contains("v1"))
+            {
+                // Apply basic authentication only for version 1
+                if (operation.security == null)
+                    operation.security = new List<IDictionary<string, IEnumerable<string>>>();
+
+                var basicAuthRequirements = new Dictionary<string, IEnumerable<string>>
+            {
+                { "basic", new string[] { } }
+            };
+                operation.security.Add(basicAuthRequirements);
+            }
         }
     }
 }
