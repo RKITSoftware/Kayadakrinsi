@@ -2,6 +2,11 @@ using System.Web.Http;
 using WebActivatorEx;
 using cutomToken;
 using Swashbuckle.Application;
+using Swashbuckle.Swagger;
+using System.Collections.Generic;
+using System.Web.Http.Description;
+using System.Linq;
+using cutomToken.Auth;
 
 [assembly: PreApplicationStartMethod(typeof(SwaggerConfig), "Register")]
 
@@ -58,14 +63,14 @@ namespace cutomToken
                         // you'll need to implement a custom IDocumentFilter and/or IOperationFilter to set these properties
                         // according to your specific authorization implementation
                         //
-                        //c.BasicAuth("basic")
-                        //    .Description("Basic HTTP Authentication");
-                        //
-                        //c.ApiKey("BearerToken")
-                        //                  .Description("Bearer Token Authentication")
-                        //                  .Name("Authorization")
-                        //                  .In("header");
+                        c.BasicAuth("basic")
+                            .Description("Basic HTTP Authentication");
 
+                        c.ApiKey("BearerToken")
+                                          .Description("Bearer Token Authentication")
+                                          .Name("Authorization")
+                                          .In("header");
+                        c.OperationFilter<AssignOAuth2SecurityRequirements>();
                         // NOTE: You must also configure 'EnableApiKeySupport' below in the SwaggerUI section
                         //c.ApiKey("apiKey")
                         //    .Description("API Key Authentication")
@@ -255,6 +260,45 @@ namespace cutomToken
                         //
                         //c.EnableApiKeySupport("apiKey", "header");
                     });
+        }
+        public class AssignOAuth2SecurityRequirements : IOperationFilter
+        {
+            public void Apply(Operation operation, SchemaRegistry schemaRegistry, ApiDescription apiDescription)
+            {
+                // Check if the method has the BasicAuth attribute
+                var basicAuthRequired = apiDescription.GetControllerAndActionAttributes<BasicAuthentication>().Any();
+
+                // Check if the method has the BearerAuth attribute
+                var bearerAuthRequired = apiDescription.GetControllerAndActionAttributes<BearerAuthentication>().Any();
+
+                if (basicAuthRequired)
+                {
+                    // Apply Basic Authentication
+                    if (operation.security == null)
+                        operation.security = new List<IDictionary<string, IEnumerable<string>>>();
+
+                    var basicAuth = new Dictionary<string, IEnumerable<string>>
+                    {
+                        { "basic", new string[] { } }
+                    };
+
+                    operation.security.Add(basicAuth);
+                }
+
+                if (bearerAuthRequired)
+                {
+                    // Apply Bearer Authentication
+                    if (operation.security == null)
+                        operation.security = new List<IDictionary<string, IEnumerable<string>>>();
+
+                    var bearerAuth = new Dictionary<string, IEnumerable<string>>
+                    {
+                        { "BearerToken", new string[] { } }
+                    };
+
+                    operation.security.Add(bearerAuth);
+                }
+            }
         }
     }
 }

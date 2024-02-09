@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using System.Net;
+﻿using System.Net;
 using System.Net.Http;
 using System.Threading;
 using System.Web.Http.Controllers;
@@ -29,15 +28,13 @@ namespace HospitalAPI.Auth
             }
             else if (authHeader.Scheme == "Basic")
             {
-                string authToken = authHeader.Parameter;
-
-                string[] usernamePassword = authToken.Split(':');
+                string[] usernamePassword = BLUser.GetUsernamePassword(actionContext.Request);
 
                 //Extracts username and password from the decoded token.
                 string username = usernamePassword[0];
                 string password = usernamePassword[1];
 
-                var user = BLUser.lstUSR01.Any(u => u.R01F02 == username && u.R01F03 == password);
+                var user = BLUser.GetUserDetails(username, password);
 
                 if (user != null)
                 {

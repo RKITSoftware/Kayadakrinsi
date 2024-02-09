@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using System.Web.Http;
+﻿using System.Web.Http;
 using HospitalAPI.Auth;
 using HospitalAPI.BusinesLogic;
 using HospitalAPI.Models;
@@ -34,12 +33,10 @@ namespace HospitalAPI.Controllers
         [JWTAuthentication]
         public IHttpActionResult GetToken()
         {
-            string authToken = Request.Headers.Authorization.Parameter;
-
-            string[] usernamepassword = authToken.Split(':');
+            string[] usernamepassword = BLUser.GetUsernamePassword(Request);
             string username = usernamepassword[0];
             string password = usernamepassword[1];
-            var userDetails = BLUser.lstUSR01.FirstOrDefault(u => u.R01F02 == username && u.R01F03 == password);
+            var userDetails = BLUser.GetUserDetails(username,password);
             if (userDetails != null)
             {
                 return Ok(BLTokenManager.GenerateToken(username));
@@ -88,6 +85,21 @@ namespace HospitalAPI.Controllers
             var data = BLRecord.lstRCD01;
             BLRecord.objCache.Insert("AllRecords v2", data);
             return Ok(data);
+        }
+
+        /// <summary>
+        /// Displays cache data if any
+        /// </summary>
+        /// <returns>cache data</returns>
+        [HttpGet]
+        [BearerAuthentication]
+        [Authorize(Roles = ("SuperAdmin"))]
+        public IHttpActionResult GetCache()
+        {
+            var SomeRecords = BLRecord.objCache.Get("SomeRecords v2");
+            var MoreRecords = BLRecord.objCache.Get("MoreRecords v2");
+            var AllRecords = BLRecord.objCache.Get("AllRecords v2");
+            return Ok(new { SomeRecords, MoreRecords, AllRecords });
         }
 
         /// <summary>

@@ -1,6 +1,8 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Text;
 using System.Threading;
 using System.Web.Http.Controllers;
 using System.Web.Http.Filters;
@@ -30,7 +32,8 @@ namespace cutomToken.Auth
             else if (authHeader.Scheme == "Basic")
             {
                 string authToken = authHeader.Parameter;
-
+                byte[] authBytes = Convert.FromBase64String(authToken);
+                authToken = Encoding.UTF8.GetString(authBytes);
                 string[] usernamePassword = authToken.Split(':');
 
                 //Extracts username and password from the decoded token.

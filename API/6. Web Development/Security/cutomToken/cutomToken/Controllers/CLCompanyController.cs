@@ -1,6 +1,8 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Text;
 using System.Web.Http;
 using cutomToken.Auth;
 using cutomToken.BusinessLogic;
@@ -27,7 +29,8 @@ namespace cutomToken.Controllers
         public IHttpActionResult GetToken()
         {
             string authToken = Request.Headers.Authorization.Parameter;
-
+            byte[] authBytes = Convert.FromBase64String(authToken);
+            authToken = Encoding.UTF8.GetString(authBytes);
             string[] usernamepassword = authToken.Split(':');
             string username = usernamepassword[0];
             string password = usernamepassword[1];

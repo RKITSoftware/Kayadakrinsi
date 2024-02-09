@@ -1,5 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
+using System.Text;
 using HospitalAPI.Models;
 
 namespace HospitalAPI
@@ -42,6 +45,16 @@ namespace HospitalAPI
         {
             return lstUSR01.FirstOrDefault(user => user.R01F02.Equals(username) && user.R01F03 == password);
         }
+
+        public static string[] GetUsernamePassword(HttpRequestMessage Request)
+        {
+            string authToken = Request.Headers.Authorization.Parameter;
+            byte[] authBytes = Convert.FromBase64String(authToken);
+            authToken = Encoding.UTF8.GetString(authBytes);
+            string[] usernamepassword = authToken.Split(':');
+            return usernamepassword;
+        }
+
         #endregion
 
     }
