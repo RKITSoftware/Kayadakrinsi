@@ -1,4 +1,6 @@
-﻿using System.Web.Http;
+﻿using System.Diagnostics;
+using System.Web;
+using System.Web.Http;
 using HospitalAPI.Auth;
 using HospitalAPI.BusinesLogic;
 using HospitalAPI.Models;
@@ -16,14 +18,18 @@ namespace HospitalAPI.Controllers
         public BLRecord objBLRecord;
 
         /// <summary>
-        /// Initializes object of BLRecord class
+        /// Declares object of Stopwatch class
+        /// </summary>
+        public static Stopwatch stopwatch;
+
+        /// <summary>
+        /// Initializes object of BLRecord and Stopwatch class
         /// </summary>
         public CLRecordV2Controller()
         {
             objBLRecord = new BLRecord();
+            stopwatch = Stopwatch.StartNew();
         }
-
-        #region Public Methods
 
         /// <summary>
         /// Used to get token
@@ -52,9 +58,15 @@ namespace HospitalAPI.Controllers
         [BearerAuthentication]
         [Authorize(Roles = ("User"))]
         public IHttpActionResult GetSomeRecords()
-        {
+        { 
             var data = objBLRecord.GetSomeRecords();
             BLRecord.objCache.Insert("SomeRecords v2", data);
+
+            stopwatch.Stop();
+            long responseTime = stopwatch.ElapsedTicks;
+
+            HttpContext.Current.Response.AddHeader("Response-time", responseTime.ToString());
+
             return Ok(data);
         }
 
@@ -67,8 +79,16 @@ namespace HospitalAPI.Controllers
         [Authorize(Roles = ("Admin,SuperAdmin"))]
         public IHttpActionResult GetMoreRecords()
         {
+            Stopwatch stopwatch = Stopwatch.StartNew();
+
             var data = objBLRecord.GetMoreRecords();
             BLRecord.objCache.Insert("MoreRecords v2", data);
+
+            stopwatch.Stop();
+            long responseTime = stopwatch.ElapsedTicks;
+
+            HttpContext.Current.Response.AddHeader("Response-time", responseTime.ToString());
+            
             return Ok(data);
         }
 
@@ -81,9 +101,17 @@ namespace HospitalAPI.Controllers
         [Authorize(Roles = ("SuperAdmin"))]
         public IHttpActionResult GetAllRecords()
         {
+            Stopwatch stopwatch = Stopwatch.StartNew();
 
             var data = BLRecord.lstRCD01;
             BLRecord.objCache.Insert("AllRecords v2", data);
+
+            stopwatch.Stop();
+            long responseTime = stopwatch.ElapsedTicks;
+
+            HttpContext.Current.Response.AddHeader("Response-time", responseTime.ToString());
+
+           
             return Ok(data);
         }
 
@@ -142,7 +170,5 @@ namespace HospitalAPI.Controllers
         {
             return Ok(objBLRecord.DeleteRecord(id));
         }
-
-        #endregion
     }
 }

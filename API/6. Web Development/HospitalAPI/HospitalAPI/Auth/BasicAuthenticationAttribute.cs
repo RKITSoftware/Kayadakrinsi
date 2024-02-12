@@ -70,7 +70,8 @@ namespace HospitalAPI.Auth
             catch (Exception)
             {
                 actionContext.Response = actionContext.Request
-                            .CreateErrorResponse(HttpStatusCode.InternalServerError, "Login failed due to Internal Server Error");
+                            .CreateErrorResponse(HttpStatusCode.InternalServerError, 
+                            "Login failed due to Internal Server Error");
             }
 
         }

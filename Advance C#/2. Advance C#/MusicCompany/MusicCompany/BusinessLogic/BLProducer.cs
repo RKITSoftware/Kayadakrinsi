@@ -119,6 +119,7 @@ namespace MusicCompany.BusinessLogic
         /// Selects data from databse and Writes data into file
         /// </summary>
         /// <returns>Appropriate Message</returns>
+
         public static string WriteData()
         {
             using (StreamWriter sw = new StreamWriter(path))

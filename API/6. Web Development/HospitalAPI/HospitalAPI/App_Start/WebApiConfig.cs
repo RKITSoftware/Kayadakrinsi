@@ -17,9 +17,6 @@ namespace HospitalAPI
                 routeTemplate: "api/{controller}/{action}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
-
-            //config.Services.Replace(typeof(IHttpControllerSelector), new CLCustomSelectorController(config));
-            
         }
     }
 }
