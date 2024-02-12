@@ -1,7 +1,7 @@
 ﻿/// <summary>
-/// Abstract class Animal2
+/// Abstract class AnimalProperty
 /// </summary>
-public abstract class Animal2
+public abstract class AnimalProperty
 {
 
     /// <summary>
@@ -25,20 +25,20 @@ public abstract class Animal2
 }
 
 /// <summary>
-/// Inherits abstract class Animal2
+/// Inherits abstract class AnimalProperty
 /// </summary>
-public class Dog2 : Animal2
+public class Cat : AnimalProperty
 {
     /// <summary>
     /// Overrides abstract property
     /// </summary>
-    public override string Sound => "Bark";
+    public override string Sound => "Meow";
 
     /// <summary>
     /// Constructor
     /// </summary>
     /// <param name="name">Name of Dog</param>
-    public Dog2(string name) : base()
+    public Cat(string name) : base()
     {
         Name = name;
     }

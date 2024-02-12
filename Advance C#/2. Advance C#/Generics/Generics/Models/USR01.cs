@@ -1,5 +1,8 @@
 ﻿namespace Generics.Models
 {
+    /// <summary>
+    /// User class
+    /// </summary>
     public class USR01
     {
         #region Public Members

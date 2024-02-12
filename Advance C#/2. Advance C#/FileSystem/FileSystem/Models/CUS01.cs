@@ -1,5 +1,8 @@
 ﻿namespace FileSystem.Models
 {
+    /// <summary>
+    /// Customer class
+    /// </summary>
     public class CUS01
     {
         /// <summary>

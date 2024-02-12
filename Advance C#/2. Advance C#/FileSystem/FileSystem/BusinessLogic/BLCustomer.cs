@@ -137,6 +137,12 @@ namespace FileSystem.BusinessLogic
             return response;
         }
 
+        /// <summary>
+        /// Gives unique filename 
+        /// </summary>
+        /// <param name="directory">Directory where to store file</param>
+        /// <param name="fileName">Name of file</param>
+        /// <returns>unique name of file</returns>
         public string GetUniqueFileName(string directory, string fileName)
         {
             int count = 1;

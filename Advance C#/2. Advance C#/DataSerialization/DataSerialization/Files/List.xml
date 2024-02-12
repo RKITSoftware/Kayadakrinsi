@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfPet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Pet>
+    <Name>Dolly</Name>
+    <Breed>Dolphin</Breed>
+  </Pet>
+  <Pet>
+    <Name>Tom</Name>
+    <Breed>Cat</Breed>
+  </Pet>
+  <Pet>
+    <Name>Jerry</Name>
+    <Breed>Mouse</Breed>
+  </Pet>
+  <Pet>
+    <Name>Mickey</Name>
+    <Breed>Mouse</Breed>
+  </Pet>
+  <Pet>
+    <Name>Donald</Name>
+    <Breed>Duck</Breed>
+  </Pet>
+</ArrayOfPet>

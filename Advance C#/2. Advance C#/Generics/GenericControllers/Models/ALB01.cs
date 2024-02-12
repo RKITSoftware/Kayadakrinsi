@@ -1,5 +1,8 @@
 ﻿namespace GenericControllers.Models
 {
+    /// <summary>
+    /// Album class
+    /// </summary>
     public class ALB01
     {
         /// <summary>

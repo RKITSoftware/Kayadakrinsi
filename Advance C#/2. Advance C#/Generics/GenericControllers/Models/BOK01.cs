@@ -1,5 +1,8 @@
 ﻿namespace GenericControllers.Models
 {
+    /// <summary>
+    /// Book class
+    /// </summary>
     public class BOK01
     {
        

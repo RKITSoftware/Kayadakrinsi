@@ -17,6 +17,9 @@
 #define DEBUG // DEBUG is defined by defualt in VS
 namespace ConditionalCompilation
 {
+    /// <summary>
+    /// For testing conditional compilation
+    /// </summary>
     class Program
     {
         static void Main()

@@ -3,6 +3,9 @@ using TpesClass.Models;
 
 namespace TpesClass.BusinessLogic
 {
+    /// <summary>
+    /// Contains logic for user controller
+    /// </summary>
     public class BLUser
     {
         /// <summary>

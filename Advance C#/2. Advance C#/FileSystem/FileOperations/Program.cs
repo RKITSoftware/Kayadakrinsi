@@ -41,7 +41,13 @@
         Console.WriteLine("Operations completed successfully.");
     }
 
-    // Method to recursively copy a directory and its contents
+    /// <summary>
+    /// Method to recursively copy a directory and its contents
+    /// </summary>
+    /// <param name="sourceDirName">Name of directory which being copied</param>
+    /// <param name="destDirName">Name of directory where copy will be saved</param>
+    /// <param name="copySubDirs">weather to copy sub directories or not</param>
+    /// <exception cref="DirectoryNotFoundException">Throw if source directory not found</exception>
     static void DirectoryCopy(string sourceDirName, string destDirName, bool copySubDirs)
     {
         DirectoryInfo dir = new DirectoryInfo(sourceDirName);

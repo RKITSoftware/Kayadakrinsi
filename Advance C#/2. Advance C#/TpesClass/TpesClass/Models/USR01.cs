@@ -2,6 +2,9 @@
 
 namespace TpesClass.Models
 {
+    /// <summary>
+    /// User class
+    /// </summary>
     public class USR01
     {
         /// <summary>

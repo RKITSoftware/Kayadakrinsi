@@ -3,6 +3,9 @@ using TpesClass.Models;
 
 namespace TpesClass.BusinessLogic
 {
+    /// <summary>
+    /// Contains logic for admin controller
+    /// </summary>
     public class BLAdmin
     {
         /// <summary>

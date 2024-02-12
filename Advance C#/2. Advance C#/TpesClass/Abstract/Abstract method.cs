@@ -1,7 +1,7 @@
 ﻿/// <summary>
-/// Abstract class Animal
+/// Abstract class AnimalMethod
 /// </summary>
-public abstract class Animal{
+public abstract class AnimalMethod{
 
     /// <summary>
     /// Name of animal
@@ -21,9 +21,9 @@ public abstract class Animal{
 }
 
 /// <summary>
-/// Class Dog inherits abstract class Animal
+/// Class Dog inherits abstract class AnimalMethod
 /// </summary>
-public class Dog : Animal
+public class Dog : AnimalMethod
 {
     /// <summary>
     /// Constructor 
@@ -37,7 +37,7 @@ public class Dog : Animal
     }
 
     /// <summary>
-    /// Overriding mabstract method Display
+    /// Overriding abstract method Display
     /// </summary>
     public override void Display()
     {

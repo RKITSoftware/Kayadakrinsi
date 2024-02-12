@@ -1,7 +1,5 @@
-﻿using System.Collections.Generic;
-using System.Web.Http;
+﻿using System.Web.Http;
 using TpesClass.BusinessLogic;
-using TpesClass.Models;
 
 namespace TpesClass.Controllers
 {

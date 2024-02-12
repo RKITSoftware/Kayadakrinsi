@@ -1,5 +1,8 @@
 ﻿namespace Generics.Models
 {
+    /// <summary>
+    /// Admin class
+    /// </summary>
     public class ADM01
     {
         #region Public Members

@@ -1,5 +1,8 @@
 ﻿namespace TpesClass.Models
 {
+    /// <summary>
+    /// Admin class
+    /// </summary>
     public class ADM01
     {
         /// <summary>

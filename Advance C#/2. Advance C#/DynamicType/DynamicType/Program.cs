@@ -1,4 +1,7 @@
-﻿public class Program
+﻿/// <summary>
+/// For testing dynamic type
+/// </summary>
+public class Program
 {
     /// <summary>
     /// Id of object
@@ -35,15 +38,20 @@
         dynamic objDynamic;
         objDynamic = 32;
         Console.WriteLine($"1. {objDynamic}");
+
         objDynamic = "Sting";
         Console.WriteLine("2. {0}", objDynamic);
+
         objDynamic = 64.234;
         Console.WriteLine($"3. {objDynamic}");
+
         objDynamic = new Program();
         Console.WriteLine($"4. {objDynamic}");
+
         objDynamic.Id = 1;
         objDynamic.Name = "test";
         Console.WriteLine($"Id : {objDynamic.Id}, Name : {objDynamic.Name}");
+
         var returned = Show(objDynamic);
         Print(returned);
     }
