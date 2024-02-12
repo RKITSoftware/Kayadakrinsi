@@ -84,7 +84,6 @@ public class Program
     public static void CryptographyUsingRSA()
     {
         RSACryptoServiceProvider RSA = new RSACryptoServiceProvider();
-        UnicodeEncoding ByteConverter = new UnicodeEncoding();
 
         byte[] plaintextBytes = Encoding.UTF8.GetBytes(plaintext) ;
         byte[] ciphertext = RSAEncryption(plaintextBytes, RSA.ExportParameters(false), false);
