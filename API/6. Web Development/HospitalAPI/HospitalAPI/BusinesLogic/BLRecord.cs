@@ -32,7 +32,7 @@ namespace HospitalAPI.BusinesLogic
         /// <summary>
         /// Object of Cache class
         /// </summary>
-        public static Cache objCache = new Cache();
+        //public static Cache objCache = new Cache();
 
         #endregion
 

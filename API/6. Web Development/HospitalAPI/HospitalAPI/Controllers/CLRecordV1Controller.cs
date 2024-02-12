@@ -1,4 +1,5 @@
-﻿using System.Web.Http;
+﻿using System.Web;
+using System.Web.Http;
 using HospitalAPI.Auth;
 using HospitalAPI.BusinesLogic;
 
@@ -36,7 +37,8 @@ namespace HospitalAPI.Controllers
         public IHttpActionResult GetFewRecords()
         {
             var data = objBLRecord.GetSomeRecords();
-            BLRecord.objCache.Insert("SomeRecords v1", data);
+            HttpContext.Current.Cache.Insert("SomeRecords v1", data, null, System.DateTime.Now.AddMinutes(20), System.TimeSpan.Zero);
+
             return Ok(data);
         }
 
@@ -49,7 +51,8 @@ namespace HospitalAPI.Controllers
         public IHttpActionResult GetMoreRecords()
         {
             var data = objBLRecord.GetMoreRecords();
-            BLRecord.objCache.Insert("MoreRecords v1", data);
+            HttpContext.Current.Cache.Insert("MoreRecords v1", data, null, System.DateTime.Now.AddMinutes(20), System.TimeSpan.Zero);
+
             return Ok(data);
         }
 
@@ -62,7 +65,8 @@ namespace HospitalAPI.Controllers
         public IHttpActionResult GetAllRecords()
         {
             var data = BLRecord.lstRCD01;
-            BLRecord.objCache.Insert("AllRecords v2", data);
+            HttpContext.Current.Cache.Insert("AllRecords v1", data, null, System.DateTime.Now.AddMinutes(20), System.TimeSpan.Zero);
+
             return Ok(data);
         }
 

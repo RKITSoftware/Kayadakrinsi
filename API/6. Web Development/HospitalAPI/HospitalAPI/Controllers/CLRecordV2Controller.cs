@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using System.Web;
+using System.Web.Caching;
 using System.Web.Http;
 using HospitalAPI.Auth;
 using HospitalAPI.BusinesLogic;
@@ -60,7 +61,7 @@ namespace HospitalAPI.Controllers
         public IHttpActionResult GetSomeRecords()
         { 
             var data = objBLRecord.GetSomeRecords();
-            BLRecord.objCache.Insert("SomeRecords v2", data);
+            HttpContext.Current.Cache.Insert("SomeRecords v2", data, null, System.DateTime.Now.AddMinutes(20),System.TimeSpan.Zero);
 
             stopwatch.Stop();
             long responseTime = stopwatch.ElapsedTicks;
@@ -82,7 +83,7 @@ namespace HospitalAPI.Controllers
             Stopwatch stopwatch = Stopwatch.StartNew();
 
             var data = objBLRecord.GetMoreRecords();
-            BLRecord.objCache.Insert("MoreRecords v2", data);
+            HttpContext.Current.Cache.Insert("MoreRecords v2", data, null, System.DateTime.Now.AddMinutes(20), System.TimeSpan.Zero);
 
             stopwatch.Stop();
             long responseTime = stopwatch.ElapsedTicks;
@@ -104,14 +105,13 @@ namespace HospitalAPI.Controllers
             Stopwatch stopwatch = Stopwatch.StartNew();
 
             var data = BLRecord.lstRCD01;
-            BLRecord.objCache.Insert("AllRecords v2", data);
+            HttpContext.Current.Cache.Insert("AllRecords v2", data, null, System.DateTime.Now.AddMinutes(20), System.TimeSpan.Zero);
 
             stopwatch.Stop();
             long responseTime = stopwatch.ElapsedTicks;
 
             HttpContext.Current.Response.AddHeader("Response-time", responseTime.ToString());
 
-           
             return Ok(data);
         }
 
@@ -124,10 +124,11 @@ namespace HospitalAPI.Controllers
         [Authorize(Roles = ("SuperAdmin"))]
         public IHttpActionResult GetCache()
         {
-            var SomeRecords = BLRecord.objCache.Get("SomeRecords v2");
-            var MoreRecords = BLRecord.objCache.Get("MoreRecords v2");
-            var AllRecords = BLRecord.objCache.Get("AllRecords v2");
-            return Ok(new { SomeRecords, MoreRecords, AllRecords });
+            var SomeRecords = HttpContext.Current.Cache.Get("SomeRecords v2");
+            var MoreRecords = HttpContext.Current.Cache.Get("MoreRecords v2");
+            var AllRecords = HttpContext.Current.Cache.Get("AllRecords v2");
+            var record = HttpContext.Current.Cache.Get("SomeRecords v1");
+            return Ok(new { SomeRecords, MoreRecords, AllRecords, record });
         }
 
         /// <summary>

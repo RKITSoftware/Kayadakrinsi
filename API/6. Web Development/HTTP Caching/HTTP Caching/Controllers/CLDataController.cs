@@ -1,9 +1,9 @@
-﻿using System.Web.Caching;
+﻿using System.Web;
+using System.Web.Caching;
 using System.Web.Http;
 
 namespace HTTP_Caching.Controllers
 {
-    //[BLCacheFilter(TimeDuration = 100)]
     /// <summary>
     /// Defines custom controller
     /// </summary>
@@ -25,6 +25,7 @@ namespace HTTP_Caching.Controllers
         /*[BLCacheFilter(TimeDuration = 100)]*/ // Using custom cache filter made previously with it's parameter
         public IHttpActionResult getData()
         {
+            HttpContext.Current.Cache.Insert("states", BLData.Data(), null, System.DateTime.Now.AddMinutes(20),Cache.NoSlidingExpiration);
             objCache.Insert("states", BLData.Data());
             objCache.Insert("Name", BLData.Data());
             return Ok(BLData.Data());
