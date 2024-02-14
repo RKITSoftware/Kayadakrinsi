@@ -137,17 +137,18 @@ namespace FileSystem.Controllers
                         var destinationPath = Path.Combine(root, fileName);
 
                         // Check if the file already exists at the destination
-                        if (File.Exists(destinationPath))
-                        {
-                            File.Delete(localFileName);
-                            return BadRequest("A file with the same name already exists.");
-                        }
                         //if (File.Exists(destinationPath))
                         //{
-                        //    // Rename the file to avoid overwriting
-                        //    var uniqueFileName = objBLCustomer.GetUniqueFileName(root, fileName);
-                        //    destinationPath = Path.Combine(root, uniqueFileName);
+                        //    File.Delete(localFileName);
+                        //    return BadRequest("A file with the same name already exists.");
                         //}
+
+                        if (File.Exists(destinationPath))
+                        {
+                            // Rename the file to avoid overwriting
+                            var uniqueFileName = objBLCustomer.GetUniqueFileName(root, fileName);
+                            destinationPath = Path.Combine(root, uniqueFileName);
+                        }
 
                         // Move the file from the temporary location to the desired location
                         File.Move(localFileName, destinationPath);
@@ -163,6 +164,5 @@ namespace FileSystem.Controllers
             }
             return BadRequest();
         }
-
+        }
     }
-}

@@ -1,15 +1,17 @@
-﻿using System.Web;
+﻿using System.Diagnostics;
+using System.Web;
+using System.Web.Caching;
 using System.Web.Http;
 using HospitalAPI.Auth;
 using HospitalAPI.BusinesLogic;
-
+using HospitalAPI.Filters;
 
 namespace HospitalAPI.Controllers
 {
     /// <summary>
     /// Custom cntroller for handling requests
     /// </summary>
-    //[BLCacheFilter(TimeDuration = 100)]
+    [CustomExceptionFilterAttribute]
     [BasicAuthenticationAttribute]
     public class CLRecordV1Controller : ApiController
     {
@@ -19,11 +21,22 @@ namespace HospitalAPI.Controllers
         public BLRecord objBLRecord;
 
         /// <summary>
+        /// Declares object of Stopwatch class
+        /// </summary>
+        public static Stopwatch stopwatch;
+
+        /// <summary>
+        /// Object of Cache class
+        /// </summary>
+        private Cache _objCache = new Cache();
+
+        /// <summary>
         /// Initializes object of BLRecord class
         /// </summary>
         public CLRecordV1Controller()
         {
             objBLRecord = new BLRecord();
+            stopwatch = Stopwatch.StartNew();
         }
 
         #region Public Methods
@@ -37,7 +50,14 @@ namespace HospitalAPI.Controllers
         public IHttpActionResult GetFewRecords()
         {
             var data = objBLRecord.GetSomeRecords();
-            HttpContext.Current.Cache.Insert("SomeRecords v1", data, null, System.DateTime.Now.AddMinutes(20), System.TimeSpan.Zero);
+            _objCache.Insert("SomeRecords v1", data, null, System.DateTime.Now.AddMinutes(20), System.TimeSpan.Zero);
+
+            stopwatch.Stop();
+            long responseTime = stopwatch.ElapsedTicks;
+
+            HttpContext.Current.Response.AddHeader("Response-time", responseTime.ToString());
+
+            // HttpContext.Current.Session.Clear();
 
             return Ok(data);
         }
@@ -51,7 +71,12 @@ namespace HospitalAPI.Controllers
         public IHttpActionResult GetMoreRecords()
         {
             var data = objBLRecord.GetMoreRecords();
-            HttpContext.Current.Cache.Insert("MoreRecords v1", data, null, System.DateTime.Now.AddMinutes(20), System.TimeSpan.Zero);
+            _objCache.Insert("MoreRecords v1", data, null, System.DateTime.Now.AddMinutes(20), System.TimeSpan.Zero);
+
+            stopwatch.Stop();
+            long responseTime = stopwatch.ElapsedTicks;
+
+            HttpContext.Current.Response.AddHeader("Response-time", responseTime.ToString());
 
             return Ok(data);
         }
@@ -65,11 +90,31 @@ namespace HospitalAPI.Controllers
         public IHttpActionResult GetAllRecords()
         {
             var data = BLRecord.lstRCD01;
-            HttpContext.Current.Cache.Insert("AllRecords v1", data, null, System.DateTime.Now.AddMinutes(20), System.TimeSpan.Zero);
+            _objCache.Insert("AllRecords v1", data, null, System.DateTime.Now.AddMinutes(20), System.TimeSpan.Zero);
+
+            stopwatch.Stop();
+            long responseTime = stopwatch.ElapsedTicks;
+
+            HttpContext.Current.Response.AddHeader("Response-time", responseTime.ToString());
 
             return Ok(data);
         }
 
+        /// <summary>
+        /// Displays cache data if any
+        /// </summary>
+        /// <returns>cache data</returns>
+        [HttpGet]
+        [BasicAuthorizationAttribute(Roles = "SuperAdmin")]
+        public IHttpActionResult GetCache()
+        {
+            var SomeRecords = _objCache.Get("SomeRecords v1");
+            var MoreRecords = _objCache.Get("MoreRecords v1");
+            var AllRecords = _objCache.Get("AllRecords v1");
+            return Ok(new { SomeRecords, MoreRecords, AllRecords });
+        }
+
         #endregion
+
     }
 }

@@ -7,8 +7,7 @@ namespace HospitalAPI
         public static void Register(HttpConfiguration config)
         {
             //config.EnableCors();
-            // Web API configuration and services
-
+            // Web API configuration and 
             // Web API routes
             config.MapHttpAttributeRoutes();
 

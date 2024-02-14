@@ -176,6 +176,7 @@
     <Compile Include="BusinesLogic\BLUser.cs" />
     <Compile Include="Controllers\CLRecordV1Controller.cs" />
     <Compile Include="Controllers\CLRecordV2Controller.cs" />
+    <Compile Include="Filters\CustomExceptionFilterAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -194,6 +195,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Log\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

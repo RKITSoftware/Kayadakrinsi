@@ -22,6 +22,10 @@ namespace Generics.GenericItems
             lstUsers = new List<T>();
         }
 
+        /// <summary>
+        /// Gives Enumerator
+        /// </summary>
+        /// <returns>Enumerator</returns>
         public IEnumerator<T> GetEnumerator()
         {
             return lstUsers.GetEnumerator();

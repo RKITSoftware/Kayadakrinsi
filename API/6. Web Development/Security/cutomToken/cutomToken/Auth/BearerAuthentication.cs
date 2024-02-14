@@ -45,6 +45,9 @@ namespace cutomToken.Auth
 
                 // pad jwtEncodedPayload
                 jwtEncodedPayload = jwtEncodedPayload + new string('=', (4 - (jwtEncodedPayload.Length % 4)));
+                jwtEncodedPayload = jwtEncodedPayload.Replace('+', '-')
+                                                     .Replace('/', '_')
+                                                     .Replace("=", "");
 
                 // decode the jwt payload
                 byte[] decodedPayloadBytes = Convert.FromBase64String(jwtEncodedPayload);

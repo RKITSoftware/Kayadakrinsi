@@ -65,3 +65,6 @@ F:\Krinsi - 379\Training\Advance C#\2. Advance C#\TpesClass\TpesClass\obj\Debug\
 F:\Krinsi - 379\Training\Advance C#\2. Advance C#\TpesClass\TpesClass\obj\Debug\Partial.csproj.CopyComplete
 F:\Krinsi - 379\Training\Advance C#\2. Advance C#\TpesClass\TpesClass\obj\Debug\TpesClass.dll
 F:\Krinsi - 379\Training\Advance C#\2. Advance C#\TpesClass\TpesClass\obj\Debug\TpesClass.pdb
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\TpesClass\TpesClass\bin\Microsoft.Web.Infrastructure.dll
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\TpesClass\TpesClass\bin\Swashbuckle.Core.dll
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\TpesClass\TpesClass\bin\WebActivatorEx.dll

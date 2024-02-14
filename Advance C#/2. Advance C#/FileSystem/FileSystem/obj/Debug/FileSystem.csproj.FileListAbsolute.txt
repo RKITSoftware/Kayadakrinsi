@@ -68,3 +68,6 @@ F:\Krinsi - 379\Training\Advance C#\2. Advance C#\FileSystem\FileSystem\obj\Debu
 F:\Krinsi - 379\Training\Advance C#\2. Advance C#\FileSystem\FileSystem\bin\Microsoft.Web.Infrastructure.dll
 F:\Krinsi - 379\Training\Advance C#\2. Advance C#\FileSystem\FileSystem\bin\Swashbuckle.Core.dll
 F:\Krinsi - 379\Training\Advance C#\2. Advance C#\FileSystem\FileSystem\bin\WebActivatorEx.dll
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\FileSystem\FileSystem\bin\Microsoft.OpenApi.dll
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\FileSystem\FileSystem\bin\Microsoft.OpenApi.pdb
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\FileSystem\FileSystem\bin\Microsoft.OpenApi.xml

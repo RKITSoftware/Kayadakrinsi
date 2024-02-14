@@ -4,6 +4,7 @@ using System.Web.Caching;
 using System.Web.Http;
 using HospitalAPI.Auth;
 using HospitalAPI.BusinesLogic;
+using HospitalAPI.Filters;
 using HospitalAPI.Models;
 
 namespace HospitalAPI.Controllers
@@ -11,6 +12,7 @@ namespace HospitalAPI.Controllers
     /// <summary>
     /// Custom controller for user requests
     /// </summary>
+    [CustomExceptionFilterAttribute]
     public class CLRecordV2Controller : ApiController
     {
         /// <summary>
@@ -22,6 +24,11 @@ namespace HospitalAPI.Controllers
         /// Declares object of Stopwatch class
         /// </summary>
         public static Stopwatch stopwatch;
+
+        /// <summary>
+        /// Object of Cache class
+        /// </summary>
+        private Cache _objCache = new Cache();
 
         /// <summary>
         /// Initializes object of BLRecord and Stopwatch class
@@ -61,7 +68,7 @@ namespace HospitalAPI.Controllers
         public IHttpActionResult GetSomeRecords()
         { 
             var data = objBLRecord.GetSomeRecords();
-            HttpContext.Current.Cache.Insert("SomeRecords v2", data, null, System.DateTime.Now.AddMinutes(20),System.TimeSpan.Zero);
+            _objCache.Insert("SomeRecords v2", data, null, System.DateTime.Now.AddMinutes(20),System.TimeSpan.Zero);
 
             stopwatch.Stop();
             long responseTime = stopwatch.ElapsedTicks;
@@ -83,7 +90,7 @@ namespace HospitalAPI.Controllers
             Stopwatch stopwatch = Stopwatch.StartNew();
 
             var data = objBLRecord.GetMoreRecords();
-            HttpContext.Current.Cache.Insert("MoreRecords v2", data, null, System.DateTime.Now.AddMinutes(20), System.TimeSpan.Zero);
+            _objCache.Insert("MoreRecords v2", data, null, System.DateTime.Now.AddMinutes(20), System.TimeSpan.Zero);
 
             stopwatch.Stop();
             long responseTime = stopwatch.ElapsedTicks;
@@ -105,7 +112,7 @@ namespace HospitalAPI.Controllers
             Stopwatch stopwatch = Stopwatch.StartNew();
 
             var data = BLRecord.lstRCD01;
-            HttpContext.Current.Cache.Insert("AllRecords v2", data, null, System.DateTime.Now.AddMinutes(20), System.TimeSpan.Zero);
+            _objCache.Insert("AllRecords v2", data, null, System.DateTime.Now.AddMinutes(20), System.TimeSpan.Zero);
 
             stopwatch.Stop();
             long responseTime = stopwatch.ElapsedTicks;
@@ -124,11 +131,10 @@ namespace HospitalAPI.Controllers
         [Authorize(Roles = ("SuperAdmin"))]
         public IHttpActionResult GetCache()
         {
-            var SomeRecords = HttpContext.Current.Cache.Get("SomeRecords v2");
-            var MoreRecords = HttpContext.Current.Cache.Get("MoreRecords v2");
-            var AllRecords = HttpContext.Current.Cache.Get("AllRecords v2");
-            var record = HttpContext.Current.Cache.Get("SomeRecords v1");
-            return Ok(new { SomeRecords, MoreRecords, AllRecords, record });
+            var SomeRecords = _objCache.Get("SomeRecords v2");
+            var MoreRecords = _objCache.Get("MoreRecords v2");
+            var AllRecords = _objCache.Get("AllRecords v2");
+            return Ok(new { SomeRecords, MoreRecords, AllRecords});
         }
 
         /// <summary>

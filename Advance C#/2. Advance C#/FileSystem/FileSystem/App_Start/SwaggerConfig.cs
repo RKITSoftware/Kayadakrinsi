@@ -2,8 +2,14 @@ using System.Web.Http;
 using WebActivatorEx;
 using FileSystem;
 using Swashbuckle.Application;
+using Swashbuckle.Swagger;
+using System.Collections.Generic;
+using System.Web.Http.Description;
+using System.Linq;
+using System.Web;
+using Microsoft.OpenApi.Models;
 
-[assembly: PreApplicationStartMethod(typeof(SwaggerConfig), "Register")]
+[assembly: System.Web.PreApplicationStartMethod(typeof(SwaggerConfig), "Register")]
 
 namespace FileSystem
 {
@@ -33,7 +39,9 @@ namespace FileSystem
                         // additional fields by chaining methods off SingleApiVersion.
                         //
                         c.SingleApiVersion("v1", "FileSystem");
-
+                        
+                        // Enable file upload
+                        c.OperationFilter<FileUploadOperation>();
                         // If you want the output Swagger docs to be indented properly, enable the "PrettyPrint" option.
                         //
                         //c.PrettyPrint();
@@ -61,7 +69,7 @@ namespace FileSystem
                         //c.BasicAuth("basic")
                         //    .Description("Basic HTTP Authentication");
                         //
-						// NOTE: You must also configure 'EnableApiKeySupport' below in the SwaggerUI section
+                        // NOTE: You must also configure 'EnableApiKeySupport' below in the SwaggerUI section
                         //c.ApiKey("apiKey")
                         //    .Description("API Key Authentication")
                         //    .Name("apiKey")
@@ -250,6 +258,30 @@ namespace FileSystem
                         //
                         //c.EnableApiKeySupport("apiKey", "header");
                     });
+
+        }
+
+        public class FileUploadOperation : IOperationFilter
+        {
+            public void Apply(Operation operation, SchemaRegistry schemaRegistry, ApiDescription apiDescription)
+            {
+                if (operation.operationId == "CLCustomer_Upload")
+                {
+                    operation.consumes.Add("multipart/form-data");
+
+                    operation.parameters = operation.parameters ?? new List<Parameter>();
+                    operation.parameters.Add(new Parameter
+                    {
+                        name = "files",
+                        @in = "formData",
+                        description = "upload multiple files",
+                        required = true,
+                        type = "file",
+                        collectionFormat = "multi"
+                    });
+                }
+            }
+
         }
     }
 }
