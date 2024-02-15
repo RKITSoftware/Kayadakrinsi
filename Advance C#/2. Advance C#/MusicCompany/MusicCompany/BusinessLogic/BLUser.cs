@@ -142,7 +142,7 @@ namespace MusicCompany.BusinessLogic
         /// </summary>
         /// <param name="objUSR01">object of class USR01</param>
         /// <returns>Appropriate message</returns>
-        public static string Insert(USR01 objUSR01)
+        public string Insert(USR01 objUSR01)
         {
             objUSR01.R01F03 = BLSecurity.EncryptAes(objUSR01.R01F03, BLSecurity.key, BLSecurity.iv);
             using (var db = _dbFactory.OpenDbConnection())
@@ -162,7 +162,7 @@ namespace MusicCompany.BusinessLogic
         /// </summary>
         /// <param name="objUSR01">object of class USR01</param>
         /// <returns>Appropriate message</returns>
-        public static string Update(USR01 objUSR01)
+        public string Update(USR01 objUSR01)
         {
             using (var db = _dbFactory.OpenDbConnection())
             {
@@ -185,7 +185,7 @@ namespace MusicCompany.BusinessLogic
         /// </summary>
         /// <param name="id">User id to be delete</param>
         /// <returns>Appropriate message</returns>
-        public static string Delete(int id)
+        public string Delete(int id)
         {
             if (!TableExists())
             {
@@ -249,7 +249,7 @@ namespace MusicCompany.BusinessLogic
         /// Selects record of album with producer and artist details
         /// </summary>
         /// <returns>List of album details</returns>
-        public static dynamic SelectAllDetails()
+        public dynamic SelectAllDetails()
         {
             string query = "SELECT " +
                 "B01F01 AS ALBUM_ID," +

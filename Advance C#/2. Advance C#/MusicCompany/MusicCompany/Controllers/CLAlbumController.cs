@@ -13,6 +13,19 @@ namespace MusicCompany.Controllers
     public class CLAlbumController : ApiController
     {
         /// <summary>
+        /// Declares object of class BLAlbum
+        /// </summary>
+        public BLAlbum objBLAlbum;
+
+        /// <summary>
+        /// Initializes object of class BLAlbum
+        /// </summary>
+        public CLAlbumController()
+        {
+            objBLAlbum = new BLAlbum();
+        }
+
+        /// <summary>
         /// Handles get reuest for getting album data
         /// </summary>
         /// <returns>All data from table ALB01</returns>
@@ -21,7 +34,7 @@ namespace MusicCompany.Controllers
         [Route("api/CLAlbum/GetAlbum")]
         public IHttpActionResult GetAlbum()
         {
-            return Ok(BLAlbum.Select());
+            return Ok(objBLAlbum.Select());
         }
 
         /// <summary>
@@ -33,7 +46,7 @@ namespace MusicCompany.Controllers
         [Route("api/CLAlbum/GetAlbumFile")]
         public HttpResponseMessage GetAlbumFile()
         {
-            return BLAlbum.Download();
+            return objBLAlbum.Download();
         }
 
         /// <summary>
@@ -46,7 +59,7 @@ namespace MusicCompany.Controllers
         [Route("api/CLAlbum/AddAlbum")]
         public IHttpActionResult AddAlbum(ALB01 objALB01)
         {
-            return Ok(BLAlbum.Insert(objALB01));
+            return Ok(objBLAlbum.Insert(objALB01));
         }
 
         /// <summary>
@@ -58,7 +71,7 @@ namespace MusicCompany.Controllers
         [Route("api/CLAlbum/WriteFile")]
         public IHttpActionResult WriteFile()
         {
-            return Ok(BLAlbum.WriteData());
+            return Ok(objBLAlbum.WriteData());
         }
 
         /// <summary>
@@ -71,7 +84,7 @@ namespace MusicCompany.Controllers
         [Route("api/CLAlbum/EditAlbum")]
         public IHttpActionResult EditAlbum(ALB01 objALB01)
         {
-            return Ok(BLAlbum.Update(objALB01));
+            return Ok(objBLAlbum.Update(objALB01));
         }
 
         /// <summary>
@@ -84,7 +97,7 @@ namespace MusicCompany.Controllers
         [Route("api/CLAlbum/DeleteAlbum")]
         public IHttpActionResult DeleteAlbum(int id)
         {
-            return Ok(BLAlbum.Delete(id));
+            return Ok(objBLAlbum.Delete(id));
         }
     }
 }

@@ -19,12 +19,12 @@ namespace MusicCompany.BusinessLogic
         /// <summary>
         /// Path of file in which album data will be written
         /// </summary>
-        private readonly static string path = HttpContext.Current.Server.MapPath("~/Producer") + "\\" + DateTime.Now.ToShortDateString() + ".txt";
+        private static readonly string path = HttpContext.Current.Server.MapPath("~/Producer") + "\\" + DateTime.Now.ToShortDateString() + ".txt";
 
         /// <summary>
         /// Declares Db factory instance
         /// </summary>
-        private readonly static IDbConnectionFactory _dbFactory;
+        private static readonly IDbConnectionFactory _dbFactory;
 
         #endregion
 
@@ -47,7 +47,7 @@ namespace MusicCompany.BusinessLogic
         /// </summary>
         /// <param name="objPRO01">object of class PRO01</param>
         /// <returns>Appropriate Message</returns>
-        public static string Insert(PRO01 objPRO01)
+        public string Insert(PRO01 objPRO01)
         {
             using (var db = _dbFactory.OpenDbConnection())
             {
@@ -65,7 +65,7 @@ namespace MusicCompany.BusinessLogic
         /// </summary>
         /// <param name="objPRO01">object of class PRO01</param>
         /// <returns>Appropriate Message</returns>
-        public static string Update(PRO01 objPRO01)
+        public string Update(PRO01 objPRO01)
         {
             using (var db = _dbFactory.OpenDbConnection())
             {
@@ -84,7 +84,7 @@ namespace MusicCompany.BusinessLogic
         /// </summary>
         /// <param name="id">id of producer to be deleted</param>
         /// <returns>Appropriate Message</returns>
-        public static string Delete(int id)
+        public string Delete(int id)
         {
             using (var db = _dbFactory.OpenDbConnection())
             {
@@ -102,7 +102,7 @@ namespace MusicCompany.BusinessLogic
         /// Selects data of producers
         /// </summary>
         /// <returns>Serialized string or appropriate message</returns>
-        public static string Select()
+        public string Select()
         {
             using (var db = _dbFactory.OpenDbConnection())
             {
@@ -120,7 +120,7 @@ namespace MusicCompany.BusinessLogic
         /// </summary>
         /// <returns>Appropriate Message</returns>
 
-        public static string WriteData()
+        public string WriteData()
         {
             using (StreamWriter sw = new StreamWriter(path))
             {
@@ -133,7 +133,7 @@ namespace MusicCompany.BusinessLogic
         /// Downloads file
         /// </summary>
         /// <returns>HttpResponseMessage with file</returns>
-        public static HttpResponseMessage Download()
+        public HttpResponseMessage Download()
         {
             // Check if the file exists
             if (!File.Exists(path))

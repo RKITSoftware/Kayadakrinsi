@@ -13,6 +13,19 @@ namespace MusicCompany.Controllers
     public class CLArtistController : ApiController
     {
         /// <summary>
+        /// Declares object of BLArtist class
+        /// </summary>
+        public BLArtist objBLArtist;
+
+        /// <summary>
+        /// Initializes object of BLArtist class
+        /// </summary>
+        public CLArtistController()
+        {
+            objBLArtist = new BLArtist();
+        }
+
+        /// <summary>
         /// Handles get reuest for getting artist data
         /// </summary>
         /// <returns>All data from table ART01</returns>
@@ -21,7 +34,7 @@ namespace MusicCompany.Controllers
         [Route("api/CLArtist/GetArtist")]
         public IHttpActionResult GetArtist()
         {
-            return Ok(BLArtist.Select());
+            return Ok(objBLArtist.Select());
         }
 
         /// <summary>
@@ -33,7 +46,7 @@ namespace MusicCompany.Controllers
         [Route("api/CLArtist/GetArtistFile")]
         public HttpResponseMessage GetArtistFile()
         {
-            return BLArtist.Download();
+            return objBLArtist.Download();
         }
 
         /// <summary>
@@ -46,7 +59,7 @@ namespace MusicCompany.Controllers
         [Route("api/CLArtist/AddArtist")]
         public IHttpActionResult AddArtist(ART01 objART01)
         {
-            return Ok(BLArtist.Insert(objART01));
+            return Ok(objBLArtist.Insert(objART01));
         }
 
         /// <summary>
@@ -58,7 +71,7 @@ namespace MusicCompany.Controllers
         [Route("api/CLArtist/WriteFile")]
         public IHttpActionResult WriteFile()
         {
-            return Ok(BLArtist.WriteData());
+            return Ok(objBLArtist.WriteData());
         }
 
         /// <summary>
@@ -71,7 +84,7 @@ namespace MusicCompany.Controllers
         [Route("api/CLArtist/EditArtist")]
         public IHttpActionResult EditArtist(ART01 objART01)
         {
-            return Ok(BLArtist.Update(objART01));
+            return Ok(objBLArtist.Update(objART01));
         }
 
         /// <summary>
@@ -84,7 +97,7 @@ namespace MusicCompany.Controllers
         [Route("api/CLArtist/DeleteArtist")]
         public IHttpActionResult DeleteArtist(int id)
         {
-            return Ok(BLArtist.Delete(id));
+            return Ok(objBLArtist.Delete(id));
         }
     }
 }

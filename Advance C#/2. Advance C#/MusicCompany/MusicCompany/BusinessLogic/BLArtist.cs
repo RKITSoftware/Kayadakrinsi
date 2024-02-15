@@ -25,7 +25,7 @@ namespace MusicCompany.BusinessLogic
         /// <summary>
         /// Declares Db factory instance
         /// </summary>
-        private readonly static IDbConnectionFactory _dbFactory;
+        private static readonly IDbConnectionFactory _dbFactory;
 
         #endregion
 
@@ -48,7 +48,7 @@ namespace MusicCompany.BusinessLogic
         /// </summary>
         /// <param name="objART01">object of class ART01</param>
         /// <returns>Appropriate Message</returns>
-        public static string Insert(ART01 objART01)
+        public string Insert(ART01 objART01)
         {
             using (var db = _dbFactory.OpenDbConnection())
             {
@@ -66,7 +66,7 @@ namespace MusicCompany.BusinessLogic
         /// </summary>
         /// <param name="objART01">object of class ART01</param>
         /// <returns>Appropriate Message</returns>
-        public static string Update(ART01 objART01)
+        public string Update(ART01 objART01)
         {
             using(var db = _dbFactory.OpenDbConnection())
             {
@@ -85,7 +85,7 @@ namespace MusicCompany.BusinessLogic
         /// </summary>
         /// <param name="id">id orf artist to be deleted</param>
         /// <returns>Appropriate Message</returns>
-        public static string Delete(int id)
+        public string Delete(int id)
         {
             using(var db=_dbFactory.OpenDbConnection())
             {
@@ -103,7 +103,7 @@ namespace MusicCompany.BusinessLogic
         /// Selects data of artist
         /// </summary>
         /// <returns>List of artist</returns>
-        public static List<ART01> Select()
+        public List<ART01> Select()
         {
             using (var db = _dbFactory.OpenDbConnection())
             {
@@ -119,7 +119,7 @@ namespace MusicCompany.BusinessLogic
         /// Selects data from database and Writes data into file
         /// </summary>
         /// <returns>Appropriate Message</returns>
-        public static string WriteData()
+        public string WriteData()
         {
             using (StreamWriter sw = new StreamWriter(path))
             {
@@ -141,7 +141,7 @@ namespace MusicCompany.BusinessLogic
         /// Download file
         /// </summary>
         /// <returns>HttpResponseMessage with file</returns>
-        public static HttpResponseMessage Download()
+        public HttpResponseMessage Download()
         {
             // Check if the file exists
             if (!File.Exists(path))

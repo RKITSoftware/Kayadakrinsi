@@ -113,3 +113,6 @@ F:\Krinsi - 379\Training\Advance C#\2. Advance C#\MusicCompany\MusicCompany\obj\
 F:\Krinsi - 379\Training\Advance C#\2. Advance C#\MusicCompany\MusicCompany\obj\Debug\MusicCompany.csproj.CopyComplete
 F:\Krinsi - 379\Training\Advance C#\2. Advance C#\MusicCompany\MusicCompany\obj\Debug\MusicCompany.dll
 F:\Krinsi - 379\Training\Advance C#\2. Advance C#\MusicCompany\MusicCompany\obj\Debug\MusicCompany.pdb
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\MusicCompany\MusicCompany\bin\Microsoft.Web.Infrastructure.dll
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\MusicCompany\MusicCompany\bin\Swashbuckle.Core.dll
+F:\Krinsi - 379\Training\Advance C#\2. Advance C#\MusicCompany\MusicCompany\bin\WebActivatorEx.dll

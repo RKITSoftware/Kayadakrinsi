@@ -12,11 +12,23 @@ namespace MusicCompany.Controllers
     public class CLUserController : ApiController
     {
         /// <summary>
+        /// Declares object of BLUser class
+        /// </summary>
+        public BLUser objBLUser;
+
+        /// <summary>
+        /// Initializes object of BLUser class
+        /// </summary>
+        public CLUserController()
+        {
+            objBLUser = new BLUser();
+        }
+        /// <summary>
         /// Handles get reuest for getting user data
         /// </summary>
         /// <returns>All data from table USR01</returns>
         [HttpGet]
-        [BasicAuthorizationAttribute(Roles = "Admin")]
+        [BasicAuthorizationAttribute(Roles = "admin")]
         [Route("api/CLUser/GetUsers")]
         public IHttpActionResult GetUsers()
         {
@@ -28,11 +40,11 @@ namespace MusicCompany.Controllers
         /// </summary>
         /// <returns>List of data from joins</returns>
         [HttpGet]
-        [BasicAuthorizationAttribute(Roles = "Admin")]
+        [BasicAuthorizationAttribute(Roles = "admin")]
         [Route("api/CLUser/GetAllDetails")]
         public IHttpActionResult GetAllDetails()
         {
-            return Ok(BLUser.SelectAllDetails());
+            return Ok(objBLUser.SelectAllDetails());
         }
 
         /// <summary>
@@ -46,7 +58,7 @@ namespace MusicCompany.Controllers
         [Route("api/CLUser/AddUser")]
         public IHttpActionResult AddUser(USR01 objUSR01)
         {
-            return Ok(BLUser.Insert(objUSR01));
+            return Ok(objBLUser.Insert(objUSR01));
         }
 
         /// <summary>
@@ -59,7 +71,7 @@ namespace MusicCompany.Controllers
         [Route("api/CLUser/EditUser")]
         public IHttpActionResult EditUsers(USR01 objUSR01)
         {
-            return Ok(BLUser.Update(objUSR01));
+            return Ok(objBLUser.Update(objUSR01));
         }
 
         /// <summary>
@@ -72,7 +84,7 @@ namespace MusicCompany.Controllers
         [Route("api/CLUser/DeleteUser")]
         public IHttpActionResult DeleteUser(int id)
         {
-            return Ok(BLUser.Delete(id));
+            return Ok(objBLUser.Delete(id));
         }
     }
 }

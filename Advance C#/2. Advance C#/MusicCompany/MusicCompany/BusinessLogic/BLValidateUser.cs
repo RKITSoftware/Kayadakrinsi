@@ -6,8 +6,8 @@ namespace MusicCompany.BusinessLogic
     /// <summary>
     /// For validating user
     /// </summary>
-    public class BLValidateUser { 
-
+    public class BLValidateUser
+    {
         #region Public Methods
 
         /// <summary>

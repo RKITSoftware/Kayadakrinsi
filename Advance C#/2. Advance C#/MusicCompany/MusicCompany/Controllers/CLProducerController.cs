@@ -13,6 +13,19 @@ namespace MusicCompany.Controllers
     public class CLProducerController : ApiController
     {
         /// <summary>
+        /// Declares object of BLProducer class
+        /// </summary>
+        public BLProducer objBLProducer;
+
+        /// <summary>
+        /// Initializes object of BLProducer class
+        /// </summary>
+        public CLProducerController()
+        {
+            objBLProducer = new BLProducer();
+        }
+
+        /// <summary>
         /// Handles get reuest for getting producer data
         /// </summary>
         /// <returns>All data from table PRO01</returns>
@@ -21,7 +34,7 @@ namespace MusicCompany.Controllers
         [Route("api/CLProducer/GetProducer")]
         public IHttpActionResult GetProducer()
         {
-            return Ok(BLProducer.Select());
+            return Ok(objBLProducer.Select());
         }
 
         /// <summary>
@@ -33,7 +46,7 @@ namespace MusicCompany.Controllers
         [Route("api/CLProducer/GetProducerFile")]
         public HttpResponseMessage GetProducerFile()
         {
-            return BLProducer.Download();
+            return objBLProducer.Download();
         }
 
         /// <summary>
@@ -46,7 +59,7 @@ namespace MusicCompany.Controllers
         [Route("api/CLProducer/AddProducer")]
         public IHttpActionResult AddProducer(PRO01 objPRO01)
         {
-            return Ok(BLProducer.Insert(objPRO01));
+            return Ok(objBLProducer.Insert(objPRO01));
         }
 
         /// <summary>
@@ -57,7 +70,7 @@ namespace MusicCompany.Controllers
         [Route("api/CLProducer/WriteFile")]
         public IHttpActionResult WriteFile()
         {
-            return Ok(BLProducer.WriteData());
+            return Ok(objBLProducer.WriteData());
         }
 
         /// <summary>
@@ -70,7 +83,7 @@ namespace MusicCompany.Controllers
         [Route("api/CLProducer/EditProducer")]
         public IHttpActionResult EditProducer(PRO01 objPRO01)
         {
-            return Ok(BLProducer.Update(objPRO01));
+            return Ok(objBLProducer.Update(objPRO01));
         }
 
         /// <summary>
@@ -83,7 +96,7 @@ namespace MusicCompany.Controllers
         [Route("api/CLProducer/DeleteProducer")]
         public IHttpActionResult DeleteProducer(int id)
         {
-            return Ok(BLProducer.Delete(id));
+            return Ok(objBLProducer.Delete(id));
         }
     }
 }
