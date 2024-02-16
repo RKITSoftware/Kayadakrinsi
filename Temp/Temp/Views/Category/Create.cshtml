@@ -5,19 +5,24 @@
 			<h2>Create new category</h2>
 			<hr/>
 		</div>
-		<div class="row mb-3">
-			<label asp-for="Id">Category Id</label>
-			<input asp-for="Id" class="form-control"/>
-		</div>
+		<div asp-validation-summary="All"></div>
 		<div class="row mb-3">
 			<label asp-for="Name">Category Name</label>
 			<input asp-for="Name" class="form-control" />
+			<span asp-validation-for="Name" class="text-danger"></span>
 		</div>
 		<div class="row mb-3">
 			<label asp-for="Description">Category Description</label>
 			<input asp-for="Description" class="form-control" />
+			<span asp-validation-for="Description" class="text-danger"></span>
 		</div>
 		<button class="btn btn-primary" type="submit">Create</button>
 	</div>
 	<a asp-action="Index" asp-controller="Category">Back</a>
 </form>
+
+@section scripts{
+	@{
+		<partial name="_ValidationScriptsPartial"/>
+	}
+}

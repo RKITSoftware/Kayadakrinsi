@@ -285,8 +285,7 @@ namespace HospitalAPI
     }
     public class BasicAuthOperationFilter : IOperationFilter
     {
-        public void Apply(Operation operation, SchemaRegistry schemaRegistry, ApiDescription apiDescription)
-        
+        public void Apply(Operation operation, SchemaRegistry schemaRegistry, ApiDescription apiDescription) 
         {
             // Check if the controller namespace contains "v1"
             if (apiDescription.ActionDescriptor.ControllerDescriptor.ControllerType.FullName.Contains("V1"))

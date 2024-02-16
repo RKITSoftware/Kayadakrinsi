@@ -4,7 +4,7 @@
 }
 
 <div class="container p-4">
-    <div class="row p-3">
+    <div class="row">
         <div class="col-6">
             List of categories
         </div>
@@ -26,6 +26,9 @@
             <th>
                 Description
             </th>
+            <th>
+                Action
+            </th>
         </tr>
     </thead>
     <tbody>
@@ -40,6 +43,10 @@
                 </td>
                 <td>
                     @item.Description
+                </td>
+                <td role="group">
+                    <a asp-action="Edit" asp-controller="Category" asp-route-id="@item.Id"><i class="bi bi-pencil-square"></i></a>
+                    <a asp-action="Delete" asp-controller="Category" asp-route-id="@item.Id" class="p-2"><i class="bi bi-trash"></i></a>
                 </td>
             </tr>
         }

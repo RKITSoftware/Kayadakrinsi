@@ -10,7 +10,7 @@ using Temp.Data;
 namespace Temp.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240213052257_AddCategoryToDatabase")]
+    [Migration("20240216053358_AddCategoryToDatabase")]
     partial class AddCategoryToDatabase
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

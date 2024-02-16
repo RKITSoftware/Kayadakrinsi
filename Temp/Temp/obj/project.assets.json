@@ -10122,11 +10122,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Krinsi - 379\\Training\\Temp\\Temp\\Temp.csproj",
+      "projectUniqueName": "F:\\Krinsi - 379\\New folder\\Temp\\Temp\\Temp.csproj",
       "projectName": "Temp",
-      "projectPath": "F:\\Krinsi - 379\\Training\\Temp\\Temp\\Temp.csproj",
+      "projectPath": "F:\\Krinsi - 379\\New folder\\Temp\\Temp\\Temp.csproj",
       "packagesPath": "C:\\Users\\krinsi.k\\.nuget\\packages\\",
-      "outputPath": "F:\\Krinsi - 379\\Training\\Temp\\Temp\\obj\\",
+      "outputPath": "F:\\Krinsi - 379\\New folder\\Temp\\Temp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\krinsi.k\\AppData\\Roaming\\NuGet\\NuGet.Config",

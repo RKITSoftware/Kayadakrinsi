@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GaMocChP4YMmk4SsDoCz/rcUgwRPYSgOx8TBlwPQfGrE4yZtAYGAEfOFdllPZ7YCkdbWPez7aTmW74ZtTzG05A==",
+  "dgSpecHash": "k+w51et5cTRC03Fdi5UFUYfWm3672cP/soxwfxeP8LqHacadnDNsYVnfNRh3418DcIBPxvgaYz9mQ3ltE2/QjQ==",
   "success": true,
-  "projectFilePath": "F:\\Krinsi - 379\\Training\\Temp\\Temp\\Temp.csproj",
+  "projectFilePath": "F:\\Krinsi - 379\\New folder\\Temp\\Temp\\Temp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\krinsi.k\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\krinsi.k\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
