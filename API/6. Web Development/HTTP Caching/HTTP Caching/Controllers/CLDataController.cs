@@ -9,9 +9,15 @@ namespace HTTP_Caching.Controllers
     /// </summary>
     public class CLDataController : ApiController
     {
+        /// <summary>
+        /// Declares object of cache class
+        /// </summary>
         Cache objCache;
 
-        public CLDataController() 
+		/// <summary>
+		/// Defines object of cache class
+		/// </summary>
+		public CLDataController() 
         { 
            objCache  = new Cache();
         }
@@ -25,21 +31,28 @@ namespace HTTP_Caching.Controllers
         /*[BLCacheFilter(TimeDuration = 100)]*/ // Using custom cache filter made previously with it's parameter
         public IHttpActionResult getData()
         {
-            HttpContext.Current.Cache.Insert("states", BLData.Data(), null, System.DateTime.Now.AddMinutes(20),Cache.NoSlidingExpiration);
+            HttpContext.Current.Cache.Insert("states", "data", null, System.DateTime.Now.AddMinutes(20),Cache.NoSlidingExpiration);
             objCache.Insert("states", BLData.Data());
             objCache.Insert("Name", BLData.Data());
             return Ok(BLData.Data());
         }
 
-        [HttpGet]
+		/// <summary>
+		/// Get data from cache
+		/// </summary>
+		/// <returns>Cache</returns>
+		[HttpGet]
         [Route("api/countCache")]
-        public IHttpActionResult Count() 
+        public IHttpActionResult GetCache() 
         {
-            return Ok(objCache.Count);
+            return Ok(new { Count = objCache.Count, Data = objCache.Get("states"), context = objCache.Get("states"), context_cache = HttpContext.Current.Cache.Get("states") });
         }
 
-
-        [HttpDelete]
+		/// <summary>
+		/// Remove from cache
+		/// </summary>
+		/// <returns>Count of cache items after data removed</returns>
+		[HttpDelete]
         [Route("api/countAfterRemove")]
         public IHttpActionResult Remove() 
         { 

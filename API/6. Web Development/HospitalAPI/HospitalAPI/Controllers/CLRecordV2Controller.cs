@@ -9,11 +9,12 @@ using HospitalAPI.Models;
 
 namespace HospitalAPI.Controllers
 {
-    /// <summary>
-    /// Custom controller for user requests
-    /// </summary>
-    [CustomExceptionFilterAttribute]
-    public class CLRecordV2Controller : ApiController
+	/// <summary>
+	/// Custom controller for user requests
+	/// </summary>
+	[CustomExceptionFilterAttribute]
+	
+	public class CLRecordV2Controller : ApiController
     {
         /// <summary>
         /// Declares object of BLRecord class
@@ -37,6 +38,17 @@ namespace HospitalAPI.Controllers
         {
             objBLRecord = new BLRecord();
             stopwatch = Stopwatch.StartNew();
+        }
+
+        /// <summary>
+        /// CORS implementation
+        /// </summary>
+        /// <returns>Message</returns>
+        [HttpGet]
+        [Route("api/v2/getCORS")]
+		public IHttpActionResult GetCORS()
+        {
+            return Ok("CORS enable worked");
         }
 
         /// <summary>

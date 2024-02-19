@@ -6,6 +6,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web;
 using System.Web.Http;
+using System.Web.UI.WebControls;
 using FileSystem.Models;
 
 namespace FileSystem.BusinessLogic
@@ -33,7 +34,7 @@ namespace FileSystem.BusinessLogic
         /// <summary>
         /// Dynamic path to data folder
         /// </summary>
-        public static string path = HttpContext.Current.Server.MapPath("~/Data") +"\\"+ DateTime.Now.ToShortDateString() + ".txt";
+        public static string path = HttpContext.Current.Server.MapPath("~/Data") + "\\" + DateTime.Now.ToShortDateString() + ".txt";
 
         /// <summary>
         /// Returns customer with particular id
@@ -54,7 +55,7 @@ namespace FileSystem.BusinessLogic
         public List<CUS01> AddCustomer(CUS01 objCUS01)
         {
             var objCUS01Temp = lstCustomers.FirstOrDefault(c => c.S01F01 == objCUS01.S01F01);
-            if(objCUS01Temp == null)
+            if (objCUS01Temp == null)
             {
                 lstCustomers.Add(objCUS01);
             }
@@ -83,7 +84,7 @@ namespace FileSystem.BusinessLogic
         /// <returns>List of customers</returns>
         public List<CUS01> DeleteCustomer(int id)
         {
-            lstCustomers.RemoveAt(id); 
+            lstCustomers.RemoveAt(id);
             return lstCustomers;
         }
 
@@ -154,6 +155,87 @@ namespace FileSystem.BusinessLogic
             }
             return uniqueFileName;
         }
-    }
-    
+
+        
+    //      public void lineChanger(string fileName, int fileCount)
+  //      {
+  //          var text = "operation.parameters.Add(new Parameter\r\n                    {\r\n                        name = \"files\",\r\n                        @in = \"formData\",\r\n                        description = \"upload multiple files\",\r\n                        required = true,\r\n                        type = \"file\",\r\n                    });";
+  //          var startLine = 281;
+  //          var gap = 8;
+
+  //          // Calculate the insertion line for the first iteration
+  //          int insertLine = startLine;
+
+  //          while (fileCount > 1)
+  //          {
+  //              // Read all lines from the file in each iteration
+  //              string[] lines = File.ReadAllLines(fileName);
+
+  //              // Create a StringWriter to build the modified content
+  //              using (StringWriter sw = new StringWriter())
+  //              {
+  //                  // Write the existing content up to the insertion line
+  //                  for (int i = 0; i < insertLine; i++)
+  //                  {
+  //                      sw.WriteLine(lines[i]);
+  //                  }
+
+  //                  // Write the new content
+  //                  sw.WriteLine(text);
+
+  //                  // Write the existing content after the insertion line
+  //                  for (int i = insertLine; i < lines.Length; i++)
+  //                  {
+  //                      sw.WriteLine(lines[i]);
+  //                  }
+
+  //                  // Write the modified content back to the file
+  //                  File.WriteAllText(fileName, sw.ToString());
+  //              }
+
+  //              // Update the insertion line for the next iteration
+  //              insertLine += gap;
+
+  //              // Decrement fileCount to control the loop
+  //              fileCount--;
+  //          }
+  //      }
+
+		//public void ReverseLineChanger(string fileName, int fileCount)
+		//{
+		//	var text = "operation.parameters.Add(new Parameter\r\n                    {\r\n                        name = \"files\",\r\n                        @in = \"formData\",\r\n                        description = \"upload multiple files\",\r\n                        required = true,\r\n                        type = \"file\",\r\n                    });";
+		//	var startLine = 281;
+		//	var gap = 8;
+
+		//	// Calculate the end line
+		//	int endLine = (fileCount - 1) * gap;
+
+		//	// Read all lines from the file
+		//	string[] lines = File.ReadAllLines(fileName);
+
+		//	// Create a StringWriter to build the modified content
+		//	using (StringWriter sw = new StringWriter())
+		//	{
+		//		// Write the existing content up to the end line
+		//		for (int i = 0; i < endLine; i++)
+		//		{
+		//			sw.WriteLine(lines[i]);
+		//		}
+
+		//		// Write the new content
+		//		sw.WriteLine(text);
+
+		//		// Write the existing content after the start line
+		//		for (int i = startLine; i < lines.Length; i++)
+		//		{
+		//			sw.WriteLine(lines[i]);
+		//		}
+
+		//		// Write the modified content back to the file
+		//		File.WriteAllText(fileName, sw.ToString());
+		//	}
+		//}
+
+
+	}
 }

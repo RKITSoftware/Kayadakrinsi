@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Krinsi - 379\\Training\\Advance C#\\2. Advance C#\\LamdaExpressions\\LamdaExpressions\\LamdaExpressions.csproj": {}
+    "F:\\Krinsi - 379\\New folder\\Advance C#\\2. Advance C#\\LamdaExpressions\\LamdaExpressions\\LamdaExpressions.csproj": {}
   },
   "projects": {
-    "F:\\Krinsi - 379\\Training\\Advance C#\\2. Advance C#\\LamdaExpressions\\LamdaExpressions\\LamdaExpressions.csproj": {
+    "F:\\Krinsi - 379\\New folder\\Advance C#\\2. Advance C#\\LamdaExpressions\\LamdaExpressions\\LamdaExpressions.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Krinsi - 379\\Training\\Advance C#\\2. Advance C#\\LamdaExpressions\\LamdaExpressions\\LamdaExpressions.csproj",
+        "projectUniqueName": "F:\\Krinsi - 379\\New folder\\Advance C#\\2. Advance C#\\LamdaExpressions\\LamdaExpressions\\LamdaExpressions.csproj",
         "projectName": "LamdaExpressions",
-        "projectPath": "F:\\Krinsi - 379\\Training\\Advance C#\\2. Advance C#\\LamdaExpressions\\LamdaExpressions\\LamdaExpressions.csproj",
+        "projectPath": "F:\\Krinsi - 379\\New folder\\Advance C#\\2. Advance C#\\LamdaExpressions\\LamdaExpressions\\LamdaExpressions.csproj",
         "packagesPath": "C:\\Users\\krinsi.k\\.nuget\\packages\\",
-        "outputPath": "F:\\Krinsi - 379\\Training\\Advance C#\\2. Advance C#\\LamdaExpressions\\LamdaExpressions\\obj\\",
+        "outputPath": "F:\\Krinsi - 379\\New folder\\Advance C#\\2. Advance C#\\LamdaExpressions\\LamdaExpressions\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\krinsi.k\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -59,7 +59,11 @@ namespace HospitalAPI.Controllers
 
             // HttpContext.Current.Session.Clear();
 
+            // Return data (first from cache else from list)
             return Ok(data);
+
+            // returns data if it exist in cache only else returns null 
+            // return Ok(_objCache.Get("SomeRecords v1"));
         }
 
         /// <summary>

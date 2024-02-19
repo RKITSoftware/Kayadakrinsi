@@ -1,4 +1,5 @@
 ﻿using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace HospitalAPI
 {
@@ -6,7 +7,9 @@ namespace HospitalAPI
     {
         public static void Register(HttpConfiguration config)
         {
-            //config.EnableCors();
+            var cors = new EnableCorsAttribute("https://www.google.com", "*", "*");
+
+			config.EnableCors(cors);
             // Web API configuration and 
             // Web API routes
             config.MapHttpAttributeRoutes();

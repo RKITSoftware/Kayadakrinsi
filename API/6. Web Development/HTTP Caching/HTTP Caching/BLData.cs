@@ -1,13 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Caching;
+﻿using System.Collections.Generic;
 
 namespace HTTP_Caching
 {
-    public class BLData
+    /// <summary>
+    /// Handles logic for data controller
+    /// </summary>
+	public class BLData
     {
+        /// <summary>
+        /// Stores data of state names
+        /// </summary>
+        /// <returns>Dictionary</returns>
         public static Dictionary<string,string> Data()
         {
             

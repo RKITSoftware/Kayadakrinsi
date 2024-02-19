@@ -1,0 +1,4 @@
+Customer id,Name,Debit,Credit
+0,Wipro,12345,200
+1,Cognizant,234,500
+2,Burbberry,2345,455
