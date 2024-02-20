@@ -47,10 +47,15 @@ namespace cutomToken.Auth
                 jwtEncodedPayload = jwtEncodedPayload.Replace('+', '-')
                                                      .Replace('/', '_')
                                                      .Replace("=", "");
-                jwtEncodedPayload = jwtEncodedPayload + new string('=', (4 - (jwtEncodedPayload.Length % 4)));
 
-                // decode the jwt payload
-                byte[] decodedPayloadBytes = Convert.FromBase64String(jwtEncodedPayload);
+				int padding = jwtEncodedPayload.Length % 4;
+				if (padding != 0)
+				{
+					jwtEncodedPayload += new string('=', 4 - padding);
+				}
+
+				// decode the jwt payload
+				byte[] decodedPayloadBytes = Convert.FromBase64String(jwtEncodedPayload);
 
                 string decodedPayload = Encoding.UTF8.GetString(decodedPayloadBytes);
 

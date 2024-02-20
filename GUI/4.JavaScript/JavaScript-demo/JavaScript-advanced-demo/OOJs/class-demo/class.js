@@ -3,7 +3,7 @@ const lastNameTxt=document.getElementById("lastNameTxt");
 const ageNo=document.getElementById("ageNo");
 const submitBtn=document.getElementById("submitBtn");
 const about=document.getElementById("about");
-const isAdult=document.getElementById("isAdult")
+const isAdult=document.getElementById("isAdult");
 
 class CreateUSer {
     constructor(firstName, lastName, age) {

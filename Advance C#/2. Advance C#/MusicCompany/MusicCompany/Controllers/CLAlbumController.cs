@@ -1,16 +1,16 @@
 ﻿using System.Net.Http;
 using System.Web.Http;
-using MusicCompany.BasicAuth;
+using MusicCompany.Auth;
 using MusicCompany.BusinessLogic;
 using MusicCompany.Models;
 
 namespace MusicCompany.Controllers
 {
-    /// <summary>
-    /// Handles methods to predorm operations related to album
-    /// </summary>
-    [BasicAuthenticationAttribute]
-    public class CLAlbumController : ApiController
+	/// <summary>
+	/// Handles methods to predorm operations related to album
+	/// </summary>
+	// [BasicAuthenticationAttribute]
+	public class CLAlbumController : ApiController
     {
         /// <summary>
         /// Declares object of class BLAlbum
@@ -30,7 +30,8 @@ namespace MusicCompany.Controllers
         /// </summary>
         /// <returns>All data from table ALB01</returns>
         [HttpGet]
-        [BasicAuthorizationAttribute(Roles = "Artist,Producer,Admin")]
+        [BearerAuthentication]
+        [Authorize(Roles = "Artist,Producer,Admin")]
         [Route("api/CLAlbum/GetAlbum")]
         public IHttpActionResult GetAlbum()
         {
@@ -42,7 +43,8 @@ namespace MusicCompany.Controllers
         /// </summary>
         /// <returns>Downloaded text file</returns>
         [HttpGet]
-        [BasicAuthorizationAttribute(Roles = "Artist,Producer,Admin")]
+		[BearerAuthentication]
+		[Authorize(Roles = "Artist,Producer,Admin")]
         [Route("api/CLAlbum/GetAlbumFile")]
         public HttpResponseMessage GetAlbumFile()
         {
@@ -55,7 +57,8 @@ namespace MusicCompany.Controllers
         /// <param name="objALB01">object of ALB01 class to be added</param>
         /// <returns>Appropriate Message</returns>
         [HttpPost]
-        [BasicAuthorizationAttribute(Roles = "Artist,Producer,Admin")]
+        [BearerAuthentication]
+		[Authorize(Roles = "Artist,Producer,Admin")]
         [Route("api/CLAlbum/AddAlbum")]
         public IHttpActionResult AddAlbum(ALB01 objALB01)
         {
@@ -67,7 +70,8 @@ namespace MusicCompany.Controllers
         /// </summary>
         /// <returns>Appropriate Message</returns>
         [HttpPost]
-        [BasicAuthorizationAttribute(Roles = "Album,Producer,Admin")]
+        [BearerAuthentication]
+		[Authorize(Roles = "Album,Producer,Admin")]
         [Route("api/CLAlbum/WriteFile")]
         public IHttpActionResult WriteFile()
         {
@@ -80,7 +84,8 @@ namespace MusicCompany.Controllers
         /// <param name="objALB01">object of ALB01 class to be edit</param>
         /// <returns>Appropriate Message</returns>
         [HttpPut]
-        [BasicAuthorizationAttribute(Roles = "Artist,Producer,Admin")]
+        [BearerAuthentication]
+		[Authorize(Roles = "Artist,Producer,Admin")]
         [Route("api/CLAlbum/EditAlbum")]
         public IHttpActionResult EditAlbum(ALB01 objALB01)
         {
@@ -93,7 +98,8 @@ namespace MusicCompany.Controllers
         /// <param name="id">id of album to be deleted</param>
         /// <returns>Appropriate Message</returns>
         [HttpDelete]
-        [BasicAuthorizationAttribute(Roles = "Admin")]
+        [BearerAuthentication]
+		[Authorize(Roles = "Admin")]
         [Route("api/CLAlbum/DeleteAlbum")]
         public IHttpActionResult DeleteAlbum(int id)
         {

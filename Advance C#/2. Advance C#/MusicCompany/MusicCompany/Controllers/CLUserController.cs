@@ -1,4 +1,5 @@
 ﻿using System.Web.Http;
+using MusicCompany.Auth;
 using MusicCompany.BasicAuth;
 using MusicCompany.BusinessLogic;
 using MusicCompany.Models;
@@ -8,7 +9,7 @@ namespace MusicCompany.Controllers
     /// <summary>
     /// Handles methods to predorm operations related to user
     /// </summary>
-    [BasicAuthenticationAttribute]
+    //[BasicAuthenticationAttribute]
     public class CLUserController : ApiController
     {
         /// <summary>
@@ -28,7 +29,8 @@ namespace MusicCompany.Controllers
         /// </summary>
         /// <returns>All data from table USR01</returns>
         [HttpGet]
-        [BasicAuthorizationAttribute(Roles = "admin")]
+        [BearerAuthentication]
+        [Authorize(Roles = "admin")]
         [Route("api/CLUser/GetUsers")]
         public IHttpActionResult GetUsers()
         {
@@ -40,7 +42,8 @@ namespace MusicCompany.Controllers
         /// </summary>
         /// <returns>List of data from joins</returns>
         [HttpGet]
-        [BasicAuthorizationAttribute(Roles = "admin")]
+		[BearerAuthentication]
+		[Authorize(Roles = "admin")]
         [Route("api/CLUser/GetAllDetails")]
         public IHttpActionResult GetAllDetails()
         {
@@ -53,8 +56,8 @@ namespace MusicCompany.Controllers
         /// <param name="objUSR01">object of USR01 class to be added</param>
         /// <returns>Appropriate Message</returns>
         [HttpPost]
-        [BasicAuthorizationAttribute(Roles = "Admin")]
-
+		[BearerAuthentication]
+		[Authorize(Roles = "Admin")]
         [Route("api/CLUser/AddUser")]
         public IHttpActionResult AddUser(USR01 objUSR01)
         {
@@ -67,7 +70,8 @@ namespace MusicCompany.Controllers
         /// <param name="objUSR01">object of USR01 class to be edit</param>
         /// <returns>Appropriate Message</returns>
         [HttpPut]
-        [BasicAuthorizationAttribute(Roles = "Admin")]
+		[BearerAuthentication]
+		[Authorize(Roles = "Admin")]
         [Route("api/CLUser/EditUser")]
         public IHttpActionResult EditUsers(USR01 objUSR01)
         {
@@ -80,7 +84,8 @@ namespace MusicCompany.Controllers
         /// <param name="id">id of user to be delete</param>
         /// <returns>Appropriate Message</returns>
         [HttpDelete]
-        [BasicAuthorizationAttribute(Roles = "Admin")]
+		[BearerAuthentication]
+		[Authorize(Roles = "Admin")]
         [Route("api/CLUser/DeleteUser")]
         public IHttpActionResult DeleteUser(int id)
         {

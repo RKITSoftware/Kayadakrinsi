@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
+using System.Net.Http;
+using System.Text;
 using System.Web;
 using MusicCompany.Models;
 using MySql.Data.MySqlClient;
@@ -305,6 +307,19 @@ namespace MusicCompany.BusinessLogic
             return lstDetail;
         }
 
-        #endregion
-    }
+		/// <summary>
+		/// Seperates username and password from request
+		/// </summary>
+		/// <param name="Request">Current request</param>
+		/// <returns>Username and password</returns>
+		public static string[] GetUsernamePassword(HttpRequestMessage Request)
+		{
+			string authToken = Request.Headers.Authorization.Parameter;
+			byte[] authBytes = Convert.FromBase64String(authToken);
+			authToken = Encoding.UTF8.GetString(authBytes);
+			string[] usernamepassword = authToken.Split(':');
+			return usernamepassword;
+		}
+		#endregion
+	}
 } 

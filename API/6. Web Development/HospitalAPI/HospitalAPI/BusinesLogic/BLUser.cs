@@ -46,6 +46,11 @@ namespace HospitalAPI
             return lstUSR01.FirstOrDefault(user => user.R01F02.Equals(username) && user.R01F03 == password);
         }
 
+        /// <summary>
+        /// Seperates username and password from request
+        /// </summary>
+        /// <param name="Request">Current request</param>
+        /// <returns>Username and password</returns>
         public static string[] GetUsernamePassword(HttpRequestMessage Request)
         {
             string authToken = Request.Headers.Authorization.Parameter;

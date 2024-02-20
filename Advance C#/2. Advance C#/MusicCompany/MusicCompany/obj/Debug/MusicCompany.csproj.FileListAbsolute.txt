@@ -234,3 +234,13 @@ F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\MusicCompany\MusicCompany\ob
 F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\MusicCompany\MusicCompany\obj\Debug\MusicCompany.csproj.CopyComplete
 F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\MusicCompany\MusicCompany\obj\Debug\MusicCompany.dll
 F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\MusicCompany\MusicCompany\obj\Debug\MusicCompany.pdb
+F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\MusicCompany\MusicCompany\bin\Microsoft.IdentityModel.Abstractions.dll
+F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\MusicCompany\MusicCompany\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\MusicCompany\MusicCompany\bin\Microsoft.IdentityModel.Logging.dll
+F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\MusicCompany\MusicCompany\bin\Microsoft.IdentityModel.Tokens.dll
+F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\MusicCompany\MusicCompany\bin\System.IdentityModel.Tokens.Jwt.dll
+F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\MusicCompany\MusicCompany\bin\Microsoft.IdentityModel.Abstractions.xml
+F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\MusicCompany\MusicCompany\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\MusicCompany\MusicCompany\bin\Microsoft.IdentityModel.Logging.xml
+F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\MusicCompany\MusicCompany\bin\Microsoft.IdentityModel.Tokens.xml
+F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\MusicCompany\MusicCompany\bin\System.IdentityModel.Tokens.Jwt.xml
