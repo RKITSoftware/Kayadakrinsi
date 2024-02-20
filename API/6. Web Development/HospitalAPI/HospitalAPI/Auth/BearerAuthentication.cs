@@ -48,15 +48,14 @@ namespace HospitalAPI.Auth
                                                      .Replace('/', '_')
                                                      .Replace("=", "");
 
-				int padding = jwtEncodedPayload.Length % 4;
-				if (padding != 0)
-				{
-					jwtEncodedPayload += new string('=', 4 - padding);
-				}
+		int padding = jwtEncodedPayload.Length % 4;
+		if (padding != 0)
+		{
+			jwtEncodedPayload += new string('=', 4 - padding);
+		}
 
-
-				// decode the jwt payload
-				byte[] decodedPayloadBytes = Convert.FromBase64String(jwtEncodedPayload);
+		// decode the jwt payload
+		byte[] decodedPayloadBytes = Convert.FromBase64String(jwtEncodedPayload);
 
                 string decodedPayload = Encoding.UTF8.GetString(decodedPayloadBytes);
 
