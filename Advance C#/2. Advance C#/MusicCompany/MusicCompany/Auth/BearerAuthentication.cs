@@ -37,6 +37,7 @@ namespace MusicCompany.Auth
 			{
 				actionContext.Response = actionContext.Request.CreateErrorResponse(HttpStatusCode.Unauthorized,
 										 "Enter valid token");
+				throw new Exception("Enter valid token");
 			}
 			else
 			{
@@ -85,6 +86,7 @@ namespace MusicCompany.Auth
 				{
 					actionContext.Response = actionContext.Request.CreateErrorResponse(HttpStatusCode.Unauthorized,
 											 "Authorization denied");
+					throw new Exception("Authorization denied");
 				}
 			}
 		}

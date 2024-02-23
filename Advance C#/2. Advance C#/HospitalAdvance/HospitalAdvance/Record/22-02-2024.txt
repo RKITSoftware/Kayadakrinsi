@@ -1,0 +1,6 @@
+Record id, Patient name, Doctor name, Helper name, Dieases name, Admit date, Discharge date, Total
+1, vimal varma, sweta sharma, cholera, 22-02-2024 12:05:25, 23-02-2024 12:05:25, 200.76
+2, sohil shah, dilip doshi, pneumonia, 22-02-2024 12:05:25, 25-02-2024 12:05:25, 451.50
+Record id, Patient name, Doctor name, Helper name, Dieases name, Admit date, Discharge date, Total
+1, vimal varma, sweta sharma, cholera, 22-02-2024 12:05:25, 23-02-2024 12:05:25, 200.76
+2, sohil shah, dilip doshi, pneumonia, 22-02-2024 12:05:25, 25-02-2024 12:05:25, 451.50

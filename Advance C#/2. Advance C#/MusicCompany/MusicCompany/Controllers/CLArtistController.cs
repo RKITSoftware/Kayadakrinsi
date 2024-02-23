@@ -2,6 +2,7 @@
 using System.Web.Http;
 using MusicCompany.Auth;
 using MusicCompany.BusinessLogic;
+using MusicCompany.Filter;
 using MusicCompany.Models;
 
 namespace MusicCompany.Controllers
@@ -10,6 +11,7 @@ namespace MusicCompany.Controllers
 	/// Handles methods to predorm operations related to artist
 	/// </summary>
 	// [BasicAuthenticationAttribute]
+	[CustomExceptionFilter]
 	public class CLArtistController : ApiController
     {
         /// <summary>

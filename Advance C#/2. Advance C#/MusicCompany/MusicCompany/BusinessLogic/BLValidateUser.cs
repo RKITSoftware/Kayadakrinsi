@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using MusicCompany.Models;
 
 namespace MusicCompany.BusinessLogic
@@ -25,7 +26,6 @@ namespace MusicCompany.BusinessLogic
             {
                 return true;
             }
-
             return false;
         }
 

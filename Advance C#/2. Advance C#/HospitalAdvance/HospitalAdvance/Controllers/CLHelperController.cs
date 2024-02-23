@@ -1,0 +1,100 @@
+﻿using System.Diagnostics;
+using System.Net.Http;
+using System.Web;
+using System.Web.Http;
+using HospitalAdvance.Auth;
+using HospitalAdvance.BusinessLogic;
+using HospitalAdvance.Models;
+
+namespace HospitalAdvance.Controllers
+{
+	public class CLHelperController : ApiController
+    {
+		#region Public Members
+
+		/// <summary>
+		/// Declares object of BLHelper class
+		/// </summary>
+		public BLHelper objBLHelper;
+
+		/// <summary>
+		/// Declares object of Stopwatch class
+		/// </summary>
+		public static Stopwatch stopwatch;
+
+		#endregion
+
+		#region Constructors
+
+		/// <summary>
+		/// Initializes objects
+		/// </summary>
+		public CLHelperController()
+		{
+			objBLHelper = new BLHelper();
+			stopwatch = Stopwatch.StartNew();
+		}
+
+		#endregion
+
+		/// <summary>
+		/// Displays helpers information
+		/// </summary>
+		/// <returns></returns>
+		[HttpGet]
+		[BearerAuthentication]
+		[Authorize(Roles = "admin,helper")]
+		[Route("api/CLHelper/GetHelpers")]
+		public IHttpActionResult GetHelpers()
+		{
+			var data = objBLHelper.Select();
+
+			stopwatch.Stop();
+			long responseTime = stopwatch.ElapsedTicks;
+
+			HttpContext.Current.Response.AddHeader("Response-time", responseTime.ToString());
+
+			return Ok(data);
+		}
+
+		/// <summary>
+		/// Downloads file of helper's data
+		/// </summary>
+		/// <returns>Downloaded text file</returns>
+		[HttpGet]
+		[BearerAuthentication]
+		[Authorize(Roles = "Admin")]
+		[Route("api/CLHelper/GetHelpersFile")]
+		public HttpResponseMessage GetHelpersFile()
+		{
+			return objBLHelper.Download();
+		}
+
+		/// <summary>
+		/// Write data into file
+		/// </summary>
+		/// <returns>Appropriate Message</returns>
+		[HttpPost]
+		[BearerAuthentication]
+		[Authorize(Roles = "Admin")]
+		[Route("api/CLHelper/WriteFile")]
+		public IHttpActionResult WriteFile()
+		{
+			return Ok(objBLHelper.WriteData());
+		}
+
+		/// <summary>
+		/// Updates helper information
+		/// </summary>
+		/// <param name="objSTF02">Helper information to be updated</param>
+		/// <returns>Appropriate message</returns>
+		[HttpPut]
+		[BearerAuthentication]
+		[Authorize(Roles = "admin")]
+		[Route("api/CLHelper/UpdateHelpers")]
+		public IHttpActionResult UpdateHelpers(STF02 objSTF02)
+		{
+			return Ok(objBLHelper.Update(objSTF02));
+		}
+	}
+}

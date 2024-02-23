@@ -1,16 +1,17 @@
 ﻿using System.Web.Http;
 using MusicCompany.Auth;
-using MusicCompany.BasicAuth;
 using MusicCompany.BusinessLogic;
+using MusicCompany.Filter;
 using MusicCompany.Models;
 
 namespace MusicCompany.Controllers
 {
-    /// <summary>
-    /// Handles methods to predorm operations related to user
-    /// </summary>
-    //[BasicAuthenticationAttribute]
-    public class CLUserController : ApiController
+	/// <summary>
+	/// Handles methods to predorm operations related to user
+	/// </summary>
+	//[BasicAuthenticationAttribute]
+	[CustomExceptionFilter]
+	public class CLUserController : ApiController
     {
         /// <summary>
         /// Declares object of BLUser class

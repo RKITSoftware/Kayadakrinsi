@@ -2,14 +2,16 @@
 using System.Web.Http;
 using MusicCompany.Auth;
 using MusicCompany.BusinessLogic;
+using MusicCompany.Filter;
 using MusicCompany.Models;
 
 namespace MusicCompany.Controllers
 {
-	/// <summary>
-	/// Handles methods to predorm operations related to album
-	/// </summary>
-	// [BasicAuthenticationAttribute]
+    /// <summary>
+    /// Handles methods to predorm operations related to album
+    /// </summary>
+    // [BasicAuthenticationAttribute]
+    [CustomExceptionFilter]
 	public class CLAlbumController : ApiController
     {
         /// <summary>

@@ -2,12 +2,14 @@
 using System.Web.Http;
 using MusicCompany.Auth;
 using MusicCompany.BusinessLogic;
+using MusicCompany.Filter;
 
 namespace MusicCompany.Controllers
 {
 	/// <summary>
 	/// Logs in user after authenticate
 	/// </summary>
+	[CustomExceptionFilter]
 	public class CLLoginController : ApiController
     {
 		/// <summary>

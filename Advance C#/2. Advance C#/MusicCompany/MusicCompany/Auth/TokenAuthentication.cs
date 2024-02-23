@@ -28,6 +28,7 @@ namespace MusicCompany.Auth
 			{
 				actionContext.Response = actionContext.Request.CreateErrorResponse(HttpStatusCode.Unauthorized,
 										 "invalid headers");
+				throw new Exception("invalid headers");
 			}
 			else if (authHeader.Scheme == "Basic")
 			{
@@ -54,6 +55,7 @@ namespace MusicCompany.Auth
 					{
 						actionContext.Response = actionContext.Request.CreateResponse(HttpStatusCode.Unauthorized,
 												 "Invalid token");
+						throw new Exception("Invalid token");
 					}
 
 					//Set the current principal for the request

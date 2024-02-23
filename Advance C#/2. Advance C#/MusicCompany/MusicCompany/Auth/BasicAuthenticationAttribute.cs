@@ -31,7 +31,8 @@ namespace MusicCompany.BasicAuth
                 {
                     actionContext.Response = actionContext.Request
                         .CreateErrorResponse(HttpStatusCode.Unauthorized, "Login failed");
-                }
+					throw new Exception("Login failed");
+				}
                 else
                 {
                     string authToken = actionContext.Request.Headers.Authorization.Parameter;
@@ -60,20 +61,24 @@ namespace MusicCompany.BasicAuth
                         {
                             actionContext.Response = actionContext.Request
                             .CreateErrorResponse(HttpStatusCode.Unauthorized, "Authorization Denied");
-                        }
+							throw new Exception("Authorization Denied");
+						}
                     }
                     else
                     {
                         actionContext.Response = actionContext.Request
                             .CreateErrorResponse(HttpStatusCode.Unauthorized, "Invalid Creditentials");
-                    }
+						throw new Exception("Invalid Creditentials");
+					}
                 }
             }
             catch (Exception)
             {
                 actionContext.Response = actionContext.Request
-                            .CreateErrorResponse(HttpStatusCode.InternalServerError, "Login failed due to Internal Server Error");
-            }
+                            .CreateErrorResponse(HttpStatusCode.InternalServerError, 
+                            "Login failed due to Internal Server Error");
+				throw new Exception("Login failed due to Internal Server Error");
+			}
 
         }
 

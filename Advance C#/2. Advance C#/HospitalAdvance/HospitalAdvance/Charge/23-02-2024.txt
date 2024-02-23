@@ -1,0 +1,4 @@
+Charge id, Doctor id, Dieases id, Amount
+1, 1, 3, 2000.00
+2, 2, 1, 150.50
+3, 3, 2, 200.76

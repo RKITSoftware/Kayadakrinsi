@@ -22,6 +22,7 @@ namespace MusicCompany.BasicAuth
             if (HttpContext.Current.User.Identity.IsAuthenticated)
             {
                 base.HandleUnauthorizedRequest(actionContext);
+                throw new System.Exception("Authorization has been denied");
             }
             else
             {

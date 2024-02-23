@@ -1,0 +1,4 @@
+Dieases id, Dieases name, Doctor id
+1, pneumonia, 2
+2, cholera, 3
+3, cancer, 1
