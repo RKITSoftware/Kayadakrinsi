@@ -71,6 +71,34 @@ namespace HospitalAdvance.Controllers
 		}
 
 		/// <summary>
+		/// Downloads file of doctor's data
+		/// </summary>
+		/// <returns>Downloaded text file</returns>
+		[HttpGet]
+		[BearerAuthentication]
+		[Authorize(Roles = "helper")]
+		[Route("api/CLHelper/GetMyFile")]
+		public HttpResponseMessage GetMyFile()
+		{
+			var user = BLUser.GetUser(ActionContext);
+			return objBLHelper.DownloadMyFile(user);
+		}
+
+		/// <summary>
+		/// Write data into file
+		/// </summary>
+		/// <returns>Appropriate Message</returns>
+		[HttpPost]
+		[BearerAuthentication]
+		[Authorize(Roles = "helper")]
+		[Route("api/CLHelper/WriteMyFile")]
+		public IHttpActionResult WriteMyFile()
+		{
+			var user = BLUser.GetUser(ActionContext);
+			return Ok(objBLHelper.WriteMyFile(user));
+		}
+
+		/// <summary>
 		/// Write data into file
 		/// </summary>
 		/// <returns>Appropriate Message</returns>

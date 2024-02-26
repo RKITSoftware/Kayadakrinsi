@@ -57,6 +57,14 @@ namespace HospitalAdvance.BusinessLogic
 				{
 					db.CreateTable<DIS01>();
 				}
+
+				var doctor = db.SingleById<STF01>(objDIS01.S01F03);
+
+				if(doctor == null)
+				{
+					return "Enter data with valid refrences";
+				}
+
 				db.Insert(objDIS01);
 				return "Success!";
 			}
@@ -76,7 +84,16 @@ namespace HospitalAdvance.BusinessLogic
 					db.CreateTable<DIS01>();
 					return "No records to be update!";
 				}
+
+				var doctor = db.SingleById<STF01>(objDIS01.S01F03);
+
+				if (doctor == null)
+				{
+					return "Enter data with valid refrences";
+				}
+
 				db.Update(objDIS01,u=>u.S01F01==objDIS01.S01F01);
+
 				return "Dieases updated successfully!";
 			}
 		}
@@ -114,18 +131,26 @@ namespace HospitalAdvance.BusinessLogic
 			using (StreamWriter sw = new StreamWriter(path))
 			{
 				var lstDIS01 = Select();
-				sw.WriteLine("Dieases id, Dieases name, Doctor id");
-				foreach (var obj in lstDIS01)
+
+				using(var db = _dbFactory.OpenDbConnection())
 				{
-					sw.Write(obj.S01F01 + ", ");
-					sw.Write(obj.S01F02 + ", ");
-					sw.Write(obj.S01F03);
-					sw.WriteLine();
+					sw.WriteLine("Dieases id, Dieases name, Doctor id");
+					foreach (var obj in lstDIS01)
+					{
+						var doctor = db.SingleById<STF01>(obj.S01F03).F01F02;
+						if(doctor != null)
+						{	
+							sw.Write(obj.S01F01 + ", ");
+							sw.Write(obj.S01F02 + ", ");
+							sw.Write(doctor);
+							sw.WriteLine();
+						}
+					}
 				}
 			}
 			return "File created successfully 🙌";
 		}
-
+		 
 		/// <summary>
 		/// Download file
 		/// </summary>
@@ -153,7 +178,7 @@ namespace HospitalAdvance.BusinessLogic
 			// Set the content disposition header to force a download
 			response.Content.Headers.ContentDisposition = new System.Net.Http.Headers.ContentDispositionHeaderValue("attachment")
 			{
-				FileName = "Downloaded-Dieases" + Path.GetFileName(path)
+				FileName = "Downloaded-Dieases-" + Path.GetFileName(path)
 			};
 
 			return response;

@@ -132,8 +132,22 @@ namespace HospitalAdvance.BusinessLogic
 					{
 						db.CreateTable<RCD01>();
 					}
+
+					var patient = db.SingleById<PTN01>(objRCD01.D01F02);
+					var doctor = db.SingleById<STF01>(objRCD01.D01F03);
+					var helper = db.SingleById<STF02>(objRCD01.D01F04);
+					var dieases = db.SingleById<STF02>(objRCD01.D01F05);
+					var charge = db.SingleById<CRG01>(objRCD01.D01F06);
+
+					if(patient==null || doctor==null || helper==null || dieases==null || charge == null)
+					{
+						return "Enter data with valid references";
+					}
+
 					objRCD01.D01F09 = CalculateTotal(objRCD01);
+
 					db.Insert(objRCD01);
+
 					return "Success!";
 				}
 			}
@@ -147,17 +161,35 @@ namespace HospitalAdvance.BusinessLogic
 		/// <returns>Appropriate Message</returns>
 		public string Update(RCD01 objRCD01)
 		{
-			using (var db = _dbFactory.OpenDbConnection())
+			if (objRCD01.D01F08 >= objRCD01.D01F07)
 			{
-				if (!db.TableExists<RCD01>())
+				using (var db = _dbFactory.OpenDbConnection())
 				{
-					db.CreateTable<RCD01>();
-					return "No records to be update!";
+					if (!db.TableExists<RCD01>())
+					{
+						db.CreateTable<RCD01>();
+						return "No records to be update!";
+					}
+
+					var patient = db.SingleById<PTN01>(objRCD01.D01F02);
+					var doctor = db.SingleById<STF01>(objRCD01.D01F03);
+					var helper = db.SingleById<STF02>(objRCD01.D01F04);
+					var dieases = db.SingleById<STF02>(objRCD01.D01F05);
+					var charge = db.SingleById<CRG01>(objRCD01.D01F06);
+
+					if (patient == null || doctor == null || helper == null || dieases == null || charge == null)
+					{
+						return "Enter data with valid references";
+					}
+
+					objRCD01.D01F09 = CalculateTotal(objRCD01);
+
+					db.Update(objRCD01, u => u.D01F01 == objRCD01.D01F01);
+
+					return "Record updated successfully!";
 				}
-				objRCD01.D01F09 = CalculateTotal(objRCD01);
-				db.Update(objRCD01, u => u.D01F01 == objRCD01.D01F01);
-				return "Record updated successfully!";
 			}
+			return "Invalid data";
 		}
 
 
@@ -213,8 +245,8 @@ namespace HospitalAdvance.BusinessLogic
 				"D01.D01F05 = S01.S01F01 AND " +
 				"D01.D01F06 = G01.G01F01 ORDER BY RECORD_ID";
 
-			//List<object>[] lstDetails = new List<object>[6];
 			List<object> lstDetail = new List<object>();
+
 			CloseConnection();
 			//Open connection
 			if (OpenConnection() == true)
@@ -237,7 +269,7 @@ namespace HospitalAdvance.BusinessLogic
 						ADMIT_DATE = dataReader[5],
 						DISCHARGE_DATE = dataReader[6],
 						TOTAL = dataReader[7]
-					});
+					});  
 				}
 
 				dataReader.Close();

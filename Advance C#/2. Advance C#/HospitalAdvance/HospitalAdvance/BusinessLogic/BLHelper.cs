@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web;
@@ -140,6 +141,63 @@ namespace HospitalAdvance.BusinessLogic
 				}
 			}
 			return "File created successfully 🙌";
+		}
+
+		/// <summary>
+		/// Selects data from database and Writes data into file of current user
+		/// </summary>
+		/// <returns>Appropriate Message</returns>
+		public string WriteMyFile(USR01 user)
+		{
+			string newPath = path.Replace(DateTime.Now.ToShortDateString(), user.R01F02 + DateTime.Now.ToShortDateString());
+
+			using (StreamWriter sw = new StreamWriter(newPath))
+			{
+				var obj = Select().FirstOrDefault(x => x.F02F05 == user.R01F01);
+				sw.WriteLine("Helper id, Helper name, Role of helper, Working days, User id, IsActive"); 
+				sw.Write(obj.F02F01 + ", ");
+				sw.Write(obj.F02F02 + ", ");
+				sw.Write(obj.F02F03 + ", ");
+				sw.Write(obj.F02F04 + ", ");
+				sw.Write(obj.F02F05 + ", ");
+				sw.Write(obj.F02F06);
+				sw.WriteLine();
+			}
+			return "File created successfully 🙌";
+		}
+
+		/// <summary>
+		/// Download file
+		/// </summary>
+		/// <returns>HttpResponseMessage with file</returns>
+		public HttpResponseMessage DownloadMyFile(USR01 user)
+		{
+			var newPath = path.Replace(DateTime.Now.ToShortDateString(), user.R01F02 + DateTime.Now.ToShortDateString());
+			// Check if the file exists
+			if (!File.Exists(newPath))
+			{
+				return new HttpResponseMessage(HttpStatusCode.NotFound);
+			}
+
+			// Create a response message
+			HttpResponseMessage response = new HttpResponseMessage(HttpStatusCode.OK);
+
+			// Read the file into a byte array
+			byte[] fileBytes = File.ReadAllBytes(newPath);
+
+			// Create a content stream from the byte array
+			response.Content = new ByteArrayContent(fileBytes);
+
+			// Set the content type based on the file extension
+			response.Content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/octet-stream");
+
+			// Set the content disposition header to force a download
+			response.Content.Headers.ContentDisposition = new System.Net.Http.Headers.ContentDispositionHeaderValue("attachment")
+			{
+				FileName = "Downloaded-Helper-" + Path.GetFileName(newPath)
+			};
+
+			return response;
 		}
 
 		/// <summary>

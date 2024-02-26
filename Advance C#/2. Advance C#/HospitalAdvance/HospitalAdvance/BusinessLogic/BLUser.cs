@@ -6,9 +6,11 @@ using System.Net.Http;
 using System.Text;
 using System.Web;
 using System.Web.Caching;
+using System.Web.Http.Controllers;
 using HospitalAdvance.Models;
 using MySql.Data.MySqlClient;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using ServiceStack.Data;
 using ServiceStack.OrmLite;
 
@@ -233,17 +235,26 @@ namespace HospitalAdvance.BusinessLogic
 		/// <returns>Appropriate message</returns>
 		public string Insert(USR01 objUSR01)
 		{
-			objUSR01.R01F03 = BLSecurity.EncryptAes(objUSR01.R01F03, BLSecurity.key, BLSecurity.iv);
 			using (var db = _dbFactory.OpenDbConnection())
 			{
 				if (!db.TableExists<USR01>())
 				{
 					db.CreateTable<USR01>();
 				}
-				db.Insert<USR01>(objUSR01);
+
+				var user = db.Select<USR01>().FirstOrDefault(x => x.R01F02 == objUSR01.R01F02);
+				if (user != null)
+				{
+					return "User already exist";
 				}
+
+				objUSR01.R01F03 = BLSecurity.EncryptAes(objUSR01.R01F03, BLSecurity.key, BLSecurity.iv);
+
+				db.Insert<USR01>(objUSR01);
+
 				return "Success!";
 			}
+		}
 
 		/// <summary>
 		/// Inserts data to USR01 as well as into the other table according to user role
@@ -520,6 +531,41 @@ namespace HospitalAdvance.BusinessLogic
 			authToken = Encoding.UTF8.GetString(authBytes);
 			string[] usernamepassword = authToken.Split(':');
 			return usernamepassword;
+		}
+
+		/// <summary>
+		/// Gets user detail from JWT token
+		/// </summary>
+		/// <param name="actionContext">Current context</param>
+		/// <returns>User</returns>
+		public static USR01 GetUser(HttpActionContext actionContext)
+		{
+			string tokenValue = actionContext.Request.Headers.Authorization.Scheme;
+
+			string jwtEncodedPayload = tokenValue.Split('.')[1];
+
+			// pad jwtEncodedPayload
+			jwtEncodedPayload = jwtEncodedPayload.Replace('+', '-')
+												 .Replace('/', '_')
+												 .Replace("=", "");
+
+			int padding = jwtEncodedPayload.Length % 4;
+			if (padding != 0)
+			{
+				jwtEncodedPayload += new string('=', 4 - padding);
+			}
+
+			// decode the jwt payload
+			byte[] decodedPayloadBytes = Convert.FromBase64String(jwtEncodedPayload);
+
+			string decodedPayload = Encoding.UTF8.GetString(decodedPayloadBytes);
+
+			JObject json = JObject.Parse(decodedPayload);
+
+			USR01 user = BLUser.Select().FirstOrDefault(u => u.R01F02 == json["unique_name"].ToString());
+
+			return user;
+
 		}
 
 		#endregion

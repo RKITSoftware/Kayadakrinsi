@@ -57,7 +57,17 @@ namespace HospitalAdvance.BusinessLogic
 				{
 					db.CreateTable<CRG01>();
 				}
+
+				var dieases = db.SingleById<DIS01>(objCRG01.G01F03);
+				var doctor = db.SingleById<STF01>(objCRG01.G01F02);
+
+				if(dieases == null || doctor == null)
+				{
+					return ("Enter data with valid refrences");
+				}
+
 				db.Insert(objCRG01);
+
 				return "Success!";
 			}
 		}
@@ -76,6 +86,15 @@ namespace HospitalAdvance.BusinessLogic
 					db.CreateTable<CRG01>();
 					return "No records to be update!";
 				}
+
+				var dieases = db.SingleById<DIS01>(objCRG01.G01F03);
+				var doctor = db.SingleById<STF01>(objCRG01.G01F02);
+
+				if (dieases == null || doctor == null)
+				{
+					return ("Enter data with valid refrences");
+				}
+
 				db.Update(objCRG01,u=>u.G01F01==objCRG01.G01F01);
 				return "Charge updated successfully!";
 			}
@@ -113,14 +132,24 @@ namespace HospitalAdvance.BusinessLogic
 			using (StreamWriter sw = new StreamWriter(path))
 			{
 				var lstCRG01 = Select();
-				sw.WriteLine("Charge id, Doctor id, Dieases id, Amount");
-				foreach (var obj in lstCRG01)
+
+				using(var db = _dbFactory.OpenDbConnection())
 				{
-					sw.Write(obj.G01F01 + ", ");
-					sw.Write(obj.G01F02 + ", ");
-					sw.Write(obj.G01F03 + ", ");
-					sw.Write(obj.G01F04);
-					sw.WriteLine();
+					sw.WriteLine("Charge id, Doctor id, Dieases id, Amount");  
+					foreach (var obj in lstCRG01)
+					{
+						var doctor = db.SingleById<STF01>(obj.G01F02).F01F02;
+						var dieases = db.SingleById<DIS01>(obj.G01F03).S01F02;
+
+						if(dieases != null && doctor != null)
+						{
+							sw.Write(obj.G01F01 + ", ");
+							sw.Write(doctor + ", ");
+							sw.Write(dieases + ", ");
+							sw.Write(obj.G01F04);
+							sw.WriteLine();
+						}
+					}
 				}
 			}
 			return "File created successfully 🙌";
@@ -129,7 +158,7 @@ namespace HospitalAdvance.BusinessLogic
 		/// <summary>
 		/// Download file
 		/// </summary>
-		/// <returns>HttpResponseMessage with file</returns>
+		/// <returns>HttpResponseMessage with file</returns> 
 		public HttpResponseMessage Download()
 		{
 			// Check if the file exists

@@ -60,7 +60,7 @@ namespace HospitalAdvance.Controllers
 		//[HttpGet]
 		//[BearerAuthentication]
 		//[Authorize(Roles = "Admin,Doctor,Helper,Patient")]
-		//[Route("api/CLRecord/GetDetailedRecords")]
+		[Route("api/CLRecord/GetDetailedRecords")]
 		public IHttpActionResult GetDetailedRecords()
 		{
 			return Ok(objBLRecord.SelectAllDetails());

@@ -49,7 +49,6 @@ namespace HospitalAdvance.Controllers
         {
 			var data = objBLCharge.Select();
 
-
 			stopwatch.Stop();
 			long responseTime = stopwatch.ElapsedTicks;
 

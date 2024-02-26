@@ -1,0 +1,11 @@
+Charge id, Doctor id, Dieases id, Amount
+1, kunal patil, cancer, 2000.00
+2, praful arora, pneumonia, 150.50
+3, rajesh sinha, cholera, 200.76
+4, sujata agarwal, typhoid, 400.00
+5, kirit kanani, alzer, 700.70
+6, kunal patil, asthma, 1700.00
+7, praful arora, diabetes, 500.00
+8, rajesh sinha, tooth erosion, 1500.00
+9, kirit kanani, fungal infection, 350.35
+10, sujata agarwal, heart dieases, 2300.00

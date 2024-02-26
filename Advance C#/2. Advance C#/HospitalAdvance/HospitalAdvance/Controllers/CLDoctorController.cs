@@ -64,10 +64,38 @@ namespace HospitalAdvance.Controllers
 		[HttpGet]
 		[BearerAuthentication]
 		[Authorize(Roles = "Admin")]
-		[Route("api/CLDoctor/GetDoctorsFile")]
-		public HttpResponseMessage GetDoctorsFile()
+		[Route("api/CLDoctor/GetFile")]
+		public HttpResponseMessage GetFile()
 		{
 			return objBLDoctor.Download();
+		}
+
+		/// <summary>
+		/// Downloads file of doctor's data
+		/// </summary>
+		/// <returns>Downloaded text file</returns>
+		[HttpGet]
+		[BearerAuthentication]
+		[Authorize(Roles = "doctor")]
+		[Route("api/CLDoctor/GetMyFile")]
+		public HttpResponseMessage GetMyFile()
+		{
+			var user = BLUser.GetUser(ActionContext);
+			return objBLDoctor.DownloadMyFile(user);
+		}
+
+		/// <summary>
+		/// Write data into file
+		/// </summary>
+		/// <returns>Appropriate Message</returns>
+		[HttpPost]
+		[BearerAuthentication]
+		[Authorize(Roles = "doctor")]
+		[Route("api/CLDoctor/WriteMyFile")]
+		public IHttpActionResult WriteMyFile()
+		{
+			var user = BLUser.GetUser(ActionContext);
+			return Ok(objBLDoctor.WriteMyFile(user));
 		}
 
 		/// <summary>
