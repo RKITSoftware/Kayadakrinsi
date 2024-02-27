@@ -43,7 +43,7 @@ namespace HospitalAdvance.Controllers
 		/// <returns></returns>
 		[HttpGet]
 		[BearerAuthentication]
-		[Authorize(Roles = "admin,patient")]
+		[Authorize(Roles = "Manager,patient")]
 		[Route("api/CLPatient/GetPatients")]
 		public IHttpActionResult GetPatients()
 		{
@@ -62,11 +62,25 @@ namespace HospitalAdvance.Controllers
 		/// <returns>Downloaded text file</returns>
 		[HttpGet]
 		[BearerAuthentication]
-		[Authorize(Roles = "Admin")]
+		[Authorize(Roles = "Manager")]
 		[Route("api/CLPatient/GetPatientsFile")]
 		public HttpResponseMessage GetPatientsFile()
 		{
 			return objBLPatient.Download();
+		}
+
+		/// <summary>
+		/// Displays particular patient's charges detials
+		/// </summary>
+		/// <returns></returns>
+		[HttpGet]
+		[BearerAuthentication]
+		[Authorize(Roles = "Patient")]
+		[Route("api/CLPatient/GetMyRecipt")]
+		public IHttpActionResult GetMyRecipt()
+		{
+			var user = BLUser.GetUser(ActionContext);
+			return Ok(objBLPatient.GetMyRecipt(user));
 		}
 
 		/// <summary>
@@ -103,7 +117,7 @@ namespace HospitalAdvance.Controllers
 		/// <returns>Appropriate Message</returns>
 		[HttpPost]
 		[BearerAuthentication]
-		[Authorize(Roles = "Admin")]
+		[Authorize(Roles = "Manager")]
 		[Route("api/CLPatient/AddPatient")]
 		public IHttpActionResult AddPatient(PTN01 objPTN01)
 		{
@@ -116,7 +130,7 @@ namespace HospitalAdvance.Controllers
 		/// <returns>Appropriate Message</returns>
 		[HttpPost]
 		[BearerAuthentication]
-		[Authorize(Roles = "Admin")]
+		[Authorize(Roles = "Manager")]
 		[Route("api/CLPatient/WriteFile")]
 		public IHttpActionResult WriteFile()
 		{
@@ -130,7 +144,7 @@ namespace HospitalAdvance.Controllers
 		/// <returns>Appropriate message</returns>
 		[HttpPut]
 		[BearerAuthentication]
-		[Authorize(Roles = "admin")]
+		[Authorize(Roles = "Manager")]
 		[Route("api/CLPatient/UpdatePatients")]
 		public IHttpActionResult UpdatePatients(PTN01 objPTN01)
 		{

@@ -1,0 +1,2 @@
+Helper id, Helper name, Role of helper, Working days, User id, IsActive
+3, rita singh, PATIENT_SERVICE_ASSISTANT, Sunday, Monday, 11, True

@@ -243,15 +243,15 @@ namespace HospitalAdvance.BusinessLogic
 				}
 
 				var user = db.Select<USR01>().FirstOrDefault(x => x.R01F02 == objUSR01.R01F02);
-				if (user != null)
+				if (user != null  && user==objUSR01)
 				{
 					return "User already exist";
 				}
-
-				objUSR01.R01F03 = BLSecurity.EncryptAes(objUSR01.R01F03, BLSecurity.key, BLSecurity.iv);
-
-				db.Insert<USR01>(objUSR01);
-
+				else if(user != null)
+				{
+					objUSR01.R01F03 = BLSecurity.EncryptAes(objUSR01.R01F03, BLSecurity.key, BLSecurity.iv);
+					db.Update(objUSR01, u => u.R01F01 == objUSR01.R01F01);
+				}
 				return "Success!";
 			}
 		}

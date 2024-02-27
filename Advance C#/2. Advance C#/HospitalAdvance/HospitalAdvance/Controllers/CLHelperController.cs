@@ -43,7 +43,7 @@ namespace HospitalAdvance.Controllers
 		/// <returns></returns>
 		[HttpGet]
 		[BearerAuthentication]
-		[Authorize(Roles = "admin,helper")]
+		[Authorize(Roles = "Manager,helper")]
 		[Route("api/CLHelper/GetHelpers")]
 		public IHttpActionResult GetHelpers()
 		{
@@ -63,7 +63,7 @@ namespace HospitalAdvance.Controllers
 		/// <returns>Downloaded text file</returns>
 		[HttpGet]
 		[BearerAuthentication]
-		[Authorize(Roles = "Admin")]
+		[Authorize(Roles = "Manager")]
 		[Route("api/CLHelper/GetHelpersFile")]
 		public HttpResponseMessage GetHelpersFile()
 		{
@@ -104,7 +104,7 @@ namespace HospitalAdvance.Controllers
 		/// <returns>Appropriate Message</returns>
 		[HttpPost]
 		[BearerAuthentication]
-		[Authorize(Roles = "Admin")]
+		[Authorize(Roles = "Manager")]
 		[Route("api/CLHelper/WriteFile")]
 		public IHttpActionResult WriteFile()
 		{
@@ -118,7 +118,7 @@ namespace HospitalAdvance.Controllers
 		/// <returns>Appropriate message</returns>
 		[HttpPut]
 		[BearerAuthentication]
-		[Authorize(Roles = "admin")]
+		[Authorize(Roles = "Manager")]
 		[Route("api/CLHelper/UpdateHelpers")]
 		public IHttpActionResult UpdateHelpers(STF02 objSTF02)
 		{

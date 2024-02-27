@@ -1,0 +1,7 @@
+Record id, Patient name, Doctor name, Helper name, Dieases name, Admit date, Discharge date, Total
+1, vimal varma, rajesh sinha, sweta sharma, cholera, 22-02-2024 12:05:25, 23-02-2024 12:05:25, 200.76
+2, sohil shah, praful arora, dilip doshi, pneumonia, 22-02-2024 12:05:25, 25-02-2024 12:05:25, 451.50
+3, nilesh ray, sujata agarwal, rita singh, heart dieases, 23-02-2024 06:50:52, 24-02-2024 06:50:52, 2300.00
+4, jay patel, rajesh sinha, jigar jani, tooth erosion, 23-02-2024 06:50:52, 25-02-2024 06:50:52, 3000.00
+5, rahul shetty, kunal patil, rita singh, asthma, 23-02-2024 06:50:52, 29-02-2024 06:50:52, 10200.00
+6, nisha sharma, praful arora, rita singh, diabetes, 23-02-2024 06:50:52, 24-02-2024 06:50:52, 500.00

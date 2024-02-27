@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.Common;
 using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web;
 using HospitalAdvance.Models;
+using MySql.Data.MySqlClient;
 using ServiceStack.Data;
 using ServiceStack.OrmLite;
 
@@ -29,6 +32,16 @@ namespace HospitalAdvance.BusinessLogic
 		/// </summary>
 		private static readonly IDbConnectionFactory _dbFactory;
 
+		/// <summary>
+		/// Connection string
+		/// </summary>
+		private static readonly string _connectionString;
+
+		/// <summary>
+		/// Connection object of class MySqlConnection
+		/// </summary>
+		private static readonly MySqlConnection _connection;
+
 		#endregion
 
 		#region Constructors
@@ -38,7 +51,49 @@ namespace HospitalAdvance.BusinessLogic
 		/// </summary>
 		static BLPatient()
 		{
+			_connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+			_connection = new MySqlConnection(_connectionString);
 			_dbFactory = HttpContext.Current.Application["dbFactory"] as IDbConnectionFactory;
+		}
+
+		#endregion
+
+		#region Private Methods
+
+		/// <summary>
+		/// open connection to database
+		/// </summary>
+		/// <returns>true if connection opened else false</returns>
+		private static bool OpenConnection()
+		{
+			try
+			{
+				_connection.Open();
+				return true;
+			}
+			catch (MySqlException ex)
+			{
+				Console.WriteLine(ex.Message);
+				return false;
+			}
+		}
+
+		/// <summary>
+		/// close connection
+		/// </summary>
+		/// <returns>true if connection closed else false</returns>
+		private static bool CloseConnection()
+		{
+			try
+			{
+				_connection.Close();
+				return true;
+			}
+			catch (MySqlException ex)
+			{
+				Console.WriteLine(ex.Message);
+				return false;
+			}
 		}
 
 		#endregion
@@ -136,6 +191,73 @@ namespace HospitalAdvance.BusinessLogic
 
 				return lstPTN01;
 			}
+		}
+
+		/// <summary>
+		/// Generates patient's charges details
+		/// </summary>
+		/// <param name="user">Current user</param>
+		/// <returns>List o object</returns>
+		public dynamic GetMyRecipt(USR01 user)
+		{
+			string query = "SELECT " +
+				"D01.D01F01 AS RECORD_ID," +
+				"N01.N01F02 AS PATIENT_NAME," +
+				"F01.F01F02 AS DOCTOR_NAME," +
+				"F02.F02F02 AS HELPER_NAME," +
+				"S01.S01F02 AS DIEASES_NAME," +
+				"D01.D01F07 AS ADMIT_DATE," +
+				"D01.D01F08 AS DISCHARGE_DATE," +
+				"D01.D01F09 AS TOTAL " +
+				"FROM " +
+				"RCD01 D01," +
+				"PTN01 N01," +
+				"STF01 F01," +
+				"STF02 F02," +
+				"DIS01 S01," +
+				"CRG01 G01 " +
+				"WHERE " +
+				"D01.D01F02 = N01.N01F01 AND " +
+				"D01.D01F03 = F01.F01F01 AND " +
+				"D01.D01F04 = F02.F02F01 AND " +
+				"D01.D01F05 = S01.S01F01 AND " +
+				"D01.D01F06 = G01.G01F01 AND N01.N01F05 = " + user.R01F01;
+
+			List<object> lstDetail = new List<object>();
+
+			CloseConnection();
+			//Open connection
+			if (OpenConnection() == true)
+			{
+				//Create Command
+				MySqlCommand command = new MySqlCommand(query, _connection);
+				//Create a data reader and Execute the command
+				MySqlDataReader dataReader = command.ExecuteReader();
+
+
+				while (dataReader.Read())
+				{
+					lstDetail.Add(new
+					{
+						RECORD_ID = dataReader[0],
+						PATIENT_NAME = dataReader[1],
+						DOCTOR_NAME = dataReader[2],
+						HELPER_NAME = dataReader[3],
+						DIEASES_NAME = dataReader[4],
+						ADMIT_DATE = dataReader[5],
+						DISCHARGE_DATE = dataReader[6],
+						TOTAL = dataReader[7]
+					});
+				}
+
+				dataReader.Close();
+
+				BLUser.CacheOperations("DetailedRecords", lstDetail);
+
+				//close Connection
+				CloseConnection();
+			}
+			return lstDetail;
 		}
 
 		/// <summary>

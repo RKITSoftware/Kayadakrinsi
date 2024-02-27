@@ -9,7 +9,7 @@ namespace HospitalAdvance.Models
 	[Flags]
 	public enum enmUserRole
 	{
-		Admin = 1,
+		Manager = 1,
 		Doctor = 2,
 		Helper = 3, 
 		Patient = 4

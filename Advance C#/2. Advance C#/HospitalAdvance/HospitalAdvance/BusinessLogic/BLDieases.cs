@@ -134,7 +134,7 @@ namespace HospitalAdvance.BusinessLogic
 
 				using(var db = _dbFactory.OpenDbConnection())
 				{
-					sw.WriteLine("Dieases id, Dieases name, Doctor id");
+					sw.WriteLine("Dieases id, Dieases name, Doctor name");
 					foreach (var obj in lstDIS01)
 					{
 						var doctor = db.SingleById<STF01>(obj.S01F03).F01F02;

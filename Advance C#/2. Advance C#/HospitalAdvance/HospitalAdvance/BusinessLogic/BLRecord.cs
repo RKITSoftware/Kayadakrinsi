@@ -282,6 +282,8 @@ namespace HospitalAdvance.BusinessLogic
 			return lstDetail;
 		}
 
+		
+
 		/// <summary>
 		/// Selects data from database and Writes data into file
 		/// </summary>
@@ -296,6 +298,7 @@ namespace HospitalAdvance.BusinessLogic
 				{
 					sw.Write(obj.RECORD_ID + ", ");
 					sw.Write(obj.PATIENT_NAME + ", ");
+					sw.Write(obj.DOCTOR_NAME + ", ");
 					sw.Write(obj.HELPER_NAME + ", ");
 					sw.Write(obj.DIEASES_NAME + ", ");
 					sw.Write(obj.ADMIT_DATE + ", ");

@@ -43,7 +43,7 @@ namespace HospitalAdvance.Controllers
 		/// <returns>List of doctors</returns>
 		[HttpGet]
 		[BearerAuthentication]
-		[Authorize(Roles = "admin,doctor")]
+		[Authorize(Roles = "Manager,doctor")]
 		[Route("api/CLDoctor/GetDoctors")]
 		public IHttpActionResult GetDoctors()
 		{
@@ -63,7 +63,7 @@ namespace HospitalAdvance.Controllers
 		/// <returns>Downloaded text file</returns>
 		[HttpGet]
 		[BearerAuthentication]
-		[Authorize(Roles = "Admin")]
+		[Authorize(Roles = "Manager")]
 		[Route("api/CLDoctor/GetFile")]
 		public HttpResponseMessage GetFile()
 		{
@@ -104,7 +104,7 @@ namespace HospitalAdvance.Controllers
 		/// <returns>Appropriate Message</returns>
 		[HttpPost]
 		[BearerAuthentication]
-		[Authorize(Roles = "Admin")]
+		[Authorize(Roles = "Manager")]
 		[Route("api/CLDoctor/WriteFile")]
 		public IHttpActionResult WriteFile()
 		{
@@ -118,7 +118,7 @@ namespace HospitalAdvance.Controllers
 		/// <returns>Appropriate message</returns>
 		[HttpPut]
 		[BearerAuthentication]
-		[Authorize(Roles = "admin")]
+		[Authorize(Roles = "Manager")]
 		[Route("api/CLDoctor/UpdateDoctors")]
 		public IHttpActionResult UpdateDoctors(STF01 objSTF01) 
 		{ 

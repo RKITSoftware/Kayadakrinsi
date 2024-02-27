@@ -13,3 +13,18 @@ F:\Krinsi - 379\Training\Advance C#\2. Advance C#\LinQ\LinQDataTable\LinQDataTab
 F:\Krinsi - 379\Training\Advance C#\2. Advance C#\LinQ\LinQDataTable\LinQDataTable\obj\Debug\net6.0\LinQDataTable.pdb
 F:\Krinsi - 379\Training\Advance C#\2. Advance C#\LinQ\LinQDataTable\LinQDataTable\obj\Debug\net6.0\LinQDataTable.genruntimeconfig.cache
 F:\Krinsi - 379\Training\Advance C#\2. Advance C#\LinQ\LinQDataTable\LinQDataTable\obj\Debug\net6.0\ref\LinQDataTable.dll
+F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\LinQ\LinQDataTable\LinQDataTable\bin\Debug\net6.0\LinQDataTable.exe
+F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\LinQ\LinQDataTable\LinQDataTable\bin\Debug\net6.0\LinQDataTable.deps.json
+F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\LinQ\LinQDataTable\LinQDataTable\bin\Debug\net6.0\LinQDataTable.runtimeconfig.json
+F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\LinQ\LinQDataTable\LinQDataTable\bin\Debug\net6.0\LinQDataTable.dll
+F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\LinQ\LinQDataTable\LinQDataTable\bin\Debug\net6.0\LinQDataTable.pdb
+F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\LinQ\LinQDataTable\LinQDataTable\obj\Debug\net6.0\LinQDataTable.csproj.AssemblyReference.cache
+F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\LinQ\LinQDataTable\LinQDataTable\obj\Debug\net6.0\LinQDataTable.GeneratedMSBuildEditorConfig.editorconfig
+F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\LinQ\LinQDataTable\LinQDataTable\obj\Debug\net6.0\LinQDataTable.AssemblyInfoInputs.cache
+F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\LinQ\LinQDataTable\LinQDataTable\obj\Debug\net6.0\LinQDataTable.AssemblyInfo.cs
+F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\LinQ\LinQDataTable\LinQDataTable\obj\Debug\net6.0\LinQDataTable.csproj.CoreCompileInputs.cache
+F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\LinQ\LinQDataTable\LinQDataTable\obj\Debug\net6.0\LinQDataTable.dll
+F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\LinQ\LinQDataTable\LinQDataTable\obj\Debug\net6.0\refint\LinQDataTable.dll
+F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\LinQ\LinQDataTable\LinQDataTable\obj\Debug\net6.0\LinQDataTable.pdb
+F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\LinQ\LinQDataTable\LinQDataTable\obj\Debug\net6.0\LinQDataTable.genruntimeconfig.cache
+F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\LinQ\LinQDataTable\LinQDataTable\obj\Debug\net6.0\ref\LinQDataTable.dll

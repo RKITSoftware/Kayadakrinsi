@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Krinsi - 379\\Training\\API\\2. Basics of C#\\DataTable\\DataTable\\DataTable.csproj": {}
+    "F:\\Krinsi - 379\\New folder\\API\\2. Basics of C#\\DataTable\\DataTable\\DataTable.csproj": {}
   },
   "projects": {
-    "F:\\Krinsi - 379\\Training\\API\\2. Basics of C#\\DataTable\\DataTable\\DataTable.csproj": {
+    "F:\\Krinsi - 379\\New folder\\API\\2. Basics of C#\\DataTable\\DataTable\\DataTable.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Krinsi - 379\\Training\\API\\2. Basics of C#\\DataTable\\DataTable\\DataTable.csproj",
+        "projectUniqueName": "F:\\Krinsi - 379\\New folder\\API\\2. Basics of C#\\DataTable\\DataTable\\DataTable.csproj",
         "projectName": "DataTable",
-        "projectPath": "F:\\Krinsi - 379\\Training\\API\\2. Basics of C#\\DataTable\\DataTable\\DataTable.csproj",
+        "projectPath": "F:\\Krinsi - 379\\New folder\\API\\2. Basics of C#\\DataTable\\DataTable\\DataTable.csproj",
         "packagesPath": "C:\\Users\\krinsi.k\\.nuget\\packages\\",
-        "outputPath": "F:\\Krinsi - 379\\Training\\API\\2. Basics of C#\\DataTable\\DataTable\\obj\\",
+        "outputPath": "F:\\Krinsi - 379\\New folder\\API\\2. Basics of C#\\DataTable\\DataTable\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\krinsi.k\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -43,7 +43,7 @@ namespace HospitalAdvance.Controllers
 		/// <returns>List of charges</returns>
 		[HttpGet]
 		[BearerAuthentication]
-		[Authorize(Roles = "Admin")]
+		[Authorize(Roles = "Manager")]
 		[Route("api/CLCharge/GetCharges")]
         public IHttpActionResult GetCharges()
         {
@@ -63,7 +63,7 @@ namespace HospitalAdvance.Controllers
 		/// <returns>Downloaded text file</returns>
 		[HttpGet]
 		[BearerAuthentication]
-		[Authorize(Roles = "Admin")]
+		[Authorize(Roles = "Manager")]
 		[Route("api/CLCharge/GetChargesFile")]
 		public HttpResponseMessage GetChargesFile()
 		{
@@ -77,7 +77,7 @@ namespace HospitalAdvance.Controllers
 		/// <returns>Appropriate message</returns>
 		[HttpPost]
         [BearerAuthentication]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Manager")]
 		[Route("api/CLCharge/AddCharge")]
 		public IHttpActionResult AddCharge(CRG01 objCRG01)
 		{
@@ -90,7 +90,7 @@ namespace HospitalAdvance.Controllers
 		/// <returns>Appropriate Message</returns>
 		[HttpPost]
 		[BearerAuthentication]
-		[Authorize(Roles = "Admin")]
+		[Authorize(Roles = "Manager")]
 		[Route("api/CLCharge/WriteFile")]
 		public IHttpActionResult WriteFile()
 		{
@@ -104,7 +104,7 @@ namespace HospitalAdvance.Controllers
 		/// <returns>Appropriate message</returns>
 		[HttpPut]
 		[BearerAuthentication]
-		[Authorize(Roles = "Admin")]
+		[Authorize(Roles = "Manager")]
 		[Route("api/CLCharge/EditCharge")]
 		public IHttpActionResult EditCharge(CRG01 objCRG01)
 		{

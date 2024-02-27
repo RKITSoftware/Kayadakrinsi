@@ -43,7 +43,7 @@ namespace HospitalAdvance.Controllers
 		/// <returns></returns>
 		[HttpGet]
         [BearerAuthentication]
-        [Authorize(Roles ="Admin,Doctor,Helper,Patient")]
+        [Authorize(Roles ="Manager,Doctor,Helper,Patient")]
         [Route("api/CLRecord/GetRecords")]
         public IHttpActionResult GetRecords()
         {
@@ -59,7 +59,7 @@ namespace HospitalAdvance.Controllers
 
 		//[HttpGet]
 		//[BearerAuthentication]
-		//[Authorize(Roles = "Admin,Doctor,Helper,Patient")]
+		//[Authorize(Roles = "Manager,Doctor,Helper,Patient")]
 		[Route("api/CLRecord/GetDetailedRecords")]
 		public IHttpActionResult GetDetailedRecords()
 		{
@@ -72,7 +72,7 @@ namespace HospitalAdvance.Controllers
 		/// <returns>Downloaded text file</returns>
 		[HttpGet]
 		[BearerAuthentication]
-		[Authorize(Roles = "Admin,Doctor,Helper,Patient")]
+		[Authorize(Roles = "Manager,Doctor,Helper,Patient")]
 		[Route("api/CLRecord/GetFile")]
 		public HttpResponseMessage GetFile()
 		{
@@ -86,7 +86,7 @@ namespace HospitalAdvance.Controllers
 		/// <returns>Appropriate message</returns>
 		[HttpPost]
 		[BearerAuthentication]
-		[Authorize(Roles = "Admin")]
+		[Authorize(Roles = "Manager")]
 		[Route("api/CLRecord/AddRecord")]
 		public IHttpActionResult AddRecord(RCD01 objRCD01)
 		{
@@ -99,7 +99,7 @@ namespace HospitalAdvance.Controllers
 		/// <returns>Appropriate Message</returns>
 		[HttpPost]
 		[BearerAuthentication]
-		[Authorize(Roles = "Admin")]
+		[Authorize(Roles = "Manager")]
 		[Route("api/CLRecord/WriteFile")]
 		public IHttpActionResult WriteFile()
 		{

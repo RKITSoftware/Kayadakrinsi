@@ -47,7 +47,7 @@ namespace HospitalAdvance.Controllers
 		/// <returns>All data from table USR01</returns>
 		[HttpGet]
 		[BearerAuthentication]
-		[Authorize(Roles = "admin")]
+		[Authorize(Roles = "Manager")]
 		[Route("api/CLUser/GetUsers")]
 		public IHttpActionResult GetUsers()
 		{
@@ -67,7 +67,7 @@ namespace HospitalAdvance.Controllers
 		/// <returns>All data from table USR01</returns>
 		[HttpGet]
 		[BearerAuthentication]
-		[Authorize(Roles = "admin")]
+		[Authorize(Roles = "Manager")]
 		[Route("api/CLUser/GetCache")]
 		public IHttpActionResult GetCache()
 		{
@@ -81,7 +81,7 @@ namespace HospitalAdvance.Controllers
 		/// <returns>Appropriate message</returns>
 		[HttpPost]
 		[BearerAuthentication]
-		[Authorize(Roles = "admin")]
+		[Authorize(Roles = "Manager")]
 		[Route("api/CLUser/AddUser")]
 		public HttpResponseMessage AddUser([FromBody] UserAddModel model)
 		{
@@ -95,7 +95,7 @@ namespace HospitalAdvance.Controllers
 		/// <returns>Appropriate Message</returns>
 		[HttpPut]
 		[BearerAuthentication]
-		[Authorize(Roles = "Admin")]
+		[Authorize(Roles = "Manager")]
 		[Route("api/CLUser/EditUser")]
 		public HttpResponseMessage EditUsers([FromBody] UserAddModel model)
 		{
@@ -109,7 +109,7 @@ namespace HospitalAdvance.Controllers
 		/// <returns>Appropriate Message</returns>
 		[HttpDelete]
 		[BearerAuthentication]
-		[Authorize(Roles = "Admin")]
+		[Authorize(Roles = "Manager")]
 		[Route("api/CLUser/DeleteUser")]
 		public HttpResponseMessage DeleteUser(int id)
 		{

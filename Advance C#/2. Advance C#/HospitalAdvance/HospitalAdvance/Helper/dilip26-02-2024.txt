@@ -1,0 +1,2 @@
+Helper id, Helper name, Role of helper, Working days, User id, IsActive
+2, dilip doshi, PATIENT_SERVICE_ASSISTANT, Weekdays, 6, True

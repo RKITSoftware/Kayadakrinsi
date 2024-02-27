@@ -58,7 +58,15 @@ namespace HospitalAdvance.BusinessLogic
 				{
 					db.CreateTable<STF01>();
 				}
-				db.Insert(objSTF01);
+				var user = db.Select<STF01>().FirstOrDefault(x => x.F01F05 == objSTF01.F01F05);
+				if (user != null && user == objSTF01)
+				{
+					return "User already exist";
+				}
+				else if (user != null)
+				{
+					db.Update(objSTF01, u => u.F01F01 == objSTF01.F01F01);
+				}
 				return "Success!";
 			}
 		}
@@ -79,7 +87,11 @@ namespace HospitalAdvance.BusinessLogic
 						db.CreateTable<STF01>();
 						return "No records to be updated!";
 					}
-
+					var user = db.Select<STF01>().FirstOrDefault(u => u.F01F01 == objSTF01.F01F01);
+					if (user == null)
+					{
+						return "Choose valid record to edit!";
+					}
 					int rowsAffected = db.Update(objSTF01, u => u.F01F01 == objSTF01.F01F01);
 
 					if (rowsAffected > 0)
