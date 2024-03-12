@@ -57,9 +57,10 @@ namespace HospitalAdvance.Controllers
 			return Ok(data);
         }
 
-		//[HttpGet]
-		//[BearerAuthentication]
-		//[Authorize(Roles = "Manager,Doctor,Helper,Patient")]
+		[HttpGet]
+		[BearerAuthentication]
+		[Authorize(Roles = "Manager,Doctor,Helper,Patient")]
+		[AllowAnonymous]
 		[Route("api/CLRecord/GetDetailedRecords")]
 		public IHttpActionResult GetDetailedRecords()
 		{

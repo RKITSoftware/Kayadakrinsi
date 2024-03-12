@@ -22,16 +22,22 @@ namespace HospitalAdvance.Controllers
 		/// </summary>
 		public static Stopwatch stopwatch;
 
-		#endregion
+        /// <summary>
+        /// Declares object of class BLUser
+        /// </summary>
+        public BLUser objBLUser;
 
-		#region Constructors
+        #endregion
 
-		/// <summary>
-		/// Initializes objects
-		/// </summary>
-		public CLPatientController()
+        #region Constructors
+
+        /// <summary>
+        /// Initializes objects
+        /// </summary>
+        public CLPatientController()
 		{
 			objBLPatient = new BLPatient();
+			objBLUser = new BLUser();
 			stopwatch = Stopwatch.StartNew();
 		}
 
@@ -79,7 +85,7 @@ namespace HospitalAdvance.Controllers
 		[Route("api/CLPatient/GetMyRecipt")]
 		public IHttpActionResult GetMyRecipt()
 		{
-			var user = BLUser.GetUser(ActionContext);
+			var user =	objBLUser.GetUser(ActionContext);
 			return Ok(objBLPatient.GetMyRecipt(user));
 		}
 
@@ -93,7 +99,7 @@ namespace HospitalAdvance.Controllers
 		[Route("api/CLPatient/GetMyFile")]
 		public HttpResponseMessage GetMyFile()
 		{
-			var user = BLUser.GetUser(ActionContext);
+			var user = objBLUser.GetUser(ActionContext);
 			return objBLPatient.DownloadMyFile(user);
 		}
 
@@ -107,7 +113,7 @@ namespace HospitalAdvance.Controllers
 		[Route("api/CLPatient/WriteMyFile")]
 		public IHttpActionResult WriteMyFile()
 		{
-			var user = BLUser.GetUser(ActionContext);
+			var user = objBLUser.GetUser(ActionContext);
 			return Ok(objBLPatient.WriteMyFile(user));
 		}
 

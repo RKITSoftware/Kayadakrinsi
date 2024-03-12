@@ -58,6 +58,16 @@ namespace HospitalAdvance.BusinessLogic
 				{
 					db.CreateTable<STF02>();
 				}
+				var user = db.Select<STF02>().FirstOrDefault(x => x.F02F05 == objSTF02.F02F05);
+				if (user != null && user == objSTF02)
+				{
+					return "User already exist";
+				}
+				else if (user != null)
+				{
+					db.Update(objSTF02, u => u.F02F01 == objSTF02.F02F01);
+					return "Success!";
+				}
 				db.Insert(objSTF02);
 				return "Success!";
 			}

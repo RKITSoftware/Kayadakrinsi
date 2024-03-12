@@ -15,83 +15,110 @@ using Newtonsoft.Json.Linq;
 
 namespace HospitalAdvance.Auth
 {
-	/// <summary>
-	/// Authenticate the reuqest with jwt (bearer) as authentication type
-	/// </summary>
-	public class BearerAuthentication : AuthorizationFilterAttribute
-	{
-		/// <summary>
-		/// Authenticates user using user's JWT token
-		/// </summary>
-		/// <param name="actionContext">Information of executing context</param>
-		public override void OnAuthorization(HttpActionContext actionContext)
-		{
+    /// <summary>
+    /// Authenticate the reuqest with jwt (bearer) as authentication type
+    /// </summary>
+    public class BearerAuthentication : AuthorizationFilterAttribute
+    {
+        /// <summary>
+        /// Declares object of class BLUser
+        /// </summary>
+        public BLUser objBLUser = new BLUser();
 
-			string tokenValue = actionContext.Request.Headers.Authorization.Scheme;
+        /// <summary>
+        /// Authenticates user using user's JWT token
+        /// </summary>
+        /// <param name="actionContext">Information of executing context</param>
+        public override void OnAuthorization(HttpActionContext actionContext)
+        {
+            if (BasicAuthentication.SkipAuthorization(actionContext)) return;
 
-			// check jwt token's validity
-			var isValid = BLTokenManager.ValidateToken(tokenValue);
+            // Check if the request has Authorization header
+            if (!actionContext.Request.Headers.Contains("Authorization"))
+            {
+                actionContext.Response = new HttpResponseMessage(HttpStatusCode.Unauthorized);
+                return;
+            }
 
-			// if jwt is invalid (corrupted-jwt or jwt-expired) then return unauthorized
-			if (!isValid)
-			{
-				actionContext.Response = actionContext.Request.CreateErrorResponse(HttpStatusCode.Unauthorized,
-										 "Enter valid token");
-				throw new Exception("Enter valid token");
-			}
-			else
-			{
-				// get jwt payload
-				string jwtEncodedPayload = tokenValue.Split('.')[1];
+            // Extract token from Authorization header
+            var token = actionContext.Request.Headers.GetValues("Authorization").FirstOrDefault()?.Replace("Bearer ", "");
 
-				// pad jwtEncodedPayload
-				jwtEncodedPayload = jwtEncodedPayload.Replace('+', '-')
-													 .Replace('/', '_')
-													 .Replace("=", "");
+            if (BLTokenManager.IsTokenExpired(token))
+            {
+                // Token is expired, refresh it
+                token = BLTokenManager.RefreshToken(token);
 
-				int padding = jwtEncodedPayload.Length % 4;
-				if (padding != 0)
-				{
-					jwtEncodedPayload += new string('=', 4 - padding);
-				}
+                if (token == null)
+                {
+                    actionContext.Response = actionContext.Request.CreateErrorResponse(HttpStatusCode.Unauthorized,
+                                             "Token expired");
+                    return;
+                }
+            }
+            // Validate JWT token
+            if (token != null && BLTokenManager.ValidateToken(token))
+            {
 
-				// decode the jwt payload
-				byte[] decodedPayloadBytes = Convert.FromBase64String(jwtEncodedPayload);
+                // get jwt payload
+                string jwtEncodedPayload = token.Split('.')[1];
 
-				string decodedPayload = Encoding.UTF8.GetString(decodedPayloadBytes);
+                // pad jwtEncodedPayload
+                jwtEncodedPayload = jwtEncodedPayload.Replace('+', '-')
+                                                     .Replace('/', '_')
+                                                     .Replace("=", "");
 
-				JObject json = JObject.Parse(decodedPayload);
+                int padding = jwtEncodedPayload.Length % 4;
+                if (padding != 0)
+                {
+                    jwtEncodedPayload += new string('=', 4 - padding);
+                }
 
-				USR01 user = BLUser.Select().FirstOrDefault(u => u.R01F02 == json["unique_name"].ToString());
+                // decode the jwt payload
+                byte[] decodedPayloadBytes = Convert.FromBase64String(jwtEncodedPayload);
+
+                string decodedPayload = Encoding.UTF8.GetString(decodedPayloadBytes);
+
+                JObject json = JObject.Parse(decodedPayload);
+
+                USR01 user = objBLUser.Select().FirstOrDefault(u => u.R01F02 == json["unique_name"].ToString());
 
 
-				// create an identity => i.e., attach username which is used to identify the user
-				GenericIdentity identity = new GenericIdentity(user.R01F02);
+                // create an identity => i.e., attach username which is used to identify the user
+                GenericIdentity identity = new GenericIdentity(user.R01F02);
 
-				// add claims for the identity => a claim has (claim_type, value)
-				identity.AddClaim(new Claim("Id", Convert.ToString(user.R01F01)));
+                // add claims for the identity => a claim has (claim_type, value)
+                identity.AddClaim(new Claim("Id", Convert.ToString(user.R01F01)));
 
-				string[] roles = user.R01F04.ToString().Split(',');
+                string[] roles = user.R01F04.ToString().Split(',');
 
-				// create a principal that represent a user => it has an (identity object + roles)
-				IPrincipal principal = new GenericPrincipal(identity, roles);
+                // create a principal that represent a user => it has an (identity object + roles)
+                IPrincipal principal = new GenericPrincipal(identity, roles);
 
-				// now associate the user/principal with the thread
-				Thread.CurrentPrincipal = principal;
+                // now associate the user/principal with the thread
+                Thread.CurrentPrincipal = principal;
 
-				if (HttpContext.Current != null)
-				{
-					// HttpContext is responsible for rq and res.
-					HttpContext.Current.User = principal;
-				}
-				else
-				{
-					actionContext.Response = actionContext.Request.CreateErrorResponse(HttpStatusCode.Unauthorized,
-											 "Authorization denied");
-					throw new Exception("Authorization denied");
-				}
-			}
-		}
+                if (HttpContext.Current != null)
+                {
+                    // HttpContext is responsible for rq and res.
+                    HttpContext.Current.User = principal;
+                }
+                else
+                {
+                    actionContext.Response = actionContext.Request.CreateErrorResponse(HttpStatusCode.Unauthorized,
+                                             "Authorization denied");
+                    //throw new Exception("Authorization denied");
+                    return;
+                }
 
-	}
+            }
+            else
+            {
+                actionContext.Response = actionContext.Request.CreateErrorResponse(HttpStatusCode.Unauthorized,
+                                             "Invalid Token");
+                return;
+            }
+        }
+
+    }
+
 }

@@ -7,10 +7,10 @@ using HospitalAPI.BusinesLogic;
 
 namespace HospitalAPI.Auth
 {
-    /// <summary>
-    /// Authenticates user who wants to get JWT token
-    /// </summary>
-    public class JWTAuthentication : ActionFilterAttribute
+	/// <summary>
+	/// Authenticates user who wants to get JWT token
+	/// </summary>
+	public class JWTAuthentication : ActionFilterAttribute
     {
         /// <summary>
         /// Authenticates user and creates response accordingly

@@ -63,6 +63,9 @@ namespace cutomToken
                         // you'll need to implement a custom IDocumentFilter and/or IOperationFilter to set these properties
                         // according to your specific authorization implementation
                         //
+
+
+
                         c.BasicAuth("basic")
                             .Description("Basic HTTP Authentication");
 
@@ -71,6 +74,9 @@ namespace cutomToken
                                           .Name("Authorization")
                                           .In("header");
                         c.OperationFilter<AssignOAuth2SecurityRequirements>();
+
+
+
                         // NOTE: You must also configure 'EnableApiKeySupport' below in the SwaggerUI section
                         //c.ApiKey("apiKey")
                         //    .Description("API Key Authentication")
@@ -266,7 +272,7 @@ namespace cutomToken
             public void Apply(Operation operation, SchemaRegistry schemaRegistry, ApiDescription apiDescription)
             {
                 // Check if the method has the BasicAuth attribute
-                var basicAuthRequired = apiDescription.GetControllerAndActionAttributes<BasicAuthentication>().Any();
+                var basicAuthRequired = apiDescription.GetControllerAndActionAttributes<HttpPostAttribute>().Any();
 
                 // Check if the method has the BearerAuth attribute
                 var bearerAuthRequired = apiDescription.GetControllerAndActionAttributes<BearerAuthentication>().Any();

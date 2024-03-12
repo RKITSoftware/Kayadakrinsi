@@ -15,10 +15,10 @@ using Newtonsoft.Json.Linq;
 
 namespace HospitalAPI.Auth
 {
-    /// <summary>
-    /// Authenticate the reuqest with jwt (bearer) as authentication type
-    /// </summary>
-    public class BearerAuthentication : AuthorizationFilterAttribute
+	/// <summary>
+	/// Authenticate the reuqest with jwt (bearer) as authentication type
+	/// </summary>
+	public class BearerAuthentication : AuthorizationFilterAttribute
     {
         /// <summary>
         /// Authenticates user using user's JWT token
@@ -60,7 +60,7 @@ namespace HospitalAPI.Auth
                 string decodedPayload = Encoding.UTF8.GetString(decodedPayloadBytes);
 
                 JObject json = JObject.Parse(decodedPayload);
-
+                
                 USR01 user = BLUser.lstUSR01.FirstOrDefault(u => u.R01F02 == json["unique_name"].ToString());
 
 

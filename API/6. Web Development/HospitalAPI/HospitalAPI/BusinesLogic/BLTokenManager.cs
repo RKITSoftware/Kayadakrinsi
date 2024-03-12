@@ -5,10 +5,10 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace HospitalAPI.BusinesLogic
 {
-    /// <summary>
-    /// Handles logic for JWT token
-    /// </summary>
-    public class BLTokenManager
+	/// <summary>
+	/// Handles logic for JWT token
+	/// </summary>
+	public class BLTokenManager
     {
         /// <summary>
         /// Secret key for hashing

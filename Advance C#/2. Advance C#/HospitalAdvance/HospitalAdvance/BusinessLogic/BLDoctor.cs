@@ -21,13 +21,18 @@ namespace HospitalAdvance.BusinessLogic
 		/// <summary>
 		/// Path of file in which doctor data will be written
 		/// </summary>
-		private static readonly string path = HttpContext.Current.Server.MapPath("~/Doctor") +
+		private readonly string path = HttpContext.Current.Server.MapPath("~/Doctor") +
 											  "\\" + DateTime.Now.ToShortDateString() + ".txt";
 
 		/// <summary>
 		/// Declares Db factory instance
 		/// </summary>
-		private static readonly IDbConnectionFactory _dbFactory;
+		private readonly IDbConnectionFactory _dbFactory;
+
+		/// <summary>
+		/// Declares object of BLSerialize class
+		/// </summary>
+		private BLSerialize _objBLSerialize;
 
 		#endregion
 
@@ -36,9 +41,10 @@ namespace HospitalAdvance.BusinessLogic
 		/// <summary>
 		/// Intializes db factory instance
 		/// </summary>
-		static BLDoctor()
+		public BLDoctor()
 		{
 			_dbFactory = HttpContext.Current.Application["dbFactory"] as IDbConnectionFactory;
+			_objBLSerialize = new BLSerialize();
 		}
 
 		#endregion
@@ -66,7 +72,9 @@ namespace HospitalAdvance.BusinessLogic
 				else if (user != null)
 				{
 					db.Update(objSTF01, u => u.F01F01 == objSTF01.F01F01);
+					return "Success!";
 				}
+				db.Insert(objSTF01);
 				return "Success!";
 			}
 		}
@@ -140,17 +148,9 @@ namespace HospitalAdvance.BusinessLogic
 			using (StreamWriter sw = new StreamWriter(path))
 			{
 				var lstSTF01 = Select();
+				var data = _objBLSerialize.Serialize(lstSTF01);
 				sw.WriteLine("Doctor id, Doctor name, Doctor qualification, Working days, User id of doctor, IsActive");
-				foreach (var obj in lstSTF01)
-				{
-					sw.Write(obj.F01F01 + ", ");
-					sw.Write(obj.F01F02 + ", ");
-					sw.Write(obj.F01F03 + ", ");
-					sw.Write(obj.F01F04.ToString() + ", ");
-					sw.Write(obj.F01F05 + ", ");
-					sw.Write(obj.F01F06);
-					sw.WriteLine();
-				}
+				sw.WriteLine(data);
 			}
 			return "File created successfully 🙌";
 		}

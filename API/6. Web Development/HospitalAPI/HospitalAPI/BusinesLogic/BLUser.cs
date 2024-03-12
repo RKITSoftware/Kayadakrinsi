@@ -7,10 +7,10 @@ using HospitalAPI.Models;
 
 namespace HospitalAPI
 {
-    /// <summary>
-    /// For validating user
-    /// </summary>
-    public class BLUser
+	/// <summary>
+	/// For validating user
+	/// </summary>
+	public class BLUser
     {
         #region Public Members
 

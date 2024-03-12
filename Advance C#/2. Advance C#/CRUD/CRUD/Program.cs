@@ -77,14 +77,14 @@ public class Program
     /// </summary>
     public void CreateTable()
     {
-        string query = "CREATE TABLE IF NOT EXISTS ORD01" +
-                        "(" +
-                           "D01F01 INT NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'order id'," +
-                           "D01F02 INT NOT NULL COMMENT 'product id'," +
-                           "D01F03 VARCHAR(25) COMMENT 'product name'," +
-                           "D01F04 INT DEFAULT 1 COMMENT 'quantity'," +
-                           "D01F05 DECIMAL(10,2) COMMENT 'price'" +
-                        ")";
+        string query = String.Format(@"CREATE TABLE IF NOT EXISTS ORD01
+                        (
+                           D01F01 INT NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'order id',
+                           D01F02 INT NOT NULL COMMENT 'product id',
+                           D01F03 VARCHAR(25) COMMENT 'product name',
+                           D01F04 INT DEFAULT 1 COMMENT 'quantity',
+                           D01F05 DECIMAL(10,2) COMMENT 'price'
+                        )");
 
         if (this.OpenConnection() == true)
         {
@@ -223,4 +223,5 @@ public class Program
         objProgram.Delete();
         objProgram.Drop();
     }
+
 }

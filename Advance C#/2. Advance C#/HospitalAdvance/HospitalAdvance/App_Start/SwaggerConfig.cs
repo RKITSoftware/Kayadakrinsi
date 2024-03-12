@@ -270,7 +270,7 @@ namespace HospitalAdvance
 			public void Apply(Operation operation, SchemaRegistry schemaRegistry, ApiDescription apiDescription)
 			{
 				// Check if the method has the BasicAuth attribute
-				var basicAuthRequired = apiDescription.GetControllerAndActionAttributes<TokenAuthentication>().Any();
+				var basicAuthRequired = apiDescription.GetControllerAndActionAttributes<BasicAuthentication>().Any();
 
 				// Check if the method has the BearerAuth attribute
 				var bearerAuthRequired = apiDescription.GetControllerAndActionAttributes<BearerAuthentication>().Any();
@@ -304,5 +304,6 @@ namespace HospitalAdvance
 				}
 			}
 		}
+
 	}
 }

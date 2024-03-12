@@ -4,6 +4,7 @@ using System.Web;
 using System.Web.Http;
 using HospitalAdvance.Auth;
 using HospitalAdvance.BusinessLogic;
+using HospitalAdvance.Models;
 
 namespace HospitalAdvance.Controllers
 {
@@ -51,7 +52,7 @@ namespace HospitalAdvance.Controllers
 		[Route("api/CLUser/GetUsers")]
 		public IHttpActionResult GetUsers()
 		{
-			var data = BLUser.Select();
+			var data = objBLUser.Select();
 
 			stopwatch.Stop();
 			long responseTime = stopwatch.ElapsedTicks;
@@ -83,7 +84,7 @@ namespace HospitalAdvance.Controllers
 		[BearerAuthentication]
 		[Authorize(Roles = "Manager")]
 		[Route("api/CLUser/AddUser")]
-		public HttpResponseMessage AddUser([FromBody] UserAddModel model)
+		public HttpResponseMessage AddUser([FromBody] USR02 model)
 		{
 			return Request.CreateResponse(objBLUser.InsertData(model));
 		}
@@ -97,7 +98,7 @@ namespace HospitalAdvance.Controllers
 		[BearerAuthentication]
 		[Authorize(Roles = "Manager")]
 		[Route("api/CLUser/EditUser")]
-		public HttpResponseMessage EditUsers([FromBody] UserAddModel model)
+		public HttpResponseMessage EditUsers([FromBody] USR02 model)
 		{
 			return Request.CreateResponse(objBLUser.UpdateData(model));
 		}

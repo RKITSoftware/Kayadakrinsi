@@ -7,9 +7,10 @@ namespace HospitalAPI
     {
         public static void Register(HttpConfiguration config)
         {
+            //CORS
             var cors = new EnableCorsAttribute("https://www.google.com", "*", "*");
-
 			config.EnableCors(cors);
+
             // Web API configuration and 
             // Web API routes
             config.MapHttpAttributeRoutes();

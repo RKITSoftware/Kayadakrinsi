@@ -11,23 +11,35 @@ namespace HospitalAdvance.Controllers
 	public class CLLoginController : ApiController
 	{
 		/// <summary>
-		/// Generates token for valid user
+		/// Declares object of class BLUser
 		/// </summary>
-		/// <returns>Custom JWT Token</returns>
-		[HttpPost]
-		[Route("api/CLLogin/token")]
-		[TokenAuthentication]
+		public BLUser objBLUser;
+
+		/// <summary>
+		/// Initializes objects
+		/// </summary>
+        public CLLoginController()
+        {
+			objBLUser = new BLUser();
+        }
+
+        /// <summary>
+        /// Generates token for valid user
+        /// </summary>
+        /// <returns>Custom JWT Token</returns>
+        [HttpPost]
+		[AllowAnonymous]
+        [BasicAuthentication]
+        [Route("api/CLLogin/token")]
 		public IHttpActionResult GetToken()
 		{
-			string[] usernamepassword = BLUser.GetUsernamePassword(Request);
+			string[] usernamepassword = objBLUser.GetUsernamePassword(Request);
 			string username = usernamepassword[0];
 			string password = usernamepassword[1];
-			var userDetails = BLUser.Select().FirstOrDefault(user => user.R01F02.Equals(username) && user.R01F03 == password);
-			if (userDetails != null)
-			{
-				return Ok(BLTokenManager.GenerateToken(username));
-			}
-			return BadRequest("Enter valid user details");
+			var userDetails = objBLUser.Select().FirstOrDefault(user => user.R01F02.Equals(username) && user.R01F03 == password);
+
+			return Ok(BLTokenManager.GenerateToken(userDetails));
+
 		}
 	}
 }

@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System.Collections.Generic;
+using System.Diagnostics;
 using System.Web;
 using System.Web.Caching;
 using System.Web.Http;
@@ -13,7 +14,6 @@ namespace HospitalAPI.Controllers
 	/// Custom controller for user requests
 	/// </summary>
 	[CustomExceptionFilterAttribute]
-	
 	public class CLRecordV2Controller : ApiController
     {
         /// <summary>
@@ -41,17 +41,6 @@ namespace HospitalAPI.Controllers
         }
 
         /// <summary>
-        /// CORS implementation
-        /// </summary>
-        /// <returns>Message</returns>
-        [HttpGet]
-        [Route("api/v2/getCORS")]
-		public IHttpActionResult GetCORS()
-        {
-            return Ok("CORS enable worked");
-        }
-
-        /// <summary>
         /// Used to get token
         /// </summary>
         /// <returns>Custom JWT token</returns>
@@ -69,29 +58,47 @@ namespace HospitalAPI.Controllers
             }
             return BadRequest("Enter valid user details");
         }
+		/// <summary>
+		/// CORS implementation
+		/// </summary>
+		/// <returns>Message</returns>
+		[HttpGet]
+		[Route("api/v2/getCORS")]
+		public IHttpActionResult GetCORS()
+		{
+			return Ok("CORS enable worked");
+		}
 
-        /// <summary>
-        /// Handles get request of normal user
-        /// </summary>
-        /// <returns>List of records with id less than four</returns>
-        [HttpGet]
+		/// <summary>
+		/// Handles get request of normal user
+		/// </summary>
+		/// <returns>List of records with id less than four</returns>
+		[HttpGet]
         [BearerAuthentication]
         [Authorize(Roles = ("User"))]
         public IHttpActionResult GetSomeRecords()
-        { 
-            var data = objBLRecord.GetSomeRecords();
-            _objCache.Insert("SomeRecords v2", data, null, System.DateTime.Now.AddMinutes(20),System.TimeSpan.Zero);
+        {
+            List<RCD01> lstData;
+            if (_objCache["SomeRecords v2"] != null)
+            {
+                lstData = (List<RCD01>)_objCache.Get("SomeRecords v2");
+            }
+            else
+            {
+				lstData = objBLRecord.GetSomeRecords();
+				_objCache.Insert("SomeRecords v2", lstData, null, System.DateTime.Now.AddMinutes(20),System.TimeSpan.Zero);
+            }
 
             stopwatch.Stop();
             long responseTime = stopwatch.ElapsedTicks;
 
             HttpContext.Current.Response.AddHeader("Response-time", responseTime.ToString());
 
-            return Ok(data);
+            return Ok(lstData);
         }
 
         /// <summary>
-        /// Handles get request of admin, super admin
+        /// Handles get request of admin, super admin                                                 
         /// </summary>
         /// <returns>List of records with id less than seven</returns>
         [HttpGet]
@@ -101,15 +108,23 @@ namespace HospitalAPI.Controllers
         {
             Stopwatch stopwatch = Stopwatch.StartNew();
 
-            var data = objBLRecord.GetMoreRecords();
-            _objCache.Insert("MoreRecords v2", data, null, System.DateTime.Now.AddMinutes(20), System.TimeSpan.Zero);
+			List<RCD01> lstData;
+			if (_objCache["MoreRecords v2"] != null)
+			{
+				lstData = (List<RCD01>)_objCache.Get("MoreRecords v2");
+			}
+			else
+			{
+				lstData = objBLRecord.GetSomeRecords();
+				_objCache.Insert("MoreRecords v2", lstData, null, System.DateTime.Now.AddMinutes(20), System.TimeSpan.Zero);
+			}
 
-            stopwatch.Stop();
+			stopwatch.Stop();
             long responseTime = stopwatch.ElapsedTicks;
 
             HttpContext.Current.Response.AddHeader("Response-time", responseTime.ToString());
             
-            return Ok(data);
+            return Ok(lstData);
         }
 
         /// <summary>
@@ -123,15 +138,23 @@ namespace HospitalAPI.Controllers
         {
             Stopwatch stopwatch = Stopwatch.StartNew();
 
-            var data = BLRecord.lstRCD01;
-            _objCache.Insert("AllRecords v2", data, null, System.DateTime.Now.AddMinutes(20), System.TimeSpan.Zero);
-
+			List<RCD01> lstData;
+			if (_objCache["AllRecords v2"] != null)
+			{
+				lstData = (List<RCD01>)_objCache.Get("AllRecords v2");
+			}
+			else
+			{
+				lstData = BLRecord.lstRCD01;
+				_objCache.Insert("AllRecords v2", lstData, null, System.DateTime.Now.AddMinutes(20), System.TimeSpan.Zero);
+			}
+			
             stopwatch.Stop();
             long responseTime = stopwatch.ElapsedTicks;
 
             HttpContext.Current.Response.AddHeader("Response-time", responseTime.ToString());
 
-            return Ok(data);
+            return Ok(lstData);
         }
 
         /// <summary>

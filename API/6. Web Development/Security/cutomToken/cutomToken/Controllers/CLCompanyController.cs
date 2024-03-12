@@ -14,18 +14,28 @@ namespace cutomToken.Controllers
     /// </summary>
     public class CLCompanyController : ApiController
     {
+        /// <summary>
+        /// Declares object of class BLCompany
+        /// </summary>
         public BLCompany objBLCompany;
 
-        public CLCompanyController()  
+        /// <summary>
+        /// Initializes objects
+        /// </summary>
+        public CLCompanyController()
         {
             objBLCompany = new BLCompany();
         }
 
         #region Public Methods
 
+        /// <summary>
+        /// Generates token
+        /// </summary>
+        /// <returns></returns>
         [HttpPost]
-        [Route("api/CLCompany/token")]
         [BasicAuthentication]
+        [Route("api/CLCompany/token")]
         public IHttpActionResult GetToken()
         {
             string authToken = Request.Headers.Authorization.Parameter;
@@ -37,7 +47,8 @@ namespace cutomToken.Controllers
             var userDetails = BLUser.lstUser.FirstOrDefault(u => u.R01F02 == username && u.R01F03 == password);
             if (userDetails != null)
             {
-                return Ok(BLTokenManager.GenerateToken(username));
+                var user = BLUser.GetUserDetails(username, password);
+                return Ok(BLTokenManager.GenerateToken(user));
             }
             return BadRequest("Enter valid user details");
         }
@@ -55,7 +66,7 @@ namespace cutomToken.Controllers
         {
             return Request.CreateResponse(HttpStatusCode.OK, objBLCompany.GetCompanyById(id));
         }
-        
+
 
         /// <summary>
         /// Handles get request of admin, super admin

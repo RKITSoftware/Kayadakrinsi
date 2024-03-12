@@ -7,6 +7,7 @@ using System.Text;
 using System.Web;
 using System.Web.Caching;
 using System.Web.Http.Controllers;
+using HospitalAdvance.DataBase;
 using HospitalAdvance.Models;
 using MySql.Data.MySqlClient;
 using Newtonsoft.Json;
@@ -17,22 +18,6 @@ using ServiceStack.OrmLite;
 namespace HospitalAdvance.BusinessLogic
 {
 	/// <summary>
-	/// For taking input model
-	/// </summary>
-	public class UserAddModel
-	{
-		/// <summary>
-		/// Object of USR01
-		/// </summary>
-		public USR01 ObjUSR01 { get; set; }
-
-		/// <summary>
-		/// Object of either STF01, STF02 or PTN01
-		/// </summary>
-		public dynamic ObjRole { get; set; }
-	}
-
-	/// <summary>
 	/// Handles logic for user controller
 	/// </summary>
 	public class BLUser 
@@ -40,39 +25,34 @@ namespace HospitalAdvance.BusinessLogic
 		#region Private Members
 
 		/// <summary>
-		/// Connection string
-		/// </summary>
-		private static readonly string _connectionString;
-
-		/// <summary>
-		/// Connection object of class MySqlConnection
-		/// </summary>
-		private static readonly MySqlConnection _connection;
-
-		/// <summary>
 		/// Declares object of class BLDoctor
 		/// </summary>
-		private static readonly BLDoctor _objSTF01;
+		private readonly BLDoctor _objSTF01;
 
 		/// <summary>
 		/// Declares object of class BLHelper
 		/// </summary>
-		private static readonly BLHelper _objSTF02;
+		private readonly BLHelper _objSTF02;
 
 		/// <summary>
 		/// Declares object of class BLPatient
 		/// </summary>
-		private static readonly BLPatient _objPTN01;
+		private readonly BLPatient _objPTN01;
 
 		/// <summary>
 		/// Declares object of class Cache
 		/// </summary>
-		private static readonly Cache _objCache;
+		private static readonly Cache _objCache = new Cache();
+		
+		/// <summary>
+		/// Declares object of class DL
+		/// </summary>
+		private readonly DL _objDL;
 
 		/// <summary>
 		/// Declares Db factory instance
 		/// </summary>
-		private readonly static IDbConnectionFactory _dbFactory;
+		private readonly IDbConnectionFactory _dbFactory;
 
 		#endregion
 
@@ -81,55 +61,13 @@ namespace HospitalAdvance.BusinessLogic
 		/// <summary>
 		/// Establishes connection and initializes objects
 		/// </summary>
-		static BLUser()
+		public BLUser()
 		{
-			_connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
-			_connection = new MySqlConnection(_connectionString);
 			_dbFactory = HttpContext.Current.Application["dbFactory"] as IDbConnectionFactory;
 			_objSTF01 = new BLDoctor();
 			_objSTF02 = new BLHelper();
 			_objPTN01 = new BLPatient();
-			_objCache = new Cache();
-		}
-
-		#endregion
-
-		#region Private Methods
-
-		/// <summary>
-		/// open connection to database
-		/// </summary>
-		/// <returns>true if connection opened else false</returns>
-		private static bool OpenConnection()
-		{
-			try
-			{
-				_connection.Open();
-				return true;
-			}
-			catch (MySqlException ex)
-			{
-				Console.WriteLine(ex.Message);
-				return false;
-			}
-		}
-
-		/// <summary>
-		/// close connection
-		/// </summary>
-		/// <returns>true if connection closed else false</returns>
-		private static bool CloseConnection()
-		{
-			try
-			{
-				_connection.Close();
-				return true;
-			}
-			catch (MySqlException ex)
-			{
-				Console.WriteLine(ex.Message);
-				return false;
-			}
+			_objDL = new DL();
 		}
 
 		#endregion
@@ -181,54 +119,6 @@ namespace HospitalAdvance.BusinessLogic
 		}
 
 		/// <summary>
-		/// Creates table statement
-		/// </summary>
-		/// <returns>Appropriate message</returns>
-		public static string CreateTable<T>() where T : class
-		{
-			using (var db = _dbFactory.OpenDbConnection())
-			{
-
-				if (!db.TableExists<T>())
-				{
-					db.CreateTable<T>();
-				}
-
-				return "Table created successfully";
-			}
-		}
-
-		/// <summary>
-		/// Checks weather table exist or not in MySqlConnection
-		/// </summary>
-		/// <returns>True if table exists else false</returns>
-		public static bool TableExists(Type type)
-		{
-			try
-			{
-				if (OpenConnection() == true)
-				{
-					MySqlCommand command = new MySqlCommand($"SHOW TABLES LIKE '@type'", _connection);
-
-					//Execute command
-					var result = command.ExecuteScalar();
-					if (result != null)
-					{
-						CloseConnection();
-						return true;
-					}
-					CloseConnection();
-				}
-				return false;
-			}
-			catch
-			{
-				CloseConnection();
-				return false;
-			}
-		}
-
-		/// <summary>
 		/// Insert statement
 		/// </summary>
 		/// <param name="objUSR01">object of class USR01</param>
@@ -262,7 +152,7 @@ namespace HospitalAdvance.BusinessLogic
 		/// <param name="model">Object of USR01 and object of second class</param>
 		/// <returns>Appropriate message</returns>
 		/// <exception cref="Exception"></exception>
-		public string InsertData(UserAddModel model)
+		public string InsertData(USR02 model)
 		{
 			if (model == null || model.ObjUSR01 == null || model.ObjRole == null)
 			{
@@ -356,7 +246,7 @@ namespace HospitalAdvance.BusinessLogic
 		/// <param name="model">Object of USR01 and object of second class</param>
 		/// <returns>Appropriate message</returns>
 		/// <exception cref="Exception"></exception>
-		public string UpdateData(UserAddModel model)
+		public string UpdateData(USR02 model)
 		{
 			if (model == null || model.ObjUSR01 == null || model.ObjRole == null)
 			{
@@ -479,43 +369,9 @@ namespace HospitalAdvance.BusinessLogic
 		/// Select statement
 		/// </summary>
 		/// <returns>List of users</returns>
-		public static List<USR01> Select()
+		public List<USR01> Select()
 		{
-			if (!TableExists((typeof(USR01))))
-			{
-				CreateTable<USR01>();
-			}
-			string query = "SELECT * FROM USR01";
-
-			List<USR01> lstusr01 = new List<USR01>();
-			//Open connection
-			if (OpenConnection() == true)
-			{
-				//Create Command
-				MySqlCommand command = new MySqlCommand(query, _connection);
-				//Create a data reader and Execute the command
-				MySqlDataReader dataReader = command.ExecuteReader();
-
-				//Read the data and store them in the list
-				while (dataReader.Read())
-				{
-					var objUSR01 = new USR01();
-					objUSR01.R01F01 = (int)dataReader[0];
-					objUSR01.R01F02 = (string)dataReader[1];
-					var password = BLSecurity.DecryptAes((string)dataReader[2], BLSecurity.key, BLSecurity.iv);
-					objUSR01.R01F03 = password;
-					objUSR01.R01F04 = (enmUserRole)dataReader[3];
-					lstusr01.Add(objUSR01);
-				}
-
-				//close Data Reader
-				dataReader.Close();
-
-				CacheOperations("Users", lstusr01);
-
-				//close Connection
-				CloseConnection();
-			}
+			var lstusr01 = _objDL.SelectUsers();
 			return lstusr01;
 		}
 
@@ -524,7 +380,7 @@ namespace HospitalAdvance.BusinessLogic
 		/// </summary>
 		/// <param name="Request">Current request</param>
 		/// <returns>Username and password</returns>
-		public static string[] GetUsernamePassword(HttpRequestMessage Request)
+		public string[] GetUsernamePassword(HttpRequestMessage Request)
 		{
 			string authToken = Request.Headers.Authorization.Parameter;
 			byte[] authBytes = Convert.FromBase64String(authToken);
@@ -538,7 +394,7 @@ namespace HospitalAdvance.BusinessLogic
 		/// </summary>
 		/// <param name="actionContext">Current context</param>
 		/// <returns>User</returns>
-		public static USR01 GetUser(HttpActionContext actionContext)
+		public USR01 GetUser(HttpActionContext actionContext)
 		{
 			string tokenValue = actionContext.Request.Headers.Authorization.Scheme;
 
@@ -562,7 +418,7 @@ namespace HospitalAdvance.BusinessLogic
 
 			JObject json = JObject.Parse(decodedPayload);
 
-			USR01 user = BLUser.Select().FirstOrDefault(u => u.R01F02 == json["unique_name"].ToString());
+			USR01 user = Select().FirstOrDefault(u => u.R01F02 == json["unique_name"].ToString());
 
 			return user;
 

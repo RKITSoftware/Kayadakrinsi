@@ -15,47 +15,60 @@ using Newtonsoft.Json.Linq;
 
 namespace cutomToken.Auth
 {
+
     /// <summary>
     /// Authenticate the reuqest with jwt (bearer) as authentication type
     /// </summary>
-    public class BearerAuthentication : AuthorizationFilterAttribute
+    public class BearerAuthentication : AuthorizationFilterAttribute 
     {
         /// <summary>
         /// Authenticates user using user's JWT token
         /// </summary>
         /// <param name="actionContext">Information of executing context</param>
         public override void OnAuthorization(HttpActionContext actionContext)
-        {
+         {
+            if (BasicAuthentication.SkipAuthorization(actionContext)) return;
 
-            string tokenValue = actionContext.Request.Headers.Authorization.Scheme;
-
-            // check jwt token's validity
-            var isValid = BLTokenManager.ValidateToken(tokenValue);
-
-            // if jwt is invalid (corrupted-jwt or jwt-expired) then return unauthorized
-            if (!isValid)
+            // Check if the request has Authorization header
+            if (!actionContext.Request.Headers.Contains("Authorization"))
             {
-                actionContext.Response = actionContext.Request.CreateErrorResponse(HttpStatusCode.Unauthorized, 
-                                         "Enter valid token");
+                actionContext.Response = new HttpResponseMessage(HttpStatusCode.Unauthorized);
+                return;
             }
-            else
+
+            // Extract token from Authorization header
+            var token = actionContext.Request.Headers.GetValues("Authorization").FirstOrDefault()?.Replace("Bearer ", "");
+            
+            if (BLTokenManager.IsTokenExpired(token))
             {
-                // get jwt payload
-                string jwtEncodedPayload = tokenValue.Split('.')[1];
+                // Token is expired, refresh it
+                token = BLTokenManager.RefreshToken(token);
+
+                if (token == null)
+                {
+                    actionContext.Response = new HttpResponseMessage(HttpStatusCode.Unauthorized);
+                    return;
+                }
+            }
+            // Validate JWT token
+            if (token != null && BLTokenManager.ValidateToken(token))
+            {
+                
+                string jwtEncodedPayload = token.Split('.')[1];
 
                 // pad jwtEncodedPayload
                 jwtEncodedPayload = jwtEncodedPayload.Replace('+', '-')
                                                      .Replace('/', '_')
                                                      .Replace("=", "");
 
-				int padding = jwtEncodedPayload.Length % 4;
-				if (padding != 0)
-				{
-					jwtEncodedPayload += new string('=', 4 - padding);
-				}
+                int padding = jwtEncodedPayload.Length % 4;
+                if (padding != 0)
+                {
+                    jwtEncodedPayload += new string('=', 4 - padding);
+                }
 
-				// decode the jwt payload
-				byte[] decodedPayloadBytes = Convert.FromBase64String(jwtEncodedPayload);
+                // decode the jwt payload
+                byte[] decodedPayloadBytes = Convert.FromBase64String(jwtEncodedPayload);
 
                 string decodedPayload = Encoding.UTF8.GetString(decodedPayloadBytes);
 
@@ -83,10 +96,12 @@ namespace cutomToken.Auth
                 }
                 else
                 {
-                    actionContext.Response = actionContext.Request.CreateErrorResponse(HttpStatusCode.Unauthorized, 
+                    actionContext.Response = actionContext.Request.CreateErrorResponse(HttpStatusCode.Unauthorized,
                                              "Authorization denied");
                 }
+
             }
         }
+
     }
 }

@@ -32,6 +32,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -143,6 +144,12 @@
     <Reference Include="ServiceStack.Text, Version=6.0.0.0, Culture=neutral, PublicKeyToken=02c12cbda47e6587, processorArchitecture=MSIL">
       <HintPath>..\packages\ServiceStack.Text.8.1.2\lib\net472\ServiceStack.Text.dll</HintPath>
     </Reference>
+    <Reference Include="Spire.Pdf, Version=8.7.2.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\FreeSpire.XLS.12.7.0\lib\net40\Spire.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.XLS, Version=12.7.0.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\FreeSpire.XLS.12.7.0\lib\net40\Spire.XLS.dll</HintPath>
+    </Reference>
     <Reference Include="Swashbuckle.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cd1bb07a5ac7c7bc, processorArchitecture=MSIL">
       <HintPath>..\packages\Swashbuckle.Core.5.6.0\lib\net40\Swashbuckle.Core.dll</HintPath>
     </Reference>
@@ -177,6 +184,7 @@
     <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
     </Reference>
+    <Reference Include="System.Runtime.Caching" />
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
@@ -241,10 +249,8 @@
   <ItemGroup>
     <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Auth\BasicAuthenticationAttribute.cs" />
-    <Compile Include="Auth\BasicAuthorizationAttribute.cs" />
+    <Compile Include="Auth\BasicAuthentication.cs" />
     <Compile Include="Auth\BearerAuthentication.cs" />
-    <Compile Include="Auth\TokenAuthentication.cs" />
     <Compile Include="BusinessLogic\BLCharge.cs" />
     <Compile Include="BusinessLogic\BLDieases.cs" />
     <Compile Include="BusinessLogic\BLHelper.cs" />
@@ -252,9 +258,9 @@
     <Compile Include="BusinessLogic\BLRecord.cs" />
     <Compile Include="BusinessLogic\BLSecurity.cs" />
     <Compile Include="BusinessLogic\BLDoctor.cs" />
+    <Compile Include="BusinessLogic\BLSerialize.cs" />
     <Compile Include="BusinessLogic\BLTokenManager.cs" />
     <Compile Include="BusinessLogic\BLUser.cs" />
-    <Compile Include="BusinessLogic\BLValidateUser.cs" />
     <Compile Include="Controllers\CLChargeController.cs" />
     <Compile Include="Controllers\CLDieasesController.cs" />
     <Compile Include="Controllers\CLDoctorController.cs" />
@@ -263,6 +269,7 @@
     <Compile Include="Controllers\CLPatientController.cs" />
     <Compile Include="Controllers\CLRecordController.cs" />
     <Compile Include="Controllers\CLUserController.cs" />
+    <Compile Include="DataBase\DL.cs" />
     <Compile Include="Filter\CustomExceptionFilterAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -274,6 +281,7 @@
     <Compile Include="Models\STF01.cs" />
     <Compile Include="Models\STF02.cs" />
     <Compile Include="Models\USR01.cs" />
+    <Compile Include="Models\USR02.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

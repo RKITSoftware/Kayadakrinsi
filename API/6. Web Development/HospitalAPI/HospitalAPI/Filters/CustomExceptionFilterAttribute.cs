@@ -5,23 +5,31 @@ using System.Web.Http.Filters;
 
 namespace HospitalAPI.Filters
 {
-    /// <summary>
-    /// Filter for handling not implemented methods
-    /// </summary>
-    public class CustomExceptionFilterAttribute : ExceptionFilterAttribute
+	/// <summary>
+	/// Filter for handling not implemented methods
+	/// </summary>
+	public class CustomExceptionFilterAttribute : ExceptionFilterAttribute
     {
-        public string path = HttpContext.Current.Server.MapPath("~/Log") + "\\" + DateTime.Now.ToString("dd-mm-yyyy") + ".txt";
-        public override void OnException(HttpActionExecutedContext context)
+		/// <summary>
+		/// Path of exception file
+		/// </summary>
+        public string path = HttpContext.Current.Server.MapPath("~/Log") + "\\" + DateTime.Now.ToString("dd-MM-yyyy") + ".txt";
+        
+		/// <summary>
+		/// Logs exception
+		/// </summary>
+		/// <param name="context">Current execution context</param>
+		public override void OnException(HttpActionExecutedContext context)
         {
             if (context.Exception is Exception)
             {
-                using (StreamWriter sw = new StreamWriter(path))
-                {
-                    sw.WriteLine(DateTime.Now);
-                    sw.WriteLine(context.Exception.StackTrace);
-                    sw.WriteLine('\n');
-                }
-            }
+				using (StreamWriter sw = File.AppendText(path))
+				{
+					sw.WriteLine(DateTime.Now);
+					sw.WriteLine(context.Exception.StackTrace);
+					sw.WriteLine('\n');
+				}
+			}
         }
     }
 }

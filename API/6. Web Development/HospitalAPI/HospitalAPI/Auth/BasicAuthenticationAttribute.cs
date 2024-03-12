@@ -13,7 +13,7 @@ namespace HospitalAPI.Auth
 { /// <summary>
   /// Custom authentication filter attribute
   /// </summary>
-    public class BasicAuthenticationAttribute : AuthorizationFilterAttribute
+	public class BasicAuthenticationAttribute : AuthorizationFilterAttribute
     {
         #region Public Methods
 

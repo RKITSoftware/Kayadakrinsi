@@ -6,10 +6,10 @@ using System.Web.Http.Controllers;
 
 namespace HospitalAPI.Auth
 {
-    /// <summary>
-    /// Authorization filter attribute
-    /// </summary>
-    public class BasicAuthorizationAttribute : AuthorizeAttribute
+	/// <summary>
+	/// Authorization filter attribute
+	/// </summary>
+	public class BasicAuthorizationAttribute : AuthorizeAttribute
     {
         #region Protected Methods
 
