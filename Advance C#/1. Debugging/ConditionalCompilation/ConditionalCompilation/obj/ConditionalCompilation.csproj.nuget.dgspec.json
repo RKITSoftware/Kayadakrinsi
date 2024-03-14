@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Krinsi - 379\\Training\\Advance C#\\1. Debugging\\ConditionalCompilation\\ConditionalCompilation\\ConditionalCompilation.csproj": {}
+    "F:\\Krinsi - 379\\New folder\\Advance C#\\1. Debugging\\ConditionalCompilation\\ConditionalCompilation\\ConditionalCompilation.csproj": {}
   },
   "projects": {
-    "F:\\Krinsi - 379\\Training\\Advance C#\\1. Debugging\\ConditionalCompilation\\ConditionalCompilation\\ConditionalCompilation.csproj": {
+    "F:\\Krinsi - 379\\New folder\\Advance C#\\1. Debugging\\ConditionalCompilation\\ConditionalCompilation\\ConditionalCompilation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Krinsi - 379\\Training\\Advance C#\\1. Debugging\\ConditionalCompilation\\ConditionalCompilation\\ConditionalCompilation.csproj",
+        "projectUniqueName": "F:\\Krinsi - 379\\New folder\\Advance C#\\1. Debugging\\ConditionalCompilation\\ConditionalCompilation\\ConditionalCompilation.csproj",
         "projectName": "ConditionalCompilation",
-        "projectPath": "F:\\Krinsi - 379\\Training\\Advance C#\\1. Debugging\\ConditionalCompilation\\ConditionalCompilation\\ConditionalCompilation.csproj",
+        "projectPath": "F:\\Krinsi - 379\\New folder\\Advance C#\\1. Debugging\\ConditionalCompilation\\ConditionalCompilation\\ConditionalCompilation.csproj",
         "packagesPath": "C:\\Users\\krinsi.k\\.nuget\\packages\\",
-        "outputPath": "F:\\Krinsi - 379\\Training\\Advance C#\\1. Debugging\\ConditionalCompilation\\ConditionalCompilation\\obj\\",
+        "outputPath": "F:\\Krinsi - 379\\New folder\\Advance C#\\1. Debugging\\ConditionalCompilation\\ConditionalCompilation\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\krinsi.k\\AppData\\Roaming\\NuGet\\NuGet.Config",

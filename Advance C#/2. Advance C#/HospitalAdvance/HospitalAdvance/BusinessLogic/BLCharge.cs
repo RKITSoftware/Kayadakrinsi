@@ -15,6 +15,7 @@ namespace HospitalAdvance.BusinessLogic
 	/// </summary>
 	public class BLCharge
 	{
+
 		#region Private Members
 
 		/// <summary>
@@ -45,6 +46,27 @@ namespace HospitalAdvance.BusinessLogic
 		#region Public Methods
 
 		/// <summary>
+		/// Validates given object
+		/// </summary>
+		/// <param name="objCRG01">Object of class CRG01</param>
+		/// <returns>True if object is valid and false otherwise</returns>
+		public bool validation(CRG01 objCRG01)
+		{
+			using (var db = _dbFactory.OpenDbConnection())
+			{
+				var dieases = db.SingleById<DIS01>(objCRG01.G01F03);
+				var doctor = db.SingleById<STF01>(objCRG01.G01F02);
+
+				if (dieases != null && doctor != null)
+				{
+					return true;
+				}
+			}
+
+			return false;
+        }
+
+		/// <summary>
 		/// Insert charge
 		/// </summary>
 		/// <param name="objCRG01">object of CRG01 class</param>
@@ -57,15 +79,7 @@ namespace HospitalAdvance.BusinessLogic
 				{
 					db.CreateTable<CRG01>();
 				}
-
-				var dieases = db.SingleById<DIS01>(objCRG01.G01F03);
-				var doctor = db.SingleById<STF01>(objCRG01.G01F02);
-
-				if(dieases == null || doctor == null)
-				{
-					return ("Enter data with valid refrences");
-				}
-
+				 
 				db.Insert(objCRG01);
 
 				return "Success!";
@@ -87,15 +101,8 @@ namespace HospitalAdvance.BusinessLogic
 					return "No records to be update!";
 				}
 
-				var dieases = db.SingleById<DIS01>(objCRG01.G01F03);
-				var doctor = db.SingleById<STF01>(objCRG01.G01F02);
-
-				if (dieases == null || doctor == null)
-				{
-					return ("Enter data with valid refrences");
-				}
-
 				db.Update(objCRG01,u=>u.G01F01==objCRG01.G01F01);
+
 				return "Charge updated successfully!";
 			}
 		}
@@ -106,18 +113,17 @@ namespace HospitalAdvance.BusinessLogic
 		/// <returns>Serialized string or appropriate message</returns>
 		public List<CRG01> Select()
 		{
-			List<CRG01> lstCRG01 = new List<CRG01>();
 
-			using (var db = _dbFactory.OpenDbConnection())
+            using (var db = _dbFactory.OpenDbConnection())
 			{
 				if (!db.TableExists<CRG01>())
 				{
 					db.CreateTable<CRG01>();
 				}
 
-				lstCRG01 = db.Select<CRG01>();
+                List<CRG01> lstCRG01 = db.Select<CRG01>();
 
-				BLUser.CacheOperations("Charges", lstCRG01);
+                BLUser.CacheOperations("Charges", lstCRG01);
 
 				return lstCRG01;
 			}
@@ -189,5 +195,6 @@ namespace HospitalAdvance.BusinessLogic
 		}
 
 		#endregion
+
 	}
 }

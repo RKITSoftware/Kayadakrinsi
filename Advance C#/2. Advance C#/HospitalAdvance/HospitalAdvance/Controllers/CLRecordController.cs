@@ -10,6 +10,7 @@ namespace HospitalAdvance.Controllers
 {
 	public class CLRecordController : ApiController
     {
+
 		#region Public Members
 
 		/// <summary>
@@ -35,13 +36,15 @@ namespace HospitalAdvance.Controllers
 			stopwatch = Stopwatch.StartNew();
 		}
 
-		#endregion
+        #endregion
 
-		/// <summary>
-		/// Displays records
-		/// </summary>
-		/// <returns></returns>
-		[HttpGet]
+        #region Public Methods
+
+        /// <summary>
+        /// Displays records
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
         [BearerAuthentication]
         [Authorize(Roles ="Manager,Doctor,Helper,Patient")]
         [Route("api/CLRecord/GetRecords")]
@@ -88,10 +91,19 @@ namespace HospitalAdvance.Controllers
 		[HttpPost]
 		[BearerAuthentication]
 		[Authorize(Roles = "Manager")]
+		[AllowAnonymous]
 		[Route("api/CLRecord/AddRecord")]
 		public IHttpActionResult AddRecord(RCD01 objRCD01)
 		{
-			return Ok(objBLRecord.Insert(objRCD01));
+			if(objBLRecord.preValidation(objRCD01))
+			{
+				objRCD01 = objBLRecord.preSave(objRCD01);
+				if (objBLRecord.validation(objRCD01))
+				{
+					return Ok(objBLRecord.Insert(objRCD01));
+				}
+			}
+			return BadRequest("Invalid data");
 		}
 
 		/// <summary>
@@ -107,5 +119,7 @@ namespace HospitalAdvance.Controllers
 			return Ok(objBLRecord.WriteData());
 		}
 
-	}
+        #endregion
+
+    }
 }

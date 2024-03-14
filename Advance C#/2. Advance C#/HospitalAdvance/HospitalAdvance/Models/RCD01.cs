@@ -55,18 +55,18 @@ namespace HospitalAdvance.Models
 		/// Admit date
 		/// </summary>
 		[Required]
-		public DateTime D01F07 { get; set; }
+		public DateTime D01F07 { get; set; } = DateTime.Now;
 
 		/// <summary>
 		/// Discharge date
 		/// </summary>
 		[Required]
-		public DateTime D01F08 { get; set; }
+		public DateTime D01F08 { get; set; } = DateTime.Now.AddDays(1);
 
-		/// <summary>
-		/// Total amount
-		/// </summary> 
-		[DecimalLength(Precision = 10,Scale = 2)]
+        /// <summary>
+        /// Total amount
+        /// </summary> 
+        [DecimalLength(Precision = 10,Scale = 2)]
         public decimal D01F09 { get; set; }
     }
 }

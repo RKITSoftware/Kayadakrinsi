@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Diagnostics;
 using System.IO;
+using System.Linq;
+using System.Reflection;
 using System.Web;
 using System.Web.Http.Filters;
 
@@ -17,9 +20,16 @@ namespace HospitalAdvance.Filter
 			{
 				using (StreamWriter sw = File.AppendText(path))
 				{
-					sw.WriteLine(DateTime.Now);
-					sw.WriteLine(context.Exception.StackTrace);
-					sw.WriteLine('\n');
+					sw.WriteLine(@"Time : {0}",DateTime.Now);
+					sw.WriteLine(@"Type : {0}",context.Exception.GetType());
+
+                    var s = new StackTrace(context.Exception);
+                    var thisAssembly = Assembly.GetExecutingAssembly();
+                    var methodname = s.GetFrames().Select(f => f.GetMethod()).First(m => m.Module.Assembly == thisAssembly).Name;
+                    sw.WriteLine(@"Method : {0}",methodname);
+					sw.WriteLine(@"Details : {0}",context.Exception.StackTrace);
+
+                    sw.WriteLine('\n');
 				}
 			}
 		}

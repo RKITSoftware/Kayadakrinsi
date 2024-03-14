@@ -10,6 +10,7 @@ namespace HospitalAdvance.Controllers
 {
 	public class CLDieasesController : ApiController
     {
+
 		#region Public Members
 
 		/// <summary>
@@ -35,13 +36,15 @@ namespace HospitalAdvance.Controllers
 			stopwatch = Stopwatch.StartNew();
 		}
 
-		#endregion
+        #endregion
 
-		/// <summary>
-		/// Displays dieases 
-		/// </summary>
-		/// <returns>List of dieases</returns>
-		[HttpGet]
+        #region Public Methods
+
+        /// <summary>
+        /// Displays dieases 
+        /// </summary>
+        /// <returns>List of dieases</returns>
+        [HttpGet]
 		[BearerAuthentication]
 		[Authorize(Roles = "Manager")]
 		[Route("api/CLDieases/GetDieasess")]
@@ -81,7 +84,11 @@ namespace HospitalAdvance.Controllers
 		[Route("api/CLDieases/AddDieases")]
 		public IHttpActionResult AddDieases(DIS01 objDIS01)
 		{
-			return Ok(objBLDieases.Insert(objDIS01));
+			if (objBLDieases.validation(objDIS01))
+			{
+				return Ok(objBLDieases.Insert(objDIS01));
+			}
+			return BadRequest("Invalid data");
 		}
 
 		/// <summary>
@@ -108,8 +115,14 @@ namespace HospitalAdvance.Controllers
 		[Route("api/CLDieases/EditDieases")]
 		public IHttpActionResult EditDieases(DIS01 objDIS01)
 		{
-			return Ok(objBLDieases.Update(objDIS01));
+            if (objBLDieases.validation(objDIS01))
+            {
+				return Ok(objBLDieases.Update(objDIS01));
+            }
+            return BadRequest("Invalid data");
 		}
 
-	}
+        #endregion
+
+    }
 }

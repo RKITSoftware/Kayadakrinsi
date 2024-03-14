@@ -10,6 +10,7 @@ namespace HospitalAdvance.Controllers
 {
 	public class CLChargeController : ApiController
     {
+
 		#region Public Members
 
 		/// <summary>
@@ -35,13 +36,15 @@ namespace HospitalAdvance.Controllers
 			stopwatch = Stopwatch.StartNew();
 		}
 
-		#endregion
+        #endregion
 
-		/// <summary>
-		/// Displays charges
-		/// </summary>
-		/// <returns>List of charges</returns>
-		[HttpGet]
+        #region Public Methods
+
+        /// <summary>
+        /// Displays charges
+        /// </summary>
+        /// <returns>List of charges</returns>
+        [HttpGet]
 		[BearerAuthentication]
 		[Authorize(Roles = "Manager")]
 		[Route("api/CLCharge/GetCharges")]
@@ -81,7 +84,11 @@ namespace HospitalAdvance.Controllers
 		[Route("api/CLCharge/AddCharge")]
 		public IHttpActionResult AddCharge(CRG01 objCRG01)
 		{
-			return Ok(objBLCharge.Insert(objCRG01));
+			if (objBLCharge.validation(objCRG01))
+			{
+				return Ok(objBLCharge.Insert(objCRG01));
+			}
+			return BadRequest("Invalid data");
 		}
 
 		/// <summary>
@@ -108,8 +115,15 @@ namespace HospitalAdvance.Controllers
 		[Route("api/CLCharge/EditCharge")]
 		public IHttpActionResult EditCharge(CRG01 objCRG01)
 		{
-			return Ok(objBLCharge.Update(objCRG01));
+            if (objBLCharge.validation(objCRG01))
+            {
+                return Ok(objBLCharge.Update(objCRG01));
+            }
+            return BadRequest("Invalid data");
+            
 		}
 
-	}
+        #endregion
+
+    }
 }

@@ -10,6 +10,7 @@ namespace HospitalAdvance.Controllers
 {
 	public class CLHelperController : ApiController
     {
+
 		#region Public Members
 
 		/// <summary>
@@ -41,13 +42,15 @@ namespace HospitalAdvance.Controllers
 			stopwatch = Stopwatch.StartNew();
 		}
 
-		#endregion
+        #endregion
 
-		/// <summary>
-		/// Displays helpers information
-		/// </summary>
-		/// <returns></returns>
-		[HttpGet]
+        #region Public Methods
+
+        /// <summary>
+        /// Displays helpers information
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
 		[BearerAuthentication]
 		[Authorize(Roles = "Manager,helper")]
 		[Route("api/CLHelper/GetHelpers")]
@@ -128,7 +131,14 @@ namespace HospitalAdvance.Controllers
 		[Route("api/CLHelper/UpdateHelpers")]
 		public IHttpActionResult UpdateHelpers(STF02 objSTF02)
 		{
-			return Ok(objBLHelper.Update(objSTF02));
+			if (objBLHelper.validationUpdate(objSTF02))
+			{
+				return Ok(objBLHelper.Update(objSTF02));
+			}
+			return BadRequest("Not found");
 		}
-	}
+
+		#endregion
+
+    }
 }

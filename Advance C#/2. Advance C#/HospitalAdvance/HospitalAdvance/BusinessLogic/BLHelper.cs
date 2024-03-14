@@ -11,238 +11,313 @@ using ServiceStack.OrmLite;
 
 namespace HospitalAdvance.BusinessLogic
 {
-	/// <summary>
-	/// Handles logic for stf01 controller
-	/// </summary>
-	public class BLHelper
-	{
-		#region Private Members
+    /// <summary>
+    /// Handles logic for stf01 controller
+    /// </summary>
+    public class BLHelper
+    {
 
-		/// <summary>
-		/// Path of file in which helper data will be written
-		/// </summary>
-		private static readonly string path = HttpContext.Current.Server.MapPath("~/Helper") +
-											  "\\" + DateTime.Now.ToShortDateString() + ".txt";
+        #region Private Members
 
-		/// <summary>
-		/// Declares Db factory instance
-		/// </summary>
-		private static readonly IDbConnectionFactory _dbFactory;
+        /// <summary>
+        /// Path of file in which helper data will be written
+        /// </summary>
+        private static readonly string path = HttpContext.Current.Server.MapPath("~/Helper") +
+                                              "\\" + DateTime.Now.ToShortDateString() + ".txt";
 
-		#endregion
+        /// <summary>
+        /// Declares Db factory instance
+        /// </summary>
+        private static readonly IDbConnectionFactory _dbFactory;
 
-		#region Constructors
+        #endregion
 
-		/// <summary>
-		/// Intializes db factory instance
-		/// </summary>
-		static BLHelper()
-		{
-			_dbFactory = HttpContext.Current.Application["dbFactory"] as IDbConnectionFactory;
-		}
+        #region Constructors
 
-		#endregion
+        /// <summary>
+        /// Intializes db factory instance
+        /// </summary>
+        static BLHelper()
+        {
+            _dbFactory = HttpContext.Current.Application["dbFactory"] as IDbConnectionFactory;
+        }
 
-		#region Public Methods
+        #endregion
 
-		/// <summary>
-		/// Insert helper
-		/// </summary>
-		/// <param name="objSTF02">object of STF02 class</param>
-		/// <returns>Appropriate Message</returns>
-		public string Insert(STF02 objSTF02)
-		{
-			using (var db = _dbFactory.OpenDbConnection())
-			{
-				if (!db.TableExists<STF02>())
-				{
-					db.CreateTable<STF02>();
-				}
-				var user = db.Select<STF02>().FirstOrDefault(x => x.F02F05 == objSTF02.F02F05);
-				if (user != null && user == objSTF02)
-				{
-					return "User already exist";
-				}
-				else if (user != null)
-				{
-					db.Update(objSTF02, u => u.F02F01 == objSTF02.F02F01);
-					return "Success!";
-				}
-				db.Insert(objSTF02);
-				return "Success!";
-			}
-		}
+        #region Public Methods
 
-		/// <summary>
-		/// Update helper
-		/// </summary>
-		/// <param name="objSTF02">object of STF02 class</param>
-		/// <returns>Appropriate Message</returns>
-		public string Update(STF02 objSTF02)
-		{
-			try
-			{
-				using (var db = _dbFactory.OpenDbConnection())
-				{
-					if (!db.TableExists<STF02>())
-					{
-						db.CreateTable<STF02>();
-						return "No records to be updated!";
-					}
+        /// <summary>
+        /// Prepares object as our need
+        /// </summary>
+        /// <param name="objSTF02">Object of class STF02</param>
+        /// <param name="objUSR01">Object of class USR01</param>
+        /// <returns>Prepared object</returns>
+        public STF02 preSave(STF02 objSTF02, USR01 objUSR01)
+        {
+            objSTF02.F02F05 = objUSR01.R01F01;
 
-					int rowsAffected = db.Update(objSTF02, u => u.F02F01 == objSTF02.F02F01);
+            return objSTF02;
+        }
 
-					if (rowsAffected > 0)
-						return "Success!";
-					else
-						return "No records updated!";
-				}
-			}
-			catch (Exception ex)
-			{
-				// Log the exception or handle it appropriately
-				return $"Error: {ex.Message}";
-			}
-		}
+        /// <summary>
+        /// Validates given object 
+        /// </summary>
+        /// <param name="objSTF02">Object of class STF02</param>
+        /// <returns>True if object is valid and false otherwise</returns>
+        public bool validationInsert(STF02 objSTF02)
+        {
+            using (var db = _dbFactory.OpenDbConnection())
+            {
+                var user = db.Select<STF02>().FirstOrDefault(x => x.F02F05 == objSTF02.F02F05);
 
+                if (user == null)
+                {
+                    return true;
+                }
+            }
 
-		/// <summary>
-		/// Select data from STF02
-		/// </summary>
-		/// <returns>Serialized string or appropriate message</returns>
-		public List<STF02> Select()
-		{
-			List<STF02> lstSTF02 = new List<STF02>();
+            return false;
+        }
 
-			using (var db = _dbFactory.OpenDbConnection())
-			{
-				if (!db.TableExists<STF02>())
-				{
-					db.CreateTable<STF02>();
-				}
+        /// <summary>
+        /// Validates given object 
+        /// </summary>
+        /// <param name="objSTF02">Object of class STF02</param>
+        /// <returns>True if object is valid and false otherwise</returns>
+        public bool validationUpdate(STF02 objSTF02)
+        {
+            using (var db = _dbFactory.OpenDbConnection())
+            {
+                var user = db.Select<STF02>().FirstOrDefault(x => x.F02F05 == objSTF02.F02F05);
 
-				lstSTF02 = db.Select<STF02>();
+                if (user != null)
+                {
+                    return true;
+                }
+            }
 
-				BLUser.CacheOperations("Helpers", lstSTF02);
+            return false;
+        }
 
-				return lstSTF02;
-			}
-		}
+        /// <summary>
+        /// Insert helper
+        /// </summary>
+        /// <param name="objSTF02">object of STF02 class</param>
+        /// <returns>Appropriate Message</returns>
+        public string Insert(STF02 objSTF02)
+        {
+            try
+            {
+                using (var db = _dbFactory.OpenDbConnection())
+                {
+                    if (!db.TableExists<STF02>())
+                    {
+                        db.CreateTable<STF02>();
+                    }
 
-		/// <summary>
-		/// Selects data from database and Writes data into file
-		/// </summary>
-		/// <returns>Appropriate Message</returns>
-		public string WriteData()
-		{
-			using (StreamWriter sw = new StreamWriter(path))
-			{
-				var lstSTF02 = Select();
-				sw.WriteLine("Helper id, Helper name, Role of helper, Working days, User id, IsActive");
-				foreach (var obj in lstSTF02)
-				{
-					sw.Write(obj.F02F01 + ", ");
-					sw.Write(obj.F02F02 + ", ");
-					sw.Write(obj.F02F03 + ", ");
-					sw.Write(obj.F02F04 + ", ");
-					sw.Write(obj.F02F05 + ", ");
-					sw.Write(obj.F02F06);
-					sw.WriteLine();
-				}
-			}
-			return "File created successfully 🙌";
-		}
+                    db.Insert(objSTF02);
 
-		/// <summary>
-		/// Selects data from database and Writes data into file of current user
-		/// </summary>
-		/// <returns>Appropriate Message</returns>
-		public string WriteMyFile(USR01 user)
-		{
-			string newPath = path.Replace(DateTime.Now.ToShortDateString(), user.R01F02 + DateTime.Now.ToShortDateString());
+                    return "Success!";
+                }
+            }
+            catch (Exception ex)
+            {
+                return $"Error: {ex.Message}";
+            }
+        }
 
-			using (StreamWriter sw = new StreamWriter(newPath))
-			{
-				var obj = Select().FirstOrDefault(x => x.F02F05 == user.R01F01);
-				sw.WriteLine("Helper id, Helper name, Role of helper, Working days, User id, IsActive"); 
-				sw.Write(obj.F02F01 + ", ");
-				sw.Write(obj.F02F02 + ", ");
-				sw.Write(obj.F02F03 + ", ");
-				sw.Write(obj.F02F04 + ", ");
-				sw.Write(obj.F02F05 + ", ");
-				sw.Write(obj.F02F06);
-				sw.WriteLine();
-			}
-			return "File created successfully 🙌";
-		}
+        /// <summary>
+        /// Update helper
+        /// </summary>
+        /// <param name="objSTF02">object of STF02 class</param>
+        /// <returns>Appropriate Message</returns>
+        public string Update(STF02 objSTF02)
+        {
+            try
+            {
+                using (var db = _dbFactory.OpenDbConnection())
+                {
+                    if (!db.TableExists<STF02>())
+                    {
+                        db.CreateTable<STF02>();
+                        return "No records to be updated!";
+                    }
 
-		/// <summary>
-		/// Download file
-		/// </summary>
-		/// <returns>HttpResponseMessage with file</returns>
-		public HttpResponseMessage DownloadMyFile(USR01 user)
-		{
-			var newPath = path.Replace(DateTime.Now.ToShortDateString(), user.R01F02 + DateTime.Now.ToShortDateString());
-			// Check if the file exists
-			if (!File.Exists(newPath))
-			{
-				return new HttpResponseMessage(HttpStatusCode.NotFound);
-			}
+                    db.Update(objSTF02, u => u.F02F01 == objSTF02.F02F01);
 
-			// Create a response message
-			HttpResponseMessage response = new HttpResponseMessage(HttpStatusCode.OK);
+                    return "Success!";
+                }
+            }
+            catch (Exception ex)
+            {
+                return $"Error: {ex.Message}";
+            }
+        }
 
-			// Read the file into a byte array
-			byte[] fileBytes = File.ReadAllBytes(newPath);
+        /// <summary>
+        /// Disable activation of helper
+        /// </summary>
+        /// <param name="objSTF02">object of STF02 class</param>
+        /// <returns>Appropriate Message</returns>
+        public string Delete(STF02 objSTF02)
+        {
+            try
+            {
+                objSTF02.F02F06 = false;
 
-			// Create a content stream from the byte array
-			response.Content = new ByteArrayContent(fileBytes);
+                Update(objSTF02);
 
-			// Set the content type based on the file extension
-			response.Content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/octet-stream");
+                return "Success!";
+            }
+            catch (Exception ex)
+            {
+                return $"Error: {ex.Message}";
+            }
+        }
 
-			// Set the content disposition header to force a download
-			response.Content.Headers.ContentDisposition = new System.Net.Http.Headers.ContentDispositionHeaderValue("attachment")
-			{
-				FileName = "Downloaded-Helper-" + Path.GetFileName(newPath)
-			};
+        /// <summary>
+        /// Select data from STF02
+        /// </summary>
+        /// <returns>Serialized string or appropriate message</returns>
+        public List<STF02> Select()
+        {
+            try
+            {
+                using (var db = _dbFactory.OpenDbConnection())
+                {
+                    if (!db.TableExists<STF02>())
+                    {
+                        db.CreateTable<STF02>();
+                    }
 
-			return response;
-		}
+                    List<STF02> lstSTF02 = db.Select<STF02>();
 
-		/// <summary>
-		/// Download file
-		/// </summary>
-		/// <returns>HttpResponseMessage with file</returns>
-		public HttpResponseMessage Download()
-		{
-			// Check if the file exists
-			if (!File.Exists(path))
-			{
-				return new HttpResponseMessage(HttpStatusCode.NotFound);
-			}
+                    BLUser.CacheOperations("Helpers", lstSTF02);
 
-			// Create a response message
-			HttpResponseMessage response = new HttpResponseMessage(HttpStatusCode.OK);
+                    return lstSTF02;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
-			// Read the file into a byte array
-			byte[] fileBytes = File.ReadAllBytes(path);
+        /// <summary>
+        /// Selects data from database and Writes data into file
+        /// </summary>
+        /// <returns>Appropriate Message</returns>
+        public string WriteData()
+        {
+            using (StreamWriter sw = new StreamWriter(path))
+            {
+                var lstSTF02 = Select();
+                sw.WriteLine("Helper id, Helper name, Role of helper, Working days, User id, IsActive");
+                foreach (var obj in lstSTF02)
+                {
+                    sw.Write(obj.F02F01 + ", ");
+                    sw.Write(obj.F02F02 + ", ");
+                    sw.Write(obj.F02F03 + ", ");
+                    sw.Write(obj.F02F04 + ", ");
+                    sw.Write(obj.F02F05 + ", ");
+                    sw.Write(obj.F02F06);
+                    sw.WriteLine();
+                }
+            }
+            return "File created successfully 🙌";
+        }
 
-			// Create a content stream from the byte array
-			response.Content = new ByteArrayContent(fileBytes);
+        /// <summary>
+        /// Selects data from database and Writes data into file of current user
+        /// </summary>
+        /// <returns>Appropriate Message</returns>
+        public string WriteMyFile(USR01 user)
+        {
+            string newPath = path.Replace(DateTime.Now.ToShortDateString(), user.R01F02 + DateTime.Now.ToShortDateString());
 
-			// Set the content type based on the file extension
-			response.Content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/octet-stream");
+            using (StreamWriter sw = new StreamWriter(newPath))
+            {
+                var obj = Select().FirstOrDefault(x => x.F02F05 == user.R01F01);
+                sw.WriteLine("Helper id, Helper name, Role of helper, Working days, User id, IsActive");
+                sw.Write(obj.F02F01 + ", ");
+                sw.Write(obj.F02F02 + ", ");
+                sw.Write(obj.F02F03 + ", ");
+                sw.Write(obj.F02F04 + ", ");
+                sw.Write(obj.F02F05 + ", ");
+                sw.Write(obj.F02F06);
+                sw.WriteLine();
+            }
+            return "File created successfully 🙌";
+        }
 
-			// Set the content disposition header to force a download
-			response.Content.Headers.ContentDisposition = new System.Net.Http.Headers.ContentDispositionHeaderValue("attachment")
-			{
-				FileName = "Downloaded-Helpers" + Path.GetFileName(path)
-			};
+        /// <summary>
+        /// Download file
+        /// </summary>
+        /// <returns>HttpResponseMessage with file</returns>
+        public HttpResponseMessage DownloadMyFile(USR01 user)
+        {
+            var newPath = path.Replace(DateTime.Now.ToShortDateString(), user.R01F02 + DateTime.Now.ToShortDateString());
+            // Check if the file exists
+            if (!File.Exists(newPath))
+            {
+                return new HttpResponseMessage(HttpStatusCode.NotFound);
+            }
 
-			return response;
-		}
+            // Create a response message
+            HttpResponseMessage response = new HttpResponseMessage(HttpStatusCode.OK);
 
-		#endregion
-	}
+            // Read the file into a byte array
+            byte[] fileBytes = File.ReadAllBytes(newPath);
+
+            // Create a content stream from the byte array
+            response.Content = new ByteArrayContent(fileBytes);
+
+            // Set the content type based on the file extension
+            response.Content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/octet-stream");
+
+            // Set the content disposition header to force a download
+            response.Content.Headers.ContentDisposition = new System.Net.Http.Headers.ContentDispositionHeaderValue("attachment")
+            {
+                FileName = "Downloaded-Helper-" + Path.GetFileName(newPath)
+            };
+
+            return response;
+        }
+
+        /// <summary>
+        /// Download file
+        /// </summary>
+        /// <returns>HttpResponseMessage with file</returns>
+        public HttpResponseMessage Download()
+        {
+            // Check if the file exists
+            if (!File.Exists(path))
+            {
+                return new HttpResponseMessage(HttpStatusCode.NotFound);
+            }
+
+            // Create a response message
+            HttpResponseMessage response = new HttpResponseMessage(HttpStatusCode.OK);
+
+            // Read the file into a byte array
+            byte[] fileBytes = File.ReadAllBytes(path);
+
+            // Create a content stream from the byte array
+            response.Content = new ByteArrayContent(fileBytes);
+
+            // Set the content type based on the file extension
+            response.Content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/octet-stream");
+
+            // Set the content disposition header to force a download
+            response.Content.Headers.ContentDisposition = new System.Net.Http.Headers.ContentDispositionHeaderValue("attachment")
+            {
+                FileName = "Downloaded-Helpers" + Path.GetFileName(path)
+            };
+
+            return response;
+        }
+
+        #endregion
+
+    }
 }

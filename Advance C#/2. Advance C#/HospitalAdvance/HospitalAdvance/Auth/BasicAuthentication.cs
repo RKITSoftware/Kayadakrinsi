@@ -34,7 +34,7 @@ namespace HospitalAdvance.Auth
             if (authHeader == null)
             {
                 actionContext.Response = actionContext.Request.CreateErrorResponse(HttpStatusCode.Unauthorized,
-                                         "invalid headers");
+                                         "Invalid headers");
             }
             else if (authHeader.Scheme == "Basic")
             {

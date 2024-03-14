@@ -36,7 +36,8 @@ namespace HospitalAdvance.Auth
             // Check if the request has Authorization header
             if (!actionContext.Request.Headers.Contains("Authorization"))
             {
-                actionContext.Response = new HttpResponseMessage(HttpStatusCode.Unauthorized);
+                actionContext.Response = actionContext.Request.CreateErrorResponse(HttpStatusCode.Unauthorized,
+                                         "Invalid headers");
                 return;
             }
 

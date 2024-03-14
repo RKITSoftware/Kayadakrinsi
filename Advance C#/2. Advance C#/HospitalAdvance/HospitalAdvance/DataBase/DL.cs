@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
-using System.Data.Odbc;
 using System.Web;
 using HospitalAdvance.BusinessLogic;
 using HospitalAdvance.Models;
@@ -13,6 +12,7 @@ namespace HospitalAdvance.DataBase
 {
     public class DL
     {
+
         #region Private Members
 
         /// <summary>
@@ -309,6 +309,78 @@ namespace HospitalAdvance.DataBase
                 CloseConnection();
             }
             return lstusr01;
+        }
+
+        /// <summary>
+        /// Generates next Id of USR01 table
+        /// </summary>
+        /// <returns>Next Id of USR01 table</returns>
+        public int GetNextAutoIncrementNumber()
+        {
+            try
+            {
+                var query = "SELECT MAX(R01F01) FROM USR01";
+                
+                if (OpenConnection() == true)
+                {
+                    MySqlCommand command = new MySqlCommand(query, _connection);
+
+                    int nextAutoIncrementNumber = (int)command.ExecuteScalar() + 1;
+                    
+                    CloseConnection();
+
+                    return nextAutoIncrementNumber;
+                }
+
+                return 0;
+            }
+            catch(Exception ex) 
+            {
+                CloseConnection();
+
+                throw ex;
+            }
+        }
+
+        /// <summary>
+        /// Fetches discharge date of patient
+        /// </summary>
+        /// <param name="id">Id of patient</param>
+        /// <returns>Discharge date</returns>
+        public DateTime? getDischargeDate(int id)
+        {
+            try
+            {
+                var query = string.Format(@"SELECT 
+                                                MAX(IF(D01F08!=NULL,NULL,D01F08))
+                                            FROM
+                                                RCD01
+                                            WHERE 
+                                                D01F02 = {0}
+                                            GROUP BY
+                                                D01F02
+                                            LIMIT 1", id);
+
+                if (OpenConnection() == true)
+                {
+                    MySqlCommand command = new MySqlCommand(query, _connection);
+
+                    var dischargeDate = command.ExecuteScalar();
+
+                    CloseConnection();
+
+                    if(dischargeDate != null )
+                        return (DateTime)dischargeDate;
+                }
+
+                return null;
+            }
+            catch (Exception ex)
+            {
+                CloseConnection();
+
+                throw ex;
+            }
         }
 
         #endregion

@@ -16,143 +16,210 @@ namespace HospitalAdvance.BusinessLogic
     /// Handles logic for stf01 controller
     /// </summary>
     public class BLPatient
-	{
-		#region Private Members
+    {
 
-		/// <summary>
-		/// Path of file in which patient data will be written
-		/// </summary>
-		private readonly string path = HttpContext.Current.Server.MapPath("~/Patient") +
-											  "\\" + DateTime.Now.ToShortDateString() + ".txt";
+        #region Private Members
 
-		/// <summary>
-		/// Declares Db factory instance
-		/// </summary>
-		private readonly IDbConnectionFactory _dbFactory;
+        /// <summary>
+        /// Path of file in which patient data will be written
+        /// </summary>
+        private readonly string path = HttpContext.Current.Server.MapPath("~/Patient") +
+                                              "\\" + DateTime.Now.ToShortDateString() + ".txt";
 
-		/// <summary>
-		/// Declares object of class DL
-		/// </summary>
-		private DL _objDL;
+        /// <summary>
+        /// Declares Db factory instance
+        /// </summary>
+        private readonly IDbConnectionFactory _dbFactory;
 
-		#endregion
+        /// <summary>
+        /// Declares object of class DL
+        /// </summary>
+        private DL _objDL;
 
-		#region Constructors
+        #endregion
 
-		/// <summary>
-		/// Intializes db factory instance
-		/// </summary>
-		public BLPatient()
-		{
+        #region Constructors
+
+        /// <summary>
+        /// Intializes db factory instance
+        /// </summary>
+        public BLPatient()
+        {
             _objDL = new DL();
             _dbFactory = HttpContext.Current.Application["dbFactory"] as IDbConnectionFactory;
-		}
+        }
 
-		#endregion
+        #endregion
 
-		#region Public Methods
+        #region Public Methods
 
-		/// <summary>
-		/// Insert patient
-		/// </summary>
-		/// <param name="objPTN01">object of PTN01 class</param>
-		/// <returns>Appropriate Message</returns>
-		public string Insert(PTN01 objPTN01)
-		{
-			using (var db = _dbFactory.OpenDbConnection())
-			{
-				if (!db.TableExists<PTN01>())
-				{
-					db.CreateTable<PTN01>();
-				}
+        /// <summary>
+        /// Prepares object as our need
+        /// </summary>
+        /// <param name="objPTN01">Object of class PTN01</param>
+        /// <param name="objUSR01">Object of class USR01</param>
+        /// <returns>Prepared object</returns>
+        public PTN01 preSave(PTN01 objPTN01, USR01 objUSR01)
+        {
+            objPTN01.N01F05 = objUSR01.R01F01;
 
-				var dieases = db.SingleById<DIS01>(objPTN01.N01F04);
-				var user = db.SingleById<USR01>(objPTN01.N01F05);
-				var patient = db.Select<PTN01>().FirstOrDefault(x => x.N01F05 == objPTN01.N01F05);
+            return objPTN01;
+        }
 
-				if (patient != null && patient == objPTN01)
-				{
-					return "User already exist";
-				}
-				else if (patient != null)
-				{
-					db.Update(objPTN01, u => u.N01F01 == objPTN01.N01F01);
-					return "Success!";
-				}
+        /// <summary>
+        /// Validates given object
+        /// </summary>
+        /// <param name="objPTN01">Object of class PTN01</param>
+        /// <returns>True if object is valid and false otherwise</returns>
+        public bool validationInsert(PTN01 objPTN01)
+        {
+            using (var db = _dbFactory.OpenDbConnection())
+            {
+                if (!db.TableExists<PTN01>())
+                {
+                    db.CreateTable<PTN01>();
+                }
 
-				if(dieases == null || user == null)
-				{
-					return "Enter data with valid refrences";
-				}
-				db.Insert(objPTN01);
+                var dieases = db.SingleById<DIS01>(objPTN01.N01F04);
+                var user = db.SingleById<USR01>(objPTN01.N01F05);
 
-				return "Success!";
-			}
-		}
+                if (dieases != null && user == null)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
 
-		/// <summary>
-		/// Update patient
-		/// </summary>
-		/// <param name="objPTN01">object of PTN01 class</param>
-		/// <returns>Appropriate Message</returns>
-		public string Update(PTN01 objPTN01)
-		{
-			try
-			{
-				using (var db = _dbFactory.OpenDbConnection())
-				{
-					if (!db.TableExists<PTN01>())
-					{
-						db.CreateTable<PTN01>();
-						return "No records to be updated!";
-					}
+        /// <summary>
+        /// Validates given object
+        /// </summary>
+        /// <param name="objPTN01">Object of class PTN01</param>
+        /// <returns>True if object is valid and false otherwise</returns>
+        public bool validationUpdate(PTN01 objPTN01)
+        {
+            using (var db = _dbFactory.OpenDbConnection())
+            {
+                if (!db.TableExists<PTN01>())
+                {
+                    db.CreateTable<PTN01>();
+                }
 
-					var dieases = db.SingleById<DIS01>(objPTN01.N01F04);
-					var user = db.SingleById<USR01>(objPTN01.N01F05);
+                var dieases = db.SingleById<DIS01>(objPTN01.N01F04);
+                var user = db.SingleById<USR01>(objPTN01.N01F05);
 
-					if (dieases == null || user == null)
-					{
-						return "Enter data with valid refrences";
-					}
+                if (dieases != null && user != null)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
 
-					int rowsAffected = db.Update(objPTN01, u => u.N01F01 == objPTN01.N01F01);
+        /// <summary>
+        /// Insert patient
+        /// </summary>
+        /// <param name="objPTN01">object of PTN01 class</param>
+        /// <returns>Appropriate Message</returns>
+        public string Insert(PTN01 objPTN01)
+        {
+            try
+            {
+                using (var db = _dbFactory.OpenDbConnection())
+                {
+                    if (!db.TableExists<PTN01>())
+                    {
+                        db.CreateTable<PTN01>();
+                    }
 
-					if (rowsAffected > 0)
-						return "Success!";
-					else
-						return "No records updated!";
-				}
-			}
-			catch (Exception ex)
-			{
-				// Log the exception or handle it appropriately
-				return $"Error: {ex.Message}";
-			}
-		}
+                    db.Insert(objPTN01);
 
+                    return "Success!";
+                }
+            }
+            catch (Exception ex)
+            {
+                return $"Error: {ex.Message}";
+            }
+        }
 
-		/// <summary>
-		/// Select data from PTN01
-		/// </summary>
-		/// <returns>Serialized string or appropriate message</returns>
-		public List<PTN01> Select()
-		{
-			List<PTN01> lstPTN01 = new List<PTN01>();
+        /// <summary>
+        /// Update patient
+        /// </summary>
+        /// <param name="objPTN01">object of PTN01 class</param>
+        /// <returns>Appropriate Message</returns>
+        public string Update(PTN01 objPTN01)
+        {
+            try
+            {
+                using (var db = _dbFactory.OpenDbConnection())
+                {
+                    if (!db.TableExists<PTN01>())
+                    {
+                        db.CreateTable<PTN01>();
+                        return "No records to be updated!";
+                    }
 
-			using (var db = _dbFactory.OpenDbConnection())
-			{
-				if (!db.TableExists<PTN01>())
-				{
-					db.CreateTable<PTN01>();
-				}
+                    db.Update(objPTN01, u => u.N01F01 == objPTN01.N01F01);
 
-				lstPTN01 = db.Select<PTN01>();
+                    return "Success!";
 
-				BLUser.CacheOperations("Patients", lstPTN01);
+                }
+            }
+            catch (Exception ex)
+            {
+                return $"Error: {ex.Message}";
+            }
+        }
 
-				return lstPTN01;
-			}
-		}
+        /// <summary>
+        /// Disable activation of doctor
+        /// </summary>
+        /// <param name="objSTF01">object of STF01 class</param>
+        /// <returns>Appropriate Message</returns>
+        public string Delete(PTN01 objPTN01)
+        {
+            try
+            {
+                objPTN01.N01F06 = false;
+
+                Update(objPTN01);
+
+                return "Success!";
+            }
+            catch (Exception ex)
+            {
+                return $"Error: {ex.Message}";
+            }
+        }
+
+        /// <summary>
+        /// Select data from PTN01
+        /// </summary>
+        /// <returns>Serialized string or appropriate message</returns>
+        public List<PTN01> Select()
+        {
+            try
+            {
+                using (var db = _dbFactory.OpenDbConnection())
+                {
+                    if (!db.TableExists<PTN01>())
+                    {
+                        db.CreateTable<PTN01>();
+                    }
+
+                    List<PTN01> lstPTN01 = db.Select<PTN01>();
+
+                    BLUser.CacheOperations("Patients", lstPTN01);
+
+                    return lstPTN01;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
         /// <summary>
         /// Generates patient's charges details
@@ -161,7 +228,7 @@ namespace HospitalAdvance.BusinessLogic
         /// <returns>List o object</returns>
         public dynamic GetMyRecipt(USR01 user)
         {
-			return _objDL.GetMyRecipt(user);
+            return _objDL.GetMyRecipt(user);
         }
 
         /// <summary>
@@ -169,132 +236,135 @@ namespace HospitalAdvance.BusinessLogic
         /// </summary>
         /// <returns>Appropriate Message</returns>
         public string WriteData()
-		{
-			using (StreamWriter sw = new StreamWriter(path))
-			{
-				var lstPTN01 = Select();
-				using (var db = _dbFactory.OpenDbConnection())
-				{
-					sw.WriteLine("Patient id, Patient name, Patient mobile number, Dieases name, User id, IsActive");
-					foreach (var obj in lstPTN01)
-			  		{
-						var diease = db.SingleById<DIS01>(obj.N01F04).S01F02;
-						if (diease != null)
-						{
-							sw.Write(obj.N01F01 + ", ");
-							sw.Write(obj.N01F02 + ", ");
-							sw.Write(obj.N01F03 + ", ");
-							sw.Write(diease + ", ");
-							sw.Write(obj.N01F05 + ", ");
-							sw.Write(obj.N01F06);
-							sw.WriteLine();
-						}
-					}
-				}
-			}
-			return "File created successfully 🙌";
-		}
+        {
+            using (StreamWriter sw = new StreamWriter(path))
+            {
+                var lstPTN01 = Select();
+                using (var db = _dbFactory.OpenDbConnection())
+                {
+                    sw.WriteLine("Patient id, Patient name, Patient mobile number, Dieases name, User id, IsActive");
 
-		/// <summary>
-		/// Selects data from database and Writes data into file of current user
-		/// </summary>
-		/// <returns>Appropriate Message</returns>
-		public string WriteMyFile(USR01 user)
-		{
-			string newPath = path.Replace(DateTime.Now.ToShortDateString(), user.R01F02 + DateTime.Now.ToShortDateString());
+                    foreach (var obj in lstPTN01)
+                    {
+                        var diease = db.SingleById<DIS01>(obj.N01F04).S01F02;
 
-			using (StreamWriter sw = new StreamWriter(newPath))
-			{
-				using (var db = _dbFactory.OpenDbConnection())
-				{
-					sw.WriteLine("Patient id, Patient name, Patient mobile number, Dieases name, User id, IsActive");
-					var obj = Select().FirstOrDefault(x => x.N01F05 == user.R01F01);
-					if(obj != null)
-					{
-						var diease = db.SingleById<DIS01>(obj.N01F04).S01F02;
-						if (diease != null)
-						{
-							sw.Write(obj.N01F01 + ", ");
-							sw.Write(obj.N01F02 + ", ");
-							sw.Write(obj.N01F03 + ", ");
-							sw.Write(diease + ", ");
-							sw.Write(obj.N01F05 + ", ");
-							sw.Write(obj.N01F06);
-							sw.WriteLine();
-						}
-					}
-				}
-			}
-			return "File created successfully 🙌";
-		}
+                        sw.Write(obj.N01F01 + ", ");
+                        sw.Write(obj.N01F02 + ", ");
+                        sw.Write(obj.N01F03 + ", ");
+                        sw.Write(diease + ", ");
+                        sw.Write(obj.N01F05 + ", ");
+                        sw.Write(obj.N01F06);
+                        sw.WriteLine();
 
-		/// <summary>
-		/// Download file
-		/// </summary>
-		/// <returns>HttpResponseMessage with file</returns>
-		public HttpResponseMessage DownloadMyFile(USR01 user)
-		{
-			var newPath = path.Replace(DateTime.Now.ToShortDateString(), user.R01F02 + DateTime.Now.ToShortDateString());
-			// Check if the file exists
-			if (!File.Exists(newPath))
-			{
-				return new HttpResponseMessage(HttpStatusCode.NotFound);
-			}
+                    }
+                }
+            }
 
-			// Create a response message
-			HttpResponseMessage response = new HttpResponseMessage(HttpStatusCode.OK);
+            return "File created successfully 🙌";
+        }
 
-			// Read the file into a byte array
-			byte[] fileBytes = File.ReadAllBytes(newPath);
+        /// <summary>
+        /// Selects data from database and Writes data into file of current user
+        /// </summary>
+        /// <returns>Appropriate Message</returns>
+        public string WriteMyFile(USR01 user)
+        {
+            string newPath = path.Replace(DateTime.Now.ToShortDateString(), user.R01F02 + DateTime.Now.ToShortDateString());
 
-			// Create a content stream from the byte array
-			response.Content = new ByteArrayContent(fileBytes);
+            using (StreamWriter sw = new StreamWriter(newPath))
+            {
+                using (var db = _dbFactory.OpenDbConnection())
+                {
+                    sw.WriteLine("Patient id, Patient name, Patient mobile number, Dieases name, User id, IsActive");
 
-			// Set the content type based on the file extension
-			response.Content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/octet-stream");
+                    var obj = Select().FirstOrDefault(x => x.N01F05 == user.R01F01);
 
-			// Set the content disposition header to force a download
-			response.Content.Headers.ContentDisposition = new System.Net.Http.Headers.ContentDispositionHeaderValue("attachment")
-			{
-				FileName = "Downloaded-Patient-" + Path.GetFileName(newPath)
-			};
+                    if (obj != null)
+                    {
+                        var diease = db.SingleById<DIS01>(obj.N01F04).S01F02;
 
-			return response;
-		}
+                        sw.Write(obj.N01F01 + ", ");
+                        sw.Write(obj.N01F02 + ", ");
+                        sw.Write(obj.N01F03 + ", ");
+                        sw.Write(diease + ", ");
+                        sw.Write(obj.N01F05 + ", ");
+                        sw.Write(obj.N01F06);
+                        sw.WriteLine();
 
-		/// <summary>
-		/// Download file
-		/// </summary>
-		/// <returns>HttpResponseMessage with file</returns>
-		public HttpResponseMessage Download()
-		{
-			// Check if the file exists
-			if (!File.Exists(path))
-			{
-				return new HttpResponseMessage(HttpStatusCode.NotFound);
-			}
+                    }
+                }
+            }
+            return "File created successfully 🙌";
+        }
 
-			// Create a response message
-			HttpResponseMessage response = new HttpResponseMessage(HttpStatusCode.OK);
+        /// <summary>
+        /// Download file
+        /// </summary>
+        /// <returns>HttpResponseMessage with file</returns>
+        public HttpResponseMessage DownloadMyFile(USR01 user)
+        {
+            var newPath = path.Replace(DateTime.Now.ToShortDateString(), user.R01F02 + DateTime.Now.ToShortDateString());
+            // Check if the file exists
+            if (!File.Exists(newPath))
+            {
+                return new HttpResponseMessage(HttpStatusCode.NotFound);
+            }
 
-			// Read the file into a byte array
-			byte[] fileBytes = File.ReadAllBytes(path);
+            // Create a response message
+            HttpResponseMessage response = new HttpResponseMessage(HttpStatusCode.OK);
 
-			// Create a content stream from the byte array
-			response.Content = new ByteArrayContent(fileBytes);
+            // Read the file into a byte array
+            byte[] fileBytes = File.ReadAllBytes(newPath);
 
-			// Set the content type based on the file extension
-			response.Content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/octet-stream");
+            // Create a content stream from the byte array
+            response.Content = new ByteArrayContent(fileBytes);
 
-			// Set the content disposition header to force a download
-			response.Content.Headers.ContentDisposition = new System.Net.Http.Headers.ContentDispositionHeaderValue("attachment")
-			{
-				FileName = "Downloaded-Patients" + Path.GetFileName(path)
-			};
+            // Set the content type based on the file extension
+            response.Content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/octet-stream");
 
-			return response;
-		}
+            // Set the content disposition header to force a download
+            response.Content.Headers.ContentDisposition = new System.Net.Http.Headers.ContentDispositionHeaderValue("attachment")
+            {
+                FileName = "Downloaded-Patient-" + Path.GetFileName(newPath)
+            };
 
-		#endregion
-	}
+            return response;
+        }
+
+        /// <summary>
+        /// Download file
+        /// </summary>
+        /// <returns>HttpResponseMessage with file</returns>
+        public HttpResponseMessage Download()
+        {
+            // Check if the file exists
+            if (!File.Exists(path))
+            {
+                return new HttpResponseMessage(HttpStatusCode.NotFound);
+            }
+
+            // Create a response message
+            HttpResponseMessage response = new HttpResponseMessage(HttpStatusCode.OK);
+
+            // Read the file into a byte array
+            byte[] fileBytes = File.ReadAllBytes(path);
+
+            // Create a content stream from the byte array
+            response.Content = new ByteArrayContent(fileBytes);
+
+            // Set the content type based on the file extension
+            response.Content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/octet-stream");
+
+            // Set the content disposition header to force a download
+            response.Content.Headers.ContentDisposition = new System.Net.Http.Headers.ContentDispositionHeaderValue("attachment")
+            {
+                FileName = "Downloaded-Patients" + Path.GetFileName(path)
+            };
+
+            return response;
+        }
+
+        #endregion
+
+    }
 }

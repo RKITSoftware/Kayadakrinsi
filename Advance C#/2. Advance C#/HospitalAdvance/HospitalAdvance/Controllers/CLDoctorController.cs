@@ -10,6 +10,7 @@ namespace HospitalAdvance.Controllers
 {
 	public class CLDoctorController : ApiController
     {
+
 		#region Public Members
 
 		/// <summary>
@@ -41,13 +42,15 @@ namespace HospitalAdvance.Controllers
 			stopwatch = Stopwatch.StartNew();
 		}
 
-		#endregion
+        #endregion
 
-		/// <summary>
-		/// Displays doctors information
-		/// </summary>
-		/// <returns>List of doctors</returns>
-		[HttpGet]
+        #region Public Methods
+
+        /// <summary>
+        /// Displays doctors information
+        /// </summary>
+        /// <returns>List of doctors</returns>
+        [HttpGet]
 		[BearerAuthentication]
 		[Authorize(Roles = "Manager,doctor")]
 		[Route("api/CLDoctor/GetDoctors")]
@@ -128,7 +131,14 @@ namespace HospitalAdvance.Controllers
 		[Route("api/CLDoctor/UpdateDoctors")]
 		public IHttpActionResult UpdateDoctors(STF01 objSTF01) 
 		{ 
-			return Ok(objBLDoctor.Update(objSTF01));
+			if(objBLDoctor.validationUpdate(objSTF01))
+			{
+				return Ok(objBLDoctor.Update(objSTF01));
+			}
+			return BadRequest("Not found");
 		}
-	}
+
+        #endregion
+
+    }
 }

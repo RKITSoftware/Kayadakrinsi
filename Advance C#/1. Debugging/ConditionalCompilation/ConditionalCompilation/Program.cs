@@ -30,5 +30,5 @@ namespace ConditionalCompilation
             Console.WriteLine("Release version");
 #endif
         }
-    }
+    }  
 }
