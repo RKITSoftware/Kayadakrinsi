@@ -13,3 +13,18 @@ F:\Krinsi - 379\Training\Advance C#\2. Advance C#\TpesClass\Abstract\obj\Debug\n
 F:\Krinsi - 379\Training\Advance C#\2. Advance C#\TpesClass\Abstract\obj\Debug\net6.0\Abstract.pdb
 F:\Krinsi - 379\Training\Advance C#\2. Advance C#\TpesClass\Abstract\obj\Debug\net6.0\Abstract.genruntimeconfig.cache
 F:\Krinsi - 379\Training\Advance C#\2. Advance C#\TpesClass\Abstract\obj\Debug\net6.0\ref\Abstract.dll
+F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\TpesClass\Abstract\bin\Debug\net6.0\Abstract.exe
+F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\TpesClass\Abstract\bin\Debug\net6.0\Abstract.deps.json
+F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\TpesClass\Abstract\bin\Debug\net6.0\Abstract.runtimeconfig.json
+F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\TpesClass\Abstract\bin\Debug\net6.0\Abstract.dll
+F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\TpesClass\Abstract\bin\Debug\net6.0\Abstract.pdb
+F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\TpesClass\Abstract\obj\Debug\net6.0\Abstract.csproj.AssemblyReference.cache
+F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\TpesClass\Abstract\obj\Debug\net6.0\Abstract.GeneratedMSBuildEditorConfig.editorconfig
+F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\TpesClass\Abstract\obj\Debug\net6.0\Abstract.AssemblyInfoInputs.cache
+F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\TpesClass\Abstract\obj\Debug\net6.0\Abstract.AssemblyInfo.cs
+F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\TpesClass\Abstract\obj\Debug\net6.0\Abstract.csproj.CoreCompileInputs.cache
+F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\TpesClass\Abstract\obj\Debug\net6.0\Abstract.dll
+F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\TpesClass\Abstract\obj\Debug\net6.0\refint\Abstract.dll
+F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\TpesClass\Abstract\obj\Debug\net6.0\Abstract.pdb
+F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\TpesClass\Abstract\obj\Debug\net6.0\Abstract.genruntimeconfig.cache
+F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\TpesClass\Abstract\obj\Debug\net6.0\ref\Abstract.dll

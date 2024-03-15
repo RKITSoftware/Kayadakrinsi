@@ -1,0 +1,43 @@
+Doctor id, Doctor name, Doctor qualification, Working days, User id of doctor, IsActive
+[
+  {
+    "F01F01": 1,
+    "F01F02": "kunal patil",
+    "F01F03": "MBBS",
+    "F01F04": 4,
+    "F01F05": 2,
+    "F01F06": false
+  },
+  {
+    "F01F01": 2,
+    "F01F02": "praful arora",
+    "F01F03": "BAMS",
+    "F01F04": 62,
+    "F01F05": 3,
+    "F01F06": true
+  },
+  {
+    "F01F01": 3,
+    "F01F02": "rajesh sinha",
+    "F01F03": "BDS",
+    "F01F04": 65,
+    "F01F05": 4,
+    "F01F06": true
+  },
+  {
+    "F01F01": 4,
+    "F01F02": "kirit kanani",
+    "F01F03": "BUMS",
+    "F01F04": 62,
+    "F01F05": 9,
+    "F01F06": true
+  },
+  {
+    "F01F01": 5,
+    "F01F02": "sujata agarwal",
+    "F01F03": "BYNS",
+    "F01F04": 12,
+    "F01F05": 10,
+    "F01F06": true
+  }
+]

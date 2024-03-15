@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Krinsi - 379\\Training\\Advance C#\\2. Advance C#\\ExtentionMethods\\CallerExtentionMethod\\CallerExtentionMethod\\CallerExtentionMethod.csproj",
+      "projectUniqueName": "F:\\Krinsi - 379\\New folder\\Advance C#\\2. Advance C#\\ExtentionMethods\\CallerExtentionMethod\\CallerExtentionMethod\\CallerExtentionMethod.csproj",
       "projectName": "CallerExtentionMethod",
-      "projectPath": "F:\\Krinsi - 379\\Training\\Advance C#\\2. Advance C#\\ExtentionMethods\\CallerExtentionMethod\\CallerExtentionMethod\\CallerExtentionMethod.csproj",
+      "projectPath": "F:\\Krinsi - 379\\New folder\\Advance C#\\2. Advance C#\\ExtentionMethods\\CallerExtentionMethod\\CallerExtentionMethod\\CallerExtentionMethod.csproj",
       "packagesPath": "C:\\Users\\krinsi.k\\.nuget\\packages\\",
-      "outputPath": "F:\\Krinsi - 379\\Training\\Advance C#\\2. Advance C#\\ExtentionMethods\\CallerExtentionMethod\\CallerExtentionMethod\\obj\\",
+      "outputPath": "F:\\Krinsi - 379\\New folder\\Advance C#\\2. Advance C#\\ExtentionMethods\\CallerExtentionMethod\\CallerExtentionMethod\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\krinsi.k\\AppData\\Roaming\\NuGet\\NuGet.Config",

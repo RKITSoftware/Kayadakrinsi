@@ -1,13 +1,9 @@
+using System.Collections.Generic;
 using System.Web.Http;
-using WebActivatorEx;
+using System.Web.Http.Description;
 using FileSystem;
 using Swashbuckle.Application;
 using Swashbuckle.Swagger;
-using System.Collections.Generic;
-using System.Web.Http.Description;
-using System.Linq;
-using System.Web;
-using Microsoft.OpenApi.Models;
 
 [assembly: System.Web.PreApplicationStartMethod(typeof(SwaggerConfig), "Register")]
 

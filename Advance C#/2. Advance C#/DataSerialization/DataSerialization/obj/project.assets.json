@@ -82,11 +82,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Krinsi - 379\\Training\\Advance C#\\2. Advance C#\\DataSerialization\\DataSerialization\\DataSerialization.csproj",
+      "projectUniqueName": "F:\\Krinsi - 379\\New folder\\Advance C#\\2. Advance C#\\DataSerialization\\DataSerialization\\DataSerialization.csproj",
       "projectName": "DataSerialization",
-      "projectPath": "F:\\Krinsi - 379\\Training\\Advance C#\\2. Advance C#\\DataSerialization\\DataSerialization\\DataSerialization.csproj",
+      "projectPath": "F:\\Krinsi - 379\\New folder\\Advance C#\\2. Advance C#\\DataSerialization\\DataSerialization\\DataSerialization.csproj",
       "packagesPath": "C:\\Users\\krinsi.k\\.nuget\\packages\\",
-      "outputPath": "F:\\Krinsi - 379\\Training\\Advance C#\\2. Advance C#\\DataSerialization\\DataSerialization\\obj\\",
+      "outputPath": "F:\\Krinsi - 379\\New folder\\Advance C#\\2. Advance C#\\DataSerialization\\DataSerialization\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\krinsi.k\\AppData\\Roaming\\NuGet\\NuGet.Config",

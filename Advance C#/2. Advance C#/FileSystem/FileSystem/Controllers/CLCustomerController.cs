@@ -9,10 +9,10 @@ using FileSystem.Models;
 
 namespace FileSystem.Controllers
 {
-	/// <summary>
-	/// Handles HTTP request for customers
-	/// </summary>
-	public class CLCustomerController : ApiController
+    /// <summary>
+    /// Handles HTTP request for customers
+    /// </summary>
+    public class CLCustomerController : ApiController
 	{
 		/// <summary>
 		/// Decalres object of clas BLCustomer
@@ -150,7 +150,8 @@ namespace FileSystem.Controllers
 							destinationPath = Path.Combine(root, uniqueFileName);
 						}
 
-						// Move the file from the temporary location to the desired location
+						// Move the file from the temporary location to the desired location (doesn't cut file from original location)
+						// Copy file saves file with original name and body_part....  
 						File.Move(localFileName, destinationPath);
 
 					}

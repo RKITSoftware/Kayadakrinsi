@@ -17,7 +17,7 @@ public class Program
     /// <summary>
     /// Encrypts plaintext, Decrypts ciphertext and prints the results using DES
     /// </summary>
-    public static void CryptographyUsingAES()
+    public void CryptographyUsingAES()
     {
         Aes objAES = Aes.Create(); 
         objAES.KeySize = 256; // key size
@@ -49,7 +49,7 @@ public class Program
     /// <summary>
     /// Encrypts plaintext, Decrypts ciphertext and prints the results using AES
     /// </summary>
-    public static void CryptographyUsingDES()
+    public void CryptographyUsingDES()
     {
         DES objDES = DES.Create();
 
@@ -81,7 +81,7 @@ public class Program
     /// <summary>
     /// Encrypts plaintext, Decrypts ciphertext and prints the results using RSA
     /// </summary>
-    public static void CryptographyUsingRSA()
+    public void CryptographyUsingRSA()
     {
         RSACryptoServiceProvider RSA = new RSACryptoServiceProvider();
 
@@ -103,7 +103,7 @@ public class Program
     /// <param name="RSAKeyInfo">key information</param>
     /// <param name="DoOAEPPadding">weather to add padding or not</param>
     /// <returns></returns>
-    public static byte[] RSAEncryption(byte[] DataToEncrypt, RSAParameters RSAKeyInfo, bool DoOAEPPadding)
+    public byte[] RSAEncryption(byte[] DataToEncrypt, RSAParameters RSAKeyInfo, bool DoOAEPPadding)
     {
         try
         {
@@ -130,7 +130,7 @@ public class Program
     /// <param name="RSAKeyInfo">key information</param>
     /// <param name="DoOAEPPadding">weather to add padding or not</param>
     /// <returns></returns>
-    public static byte[] RSADecryption(byte[] DataToDecrypt, RSAParameters RSAKeyInfo, bool DoOAEPPadding)
+    public byte[] RSADecryption(byte[] DataToDecrypt, RSAParameters RSAKeyInfo, bool DoOAEPPadding)
     {
         try
         {
@@ -156,12 +156,16 @@ public class Program
     /// <param name="args"></param>
     public static void Main(string[] args)
     {
+        Program obj = new Program();
+
         Console.WriteLine("\nAdvance data Encryption standard...");
-        CryptographyUsingAES();
+        obj.CryptographyUsingAES();
+
         Console.WriteLine("\nData Encryption standard...");
-        CryptographyUsingDES();
+        obj.CryptographyUsingDES();
+
         Console.WriteLine("\nRSA...");
-        CryptographyUsingRSA();
+        obj.CryptographyUsingRSA();
     }
 
     #endregion

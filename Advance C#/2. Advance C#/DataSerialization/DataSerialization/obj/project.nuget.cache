@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WLQoMQ6WNuigIVq5g2WcZIwkYgdtIkkSgDCNHgjZ3pQX49XzJgmkWuUqzozSgq/gRMHL4KDSeuxBztOI4LwAQg==",
+  "dgSpecHash": "idEC2miVWTp+MuWf5cVzQlbbBRv0aJ6n6l7INBScL1F9q3/H54i2vAAmdyRndlX7AyhFmiaObzE09G7MmwAI+A==",
   "success": true,
-  "projectFilePath": "F:\\Krinsi - 379\\Training\\Advance C#\\2. Advance C#\\DataSerialization\\DataSerialization\\DataSerialization.csproj",
+  "projectFilePath": "F:\\Krinsi - 379\\New folder\\Advance C#\\2. Advance C#\\DataSerialization\\DataSerialization\\DataSerialization.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\krinsi.k\\.nuget\\packages\\json.net\\1.0.33\\json.net.1.0.33.nupkg.sha512",
     "C:\\Users\\krinsi.k\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"

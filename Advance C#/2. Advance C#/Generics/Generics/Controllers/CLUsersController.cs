@@ -9,13 +9,18 @@ namespace Generics.Controllers
     public class CLUsersController : ApiController
     {
         /// <summary>
+        /// Creates object of class BLUsers
+        /// </summary>
+        public BLUsers objBLUsers = new BLUsers();
+
+        /// <summary>
         /// Gets users data
         /// </summary>
         /// <returns>List of users</returns>
         [HttpGet]
         [Route("api/CLUsers/GetUsers")]
         public IHttpActionResult GetUsers() {
-            return Ok(BLUsers.Users());
+            return Ok(objBLUsers.Users());
         }
 
         /// <summary>
@@ -26,7 +31,7 @@ namespace Generics.Controllers
         [Route("api/CLUsers/GetAdmins")]
         public IHttpActionResult GetAdmins()
         {
-            return Ok(BLUsers.Admins());
+            return Ok(objBLUsers.Admins());
         }
         
         /// <summary>
@@ -37,7 +42,7 @@ namespace Generics.Controllers
         [Route("api/CLUsers/GetAllUsers")]
         public IHttpActionResult GetAllUsers()
         {
-            return Ok(BLUsers.AllUsers());
+            return Ok(objBLUsers.AllUsers());
         }
     }
 }

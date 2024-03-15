@@ -18,7 +18,7 @@ namespace Generics.BusinessLogic
         /// Add users
         /// </summary>
         /// <returns>List of users</returns>
-        public static GenericClass<object> Users()
+        public GenericClass<object> Users()
         {
             GenericClass<object> lstUsers = new GenericClass<object>();
             lstUsers.AddItem(new USR01 {R01F01 = 0, R01F02 = "sonu", R01F03 = "sood", R01F04 = "user" });
@@ -31,7 +31,7 @@ namespace Generics.BusinessLogic
         /// Add admins
         /// </summary>
         /// <returns>List of admins</returns>
-        public static GenericClass<object> Admins()
+        public GenericClass<object> Admins()
         {
             GenericClass<object> lstAdmins = new GenericClass<object>();
             lstAdmins.AddItem(new ADM01 { M01F01 = 0, M01F02 = "priyanka", M01F03 = "chopara", M01F04 = "admin" });
@@ -44,7 +44,7 @@ namespace Generics.BusinessLogic
         /// Combines users
         /// </summary>
         /// <returns>List of all users</returns>
-        public static GenericClass<object> AllUsers()
+        public GenericClass<object> AllUsers()
         {
             GenericClass<object> lstAllUsers = new GenericClass<object>();
             lstAllUsers = Users();

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Krinsi - 379\\Training\\Advance C#\\2. Advance C#\\TpesClass\\Abstract\\Abstract.csproj": {}
+    "F:\\Krinsi - 379\\New folder\\Advance C#\\2. Advance C#\\TpesClass\\Abstract\\Abstract.csproj": {}
   },
   "projects": {
-    "F:\\Krinsi - 379\\Training\\Advance C#\\2. Advance C#\\TpesClass\\Abstract\\Abstract.csproj": {
+    "F:\\Krinsi - 379\\New folder\\Advance C#\\2. Advance C#\\TpesClass\\Abstract\\Abstract.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Krinsi - 379\\Training\\Advance C#\\2. Advance C#\\TpesClass\\Abstract\\Abstract.csproj",
+        "projectUniqueName": "F:\\Krinsi - 379\\New folder\\Advance C#\\2. Advance C#\\TpesClass\\Abstract\\Abstract.csproj",
         "projectName": "Abstract",
-        "projectPath": "F:\\Krinsi - 379\\Training\\Advance C#\\2. Advance C#\\TpesClass\\Abstract\\Abstract.csproj",
+        "projectPath": "F:\\Krinsi - 379\\New folder\\Advance C#\\2. Advance C#\\TpesClass\\Abstract\\Abstract.csproj",
         "packagesPath": "C:\\Users\\krinsi.k\\.nuget\\packages\\",
-        "outputPath": "F:\\Krinsi - 379\\Training\\Advance C#\\2. Advance C#\\TpesClass\\Abstract\\obj\\",
+        "outputPath": "F:\\Krinsi - 379\\New folder\\Advance C#\\2. Advance C#\\TpesClass\\Abstract\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\krinsi.k\\AppData\\Roaming\\NuGet\\NuGet.Config",

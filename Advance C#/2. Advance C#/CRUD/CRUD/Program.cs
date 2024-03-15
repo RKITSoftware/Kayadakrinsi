@@ -1,6 +1,9 @@
 ﻿using CRUD;
 using MySql.Data.MySqlClient;
 
+/// <summary>
+/// Contains main method and logic
+/// </summary>
 public class Program
 {
     #region Private Members
@@ -86,7 +89,7 @@ public class Program
                            D01F05 DECIMAL(10,2) COMMENT 'price'
                         )");
 
-        if (this.OpenConnection() == true)
+        if (OpenConnection() == true)
         {
             //create command and assign the query and connection from the constructor
             MySqlCommand command = new MySqlCommand(query, _connection);
@@ -96,7 +99,7 @@ public class Program
             Console.WriteLine("TABLE ok");
 
             //close connection
-            this.CloseConnection();
+            CloseConnection();
         }
     }
 
@@ -112,7 +115,7 @@ public class Program
                         "VALUES" +
                             $"({objORD01.D01F02},'{objORD01.D01F03}',{objORD01.D01F04},{objORD01.D01F05})";
 
-        if (this.OpenConnection() == true)
+        if (OpenConnection() == true)
         {
             //create command and assign the query and connection from the constructor
             MySqlCommand command = new MySqlCommand(query, _connection);
@@ -122,7 +125,7 @@ public class Program
             Console.WriteLine("INSERT ok");
 
             //close connection
-            this.CloseConnection();
+            CloseConnection();
         }
     }
 
@@ -134,7 +137,7 @@ public class Program
         string query = "UPDATE ORD01 SET D01F02=10 WHERE D01F03='CHOCOLATE'";
 
         //Open connection
-        if (this.OpenConnection() == true)
+        if (OpenConnection() == true)
         {
             //create mysql command
             MySqlCommand command = new MySqlCommand();
@@ -147,7 +150,7 @@ public class Program
             command.ExecuteNonQuery();
 
             //close connection
-            this.CloseConnection();
+            CloseConnection();
         }
     }
 
@@ -158,11 +161,11 @@ public class Program
     {
         string query = "DELETE FROM ORD01 WHERE D01F01=1";
 
-        if (this.OpenConnection() == true)
+        if (OpenConnection() == true)
         {
             MySqlCommand command = new MySqlCommand(query, _connection);
             command.ExecuteNonQuery();
-            this.CloseConnection();
+            CloseConnection();
         }
     }
 
@@ -174,7 +177,7 @@ public class Program
         string query = "SELECT * FROM ORD01";
 
         //Open connection
-        if (this.OpenConnection() == true)
+        if (OpenConnection() == true)
         {
             //Create Command
             MySqlCommand command = new MySqlCommand(query, _connection);
@@ -191,7 +194,7 @@ public class Program
             dataReader.Close();
 
             //close Connection
-            this.CloseConnection();
+            CloseConnection();
         }
     }
 
@@ -201,26 +204,36 @@ public class Program
     public void Drop()
     {
         string query = "DROP TABLE ORD01";
-        if(this.OpenConnection() == true)
+        if(OpenConnection() == true)
         {
             MySqlCommand command = new MySqlCommand(query,_connection); 
             command.ExecuteNonQuery();
-            this.CloseConnection();
+            CloseConnection();
         }
     }
 
     #endregion
 
+    /// <summary>
+    /// Driver code
+    /// </summary>
+    /// <param name="args"></param>
     public static void Main(string[] args)
     {
        var objProgram = new Program();
+
         objProgram.CreateTable();
+
         objProgram.Insert(new ORD01 { D01F02 = 11, D01F03 = "CHOCOLATE", D01F04 = 5, D01F05 = 25.5 });
         objProgram.Insert(new ORD01 { D01F02 = 23, D01F03 = "BOOK", D01F04 = 2, D01F05 = 60 });
         objProgram.Insert(new ORD01 { D01F02 = 02, D01F03 = "SHOES", D01F04 = 1, D01F05 = 1000 });
+
         objProgram.Select();
+
         objProgram.Update();
+
         objProgram.Delete();
+
         objProgram.Drop();
     }
 

@@ -1,77 +1,74 @@
-﻿public class Flower
+﻿namespace LinQList
 {
     /// <summary>
-    /// Name of flower
+    /// Contains logic and main method
     /// </summary>
-    public string Name { get; set; }
-
-    /// <summary>
-    /// Color of flower
-    /// </summary>
-    public string Color { get; set; }
-
-    /// <summary>
-    /// List of flowers
-    /// </summary>
-    public static List<Flower> lstFlower = new List<Flower>
+    internal class Program
     {
-            new Flower{Name = "Rose",Color = "Red" },
-            new Flower{Name = "Tulip",Color = "Pruple"},
-            new Flower{Name = "Marie Gold",Color = "Yellow"},
-            new Flower{Name = "Tulip",Color = "Yellow"},
-            new Flower{Name = "Rose",Color = "Pink"},
-            new Flower{Name = "Tulip",Color = "Pink"},
-            new Flower{Name = "Lotus",Color = "Pink"}
-    };
-
-    /// <summary>
-    /// Prints flower whoose color is given
-    /// </summary>
-    /// <param name="color">color of floweer</param>
-    public static void QueryColorFlower(string color)
-    {
-        var colorFlower = from flower in lstFlower
-                         where flower.Color == color
-                         select flower;
-        foreach (var flower in colorFlower)
+        /// <summary>
+        /// List of flowers
+        /// </summary>
+        public static List<Flower> lstFlower = new List<Flower>
         {
-            Console.WriteLine($"Name : {flower.Name}, Color : {flower.Color}");
-        }
-    }
+                new Flower{Name = "Rose",Color = "Red" },
+                new Flower{Name = "Tulip",Color = "Pruple"},
+                new Flower{Name = "Marie Gold",Color = "Yellow"},
+                new Flower{Name = "Tulip",Color = "Yellow"},
+                new Flower{Name = "Rose",Color = "Pink"},
+                new Flower{Name = "Tulip",Color = "Pink"},
+                new Flower{Name = "Lotus",Color = "Pink"}
+        };
 
-    /// <summary>
-    /// Prints sorted flower by flower name length and then color(thenby)
-    /// </summary>
-    public static void QuerySort()
-    {
-        var data = from flower in lstFlower
-                   orderby flower.Name.Length,flower.Color descending
-                   select flower;
-        foreach (var flower in data)
+        /// <summary>
+        /// Prints flower whoose color is given
+        /// </summary>
+        /// <param name="color">color of floweer</param>
+        public void QueryColorFlower(string color)
         {
-            Console.WriteLine($"Name : {flower.Name}, Color : {flower.Color}");
+            var colorFlower = from flower in lstFlower
+                              where flower.Color == color
+                              select flower;
+            foreach (var flower in colorFlower)
+            {
+                Console.WriteLine($"Name : {flower.Name}, Color : {flower.Color}");
+            }
         }
-    }
-    private static void Main(string[] args)
-    {
-        // Query color
-        QueryColorFlower("Yellow");
 
-        // Sorting then by
-        QuerySort();
-        
-        // Element at
-        Console.WriteLine($"Element at 1 : {lstFlower.ElementAt(1).Name}");
+        /// <summary>
+        /// Prints sorted flower by flower name length and then color(thenby)
+        /// </summary>
+        public void QuerySort()
+        {
+            var data = from flower in lstFlower
+                       orderby flower.Name.Length, flower.Color descending
+                       select flower;
+            foreach (var flower in data)
+            {
+                Console.WriteLine($"Name : {flower.Name}, Color : {flower.Color}");
+            }
+        }
 
-        // First element
-        Console.WriteLine($"First element : {lstFlower.First().Name}");
+        public static void Main(string[] args)
+        {
+            Program obj = new Program();
 
-        // Last element
-        Console.WriteLine($"Last element : {lstFlower.Last().Name}");
+            // Query color
+            obj.QueryColorFlower("\nYellow");
 
-        // Total number of elements inside list
-        Console.WriteLine($"Total number of elements : {lstFlower.LongCount()}");
+            // Sorting then by
+            obj.QuerySort();
 
+            // Element at
+            Console.WriteLine($"\nElement at 1 : {lstFlower.ElementAt(1).Name}");
 
+            // First element
+            Console.WriteLine($"\nFirst element : {lstFlower.First().Name}");
+
+            // Last element
+            Console.WriteLine($"\nLast element : {lstFlower.Last().Name}");
+
+            // Total number of elements inside list
+            Console.WriteLine($"\nTotal number of elements : {lstFlower.LongCount()}");
+        }
     }
 }

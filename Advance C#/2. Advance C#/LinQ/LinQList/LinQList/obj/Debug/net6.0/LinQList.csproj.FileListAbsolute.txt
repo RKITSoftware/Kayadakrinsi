@@ -13,3 +13,18 @@ F:\Krinsi - 379\Training\Advance C#\2. Advance C#\LinQ\LinQList\LinQList\obj\Deb
 F:\Krinsi - 379\Training\Advance C#\2. Advance C#\LinQ\LinQList\LinQList\obj\Debug\net6.0\LinQList.pdb
 F:\Krinsi - 379\Training\Advance C#\2. Advance C#\LinQ\LinQList\LinQList\obj\Debug\net6.0\LinQList.genruntimeconfig.cache
 F:\Krinsi - 379\Training\Advance C#\2. Advance C#\LinQ\LinQList\LinQList\obj\Debug\net6.0\ref\LinQList.dll
+F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\LinQ\LinQList\LinQList\obj\Debug\net6.0\LinQList.csproj.AssemblyReference.cache
+F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\LinQ\LinQList\LinQList\obj\Debug\net6.0\LinQList.GeneratedMSBuildEditorConfig.editorconfig
+F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\LinQ\LinQList\LinQList\obj\Debug\net6.0\LinQList.AssemblyInfoInputs.cache
+F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\LinQ\LinQList\LinQList\obj\Debug\net6.0\LinQList.AssemblyInfo.cs
+F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\LinQ\LinQList\LinQList\obj\Debug\net6.0\LinQList.csproj.CoreCompileInputs.cache
+F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\LinQ\LinQList\LinQList\obj\Debug\net6.0\LinQList.dll
+F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\LinQ\LinQList\LinQList\obj\Debug\net6.0\refint\LinQList.dll
+F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\LinQ\LinQList\LinQList\obj\Debug\net6.0\LinQList.pdb
+F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\LinQ\LinQList\LinQList\bin\Debug\net6.0\LinQList.exe
+F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\LinQ\LinQList\LinQList\bin\Debug\net6.0\LinQList.deps.json
+F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\LinQ\LinQList\LinQList\bin\Debug\net6.0\LinQList.runtimeconfig.json
+F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\LinQ\LinQList\LinQList\bin\Debug\net6.0\LinQList.dll
+F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\LinQ\LinQList\LinQList\bin\Debug\net6.0\LinQList.pdb
+F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\LinQ\LinQList\LinQList\obj\Debug\net6.0\LinQList.genruntimeconfig.cache
+F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\LinQ\LinQList\LinQList\obj\Debug\net6.0\ref\LinQList.dll

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Krinsi - 379\\Training\\Advance C#\\2. Advance C#\\BaseLibrary\\BaseLibrary\\BaseLibrary.csproj": {}
+    "F:\\Krinsi - 379\\New folder\\Advance C#\\2. Advance C#\\BaseLibrary\\BaseLibrary\\BaseLibrary.csproj": {}
   },
   "projects": {
-    "F:\\Krinsi - 379\\Training\\Advance C#\\2. Advance C#\\BaseLibrary\\BaseLibrary\\BaseLibrary.csproj": {
+    "F:\\Krinsi - 379\\New folder\\Advance C#\\2. Advance C#\\BaseLibrary\\BaseLibrary\\BaseLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Krinsi - 379\\Training\\Advance C#\\2. Advance C#\\BaseLibrary\\BaseLibrary\\BaseLibrary.csproj",
+        "projectUniqueName": "F:\\Krinsi - 379\\New folder\\Advance C#\\2. Advance C#\\BaseLibrary\\BaseLibrary\\BaseLibrary.csproj",
         "projectName": "BaseLibrary",
-        "projectPath": "F:\\Krinsi - 379\\Training\\Advance C#\\2. Advance C#\\BaseLibrary\\BaseLibrary\\BaseLibrary.csproj",
+        "projectPath": "F:\\Krinsi - 379\\New folder\\Advance C#\\2. Advance C#\\BaseLibrary\\BaseLibrary\\BaseLibrary.csproj",
         "packagesPath": "C:\\Users\\krinsi.k\\.nuget\\packages\\",
-        "outputPath": "F:\\Krinsi - 379\\Training\\Advance C#\\2. Advance C#\\BaseLibrary\\BaseLibrary\\obj\\",
+        "outputPath": "F:\\Krinsi - 379\\New folder\\Advance C#\\2. Advance C#\\BaseLibrary\\BaseLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\krinsi.k\\AppData\\Roaming\\NuGet\\NuGet.Config",

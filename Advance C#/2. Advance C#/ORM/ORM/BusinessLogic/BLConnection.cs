@@ -8,8 +8,14 @@ namespace ORM.BusinessLogic
     /// </summary>
     public class BLConnection
     {
+        /// <summary>
+        /// Connection string
+        /// </summary>
         public static string connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
 
+        /// <summary>
+        /// Db factory
+        /// </summary>
         public static OrmLiteConnectionFactory dbFactory = new OrmLiteConnectionFactory(connectionString, MySqlDialect.Provider);
     }
 }

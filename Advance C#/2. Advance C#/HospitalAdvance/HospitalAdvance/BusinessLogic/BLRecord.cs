@@ -137,28 +137,7 @@ namespace HospitalAdvance.BusinessLogic
 
                 return "Success!";
             }
-        }
-
-        ///// <summary>
-        ///// Update record
-        ///// </summary>
-        ///// <param name="objRCD01">object of RCD01 class</param>
-        ///// <returns>Appropriate Message</returns>
-        //public string Update(RCD01 objRCD01)
-        //{
-        //    using (var db = _dbFactory.OpenDbConnection())
-        //    {
-        //        if (!db.TableExists<RCD01>())
-        //        {
-        //            db.CreateTable<RCD01>();
-        //            return "No records to be update!";
-        //        }
-
-        //        db.Update(objRCD01, u => u.D01F01 == objRCD01.D01F01);
-
-        //        return "Record updated successfully!";
-        //    }
-        //}
+        }   
 
         /// <summary>
         /// Select data from RCD01
@@ -282,7 +261,7 @@ namespace HospitalAdvance.BusinessLogic
             }
         }
 
-        #endregion
+        #endregion  
 
     }
 }
