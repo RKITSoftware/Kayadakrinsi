@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Product Page";
+    var data = ViewBag.Message;
+}
+ 
+
+<div style="font-family:Cambria;">
+   <div>
+        <h1>Product Details</h1>
+        @foreach(var product in data)
+        {
+            <h5>Id : @product.R01F01</h5>
+            <h5>Name : @product.R01F02</h5>
+        }
+   </div>
+</div>

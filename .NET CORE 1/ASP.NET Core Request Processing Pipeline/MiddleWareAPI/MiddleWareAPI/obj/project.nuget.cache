@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "DVtt2zYEDe0MUqOf3q118lMUkqZQTv1nbEN4i5y5eUfuKjpcctmEU2467GrKfh+bm1pEsvSVwZlH13RMdcVr8g==",
+  "success": true,
+  "projectFilePath": "F:\\Krinsi - 379\\New folder\\.NET CORE 1\\ASP.NET Core Request Processing Pipeline\\MiddleWareAPI\\MiddleWareAPI\\MiddleWareAPI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\krinsi.k\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\krinsi.k\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\krinsi.k\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\krinsi.k\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\krinsi.k\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\krinsi.k\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}
