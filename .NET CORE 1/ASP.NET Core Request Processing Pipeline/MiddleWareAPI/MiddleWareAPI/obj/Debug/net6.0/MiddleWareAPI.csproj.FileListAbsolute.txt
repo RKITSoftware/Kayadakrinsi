@@ -30,3 +30,4 @@ F:\Krinsi - 379\New folder\.NET CORE 1\ASP.NET Core Request Processing Pipeline\
 F:\Krinsi - 379\New folder\.NET CORE 1\ASP.NET Core Request Processing Pipeline\MiddleWareAPI\MiddleWareAPI\obj\Debug\net6.0\MiddleWareAPI.pdb
 F:\Krinsi - 379\New folder\.NET CORE 1\ASP.NET Core Request Processing Pipeline\MiddleWareAPI\MiddleWareAPI\obj\Debug\net6.0\MiddleWareAPI.genruntimeconfig.cache
 F:\Krinsi - 379\New folder\.NET CORE 1\ASP.NET Core Request Processing Pipeline\MiddleWareAPI\MiddleWareAPI\obj\Debug\net6.0\ref\MiddleWareAPI.dll
+F:\Krinsi - 379\New folder\.NET CORE 1\ASP.NET Core Request Processing Pipeline\MiddleWareAPI\MiddleWareAPI\bin\Debug\net6.0\Newtonsoft.Json.dll

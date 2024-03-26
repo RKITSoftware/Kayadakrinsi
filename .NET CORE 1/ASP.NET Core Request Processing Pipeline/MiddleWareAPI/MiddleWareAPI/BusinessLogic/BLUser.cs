@@ -29,10 +29,10 @@ namespace MiddleWareAPI.BusinessLogic
         /// <param name="name">User name</param>
         /// <param name="password">Password</param>
         /// <returns></returns>
-        public USR01 PreSave(string name, string password)
+        public USR01 PreSave(USR01 objUSR01)
         {
             count++;
-            var objUSR01 = new USR01 { R01F01 = count, R01F02 = name, R01F03 = password };
+            objUSR01.
             return objUSR01;
         }
 

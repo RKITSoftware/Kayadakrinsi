@@ -5,7 +5,7 @@ namespace MiddleWareAPI.Middleware
     /// <summary>
     /// Custom middleware class
     /// </summary>
-    public class CustomMiddleware
+    public class ValidateQueryParameterMiddleware
     {
         /// <summary>
         /// Declares next delegate
@@ -16,35 +16,10 @@ namespace MiddleWareAPI.Middleware
         /// Assigns next delegate to next middleware in HTTP request pipeline
         /// </summary>
         /// <param name="next">Next middleware in HTTP request pipeline</param>
-        public CustomMiddleware(RequestDelegate next)
+        public ValidateQueryParameterMiddleware(RequestDelegate next)
         {
             _next = next;
         }
-
-        //    /// <summary>
-        //    /// Checks if data is not null while add user request encountred
-        //    /// </summary>
-        //    /// <param name="httpContext">HTTP request context</param>
-        //    /// <returns>Appropriate data or message</returns>
-        //    public Task Invoke(HttpContext httpContext)
-        //    {
-
-        //        var pattern = @".*MiddleWareAPI/CLUser/AddUser.*";
-        //        var path = httpContext.Request.Path;
-        //        if (Regex.IsMatch(path, pattern))
-        //        {
-        //            Microsoft.Extensions.Primitives.StringValues username,password;
-        //            httpContext.Request.Query.TryGetValue("username", out username);
-        //            httpContext.Request.Query.TryGetValue("password", out password);
-        //            if (username.FirstOrDefault() == null || password.FirstOrDefault() == null)
-        //            {
-        //                return httpContext.Response.WriteAsync("Null data found!");
-        //            }
-
-        //        }
-        //        return _next(httpContext);
-        //    }
-        //}
 
         /// <summary>
         /// Checks if data is not null while add user request encountred
@@ -54,7 +29,7 @@ namespace MiddleWareAPI.Middleware
         public Task Invoke(HttpContext httpContext)
         {
 
-            var pattern = @".*MiddleWareAPI/CLUser/AddUser.*";
+            var pattern = @".*MiddleWareAPI/CLUser/AddUserURL.*";
             var path = httpContext.Request.Path;
             if (Regex.IsMatch(path, pattern))
             {
@@ -76,9 +51,9 @@ namespace MiddleWareAPI.Middleware
     /// </summary>
     public static class MiddlewareExtensions
     {
-        public static IApplicationBuilder UseMiddleware(this IApplicationBuilder builder)
+        public static IApplicationBuilder UseValidateQueryParameterMiddleware(this IApplicationBuilder builder)
         {
-            return builder.UseMiddleware<CustomMiddleware>();
+            return builder.UseMiddleware<ValidateQueryParameterMiddleware>();
         }
     }
 }

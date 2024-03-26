@@ -15,11 +15,10 @@ namespace MiddleWareAPI
         public void ConfigureServices(IServiceCollection services)
         {
             // Add services to the container.
-
             services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             services.AddEndpointsApiExplorer();
             services.AddSwaggerGen();
+            services.AddTransient<ValidateRequestBodyParameterMiddleware>();
         }
 
         /// <summary>
@@ -27,7 +26,7 @@ namespace MiddleWareAPI
         /// </summary>
         /// <param name="app">The application builder.</param>
         /// <param name="env">The hosting environment.</param>
-        public void Configure(IApplicationBuilder app, Microsoft.AspNetCore.Hosting.IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
@@ -44,7 +43,11 @@ namespace MiddleWareAPI
 
             app.UseAuthorization();
 
-            app.UseMiddleware<CustomMiddleware>();
+            app.UseMalwareDetectionMiddleware();
+
+            app.UseValidateQueryParameterMiddleware();
+
+            app.UseMiddleware<ValidateRequestBodyParameterMiddleware>();
 
             app.UseEndpoints(endpoints => endpoints.MapControllers());
         }

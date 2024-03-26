@@ -40,10 +40,31 @@ namespace MiddleWareAPI.Controllers
         /// <param name="password">Password</param>
         /// <returns>Appropriate message</returns>
         [HttpPost]
-        [Route("MiddleWareAPI/CLUser/AddUser")]
-        public IActionResult AddUSer(string username,string password)
+        [Route("MiddleWareAPI/CLUser/AddUserURL")]
+        public IActionResult AddUserURL(string username, string password)
         {
-                USR01 objUSR01 = objBLUser.PreSave(username, password);
+            USR01 objUSR01 = objBLUser.PreSave(username, password);
+            if (objBLUser.Validation(objUSR01))
+            {
+                return Ok(objBLUser.AddUser(objUSR01));
+            }
+            else
+            {
+                return BadRequest("Invalid data!");
+            }
+        }
+
+        /// <summary>
+        /// Handles request for add user2+
+        /// </summary>
+        /// <param name="username">Username</param>
+        /// <param name="password">Password</param>
+        /// <returns>Appropriate message</returns>
+        [HttpPost]
+        [Route("MiddleWareAPI/CLUser/AddUserBody")]
+        public IActionResult AddUserBody([FromBody] USR01 objUSR01)
+        {
+                objUSR01 = objBLUser.PreSave(objUSR01.R01F02, objUSR01.R01F03);
                 if(objBLUser.Validation(objUSR01))
                 {
                     return Ok(objBLUser.AddUser(objUSR01));
