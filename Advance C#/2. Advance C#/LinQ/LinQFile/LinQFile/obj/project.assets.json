@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Krinsi - 379\\Training\\Advance C#\\2. Advance C#\\LinQ\\LinQFile\\LinQFile\\LinQFile.csproj",
+      "projectUniqueName": "F:\\Krinsi - 379\\New folder\\Advance C#\\2. Advance C#\\LinQ\\LinQFile\\LinQFile\\LinQFile.csproj",
       "projectName": "LinQFile",
-      "projectPath": "F:\\Krinsi - 379\\Training\\Advance C#\\2. Advance C#\\LinQ\\LinQFile\\LinQFile\\LinQFile.csproj",
+      "projectPath": "F:\\Krinsi - 379\\New folder\\Advance C#\\2. Advance C#\\LinQ\\LinQFile\\LinQFile\\LinQFile.csproj",
       "packagesPath": "C:\\Users\\krinsi.k\\.nuget\\packages\\",
-      "outputPath": "F:\\Krinsi - 379\\Training\\Advance C#\\2. Advance C#\\LinQ\\LinQFile\\LinQFile\\obj\\",
+      "outputPath": "F:\\Krinsi - 379\\New folder\\Advance C#\\2. Advance C#\\LinQ\\LinQFile\\LinQFile\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\krinsi.k\\AppData\\Roaming\\NuGet\\NuGet.Config",

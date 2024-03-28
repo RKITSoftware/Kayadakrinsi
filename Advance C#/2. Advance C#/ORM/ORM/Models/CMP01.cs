@@ -8,7 +8,6 @@ namespace ORM.Models
     [Alias("CMP01")]
     public class CMP01
     {
-        #region Public Members
 
         /// <summary>
         /// Declares id of company
@@ -36,7 +35,6 @@ namespace ORM.Models
         /// </summary>
         public int P01F05 { get; set; }
 
-        #endregion
 
     }
 }

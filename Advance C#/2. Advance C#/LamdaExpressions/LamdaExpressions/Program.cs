@@ -21,7 +21,7 @@
 
             // Lamda expression with two parameters returns sum of arguments
             Func<int, int, int> sum = (x, y) => x + y;
-            Console.WriteLine(sum(20, 30));
+            Console.WriteLine(sum(2, 30));
 
             // Lamda expression with methods
             Action<string> greet = name =>

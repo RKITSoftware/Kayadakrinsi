@@ -71,7 +71,7 @@ namespace HospitalAdvance.BusinessLogic
 
         #endregion
 
-             #region Public Methods
+        #region Public Methods
 
         /// <summary>
         /// Performs caching operations

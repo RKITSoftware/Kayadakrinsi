@@ -28,6 +28,8 @@
             var colorFlower = from flower in lstFlower
                               where flower.Color == color
                               select flower;
+
+            
             foreach (var flower in colorFlower)
             {
                 Console.WriteLine($"Name : {flower.Name}, Color : {flower.Color}");
@@ -37,11 +39,27 @@
         /// <summary>
         /// Prints sorted flower by flower name length and then color(thenby)
         /// </summary>
-        public void QuerySort()
+        public void QueryThenBy()
         {
+            // Then by
             var data = from flower in lstFlower
                        orderby flower.Name.Length, flower.Color descending
                        select flower;
+            
+            foreach (var flower in data)
+            {
+                Console.WriteLine($"Name : {flower.Name}, Color : {flower.Color}");
+            }
+        }
+        
+        /// <summary>
+        /// Prints sorted flwers in ascending order
+        /// </summary>
+        public void QuerySort()
+        {
+            // Order by
+            var data = lstFlower.OrderBy(f => f.Name).ToList();
+
             foreach (var flower in data)
             {
                 Console.WriteLine($"Name : {flower.Name}, Color : {flower.Color}");
@@ -53,9 +71,14 @@
             Program obj = new Program();
 
             // Query color
-            obj.QueryColorFlower("\nYellow");
+            obj.QueryColorFlower("Yellow");
 
+            Console.WriteLine("\n");
             // Sorting then by
+            obj.QueryThenBy();
+
+            Console.WriteLine("\n");
+            // Sorting 
             obj.QuerySort();
 
             // Element at
