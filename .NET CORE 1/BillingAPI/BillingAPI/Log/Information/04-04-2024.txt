@@ -1,0 +1,65 @@
+224-04-04 16:43:31.9969 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/swagger - -
+224-04-04 16:43:32.1463 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/swagger - - - 301 0 - 151.8694ms
+224-04-04 16:43:32.1463 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/swagger/index.html - -
+224-04-04 16:43:32.7516 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/swagger/index.html - - - 2 - text/html;charset=utf-8 604.1731ms
+224-04-04 16:43:33.3808 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/swagger/swagger-ui.css - -
+224-04-04 16:43:33.3808 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/swagger/swagger-ui-bundle.js - -
+224-04-04 16:43:33.3808 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/swagger/swagger-ui-standalone-preset.js - -
+224-04-04 16:43:33.3808 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/_framework/aspnetcore-browser-refresh.js - -
+224-04-04 16:43:33.3808 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/_vs/browserLink - -
+224-04-04 16:43:33.3924 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/_framework/aspnetcore-browser-refresh.js - - - 2 11990 application/javascript;+charset=utf-8 8.8127ms
+224-04-04 16:43:33.4062 | INFO | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+224-04-04 16:43:33.4062 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/swagger/swagger-ui.css - - - 2 143632 text/css 24.4340ms
+224-04-04 16:43:33.4380 | INFO | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+224-04-04 16:43:33.4380 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/swagger/swagger-ui-standalone-preset.js - - - 2 337162 application/javascript 65.4896ms
+224-04-04 16:43:33.4705 | INFO | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+224-04-04 16:43:33.4705 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/swagger/swagger-ui-bundle.js - - - 2 1092889 application/javascript 87.4738ms
+224-04-04 16:43:33.5001 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/_vs/browserLink - - - 2 - text/javascript;+charset=UTF-8 112.6895ms
+224-04-04 16:43:33.7504 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/swagger/v1/swagger.json - -
+224-04-04 16:43:33.7842 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/swagger/favicon-32x32.png - -
+224-04-04 16:43:33.7842 | INFO | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+224-04-04 16:43:33.7842 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/swagger/favicon-32x32.png - - - 2 628 image/png 0.9903ms
+224-04-04 16:43:34.1216 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/swagger/v1/swagger.json - - - 2 - application/json;charset=utf-8 371.9827ms
+224-04-04 16:43:56.5787 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 POST https://localhost:7082/api/CLUser/AddUser application/json 73
+224-04-04 16:43:56.6412 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'BillingAPI.Controllers.CLUserController.AddUser (BillingAPI)'
+224-04-04 16:43:56.6668 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "AddUser", controller = "CLUser"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddUser(BillingAPI.Models.POCO.USR01) on controller BillingAPI.Controllers.CLUserController (BillingAPI).
+224-04-04 16:43:56.7862 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method BillingAPI.Controllers.CLUserController.AddUser (BillingAPI) - Validation state: Valid
+224-04-04 16:44:19.7653 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method BillingAPI.Controllers.CLUserController.AddUser (BillingAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 22970.9653ms.
+224-04-04 16:44:19.7657 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'BillingAPI.Models.RES01'.
+224-04-04 16:44:19.8146 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action BillingAPI.Controllers.CLUserController.AddUser (BillingAPI) in 23131.4344ms
+224-04-04 16:44:19.8146 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'BillingAPI.Controllers.CLUserController.AddUser (BillingAPI)'
+224-04-04 16:44:19.8146 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 POST https://localhost:7082/api/CLUser/AddUser application/json 73 - 2 - application/json;+charset=utf-8 23234.8082ms
+224-04-04 16:45:43.6329 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/swagger/index.html - -
+224-04-04 16:45:44.2677 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/swagger/index.html - - - 2 - text/html;charset=utf-8 642.4521ms
+224-04-04 16:45:44.9566 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/_framework/aspnetcore-browser-refresh.js - -
+224-04-04 16:45:44.9566 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/_vs/browserLink - -
+224-04-04 16:45:44.9774 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/_framework/aspnetcore-browser-refresh.js - - - 2 11990 application/javascript;+charset=utf-8 2.9083ms
+224-04-04 16:45:45.0343 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/_vs/browserLink - - - 2 - text/javascript;+charset=UTF-8 75.7814ms
+224-04-04 16:45:45.2859 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/swagger/v1/swagger.json - -
+224-04-04 16:45:45.5985 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/swagger/v1/swagger.json - - - 2 - application/json;charset=utf-8 312.0083ms
+224-04-04 16:46:07.2461 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 POST https://localhost:7082/api/CLUser/AddUser application/json 73
+224-04-04 16:46:07.3039 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'BillingAPI.Controllers.CLUserController.AddUser (BillingAPI)'
+224-04-04 16:46:07.3425 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "AddUser", controller = "CLUser"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddUser(BillingAPI.Models.POCO.USR01) on controller BillingAPI.Controllers.CLUserController (BillingAPI).
+224-04-04 16:46:07.4559 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method BillingAPI.Controllers.CLUserController.AddUser (BillingAPI) - Validation state: Valid
+224-04-04 16:46:27.6499 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method BillingAPI.Controllers.CLUserController.AddUser (BillingAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2179.2346ms.
+224-04-04 16:46:27.6499 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'BillingAPI.Models.RES01'.
+224-04-04 16:46:29.8775 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action BillingAPI.Controllers.CLUserController.AddUser (BillingAPI) in 22531.9552ms
+224-04-04 16:46:29.8775 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'BillingAPI.Controllers.CLUserController.AddUser (BillingAPI)'
+224-04-04 16:46:29.8775 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 POST https://localhost:7082/api/CLUser/AddUser application/json 73 - 2 - application/json;+charset=utf-8 22636.2303ms
+224-04-04 16:47:15.4968 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/api/CLUser/GetUSers - -
+224-04-04 16:47:15.5012 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'BillingAPI.Controllers.CLUserController.GetUSers (BillingAPI)'
+224-04-04 16:47:15.5012 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "GetUSers", controller = "CLUser"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetUSers() on controller BillingAPI.Controllers.CLUserController (BillingAPI).
+224-04-04 16:48:17.1262 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action BillingAPI.Controllers.CLUserController.GetUSers (BillingAPI) in 61622.9919ms
+224-04-04 16:48:17.1658 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'BillingAPI.Controllers.CLUserController.GetUSers (BillingAPI)'
+224-04-04 16:48:17.4928 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/api/CLUser/GetUSers - - - 500 - text/plain;+charset=utf-8 61996.1594ms
+224-04-04 17:09:19.7792 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/swagger/index.html - -
+224-04-04 17:09:21.3896 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/swagger/index.html - - - 2 - text/html;charset=utf-8 1592.5440ms
+224-04-04 17:09:22.7527 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/_vs/browserLink - -
+224-04-04 17:09:22.7681 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/_framework/aspnetcore-browser-refresh.js - -
+224-04-04 17:09:22.7681 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/_framework/aspnetcore-browser-refresh.js - - - 2 11990 application/javascript;+charset=utf-8 14.2306ms
+224-04-04 17:09:23.0807 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/_vs/browserLink - - - 2 - text/javascript;+charset=UTF-8 322.0084ms
+224-04-04 17:09:23.2525 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/swagger/v1/swagger.json - -
+224-04-04 17:09:23.7454 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/swagger/v1/swagger.json - - - 2 - application/json;charset=utf-8 491.4785ms
+224-04-04 17:09:44.7849 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/api/CLUser/GetUSers - -
+224-04-04 17:09:44.8466 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'BillingAPI.Controllers.CLUserController.GetUSers (BillingAPI)'
+224-04-04 17:09:44.8466 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "GetUSers", controller = "CLUser"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetUSers() on controller BillingAPI.Controllers.CLUserController (BillingAPI).

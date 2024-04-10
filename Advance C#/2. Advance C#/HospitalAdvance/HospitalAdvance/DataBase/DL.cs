@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Web;
 using HospitalAdvance.BusinessLogic;
+using HospitalAdvance.Enums;
 using HospitalAdvance.Models;
 using MySql.Data.MySqlClient;
 using ServiceStack.Data;
@@ -192,7 +193,7 @@ namespace HospitalAdvance.DataBase
 
                 dataReader.Close();
 
-                BLUser.CacheOperations("DetailedRecords", lstDetail);
+                BLUSR01.CacheOperations("DetailedRecords", lstDetail);
 
                 //close Connection
                 CloseConnection();
@@ -259,7 +260,7 @@ namespace HospitalAdvance.DataBase
 
                 dataReader.Close();
 
-                BLUser.CacheOperations("DetailedRecords", lstDetail);
+                BLUSR01.CacheOperations("DetailedRecords", lstDetail);
 
                 //close Connection
                 CloseConnection();
@@ -303,7 +304,7 @@ namespace HospitalAdvance.DataBase
                 //close Data Reader
                 dataReader.Close();
 
-                BLUser.CacheOperations("Users", lstusr01);
+                BLUSR01.CacheOperations("Users", lstusr01);
 
                 //close Connection
                 CloseConnection();

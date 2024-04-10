@@ -187,7 +187,10 @@ F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\ORM\ORM\bin\System.Memory.dl
 F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\ORM\ORM\bin\System.Net.Http.Formatting.dll
 F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\ORM\ORM\bin\System.Numerics.Vectors.dll
 F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\ORM\ORM\bin\System.Runtime.CompilerServices.Unsafe.dll
+F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\ORM\ORM\bin\System.Text.Encodings.Web.dll
+F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\ORM\ORM\bin\System.Text.Json.dll
 F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\ORM\ORM\bin\System.Threading.Tasks.Extensions.dll
+F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\ORM\ORM\bin\System.ValueTuple.dll
 F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\ORM\ORM\bin\System.Web.Http.dll
 F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\ORM\ORM\bin\System.Web.Http.WebHost.dll
 F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\ORM\ORM\bin\WebActivatorEx.dll
@@ -211,7 +214,10 @@ F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\ORM\ORM\bin\System.IO.Pipeli
 F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\ORM\ORM\bin\System.Memory.xml
 F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\ORM\ORM\bin\System.Numerics.Vectors.xml
 F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\ORM\ORM\bin\System.Runtime.CompilerServices.Unsafe.xml
+F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\ORM\ORM\bin\System.Text.Encodings.Web.xml
+F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\ORM\ORM\bin\System.Text.Json.xml
 F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\ORM\ORM\bin\System.Threading.Tasks.Extensions.xml
+F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\ORM\ORM\bin\System.ValueTuple.xml
 F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\ORM\ORM\bin\Newtonsoft.Json.xml
 F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\ORM\ORM\bin\System.Net.Http.Formatting.xml
 F:\Krinsi - 379\New folder\Advance C#\2. Advance C#\ORM\ORM\bin\System.Web.Http.xml

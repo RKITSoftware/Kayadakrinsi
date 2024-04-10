@@ -1,0 +1,12 @@
+2024-04-02 10:19:50.7254 | WARN | Logging.Startup | Logging warning.
+2024-04-02 10:33:25.0092 | WARN | Logging.Controllers.CLStationary | AddItem | Invalid data
+2024-04-02 10:43:16.5018 | WARN | Logging.Controllers.CLStationary | AddItem | Invalid data
+2024-04-02 10:50:16.8627 | WARN | Logging.Controllers.CLStationary | AddItem | Invalid data
+2024-04-02 11:41:25.2798 | WARN | Logging.Controllers.CLStationary | AddItem | Invalid data
+2024-04-02 11:50:13.6950 | WARN | Logging.Controllers.CLStationary | AddItem | Invalid data
+2024-04-02 11:50:58.8388 | WARN | Logging.Controllers.CLStationary | AddItem | Invalid data
+2024-04-02 12:14:19.4557 | WARN | Logging.Controllers.CLStationary | AddItem | Invalid data
+2024-04-02 12:14:39.1606 | WARN | Logging.Controllers.CLStationary | AddItem | Invalid data
+2024-04-02 12:15:45.5047 | WARN | Logging.Controllers.CLStationary | AddItem | Invalid data
+2024-04-02 12:16:06.7214 | WARN | Logging.Controllers.CLStationary | AddItem | Invalid data
+2024-04-02 12:19:50.8235 | WARN | Logging.Controllers.CLStationary | AddItem | Invalid data

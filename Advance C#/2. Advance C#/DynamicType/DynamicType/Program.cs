@@ -34,10 +34,11 @@
             Program obj = new Program();
 
             dynamic objDynamic;
+
             objDynamic = 32;
             Console.WriteLine($"1. {objDynamic}");
 
-            objDynamic = "Sting";
+            objDynamic = "String";
             Console.WriteLine("2. {0}", objDynamic);
 
             objDynamic = 64.234;

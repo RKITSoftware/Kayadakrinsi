@@ -13,14 +13,14 @@ namespace HospitalAdvance.Controllers
 		/// <summary>
 		/// Declares object of class BLUser
 		/// </summary>
-		public BLUser objBLUser;
+		public BLUSR01 objBLUser;
 
 		/// <summary>
 		/// Initializes objects
 		/// </summary>
         public CLLoginController()
         {
-			objBLUser = new BLUser();
+			objBLUser = new BLUSR01();
         }
 
         /// <summary>

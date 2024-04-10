@@ -1,0 +1,3 @@
+224-04-04 15:51:43.4118 | FATAL | Microsoft.AspNetCore.Hosting.Diagnostics | Application startup exception
+224-04-04 15:54:49.4367 | FATAL | Microsoft.AspNetCore.Hosting.Diagnostics | Application startup exception
+224-04-04 16:05:26.6419 | FATAL | Microsoft.AspNetCore.Hosting.Diagnostics | Application startup exception

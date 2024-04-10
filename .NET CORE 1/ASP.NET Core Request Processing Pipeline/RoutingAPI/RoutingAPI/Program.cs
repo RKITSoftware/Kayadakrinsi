@@ -1,6 +1,9 @@
 using Microsoft.AspNetCore;
 using RoutingAPI;
 
+/// <summary>
+/// Entry point of an application
+/// </summary>
 internal class Program
 {
     /// <summary>

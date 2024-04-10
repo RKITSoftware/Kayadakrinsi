@@ -1,0 +1,29 @@
+2024-04-03 09:45:14.0825 | ERROR | Logging.BusinessLogic.BLStationary | DelteteItem | Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+2024-04-03 09:50:28.6339 | ERROR | Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware | An unhandled exception has occurred while executing the request.
+2024-04-03 09:53:34.9029 | ERROR | Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware | An unhandled exception has occurred while executing the request.
+2024-04-03 09:54:07.8219 | ERROR | Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware | An unhandled exception has occurred while executing the request.
+2024-04-03 09:56:32.9275 | ERROR | Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware | An unhandled exception has occurred while executing the request.
+2024-04-03 10:05:52.4885 | ERROR | Logging.BusinessLogic.BLStationary | DelteteItem | Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+2024-04-03 10:07:04.2471 | ERROR | Logging.BusinessLogic.BLStationary | DelteteItem | Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+2024-04-03 10:08:35.8456 | ERROR | Logging.BusinessLogic.BLStationary | DelteteItem | Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+2024-04-03 10:10:49.0102 | ERROR | Logging.BusinessLogic.BLStationary | DelteteItem | Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+2024-04-03 10:13:12.1806 | ERROR | Logging.BusinessLogic.BLStationary | DelteteItem | Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+2024-04-03 10:15:05.4915 | ERROR | Logging.BusinessLogic.BLStationary | DelteteItem | Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+2024-04-03 10:18:11.4987 | ERROR | Logging.BusinessLogic.BLStationary | DelteteItem | Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+2024-04-03 10:20:40.2695 | ERROR | Logging.BusinessLogic.BLStationary | DelteteItem | Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+2024-04-03 10:23:43.3715 | ERROR | Logging.BusinessLogic.BLStationary | DelteteItem | Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+2024-04-03 10:25:02.7575 | ERROR | Logging.BusinessLogic.BLStationary | DelteteItem | Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+2024-04-03 10:27:49.4608 | ERROR | Logging.BusinessLogic.BLStationary | DelteteItem | Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+2024-04-03 10:28:13.7711 | ERROR | Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware | An unhandled exception has occurred while executing the request.
+2024-04-03 10:28:13.8447 | ERROR | Microsoft.AspNetCore.Server.Kestrel | Connection id "0HN2JJA6GVBQP", Request id "0HN2JJA6GVBQP:00000001": An unhandled exception was thrown by the application.
+2024-04-03 10:30:42.7855 | ERROR | Logging.BusinessLogic.BLStationary | DelteteItem | Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+2024-04-03 10:31:46.9198 | ERROR | Logging.BusinessLogic.BLStationary | DelteteItem | Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+2024-04-03 10:33:25.1027 | ERROR | Logging.BusinessLogic.BLStationary | DelteteItem | Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+2024-04-03 10:35:48.6564 | ERROR | Logging.BusinessLogic.BLStationary | DelteteItem | Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+2024-04-03 10:47:24.3486 | ERROR | Logging.BusinessLogic.BLStationary | DelteteItem | Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+2024-04-03 10:48:23.9073 | ERROR | Logging.BusinessLogic.BLStationary | UpdateItem | Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+2024-04-03 12:27:36.3281 | ERROR | Logging.BusinessLogic.BLStationary | DelteteItem | Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+2024-04-03 12:42:32.1282 | ERROR | Logging.BusinessLogic.BLStationary | DelteteItem | Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+2024-04-03 12:44:54.9676 | ERROR | Logging.BusinessLogic.BLStationary | DelteteItem | Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+2024-04-03 12:47:41.8780 | ERROR | Logging.BusinessLogic.BLStationary | DelteteItem | Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+2024-04-03 12:51:05.3641 | ERROR | Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware | An unhandled exception has occurred while executing the request.

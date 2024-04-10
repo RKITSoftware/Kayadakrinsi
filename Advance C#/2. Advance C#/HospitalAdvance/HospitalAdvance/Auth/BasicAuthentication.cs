@@ -18,7 +18,7 @@ namespace HospitalAdvance.Auth
         /// <summary>
         /// Declares object of class BLUser
         /// </summary>
-        public BLUser objBLUser = new BLUser();
+        public BLUSR01 objBLUser = new BLUSR01();
 
         /// <summary>
         /// Authenticates user and creates response accordingly

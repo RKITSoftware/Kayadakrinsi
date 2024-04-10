@@ -1,0 +1,367 @@
+2024-04-01 16:13:33.2779 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/swagger/index.html - -
+2024-04-01 16:13:33.8256 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/swagger/index.html - - - 200 - text/html;charset=utf-8 551.6423ms
+2024-04-01 16:13:34.4584 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/_framework/aspnetcore-browser-refresh.js - -
+2024-04-01 16:13:34.4584 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/_vs/browserLink - -
+2024-04-01 16:13:34.4732 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/_framework/aspnetcore-browser-refresh.js - - - 200 11984 application/javascript;+charset=utf-8 10.3520ms
+2024-04-01 16:13:34.5036 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 43.5747ms
+2024-04-01 16:13:34.6454 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/swagger/v1/swagger.json - -
+2024-04-01 16:13:34.9190 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 273.6416ms
+2024-04-01 16:13:43.9983 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 POST https://localhost:7185/api/CLStationary/AddItem application/json-patch+json 70
+2024-04-01 16:13:44.0706 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Logging.Controllers.CLStationary.AddItem (Logging)'
+2024-04-01 16:13:44.1050 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "AddItem", controller = "CLStationary"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddItem(Logging.Models.STA01) on controller Logging.Controllers.CLStationary (Logging).
+2024-04-01 16:13:44.9895 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method Logging.Controllers.CLStationary.AddItem (Logging) - Validation state: Valid
+2024-04-01 16:13:56.6587 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method Logging.Controllers.CLStationary.AddItem (Logging), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 11647.4483ms.
+2024-04-01 16:13:56.6623 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'Logging.Models.RES01'.
+2024-04-01 16:14:00.2426 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Logging.Controllers.CLStationary.AddItem (Logging) in 16139.3474ms
+2024-04-01 16:14:00.2426 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Logging.Controllers.CLStationary.AddItem (Logging)'
+2024-04-01 16:14:00.2426 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 POST https://localhost:7185/api/CLStationary/AddItem application/json-patch+json 70 - 200 58 application/json;+charset=utf-8 16253.2049ms
+2024-04-01 16:26:51.7829 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/swagger/index.html - -
+2024-04-01 16:26:56.3807 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/swagger/index.html - - - 200 - text/html;charset=utf-8 4605.2049ms
+2024-04-01 16:26:56.6788 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/_vs/browserLink - -
+2024-04-01 16:26:56.6788 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/_framework/aspnetcore-browser-refresh.js - -
+2024-04-01 16:26:56.7300 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/_framework/aspnetcore-browser-refresh.js - - - 200 11984 application/javascript;+charset=utf-8 44.1551ms
+2024-04-01 16:26:56.8781 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 193.9126ms
+2024-04-01 16:26:56.9777 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/swagger/v1/swagger.json - -
+2024-04-01 16:26:57.2711 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 293.6398ms
+2024-04-01 16:27:03.1597 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 DELETE https://localhost:7185/api/CLStationary/DeleteItem?id=25 - -
+2024-04-01 16:27:03.2150 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Logging.Controllers.CLStationary.DeleteItem (Logging)'
+2024-04-01 16:27:03.2526 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "DeleteItem", controller = "CLStationary"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteItem(Int32) on controller Logging.Controllers.CLStationary (Logging).
+2024-04-01 16:27:03.3989 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method Logging.Controllers.CLStationary.DeleteItem (Logging) - Validation state: Valid
+2024-04-01 16:27:03.5770 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method Logging.Controllers.CLStationary.DeleteItem (Logging), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 157.5555ms.
+2024-04-01 16:27:03.5845 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'Logging.Models.RES01'.
+2024-04-01 16:27:04.2388 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Logging.Controllers.CLStationary.DeleteItem (Logging) in 976.264ms
+2024-04-01 16:27:04.2388 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Logging.Controllers.CLStationary.DeleteItem (Logging)'
+2024-04-01 16:27:04.2388 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 DELETE https://localhost:7185/api/CLStationary/DeleteItem?id=25 - - - 200 151 application/json;+charset=utf-8 1077.6834ms
+2024-04-01 16:27:20.4226 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/api/CLStationary/GetItems - -
+2024-04-01 16:27:20.4236 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Logging.Controllers.CLStationary.GetItems (Logging)'
+2024-04-01 16:27:20.4236 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "GetItems", controller = "CLStationary"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetItems() on controller Logging.Controllers.CLStationary (Logging).
+2024-04-01 16:27:20.4904 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method Logging.Controllers.CLStationary.GetItems (Logging) - Validation state: Valid
+2024-04-01 16:27:20.5994 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method Logging.Controllers.CLStationary.GetItems (Logging), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 103.3471ms.
+2024-04-01 16:27:20.5994 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'Logging.Models.RES01'.
+2024-04-01 16:27:20.6133 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Logging.Controllers.CLStationary.GetItems (Logging) in 178.0111ms
+2024-04-01 16:27:20.6133 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Logging.Controllers.CLStationary.GetItems (Logging)'
+2024-04-01 16:27:20.6133 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/api/CLStationary/GetItems - - - 200 46 application/json;+charset=utf-8 190.7220ms
+2024-04-01 16:29:02.9206 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/swagger/index.html - -
+2024-04-01 16:29:04.0194 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/swagger/index.html - - - 200 - text/html;charset=utf-8 1104.8328ms
+2024-04-01 16:29:04.8725 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/_framework/aspnetcore-browser-refresh.js - -
+2024-04-01 16:29:04.8725 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/_vs/browserLink - -
+2024-04-01 16:29:04.9333 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/_framework/aspnetcore-browser-refresh.js - - - 200 11984 application/javascript;+charset=utf-8 62.7315ms
+2024-04-01 16:29:05.2259 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 360.3642ms
+2024-04-01 16:29:05.3479 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/swagger/v1/swagger.json - -
+2024-04-01 16:29:05.5885 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 241.7363ms
+2024-04-01 16:29:11.6300 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/api/CLStationary/GetItems - -
+2024-04-01 16:29:11.7742 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Logging.Controllers.CLStationary.GetItems (Logging)'
+2024-04-01 16:29:11.7919 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "GetItems", controller = "CLStationary"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetItems() on controller Logging.Controllers.CLStationary (Logging).
+2024-04-01 16:29:11.9735 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method Logging.Controllers.CLStationary.GetItems (Logging) - Validation state: Valid
+2024-04-01 16:29:12.2612 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method Logging.Controllers.CLStationary.GetItems (Logging), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 272.4174ms.
+2024-04-01 16:29:12.2699 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'Logging.Models.RES01'.
+2024-04-01 16:29:12.3522 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Logging.Controllers.CLStationary.GetItems (Logging) in 553.7757ms
+2024-04-01 16:29:12.3522 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Logging.Controllers.CLStationary.GetItems (Logging)'
+2024-04-01 16:29:12.3522 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/api/CLStationary/GetItems - - - 200 46 application/json;+charset=utf-8 722.5259ms
+2024-04-01 16:29:25.5785 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/api/CLStationary/GetItems - -
+2024-04-01 16:29:25.5842 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Logging.Controllers.CLStationary.GetItems (Logging)'
+2024-04-01 16:29:25.5842 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "GetItems", controller = "CLStationary"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetItems() on controller Logging.Controllers.CLStationary (Logging).
+2024-04-01 16:29:25.6132 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method Logging.Controllers.CLStationary.GetItems (Logging) - Validation state: Valid
+2024-04-01 16:29:47.2352 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method Logging.Controllers.CLStationary.GetItems (Logging), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 21607.299ms.
+2024-04-01 16:29:47.2352 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'Logging.Models.RES01'.
+2024-04-01 16:29:50.1498 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Logging.Controllers.CLStationary.GetItems (Logging) in 24565.1929ms
+2024-04-01 16:29:50.1498 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Logging.Controllers.CLStationary.GetItems (Logging)'
+2024-04-01 16:29:50.1498 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/api/CLStationary/GetItems - - - 200 46 application/json;+charset=utf-8 24570.3018ms
+2024-04-01 16:31:44.8278 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/swagger/index.html - -
+2024-04-01 16:31:45.2519 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/swagger/index.html - - - 200 - text/html;charset=utf-8 430.7496ms
+2024-04-01 16:31:45.9623 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/_framework/aspnetcore-browser-refresh.js - -
+2024-04-01 16:31:45.9623 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/_vs/browserLink - -
+2024-04-01 16:31:45.9916 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/_framework/aspnetcore-browser-refresh.js - - - 200 11984 application/javascript;+charset=utf-8 25.3893ms
+2024-04-01 16:31:46.1037 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 146.7498ms
+2024-04-01 16:31:46.2390 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/swagger/v1/swagger.json - -
+2024-04-01 16:31:46.4713 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 232.1118ms
+2024-04-01 16:31:54.0285 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/api/CLStationary/GetItems - -
+2024-04-01 16:31:54.0942 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Logging.Controllers.CLStationary.GetItems (Logging)'
+2024-04-01 16:31:54.1102 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "GetItems", controller = "CLStationary"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetItems() on controller Logging.Controllers.CLStationary (Logging).
+2024-04-01 16:31:54.2000 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method Logging.Controllers.CLStationary.GetItems (Logging) - Validation state: Valid
+2024-04-01 16:32:12.6533 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method Logging.Controllers.CLStationary.GetItems (Logging), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 18439.6237ms.
+2024-04-01 16:32:12.6642 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'Logging.Models.RES01'.
+2024-04-01 16:32:14.8404 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Logging.Controllers.CLStationary.GetItems (Logging) in 20715.5875ms
+2024-04-01 16:32:14.8404 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Logging.Controllers.CLStationary.GetItems (Logging)'
+2024-04-01 16:32:14.8404 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/api/CLStationary/GetItems - - - 200 46 application/json;+charset=utf-8 20810.8852ms
+2024-04-01 16:34:08.8739 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/swagger/index.html - -
+2024-04-01 16:34:09.5934 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/swagger/index.html - - - 200 - text/html;charset=utf-8 727.0604ms
+2024-04-01 16:34:10.3091 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/_framework/aspnetcore-browser-refresh.js - -
+2024-04-01 16:34:10.3091 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/_vs/browserLink - -
+2024-04-01 16:34:10.3388 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/_framework/aspnetcore-browser-refresh.js - - - 200 11984 application/javascript;+charset=utf-8 35.6302ms
+2024-04-01 16:34:11.6336 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 1324.3692ms
+2024-04-01 16:34:11.7434 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/swagger/v1/swagger.json - -
+2024-04-01 16:34:11.9342 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 190.4721ms
+2024-04-01 16:34:39.2142 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 DELETE https://localhost:7185/api/CLStationary/DeleteItem?id=2 - -
+2024-04-01 16:34:39.3220 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Logging.Controllers.CLStationary.DeleteItem (Logging)'
+2024-04-01 16:34:39.3590 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "DeleteItem", controller = "CLStationary"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteItem(Int32) on controller Logging.Controllers.CLStationary (Logging).
+2024-04-01 16:34:39.5253 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method Logging.Controllers.CLStationary.DeleteItem (Logging) - Validation state: Valid
+2024-04-01 16:35:03.1505 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method Logging.Controllers.CLStationary.DeleteItem (Logging), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 23601.7358ms.
+2024-04-01 16:35:03.1505 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'Logging.Models.RES01'.
+2024-04-01 16:35:16.7470 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Logging.Controllers.CLStationary.DeleteItem (Logging) in 37379.2931ms
+2024-04-01 16:35:16.7470 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Logging.Controllers.CLStationary.DeleteItem (Logging)'
+2024-04-01 16:35:16.7470 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 DELETE https://localhost:7185/api/CLStationary/DeleteItem?id=2 - - - 200 151 application/json;+charset=utf-8 37532.8852ms
+2024-04-01 16:36:35.6468 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/swagger/index.html - -
+2024-04-01 16:36:36.9241 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/swagger/index.html - - - 200 - text/html;charset=utf-8 1285.7588ms
+2024-04-01 16:36:38.1880 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/_framework/aspnetcore-browser-refresh.js - -
+2024-04-01 16:36:38.2806 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/_vs/browserLink - -
+2024-04-01 16:36:38.3112 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/_framework/aspnetcore-browser-refresh.js - - - 200 11984 application/javascript;+charset=utf-8 114.6756ms
+2024-04-01 16:36:38.9025 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 621.9776ms
+2024-04-01 16:36:39.1280 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/swagger/v1/swagger.json - -
+2024-04-01 16:36:39.6390 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 514.7616ms
+2024-04-01 16:36:54.7543 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 DELETE https://localhost:7185/api/CLStationary/DeleteItem?id=2 - -
+2024-04-01 16:36:54.8823 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Logging.Controllers.CLStationary.DeleteItem (Logging)'
+2024-04-01 16:36:54.9532 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "DeleteItem", controller = "CLStationary"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteItem(Int32) on controller Logging.Controllers.CLStationary (Logging).
+2024-04-01 16:36:55.3128 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method Logging.Controllers.CLStationary.DeleteItem (Logging) - Validation state: Valid
+2024-04-01 16:37:17.7507 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method Logging.Controllers.CLStationary.DeleteItem (Logging), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 22416.7463ms.
+2024-04-01 16:37:17.7507 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'Logging.Models.RES01'.
+2024-04-01 16:37:21.5634 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Logging.Controllers.CLStationary.DeleteItem (Logging) in 26611.2119ms
+2024-04-01 16:37:21.5742 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Logging.Controllers.CLStationary.DeleteItem (Logging)'
+2024-04-01 16:37:21.5742 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 DELETE https://localhost:7185/api/CLStationary/DeleteItem?id=2 - - - 200 151 application/json;+charset=utf-8 26819.7249ms
+2024-04-01 16:53:52.2043 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/swagger/index.html - -
+2024-04-01 16:53:54.0434 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/swagger/index.html - - - 200 - text/html;charset=utf-8 1829.5342ms
+2024-04-01 16:53:54.9185 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/_vs/browserLink - -
+2024-04-01 16:53:54.9402 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/_framework/aspnetcore-browser-refresh.js - -
+2024-04-01 16:53:55.0699 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/_framework/aspnetcore-browser-refresh.js - - - 200 11984 application/javascript;+charset=utf-8 128.0170ms
+2024-04-01 16:53:55.3184 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 408.2219ms
+2024-04-01 16:53:55.4662 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/swagger/v1/swagger.json - -
+2024-04-01 16:53:57.5642 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 2098.9389ms
+2024-04-01 16:54:03.5843 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 DELETE https://localhost:7185/api/CLStationary/DeleteItem?id=1 - -
+2024-04-01 16:54:03.6645 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Logging.Controllers.CLStationary.DeleteItem (Logging)'
+2024-04-01 16:54:03.7401 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "DeleteItem", controller = "CLStationary"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteItem(Int32) on controller Logging.Controllers.CLStationary (Logging).
+2024-04-01 16:54:03.9776 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method Logging.Controllers.CLStationary.DeleteItem (Logging) - Validation state: Valid
+2024-04-01 16:54:22.4437 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method Logging.Controllers.CLStationary.DeleteItem (Logging), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 18453.8311ms.
+2024-04-01 16:54:22.4437 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'Logging.Models.RES01'.
+2024-04-01 16:54:27.1326 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Logging.Controllers.CLStationary.DeleteItem (Logging) in 23377.3596ms
+2024-04-01 16:54:27.1326 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Logging.Controllers.CLStationary.DeleteItem (Logging)'
+2024-04-01 16:54:27.1326 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 DELETE https://localhost:7185/api/CLStationary/DeleteItem?id=1 - - - 200 151 application/json;+charset=utf-8 23550.6001ms
+2024-04-01 16:56:27.3582 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/swagger/index.html - -
+2024-04-01 16:56:27.8209 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/swagger/index.html - - - 200 - text/html;charset=utf-8 477.4194ms
+2024-04-01 16:56:28.3852 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/_vs/browserLink - -
+2024-04-01 16:56:28.3852 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/_framework/aspnetcore-browser-refresh.js - -
+2024-04-01 16:56:28.4000 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/_framework/aspnetcore-browser-refresh.js - - - 200 11984 application/javascript;+charset=utf-8 8.2229ms
+2024-04-01 16:56:28.5715 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 177.6673ms
+2024-04-01 16:56:28.6911 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/swagger/v1/swagger.json - -
+2024-04-01 16:56:28.9753 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 283.3067ms
+2024-04-01 16:56:42.1992 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/api/CLStationary/GetItems - -
+2024-04-01 16:56:42.2576 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Logging.Controllers.CLStationary.GetItems (Logging)'
+2024-04-01 16:56:42.2789 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "GetItems", controller = "CLStationary"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetItems() on controller Logging.Controllers.CLStationary (Logging).
+2024-04-01 16:56:42.4157 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method Logging.Controllers.CLStationary.GetItems (Logging) - Validation state: Valid
+2024-04-01 16:56:42.7427 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method Logging.Controllers.CLStationary.GetItems (Logging), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 320.4238ms.
+2024-04-01 16:56:42.7427 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'Logging.Models.RES01'.
+2024-04-01 16:56:42.8232 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Logging.Controllers.CLStationary.GetItems (Logging) in 542.6099ms
+2024-04-01 16:56:42.8232 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Logging.Controllers.CLStationary.GetItems (Logging)'
+2024-04-01 16:56:42.8232 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/api/CLStationary/GetItems - - - 200 46 application/json;+charset=utf-8 630.6077ms
+2024-04-01 17:47:17.6414 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/swagger/index.html - -
+2024-04-01 17:47:18.2604 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/swagger/index.html - - - 200 - text/html;charset=utf-8 623.6546ms
+2024-04-01 17:47:19.3237 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/_framework/aspnetcore-browser-refresh.js - -
+2024-04-01 17:47:19.3590 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/_vs/browserLink - -
+2024-04-01 17:47:19.3684 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/_framework/aspnetcore-browser-refresh.js - - - 200 11984 application/javascript;+charset=utf-8 38.4193ms
+2024-04-01 17:47:19.8099 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 457.5482ms
+2024-04-01 17:47:19.9153 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/swagger/v1/swagger.json - -
+2024-04-01 17:47:20.2045 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 289.3564ms
+2024-04-01 17:47:47.1374 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 POST https://localhost:7185/api/CLStationary/AddItem application/json-patch+json 70
+2024-04-01 17:47:47.1994 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Logging.Controllers.CLStationary.AddItem (Logging)'
+2024-04-01 17:47:47.2363 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "AddItem", controller = "CLStationary"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddItem(Logging.Models.STA01) on controller Logging.Controllers.CLStationary (Logging).
+2024-04-01 17:47:47.8559 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method Logging.Controllers.CLStationary.AddItem (Logging) - Validation state: Valid
+2024-04-01 17:47:47.8874 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method Logging.Controllers.CLStationary.AddItem (Logging), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 25.0793ms.
+2024-04-01 17:47:47.9001 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'Logging.Models.RES01'.
+2024-04-01 17:47:48.0113 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Logging.Controllers.CLStationary.AddItem (Logging) in 774.8196ms
+2024-04-01 17:47:48.0113 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Logging.Controllers.CLStationary.AddItem (Logging)'
+2024-04-01 17:47:48.0113 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 POST https://localhost:7185/api/CLStationary/AddItem application/json-patch+json 70 - 200 58 application/json;+charset=utf-8 880.5729ms
+2024-04-01 17:50:50.0491 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/swagger/index.html - -
+2024-04-01 17:50:50.6534 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/swagger/index.html - - - 200 - text/html;charset=utf-8 612.4309ms
+2024-04-01 17:50:51.1678 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/_framework/aspnetcore-browser-refresh.js - -
+2024-04-01 17:50:51.1678 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/_vs/browserLink - -
+2024-04-01 17:50:51.1678 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/_framework/aspnetcore-browser-refresh.js - - - 200 11984 application/javascript;+charset=utf-8 14.5566ms
+2024-04-01 17:50:51.1984 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 32.6566ms
+2024-04-01 17:50:51.3300 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/swagger/v1/swagger.json - -
+2024-04-01 17:50:51.5205 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 190.3663ms
+2024-04-01 17:50:56.2530 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 POST https://localhost:7185/api/CLStationary/AddItem application/json-patch+json 69
+2024-04-01 17:50:56.2945 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Logging.Controllers.CLStationary.AddItem (Logging)'
+2024-04-01 17:50:56.3307 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "AddItem", controller = "CLStationary"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddItem(Logging.Models.STA01) on controller Logging.Controllers.CLStationary (Logging).
+2024-04-01 17:50:56.6887 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method Logging.Controllers.CLStationary.AddItem (Logging) - Validation state: Valid
+2024-04-01 17:50:56.7162 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method Logging.Controllers.CLStationary.AddItem (Logging), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 10.182ms.
+2024-04-01 17:50:56.7162 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'Logging.Models.RES01'.
+2024-04-01 17:50:56.7927 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Logging.Controllers.CLStationary.AddItem (Logging) in 460.7297ms
+2024-04-01 17:50:56.7927 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Logging.Controllers.CLStationary.AddItem (Logging)'
+2024-04-01 17:50:56.7927 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 POST https://localhost:7185/api/CLStationary/AddItem application/json-patch+json 69 - 200 53 application/json;+charset=utf-8 544.2462ms
+2024-04-01 17:52:57.2915 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/swagger/index.html - -
+2024-04-01 17:52:57.9047 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/swagger/index.html - - - 200 - text/html;charset=utf-8 624.1070ms
+2024-04-01 17:52:58.4439 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/_framework/aspnetcore-browser-refresh.js - -
+2024-04-01 17:52:58.4439 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/_vs/browserLink - -
+2024-04-01 17:52:58.4557 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/_framework/aspnetcore-browser-refresh.js - - - 200 11984 application/javascript;+charset=utf-8 15.7499ms
+2024-04-01 17:52:58.4822 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 39.2701ms
+2024-04-01 17:52:58.6181 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/swagger/v1/swagger.json - -
+2024-04-01 17:52:58.8023 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 184.1288ms
+2024-04-01 17:53:03.3641 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 POST https://localhost:7185/api/CLStationary/AddItem application/json-patch+json 69
+2024-04-01 17:53:03.4085 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Logging.Controllers.CLStationary.AddItem (Logging)'
+2024-04-01 17:53:03.4469 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "AddItem", controller = "CLStationary"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddItem(Logging.Models.STA01) on controller Logging.Controllers.CLStationary (Logging).
+2024-04-01 17:53:03.8619 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method Logging.Controllers.CLStationary.AddItem (Logging) - Validation state: Valid
+2024-04-01 17:53:03.8818 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method Logging.Controllers.CLStationary.AddItem (Logging), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 12.1191ms.
+2024-04-01 17:53:03.8896 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'Logging.Models.RES01'.
+2024-04-01 17:53:03.9695 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Logging.Controllers.CLStationary.AddItem (Logging) in 522.4425ms
+2024-04-01 17:53:03.9695 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Logging.Controllers.CLStationary.AddItem (Logging)'
+2024-04-01 17:53:03.9695 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 POST https://localhost:7185/api/CLStationary/AddItem application/json-patch+json 69 - 200 53 application/json;+charset=utf-8 613.0412ms
+2024-04-01 17:53:09.9646 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/api/CLStationary/GetItems - -
+2024-04-01 17:53:09.9674 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Logging.Controllers.CLStationary.GetItems (Logging)'
+2024-04-01 17:53:09.9674 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "GetItems", controller = "CLStationary"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetItems() on controller Logging.Controllers.CLStationary (Logging).
+2024-04-01 17:53:09.9827 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method Logging.Controllers.CLStationary.GetItems (Logging) - Validation state: Valid
+2024-04-01 17:53:10.0818 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method Logging.Controllers.CLStationary.GetItems (Logging), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 87.1984ms.
+2024-04-01 17:53:10.0818 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'Logging.Models.RES01'.
+2024-04-01 17:53:10.0818 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Logging.Controllers.CLStationary.GetItems (Logging) in 119.3007ms
+2024-04-01 17:53:10.0818 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Logging.Controllers.CLStationary.GetItems (Logging)'
+2024-04-01 17:53:10.0818 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/api/CLStationary/GetItems - - - 200 102 application/json;+charset=utf-8 124.9581ms
+2024-04-01 17:55:29.7850 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/swagger/index.html - -
+2024-04-01 17:55:30.8301 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/swagger/index.html - - - 200 - text/html;charset=utf-8 1055.6091ms
+2024-04-01 17:55:31.6533 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/_framework/aspnetcore-browser-refresh.js - -
+2024-04-01 17:55:31.6533 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/_vs/browserLink - -
+2024-04-01 17:55:31.6801 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/_framework/aspnetcore-browser-refresh.js - - - 200 11984 application/javascript;+charset=utf-8 28.4006ms
+2024-04-01 17:55:32.1725 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 521.9478ms
+2024-04-01 17:55:32.2973 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/swagger/v1/swagger.json - -
+2024-04-01 17:55:32.5691 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 272.4859ms
+2024-04-01 17:55:42.7523 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 POST https://localhost:7185/api/CLStationary/AddItem application/json-patch+json 70
+2024-04-01 17:55:42.8026 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Logging.Controllers.CLStationary.AddItem (Logging)'
+2024-04-01 17:55:42.8471 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "AddItem", controller = "CLStationary"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddItem(Logging.Models.STA01) on controller Logging.Controllers.CLStationary (Logging).
+2024-04-01 17:55:43.2566 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method Logging.Controllers.CLStationary.AddItem (Logging) - Validation state: Valid
+2024-04-01 17:55:43.2833 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method Logging.Controllers.CLStationary.AddItem (Logging), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 19.5024ms.
+2024-04-01 17:55:43.2833 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'Logging.Models.RES01'.
+2024-04-01 17:55:43.3915 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Logging.Controllers.CLStationary.AddItem (Logging) in 542.5529ms
+2024-04-01 17:55:43.3915 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Logging.Controllers.CLStationary.AddItem (Logging)'
+2024-04-01 17:55:43.3915 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 POST https://localhost:7185/api/CLStationary/AddItem application/json-patch+json 70 - 200 58 application/json;+charset=utf-8 636.7709ms
+2024-04-01 17:57:29.0508 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/swagger/index.html - -
+2024-04-01 17:57:30.2543 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/swagger/index.html - - - 200 - text/html;charset=utf-8 1212.6113ms
+2024-04-01 17:57:31.0116 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/_vs/browserLink - -
+2024-04-01 17:57:31.0116 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/_framework/aspnetcore-browser-refresh.js - -
+2024-04-01 17:57:31.0179 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/_framework/aspnetcore-browser-refresh.js - - - 200 11984 application/javascript;+charset=utf-8 8.3885ms
+2024-04-01 17:57:31.0958 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 87.3101ms
+2024-04-01 17:57:31.2053 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/swagger/v1/swagger.json - -
+2024-04-01 17:57:31.4636 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 260.2821ms
+2024-04-01 17:57:42.6603 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 DELETE https://localhost:7185/api/CLStationary/DeleteItem?id=1 - -
+2024-04-01 17:57:42.7381 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Logging.Controllers.CLStationary.DeleteItem (Logging)'
+2024-04-01 17:57:42.7936 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "DeleteItem", controller = "CLStationary"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteItem(Int32) on controller Logging.Controllers.CLStationary (Logging).
+2024-04-01 17:57:43.0025 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method Logging.Controllers.CLStationary.DeleteItem (Logging) - Validation state: Valid
+2024-04-01 17:57:43.1594 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method Logging.Controllers.CLStationary.DeleteItem (Logging), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 151.454ms.
+2024-04-01 17:57:43.1594 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'Logging.Models.RES01'.
+2024-04-01 17:57:43.4402 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Logging.Controllers.CLStationary.DeleteItem (Logging) in 638.5661ms
+2024-04-01 17:57:43.4402 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Logging.Controllers.CLStationary.DeleteItem (Logging)'
+2024-04-01 17:57:43.4402 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 DELETE https://localhost:7185/api/CLStationary/DeleteItem?id=1 - - - 200 151 application/json;+charset=utf-8 773.7271ms
+2024-04-01 17:59:05.6058 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/swagger/index.html - -
+2024-04-01 17:59:06.7383 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/swagger/index.html - - - 200 - text/html;charset=utf-8 1145.9102ms
+2024-04-01 17:59:07.6355 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/_framework/aspnetcore-browser-refresh.js - -
+2024-04-01 17:59:07.6571 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/_vs/browserLink - -
+2024-04-01 17:59:07.6603 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/_framework/aspnetcore-browser-refresh.js - - - 200 11984 application/javascript;+charset=utf-8 20.5627ms
+2024-04-01 17:59:07.8491 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 201.0803ms
+2024-04-01 17:59:08.0590 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/swagger/v1/swagger.json - -
+2024-04-01 17:59:08.2594 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 198.5746ms
+2024-04-01 17:59:18.1225 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 DELETE https://localhost:7185/api/CLStationary/DeleteItem?id=1 - -
+2024-04-01 17:59:18.1800 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Logging.Controllers.CLStationary.DeleteItem (Logging)'
+2024-04-01 17:59:18.2222 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "DeleteItem", controller = "CLStationary"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteItem(Int32) on controller Logging.Controllers.CLStationary (Logging).
+2024-04-01 17:59:18.3187 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method Logging.Controllers.CLStationary.DeleteItem (Logging) - Validation state: Valid
+2024-04-01 17:59:18.4450 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method Logging.Controllers.CLStationary.DeleteItem (Logging), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 108.355ms.
+2024-04-01 17:59:18.4450 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'Logging.Models.RES01'.
+2024-04-01 17:59:18.6938 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Logging.Controllers.CLStationary.DeleteItem (Logging) in 464.8414ms
+2024-04-01 17:59:18.6938 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Logging.Controllers.CLStationary.DeleteItem (Logging)'
+2024-04-01 17:59:18.6938 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 DELETE https://localhost:7185/api/CLStationary/DeleteItem?id=1 - - - 200 151 application/json;+charset=utf-8 568.2829ms
+2024-04-01 17:59:26.1865 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/api/CLStationary/GetItems - -
+2024-04-01 17:59:26.1928 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Logging.Controllers.CLStationary.GetItems (Logging)'
+2024-04-01 17:59:26.1928 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "GetItems", controller = "CLStationary"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetItems() on controller Logging.Controllers.CLStationary (Logging).
+2024-04-01 17:59:26.2074 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method Logging.Controllers.CLStationary.GetItems (Logging) - Validation state: Valid
+2024-04-01 17:59:26.2538 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method Logging.Controllers.CLStationary.GetItems (Logging), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 41.8212ms.
+2024-04-01 17:59:26.2543 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'Logging.Models.RES01'.
+2024-04-01 17:59:26.2543 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Logging.Controllers.CLStationary.GetItems (Logging) in 68.6187ms
+2024-04-01 17:59:26.2543 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Logging.Controllers.CLStationary.GetItems (Logging)'
+2024-04-01 17:59:26.2543 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/api/CLStationary/GetItems - - - 200 46 application/json;+charset=utf-8 73.4375ms
+2024-04-01 18:00:08.2019 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/swagger/index.html - -
+2024-04-01 18:00:09.1172 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/swagger/index.html - - - 200 - text/html;charset=utf-8 927.5365ms
+2024-04-01 18:00:09.7157 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/_framework/aspnetcore-browser-refresh.js - -
+2024-04-01 18:00:09.7157 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/_vs/browserLink - -
+2024-04-01 18:00:09.7491 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/_framework/aspnetcore-browser-refresh.js - - - 200 11984 application/javascript;+charset=utf-8 31.0720ms
+2024-04-01 18:00:09.8173 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 95.5618ms
+2024-04-01 18:00:09.9248 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/swagger/v1/swagger.json - -
+2024-04-01 18:00:10.1905 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 266.1768ms
+2024-04-01 18:00:23.8589 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 DELETE https://localhost:7185/api/CLStationary/DeleteItem?id=1 - -
+2024-04-01 18:00:23.9132 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Logging.Controllers.CLStationary.DeleteItem (Logging)'
+2024-04-01 18:00:23.9613 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "DeleteItem", controller = "CLStationary"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteItem(Int32) on controller Logging.Controllers.CLStationary (Logging).
+2024-04-01 18:00:24.1652 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method Logging.Controllers.CLStationary.DeleteItem (Logging) - Validation state: Valid
+2024-04-01 18:00:24.3706 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method Logging.Controllers.CLStationary.DeleteItem (Logging), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 194.3246ms.
+2024-04-01 18:00:24.3806 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'Logging.Models.RES01'.
+2024-04-01 18:00:25.0744 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Logging.Controllers.CLStationary.DeleteItem (Logging) in 1103.6554ms
+2024-04-01 18:00:25.0744 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Logging.Controllers.CLStationary.DeleteItem (Logging)'
+2024-04-01 18:00:25.0744 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 DELETE https://localhost:7185/api/CLStationary/DeleteItem?id=1 - - - 200 151 application/json;+charset=utf-8 1215.8503ms
+2024-04-01 18:02:38.7733 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/swagger/index.html - -
+2024-04-01 18:02:39.3421 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/swagger/index.html - - - 200 - text/html;charset=utf-8 576.3481ms
+2024-04-01 18:02:39.8375 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/_vs/browserLink - -
+2024-04-01 18:02:39.8375 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/_framework/aspnetcore-browser-refresh.js - -
+2024-04-01 18:02:39.8553 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/_framework/aspnetcore-browser-refresh.js - - - 200 11984 application/javascript;+charset=utf-8 13.0943ms
+2024-04-01 18:02:39.8678 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 34.0810ms
+2024-04-01 18:02:40.0185 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/swagger/v1/swagger.json - -
+2024-04-01 18:02:40.1923 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 173.9009ms
+2024-04-01 18:02:45.3676 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 DELETE https://localhost:7185/api/CLStationary/DeleteItem?id=1 - -
+2024-04-01 18:02:45.4189 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Logging.Controllers.CLStationary.DeleteItem (Logging)'
+2024-04-01 18:02:45.4555 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "DeleteItem", controller = "CLStationary"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteItem(Int32) on controller Logging.Controllers.CLStationary (Logging).
+2024-04-01 18:02:45.5553 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method Logging.Controllers.CLStationary.DeleteItem (Logging) - Validation state: Valid
+2024-04-01 18:02:45.6881 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method Logging.Controllers.CLStationary.DeleteItem (Logging), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 118.0668ms.
+2024-04-01 18:02:45.6965 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'Logging.Models.RES01'.
+2024-04-01 18:02:45.9472 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Logging.Controllers.CLStationary.DeleteItem (Logging) in 484.3951ms
+2024-04-01 18:02:45.9472 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Logging.Controllers.CLStationary.DeleteItem (Logging)'
+2024-04-01 18:02:45.9472 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 DELETE https://localhost:7185/api/CLStationary/DeleteItem?id=1 - - - 200 151 application/json;+charset=utf-8 572.2986ms
+2024-04-01 18:06:08.1359 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/swagger/index.html - -
+2024-04-01 18:06:08.6993 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/swagger/index.html - - - 200 - text/html;charset=utf-8 570.6619ms
+2024-04-01 18:06:09.3912 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/_framework/aspnetcore-browser-refresh.js - -
+2024-04-01 18:06:09.3912 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/_vs/browserLink - -
+2024-04-01 18:06:09.4542 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/_framework/aspnetcore-browser-refresh.js - - - 200 11984 application/javascript;+charset=utf-8 57.8427ms
+2024-04-01 18:06:09.5894 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 189.1009ms
+2024-04-01 18:06:09.6884 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/swagger/v1/swagger.json - -
+2024-04-01 18:06:09.8993 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 211.0867ms
+2024-04-01 18:06:19.5243 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/swagger/index.html - -
+2024-04-01 18:06:20.3325 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/swagger/index.html - - - 200 - text/html;charset=utf-8 817.6931ms
+2024-04-01 18:06:21.2928 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/_framework/aspnetcore-browser-refresh.js - -
+2024-04-01 18:06:21.2928 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/_vs/browserLink - -
+2024-04-01 18:06:21.2928 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/_framework/aspnetcore-browser-refresh.js - - - 200 11984 application/javascript;+charset=utf-8 10.8190ms
+2024-04-01 18:06:21.5757 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 288.3587ms
+2024-04-01 18:06:21.7305 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/swagger/v1/swagger.json - -
+2024-04-01 18:06:22.0649 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 334.7728ms
+2024-04-01 18:06:28.1229 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 DELETE https://localhost:7185/api/CLStationary/DeleteItem?id=1 - -
+2024-04-01 18:06:28.1710 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Logging.Controllers.CLStationary.DeleteItem (Logging)'
+2024-04-01 18:06:28.2122 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "DeleteItem", controller = "CLStationary"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteItem(Int32) on controller Logging.Controllers.CLStationary (Logging).
+2024-04-01 18:06:28.4014 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method Logging.Controllers.CLStationary.DeleteItem (Logging) - Validation state: Valid
+2024-04-01 18:06:28.5301 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method Logging.Controllers.CLStationary.DeleteItem (Logging), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 131.272ms.
+2024-04-01 18:06:28.5434 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'Logging.Models.RES01'.
+2024-04-01 18:06:28.8865 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Logging.Controllers.CLStationary.DeleteItem (Logging) in 666.0098ms
+2024-04-01 18:06:28.8865 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Logging.Controllers.CLStationary.DeleteItem (Logging)'
+2024-04-01 18:06:28.8865 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 DELETE https://localhost:7185/api/CLStationary/DeleteItem?id=1 - - - 200 151 application/json;+charset=utf-8 762.3358ms
+2024-04-01 18:08:52.4559 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/swagger/index.html - -
+2024-04-01 18:08:53.5641 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/swagger/index.html - - - 200 - text/html;charset=utf-8 1116.7263ms
+2024-04-01 18:08:54.2515 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/_vs/browserLink - -
+2024-04-01 18:08:54.2515 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/_framework/aspnetcore-browser-refresh.js - -
+2024-04-01 18:08:54.2515 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/_framework/aspnetcore-browser-refresh.js - - - 200 11984 application/javascript;+charset=utf-8 10.1436ms
+2024-04-01 18:08:54.4510 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 210.7766ms
+2024-04-01 18:08:54.6104 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/swagger/v1/swagger.json - -
+2024-04-01 18:08:54.8740 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 262.7400ms
+2024-04-01 18:09:03.4220 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 DELETE https://localhost:7185/api/CLStationary/DeleteItem?id=1 - -
+2024-04-01 18:09:03.4979 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Logging.Controllers.CLStationary.DeleteItem (Logging)'
+2024-04-01 18:09:03.5608 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "DeleteItem", controller = "CLStationary"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteItem(Int32) on controller Logging.Controllers.CLStationary (Logging).
+2024-04-01 18:09:03.7662 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method Logging.Controllers.CLStationary.DeleteItem (Logging) - Validation state: Valid
+2024-04-01 18:09:03.9840 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method Logging.Controllers.CLStationary.DeleteItem (Logging), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 210.046ms.
+2024-04-01 18:09:03.9840 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'Logging.Models.RES01'.
+2024-04-01 18:09:04.3650 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Logging.Controllers.CLStationary.DeleteItem (Logging) in 789.5714ms
+2024-04-01 18:09:04.3650 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Logging.Controllers.CLStationary.DeleteItem (Logging)'
+2024-04-01 18:09:04.3650 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 DELETE https://localhost:7185/api/CLStationary/DeleteItem?id=1 - - - 200 151 application/json;+charset=utf-8 935.5683ms
+2024-04-01 18:12:56.4086 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/swagger/index.html - -
+2024-04-01 18:12:57.3945 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/swagger/index.html - - - 200 - text/html;charset=utf-8 994.9444ms
+2024-04-01 18:12:58.3867 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/_framework/aspnetcore-browser-refresh.js - -
+2024-04-01 18:12:58.4020 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/_vs/browserLink - -
+2024-04-01 18:12:58.4424 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/_framework/aspnetcore-browser-refresh.js - - - 200 11984 application/javascript;+charset=utf-8 55.6880ms
+2024-04-01 18:12:58.5196 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 123.4776ms
+2024-04-01 18:12:58.7602 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7185/swagger/v1/swagger.json - -
+2024-04-01 18:12:59.0637 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7185/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 304.9417ms
+2024-04-01 18:13:09.3205 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 DELETE https://localhost:7185/api/CLStationary/DeleteItem?id=1 - -
+2024-04-01 18:13:09.3845 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'Logging.Controllers.CLStationary.DeleteItem (Logging)'
+2024-04-01 18:13:09.4323 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "DeleteItem", controller = "CLStationary"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteItem(Int32) on controller Logging.Controllers.CLStationary (Logging).
+2024-04-01 18:13:09.5514 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method Logging.Controllers.CLStationary.DeleteItem (Logging) - Validation state: Valid
+2024-04-01 18:13:09.6834 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method Logging.Controllers.CLStationary.DeleteItem (Logging), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 114.1975ms.
+2024-04-01 18:13:09.6971 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'Logging.Models.RES01'.
+2024-04-01 18:13:09.9465 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action Logging.Controllers.CLStationary.DeleteItem (Logging) in 513.3203ms
+2024-04-01 18:13:09.9465 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'Logging.Controllers.CLStationary.DeleteItem (Logging)'
+2024-04-01 18:13:09.9465 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 DELETE https://localhost:7185/api/CLStationary/DeleteItem?id=1 - - - 200 151 application/json;+charset=utf-8 626.8229ms

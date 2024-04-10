@@ -1,0 +1,30 @@
+2024-04-03 13:23:14.2154 Info Loading assembly name: NLog.Database
+2024-04-03 13:23:14.2454 Info NLog.Database, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-04-03 13:23:14.3281 Info Registered target NLog.Targets.FileTarget(Name=Trace)
+2024-04-03 13:23:14.3281 Info Registered target NLog.Targets.FileTarget(Name=Information)
+2024-04-03 13:23:14.3281 Info Registered target NLog.Targets.FileTarget(Name=Warning)
+2024-04-03 13:23:14.3281 Info Registered target NLog.Targets.FileTarget(Name=Error)
+2024-04-03 13:23:14.3281 Info Registered target NLog.Targets.FileTarget(Name=Critical)
+2024-04-03 13:23:14.3281 Info Registered target NLog.Targets.FileTarget(Name=Debug)
+2024-04-03 13:23:14.3374 Info Registered target NLog.Targets.DatabaseTarget(Name=database)
+2024-04-03 13:23:14.3550 Info Registered target NLog.Targets.DatabaseTarget(Name=databaseLog)
+2024-04-03 13:23:14.3833 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-04-03 13:23:14.4038 Info LogManager.ThrowExceptions = true can crash the application! Use only for unit-testing and last resort troubleshooting.
+2024-04-03 13:23:14.4174 Info Validating config: Targets=8, ConfigItems=137, FilePath=F:\Krinsi - 379\New folder\.NET CORE 1\Logging\Logging\Logging\bin\Debug\net6.0\nlog.config
+2024-04-03 13:23:14.6332 Info Configuration initialized.
+2024-04-03 13:23:15.0717 Info Validating config: Targets=8, ConfigItems=137, FilePath=F:\Krinsi - 379\New folder\.NET CORE 1\Logging\Logging\Logging\bin\Debug\net6.0\nlog.config
+2024-04-03 13:25:36.2545 Info Loading assembly name: NLog.Database
+2024-04-03 13:25:36.2663 Info NLog.Database, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-04-03 13:25:36.3210 Info Registered target NLog.Targets.FileTarget(Name=Trace)
+2024-04-03 13:25:36.3210 Info Registered target NLog.Targets.FileTarget(Name=Information)
+2024-04-03 13:25:36.3210 Info Registered target NLog.Targets.FileTarget(Name=Warning)
+2024-04-03 13:25:36.3210 Info Registered target NLog.Targets.FileTarget(Name=Error)
+2024-04-03 13:25:36.3230 Info Registered target NLog.Targets.FileTarget(Name=Critical)
+2024-04-03 13:25:36.3230 Info Registered target NLog.Targets.FileTarget(Name=Debug)
+2024-04-03 13:25:36.3230 Info Registered target NLog.Targets.DatabaseTarget(Name=database)
+2024-04-03 13:25:36.3460 Info Registered target NLog.Targets.DatabaseTarget(Name=databaseLog)
+2024-04-03 13:25:36.3608 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-04-03 13:25:36.3756 Info LogManager.ThrowExceptions = true can crash the application! Use only for unit-testing and last resort troubleshooting.
+2024-04-03 13:25:36.3756 Info Validating config: Targets=8, ConfigItems=137, FilePath=F:\Krinsi - 379\New folder\.NET CORE 1\Logging\Logging\Logging\bin\Debug\net6.0\nlog.config
+2024-04-03 13:25:36.4373 Info Configuration initialized.
+2024-04-03 13:25:36.6214 Info Validating config: Targets=8, ConfigItems=137, FilePath=F:\Krinsi - 379\New folder\.NET CORE 1\Logging\Logging\Logging\bin\Debug\net6.0\nlog.config

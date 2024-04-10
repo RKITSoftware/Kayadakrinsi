@@ -5,7 +5,7 @@ using ServiceLifetime = DependencyInjection.Services.ServiceLifetime;
 namespace DependencyInjection
 {
     /// <summary>
-    /// Configures request processing pipeline ans services which are required for an application
+    /// Represents the startup class responsible for configuring request processing pipeline and services of an application
     /// </summary>
     public class Startup
     {
@@ -32,8 +32,8 @@ namespace DependencyInjection
         /// <summary>
         /// Configures request processing pipeline for an application
         /// </summary>
-        /// <param name="app"></param>
-        /// <param name="environment"></param>
+        /// <param name="app">Application builder</param>
+        /// <param name="environment">Hosting environment</param>
         public void Configure(IApplicationBuilder app, IWebHostEnvironment environment)
         {
             if (environment.IsDevelopment())

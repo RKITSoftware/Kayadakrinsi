@@ -1,5 +1,8 @@
 ﻿namespace DynamicType
 {
+    /// <summary>
+    /// Represents test class
+    /// </summary>
     public class Test
     {
         /// <summary>
