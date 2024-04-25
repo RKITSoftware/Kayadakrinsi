@@ -2,31 +2,35 @@
 using System.Net.Http;
 using System.Web;
 using System.Web.Http;
-using HospitalAdvance.Auth;
 using HospitalAdvance.BusinessLogic;
+using HospitalAdvance.Enums;
 using HospitalAdvance.Models;
 
 namespace HospitalAdvance.Controllers
 {
-	public class CLSTF02Controller : ApiController
+    /// <summary>
+    /// Handles methods to perform operations related to helper
+    /// </summary>
+    [RoutePrefix("api/CLSTF02")]
+    public class CLSTF02Controller : ApiController
     {
 
-		#region Public Members
-
-		/// <summary>
-		/// Declares object of BLHelper class
-		/// </summary>
-		public BLSTF02 objBLHelper;
-
-		/// <summary>
-		/// Declares object of Stopwatch class
-		/// </summary>
-		public static Stopwatch stopwatch;
+        #region Public Members
 
         /// <summary>
-        /// Declares object of class BLUser
+        /// Declares object of BLSTF02Handler class
         /// </summary>
-        public BLUSR01 objBLUser;
+        public BLSTF02Handler objBLSTF02Handler;
+
+        /// <summary>
+        /// Declares object of Stopwatch class
+        /// </summary>
+        public Stopwatch stopwatch;
+
+        /// <summary>
+        /// Declares object of class BLUSR01Handler
+        /// </summary>
+        public BLUSR01Handler objBLUSR01Handler;
 
         #endregion
 
@@ -36,11 +40,11 @@ namespace HospitalAdvance.Controllers
         /// Initializes objects
         /// </summary>
         public CLSTF02Controller()
-		{
-			objBLHelper = new BLSTF02();
-			objBLUser = new BLUSR01();
-			stopwatch = Stopwatch.StartNew();
-		}
+        {
+            objBLSTF02Handler = new BLSTF02Handler();
+            objBLUSR01Handler = new BLUSR01Handler();
+            stopwatch = Stopwatch.StartNew();
+        }
 
         #endregion
 
@@ -49,96 +53,117 @@ namespace HospitalAdvance.Controllers
         /// <summary>
         /// Displays helpers information
         /// </summary>
-        /// <returns></returns>
+        /// <returns>List of helpers</returns>
         [HttpGet]
-		[BearerAuthentication]
-		[Authorize(Roles = "Manager,helper")]
-		[Route("api/CLHelper/GetHelpers")]
-		public IHttpActionResult GetHelpers()
-		{
-			var data = objBLHelper.Select();
+        [Authorize(Roles = "M")]
+        [Route("GetHelpers")]
+        public IHttpActionResult GetHelpers()
+        {
+            Response response = objBLSTF02Handler.Select();
 
-			stopwatch.Stop();
-			long responseTime = stopwatch.ElapsedTicks;
+            stopwatch.Stop();
+            long responseTime = stopwatch.ElapsedTicks;
 
-			HttpContext.Current.Response.AddHeader("Response-time", responseTime.ToString());
+            HttpContext.Current.Response.AddHeader("Response-time", responseTime.ToString());
 
-			return Ok(data);
-		}
+            return Ok(response);
+        }
 
-		/// <summary>
-		/// Downloads file of helper's data
-		/// </summary>
-		/// <returns>Downloaded text file</returns>
-		[HttpGet]
-		[BearerAuthentication]
-		[Authorize(Roles = "Manager")]
-		[Route("api/CLHelper/GetHelpersFile")]
-		public HttpResponseMessage GetHelpersFile()
-		{
-			return objBLHelper.Download();
-		}
+        /// <summary>
+        /// Downloads file of helper's data
+        /// </summary>
+        /// <returns>Downloaded text file</returns>
+        [HttpGet]
+        [Authorize(Roles = "M")]
+        [Route("GetFile")]
+        public HttpResponseMessage GetFile()
+        {
+            return objBLSTF02Handler.Download();
+        }
 
-		/// <summary>
-		/// Downloads file of doctor's data
-		/// </summary>
-		/// <returns>Downloaded text file</returns>
-		[HttpGet]
-		[BearerAuthentication]
-		[Authorize(Roles = "helper")]
-		[Route("api/CLHelper/GetMyFile")]
-		public HttpResponseMessage GetMyFile()
-		{
-			var user = objBLUser.GetUser(ActionContext);
-			return objBLHelper.DownloadMyFile(user);
-		}
+        /// <summary>
+        /// Downloads file of current logged in helper's data
+        /// </summary>
+        /// <returns>Downloaded text file</returns>
+        [HttpGet]
+        [Authorize(Roles = "H")]
+        [Route("GetMyFile")]
+        public HttpResponseMessage GetMyFile()
+        {
+            USR01 user = objBLUSR01Handler.GetUser();
 
-		/// <summary>
-		/// Write data into file
-		/// </summary>
-		/// <returns>Appropriate Message</returns>
-		[HttpPost]
-		[BearerAuthentication]
-		[Authorize(Roles = "helper")]
-		[Route("api/CLHelper/WriteMyFile")]
-		public IHttpActionResult WriteMyFile()
-		{
-			var user = objBLUser.GetUser(ActionContext);
-			return Ok(objBLHelper.WriteMyFile(user));
-		}
+            return objBLSTF02Handler.DownloadMyFile(user);
+        }
 
-		/// <summary>
-		/// Write data into file
-		/// </summary>
-		/// <returns>Appropriate Message</returns>
-		[HttpPost]
-		[BearerAuthentication]
-		[Authorize(Roles = "Manager")]
-		[Route("api/CLHelper/WriteFile")]
-		public IHttpActionResult WriteFile()
-		{
-			return Ok(objBLHelper.WriteData());
-		}
+        /// <summary>
+        /// Adds helper information
+        /// </summary>
+        /// <param name="objDTOSTF02">Object of DTOSTF02 class</param>
+        /// <returns>Appropriate message</returns>
+        [HttpPost]
+        [Authorize(Roles = "M")]
+        [Route("AddHelper")]
+        public IHttpActionResult AddHelper(DTOSTF02 objDTOSTF02)
+        {
+            objBLSTF02Handler.ObjOperations = enmOperations.I;
 
-		/// <summary>
-		/// Updates helper information
-		/// </summary>
-		/// <param name="objSTF02">Helper information to be updated</param>
-		/// <returns>Appropriate message</returns>
-		[HttpPut]
-		[BearerAuthentication]
-		[Authorize(Roles = "Manager")]
-		[Route("api/CLHelper/UpdateHelpers")]
-		public IHttpActionResult UpdateHelpers(STF02 objSTF02)
-		{
-			if (objBLHelper.validationUpdate(objSTF02))
-			{
-				return Ok(objBLHelper.Update(objSTF02));
-			}
-			return BadRequest("Not found");
-		}
+            objBLSTF02Handler.PreSave(objDTOSTF02);
 
-		#endregion
+            Response response = objBLSTF02Handler.Validation();
+
+            if (!response.isError)
+            {
+                response = objBLSTF02Handler.Save();
+            }
+
+            return Ok(response);
+        }
+
+        /// <summary>
+        /// Updates helper information
+        /// </summary>
+        /// <param name="objDTOSTF02">Object of DTOSTF02 class</param>
+        /// <returns>Appropriate message</returns>
+        [HttpPut]
+        [Authorize(Roles = "M")]
+        [Route("UpdateHelper")]
+        public IHttpActionResult UpdateHelper(DTOSTF02 objDTOSTF02)
+        {
+            objBLSTF02Handler.ObjOperations = enmOperations.U;
+
+            objBLSTF02Handler.PreSave(objDTOSTF02);
+
+            Response response = objBLSTF02Handler.Validation();
+
+            if (!response.isError)
+            {
+                response = objBLSTF02Handler.Save();
+            }
+
+            return Ok(response);
+        }
+
+        /// <summary>
+        /// Deletes STF02 object
+        /// </summary>
+        /// <param name="id">Id of helper to be delete</param>
+        /// <returns>Appropriate message</returns>
+        [HttpDelete]
+        [Authorize(Roles = "M")]
+        [Route("DeleteHelper")]
+        public IHttpActionResult DeleteHelper(int id)
+        {
+            Response response = objBLSTF02Handler.ValidationDelete(id);
+
+            if (!response.isError)
+            {
+                response = objBLSTF02Handler.Delete(id);
+            }
+
+            return Ok(response);
+        }
+
+        #endregion
 
     }
 }

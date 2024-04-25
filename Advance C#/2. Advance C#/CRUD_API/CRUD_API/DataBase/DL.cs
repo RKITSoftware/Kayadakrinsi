@@ -11,6 +11,7 @@ namespace CRUD_API.DataBase
     /// </summary>
     public class DL
     {
+
         #region Private Members
 
         /// <summary>
@@ -88,7 +89,10 @@ namespace CRUD_API.DataBase
         {
             try
             {
-                string query = string.Format(@"SHOW TABLES LIKE '{0}'", type.Name);
+                string query = string.Format(@"SHOW TABLES LIKE 
+                                                '{0}'"
+                                            , type.Name);
+
                 if (OpenConnection() == true)
                 {
                     MySqlCommand command = new MySqlCommand(query, _connection);
@@ -116,7 +120,8 @@ namespace CRUD_API.DataBase
         /// </summary>
         public void CreateTable()
         {
-            string query = String.Format(@"CREATE TABLE IF NOT EXISTS ORD01
+            string query = String.Format(@"CREATE TABLE IF NOT EXISTS 
+                                            ORD01
                                             (
                                                D01F01 INT NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'order id',
                                                D01F02 VARCHAR(25) COMMENT 'product name',
@@ -146,9 +151,9 @@ namespace CRUD_API.DataBase
         {
             string query = String.Format(@"INSERT INTO 
                                             ORD01
-                                            (D01F02,D01F03,D01F04)
-                                        VALUES
-                                           ('{0}',{1},{2}) ",
+                                                (D01F02,D01F03,D01F04)
+                                            VALUES
+                                                ('{0}',{1},{2}) ",
                                            ObjORD01.D01F02, ObjORD01.D01F03, ObjORD01.D01F04);
 
             if (OpenConnection() == true)
@@ -177,14 +182,14 @@ namespace CRUD_API.DataBase
             if (order != null)
             {
                 string query = String.Format(@"UPDATE 
-                                            ORD01 
-                                           SET  
-                                            D01F02='{0}',
-                                            D01F03={1},
-                                            D01F04={2}
-                                           WHERE 
-                                            D01F01={3}"
-                                           , ObjORD01.D01F02, ObjORD01.D01F03, ObjORD01.D01F04, id);
+                                                    ORD01 
+                                               SET  
+                                                    D01F02='{0}',
+                                                    D01F03={1},
+                                                    D01F04={2}
+                                               WHERE 
+                                                    D01F01={3}"
+                                               , ObjORD01.D01F02, ObjORD01.D01F03, ObjORD01.D01F04, id);
 
                 //Open connection
                 if (OpenConnection() == true)
@@ -212,11 +217,11 @@ namespace CRUD_API.DataBase
         /// </summary>
         public string Delete(int id)
         {
-            string query = String.Format(@"DELETE 
-                                            FROM 
+            string query = String.Format(@"DELETE FROM 
                                                 ORD01 
                                             WHERE 
-                                                D01F01={0}", id);
+                                                D01F01={0}"
+                                            , id);
 
             if (OpenConnection() == true)
             {
@@ -239,9 +244,12 @@ namespace CRUD_API.DataBase
             List<ORD01> lstORD01 = new List<ORD01>();
 
             string query = String.Format(@"SELECT 
-                                            D01F01, D01F02, D01F03, D01F04
+                                                D01F01, 
+                                                D01F02, 
+                                                D01F03, 
+                                                D01F04
                                            FROM 
-                                            ORD01");
+                                                ORD01");
 
             //Open connection
             if (OpenConnection() == true)
@@ -281,7 +289,7 @@ namespace CRUD_API.DataBase
         public string Drop()
         {
             string query = String.Format(@"DROP TABLE 
-                                            ORD01");
+                                                ORD01");
             if (OpenConnection() == true)
             {
                 MySqlCommand command = new MySqlCommand(query, _connection);
@@ -293,5 +301,6 @@ namespace CRUD_API.DataBase
         }
 
         #endregion
+
     }
 }

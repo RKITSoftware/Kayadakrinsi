@@ -12,7 +12,7 @@ using WebActivatorEx;
 
 namespace HospitalAdvance
 {
-	public class SwaggerConfig
+    public class SwaggerConfig
     {
         public static void Register()
         {
@@ -39,158 +39,159 @@ namespace HospitalAdvance
                         //
                         c.SingleApiVersion("v1", "HospitalAdvance");
 
-						c.BasicAuth("basic")
-							.Description("Basic HTTP Authentication");
+                        c.BasicAuth("basic")
+                            .Description("Basic HTTP Authentication");
 
-						c.ApiKey("BearerToken")
-										  .Description("Bearer Token Authentication")
-										  .Name("Authorization")
-										  .In("header");
-						c.OperationFilter<AssignOAuth2SecurityRequirements>();
+                        //c.ApiKey("BearerToken")
+                        //                  .Description("Bearer Token Authentication")
+                        //                  .Name("Authorization")
+                        //                  .In("header");
 
-						// If you want the output Swagger docs to be indented properly, enable the "PrettyPrint" option.
-						//
-						//c.PrettyPrint();
+                        c.OperationFilter<AssignOAuth2SecurityRequirements>();
 
-						// If your API has multiple versions, use "MultipleApiVersions" instead of "SingleApiVersion".
-						// In this case, you must provide a lambda that tells Swashbuckle which actions should be
-						// included in the docs for a given API version. Like "SingleApiVersion", each call to "Version"
-						// returns an "Info" builder so you can provide additional metadata per API version.
-						//
-						//c.MultipleApiVersions(
-						//    (apiDesc, targetApiVersion) => ResolveVersionSupportByRouteConstraint(apiDesc, targetApiVersion),
-						//    (vc) =>
-						//    {
-						//        vc.Version("v2", "Swashbuckle Dummy API V2");
-						//        vc.Version("v1", "Swashbuckle Dummy API V1");
-						//    });
+                        // If you want the output Swagger docs to be indented properly, enable the "PrettyPrint" option.
+                        //
+                        //c.PrettyPrint();
 
-						// You can use "BasicAuth", "ApiKey" or "OAuth2" options to describe security schemes for the API.
-						// See https://github.com/swagger-api/swagger-spec/blob/master/versions/2.0.md for more details.
-						// NOTE: These only define the schemes and need to be coupled with a corresponding "security" property
-						// at the document or operation level to indicate which schemes are required for an operation. To do this,
-						// you'll need to implement a custom IDocumentFilter and/or IOperationFilter to set these properties
-						// according to your specific authorization implementation
-						//
-						//c.BasicAuth("basic")
-						//    .Description("Basic HTTP Authentication");
-						//
-						// NOTE: You must also configure 'EnableApiKeySupport' below in the SwaggerUI section
-						//c.ApiKey("apiKey")
-						//    .Description("API Key Authentication")
-						//    .Name("apiKey")
-						//    .In("header");
-						//
-						//c.OAuth2("oauth2")
-						//    .Description("OAuth2 Implicit Grant")
-						//    .Flow("implicit")
-						//    .AuthorizationUrl("http://petstore.swagger.wordnik.com/api/oauth/dialog")
-						//    //.TokenUrl("https://tempuri.org/token")
-						//    .Scopes(scopes =>
-						//    {
-						//        scopes.Add("read", "Read access to protected resources");
-						//        scopes.Add("write", "Write access to protected resources");
-						//    });
+                        // If your API has multiple versions, use "MultipleApiVersions" instead of "SingleApiVersion".
+                        // In this case, you must provide a lambda that tells Swashbuckle which actions should be
+                        // included in the docs for a given API version. Like "SingleApiVersion", each call to "Version"
+                        // returns an "Info" builder so you can provide additional metadata per API version.
+                        //
+                        //c.MultipleApiVersions(
+                        //    (apiDesc, targetApiVersion) => ResolveVersionSupportByRouteConstraint(apiDesc, targetApiVersion),
+                        //    (vc) =>
+                        //    {
+                        //        vc.Version("v2", "Swashbuckle Dummy API V2");
+                        //        vc.Version("v1", "Swashbuckle Dummy API V1");
+                        //    });
 
-						// Set this flag to omit descriptions for any actions decorated with the Obsolete attribute
-						//c.IgnoreObsoleteActions();
+                        // You can use "BasicAuth", "ApiKey" or "OAuth2" options to describe security schemes for the API.
+                        // See https://github.com/swagger-api/swagger-spec/blob/master/versions/2.0.md for more details.
+                        // NOTE: These only define the schemes and need to be coupled with a corresponding "security" property
+                        // at the document or operation level to indicate which schemes are required for an operation. To do this,
+                        // you'll need to implement a custom IDocumentFilter and/or IOperationFilter to set these properties
+                        // according to your specific authorization implementation
+                        //
+                        //c.BasicAuth("basic")
+                        //    .Description("Basic HTTP Authentication");
+                        //
+                        // NOTE: You must also configure 'EnableApiKeySupport' below in the SwaggerUI section
+                        //c.ApiKey("apiKey")
+                        //    .Description("API Key Authentication")
+                        //    .Name("apiKey")
+                        //    .In("header");
+                        //
+                        //c.OAuth2("oauth2")
+                        //    .Description("OAuth2 Implicit Grant")
+                        //    .Flow("implicit")
+                        //    .AuthorizationUrl("http://petstore.swagger.wordnik.com/api/oauth/dialog")
+                        //    //.TokenUrl("https://tempuri.org/token")
+                        //    .Scopes(scopes =>
+                        //    {
+                        //        scopes.Add("read", "Read access to protected resources");
+                        //        scopes.Add("write", "Write access to protected resources");
+                        //    });
 
-						// Each operation be assigned one or more tags which are then used by consumers for various reasons.
-						// For example, the swagger-ui groups operations according to the first tag of each operation.
-						// By default, this will be controller name but you can use the "GroupActionsBy" option to
-						// override with any value.
-						//
-						//c.GroupActionsBy(apiDesc => apiDesc.HttpMethod.ToString());
+                        // Set this flag to omit descriptions for any actions decorated with the Obsolete attribute
+                        //c.IgnoreObsoleteActions();
 
-						// You can also specify a custom sort order for groups (as defined by "GroupActionsBy") to dictate
-						// the order in which operations are listed. For example, if the default grouping is in place
-						// (controller name) and you specify a descending alphabetic sort order, then actions from a
-						// ProductsController will be listed before those from a CustomersController. This is typically
-						// used to customize the order of groupings in the swagger-ui.
-						//
-						//c.OrderActionGroupsBy(new DescendingAlphabeticComparer());
+                        // Each operation be assigned one or more tags which are then used by consumers for various reasons.
+                        // For example, the swagger-ui groups operations according to the first tag of each operation.
+                        // By default, this will be controller name but you can use the "GroupActionsBy" option to
+                        // override with any value.
+                        //
+                        //c.GroupActionsBy(apiDesc => apiDesc.HttpMethod.ToString());
 
-						// If you annotate Controllers and API Types with
-						// Xml comments (http://msdn.microsoft.com/en-us/library/b2s063f7(v=vs.110).aspx), you can incorporate
-						// those comments into the generated docs and UI. You can enable this by providing the path to one or
-						// more Xml comment files.
-						//
-						//c.IncludeXmlComments(GetXmlCommentsPath());
+                        // You can also specify a custom sort order for groups (as defined by "GroupActionsBy") to dictate
+                        // the order in which operations are listed. For example, if the default grouping is in place
+                        // (controller name) and you specify a descending alphabetic sort order, then actions from a
+                        // ProductsController will be listed before those from a CustomersController. This is typically
+                        // used to customize the order of groupings in the swagger-ui.
+                        //
+                        //c.OrderActionGroupsBy(new DescendingAlphabeticComparer());
 
-						// Swashbuckle makes a best attempt at generating Swagger compliant JSON schemas for the various types
-						// exposed in your API. However, there may be occasions when more control of the output is needed.
-						// This is supported through the "MapType" and "SchemaFilter" options:
-						//
-						// Use the "MapType" option to override the Schema generation for a specific type.
-						// It should be noted that the resulting Schema will be placed "inline" for any applicable Operations.
-						// While Swagger 2.0 supports inline definitions for "all" Schema types, the swagger-ui tool does not.
-						// It expects "complex" Schemas to be defined separately and referenced. For this reason, you should only
-						// use the "MapType" option when the resulting Schema is a primitive or array type. If you need to alter a
-						// complex Schema, use a Schema filter.
-						//
-						//c.MapType<ProductType>(() => new Schema { type = "integer", format = "int32" });
+                        // If you annotate Controllers and API Types with
+                        // Xml comments (http://msdn.microsoft.com/en-us/library/b2s063f7(v=vs.110).aspx), you can incorporate
+                        // those comments into the generated docs and UI. You can enable this by providing the path to one or
+                        // more Xml comment files.
+                        //
+                        //c.IncludeXmlComments(GetXmlCommentsPath());
 
-						// If you want to post-modify "complex" Schemas once they've been generated, across the board or for a
-						// specific type, you can wire up one or more Schema filters.
-						//
-						//c.SchemaFilter<ApplySchemaVendorExtensions>();
+                        // Swashbuckle makes a best attempt at generating Swagger compliant JSON schemas for the various types
+                        // exposed in your API. However, there may be occasions when more control of the output is needed.
+                        // This is supported through the "MapType" and "SchemaFilter" options:
+                        //
+                        // Use the "MapType" option to override the Schema generation for a specific type.
+                        // It should be noted that the resulting Schema will be placed "inline" for any applicable Operations.
+                        // While Swagger 2.0 supports inline definitions for "all" Schema types, the swagger-ui tool does not.
+                        // It expects "complex" Schemas to be defined separately and referenced. For this reason, you should only
+                        // use the "MapType" option when the resulting Schema is a primitive or array type. If you need to alter a
+                        // complex Schema, use a Schema filter.
+                        //
+                        //c.MapType<ProductType>(() => new Schema { type = "integer", format = "int32" });
 
-						// In a Swagger 2.0 document, complex types are typically declared globally and referenced by unique
-						// Schema Id. By default, Swashbuckle does NOT use the full type name in Schema Ids. In most cases, this
-						// works well because it prevents the "implementation detail" of type namespaces from leaking into your
-						// Swagger docs and UI. However, if you have multiple types in your API with the same class name, you'll
-						// need to opt out of this behavior to avoid Schema Id conflicts.
-						//
-						//c.UseFullTypeNameInSchemaIds();
+                        // If you want to post-modify "complex" Schemas once they've been generated, across the board or for a
+                        // specific type, you can wire up one or more Schema filters.
+                        //
+                        //c.SchemaFilter<ApplySchemaVendorExtensions>();
 
-						// Alternatively, you can provide your own custom strategy for inferring SchemaId's for
-						// describing "complex" types in your API.
-						//
-						//c.SchemaId(t => t.FullName.Contains('`') ? t.FullName.Substring(0, t.FullName.IndexOf('`')) : t.FullName);
+                        // In a Swagger 2.0 document, complex types are typically declared globally and referenced by unique
+                        // Schema Id. By default, Swashbuckle does NOT use the full type name in Schema Ids. In most cases, this
+                        // works well because it prevents the "implementation detail" of type namespaces from leaking into your
+                        // Swagger docs and UI. However, if you have multiple types in your API with the same class name, you'll
+                        // need to opt out of this behavior to avoid Schema Id conflicts.
+                        //
+                        //c.UseFullTypeNameInSchemaIds();
 
-						// Set this flag to omit schema property descriptions for any type properties decorated with the
-						// Obsolete attribute
-						//c.IgnoreObsoleteProperties();
+                        // Alternatively, you can provide your own custom strategy for inferring SchemaId's for
+                        // describing "complex" types in your API.
+                        //
+                        //c.SchemaId(t => t.FullName.Contains('`') ? t.FullName.Substring(0, t.FullName.IndexOf('`')) : t.FullName);
 
-						// In accordance with the built in JsonSerializer, Swashbuckle will, by default, describe enums as integers.
-						// You can change the serializer behavior by configuring the StringToEnumConverter globally or for a given
-						// enum type. Swashbuckle will honor this change out-of-the-box. However, if you use a different
-						// approach to serialize enums as strings, you can also force Swashbuckle to describe them as strings.
-						//
-						//c.DescribeAllEnumsAsStrings();
+                        // Set this flag to omit schema property descriptions for any type properties decorated with the
+                        // Obsolete attribute
+                        //c.IgnoreObsoleteProperties();
 
-						// Similar to Schema filters, Swashbuckle also supports Operation and Document filters:
-						//
-						// Post-modify Operation descriptions once they've been generated by wiring up one or more
-						// Operation filters.
-						//
-						//c.OperationFilter<AddDefaultResponse>();
-						//
-						// If you've defined an OAuth2 flow as described above, you could use a custom filter
-						// to inspect some attribute on each action and infer which (if any) OAuth2 scopes are required
-						// to execute the operation
-						//
-						//c.OperationFilter<AssignOAuth2SecurityRequirements>();
+                        // In accordance with the built in JsonSerializer, Swashbuckle will, by default, describe enums as integers.
+                        // You can change the serializer behavior by configuring the StringToEnumConverter globally or for a given
+                        // enum type. Swashbuckle will honor this change out-of-the-box. However, if you use a different
+                        // approach to serialize enums as strings, you can also force Swashbuckle to describe them as strings.
+                        //
+                        //c.DescribeAllEnumsAsStrings();
 
-						// Post-modify the entire Swagger document by wiring up one or more Document filters.
-						// This gives full control to modify the final SwaggerDocument. You should have a good understanding of
-						// the Swagger 2.0 spec. - https://github.com/swagger-api/swagger-spec/blob/master/versions/2.0.md
-						// before using this option.
-						//
-						//c.DocumentFilter<ApplyDocumentVendorExtensions>();
+                        // Similar to Schema filters, Swashbuckle also supports Operation and Document filters:
+                        //
+                        // Post-modify Operation descriptions once they've been generated by wiring up one or more
+                        // Operation filters.
+                        //
+                        //c.OperationFilter<AddDefaultResponse>();
+                        //
+                        // If you've defined an OAuth2 flow as described above, you could use a custom filter
+                        // to inspect some attribute on each action and infer which (if any) OAuth2 scopes are required
+                        // to execute the operation
+                        //
+                        //c.OperationFilter<AssignOAuth2SecurityRequirements>();
 
-						// In contrast to WebApi, Swagger 2.0 does not include the query string component when mapping a URL
-						// to an action. As a result, Swashbuckle will raise an exception if it encounters multiple actions
-						// with the same path (sans query string) and HTTP method. You can workaround this by providing a
-						// custom strategy to pick a winner or merge the descriptions for the purposes of the Swagger docs
-						//
-						//c.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
+                        // Post-modify the entire Swagger document by wiring up one or more Document filters.
+                        // This gives full control to modify the final SwaggerDocument. You should have a good understanding of
+                        // the Swagger 2.0 spec. - https://github.com/swagger-api/swagger-spec/blob/master/versions/2.0.md
+                        // before using this option.
+                        //
+                        //c.DocumentFilter<ApplyDocumentVendorExtensions>();
 
-						// Wrap the default SwaggerGenerator with additional behavior (e.g. caching) or provide an
-						// alternative implementation for ISwaggerProvider with the CustomProvider option.
-						//
-						//c.CustomProvider((defaultProvider) => new CachingSwaggerProvider(defaultProvider));
-					})
+                        // In contrast to WebApi, Swagger 2.0 does not include the query string component when mapping a URL
+                        // to an action. As a result, Swashbuckle will raise an exception if it encounters multiple actions
+                        // with the same path (sans query string) and HTTP method. You can workaround this by providing a
+                        // custom strategy to pick a winner or merge the descriptions for the purposes of the Swagger docs
+                        //
+                        //c.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
+
+                        // Wrap the default SwaggerGenerator with additional behavior (e.g. caching) or provide an
+                        // alternative implementation for ISwaggerProvider with the CustomProvider option.
+                        //
+                        //c.CustomProvider((defaultProvider) => new CachingSwaggerProvider(defaultProvider));
+                    })
                 .EnableSwaggerUi(c =>
                     {
                         // Use the "DocumentTitle" option to change the Document title.
@@ -265,45 +266,54 @@ namespace HospitalAdvance
                         //c.EnableApiKeySupport("apiKey", "header");
                     });
         }
-		public class AssignOAuth2SecurityRequirements : IOperationFilter
-		{
-			public void Apply(Operation operation, SchemaRegistry schemaRegistry, ApiDescription apiDescription)
-			{
-				// Check if the method has the BasicAuth attribute
-				var basicAuthRequired = apiDescription.GetControllerAndActionAttributes<BasicAuthentication>().Any();
+        public class AssignOAuth2SecurityRequirements : IOperationFilter
+        {
+            public void Apply(Operation operation, SchemaRegistry schemaRegistry, ApiDescription apiDescription)
+            {
+                ////Check if the method has the BasicAuth attribute
+                //var basicAuthRequired = apiDescription.GetControllerAndActionAttributes<BasicAuthentication>().Any();
 
-				// Check if the method has the BearerAuth attribute
-				var bearerAuthRequired = apiDescription.GetControllerAndActionAttributes<BearerAuthentication>().Any();
+                //// Check if the method has the BearerAuth attribute
+                //var bearerAuthRequired = apiDescription.GetControllerAndActionAttributes<BearerAuthentication>().Any();
 
-				if (basicAuthRequired)
-				{
-					// Apply Basic Authentication
-					if (operation.security == null)
-						operation.security = new List<IDictionary<string, IEnumerable<string>>>();
+                //if (basicAuthRequired)
+                //{
+                //    //Apply Basic Authentication
+                //    if (operation.security == null)
+                //        operation.security = new List<IDictionary<string, IEnumerable<string>>>();
 
-					var basicAuth = new Dictionary<string, IEnumerable<string>>
-					{
-						{ "basic", new string[] { } }
-					};
+                //    var basicAuth = new Dictionary<string, IEnumerable<string>>
+                //    {
+                //        { "basic", new string[] { } }
+                //    };
 
-					operation.security.Add(basicAuth);
-				}
+                //    operation.security.Add(basicAuth);
+                //}
 
-				if (bearerAuthRequired)
-				{
-					// Apply Bearer Authentication
-					if (operation.security == null)
-						operation.security = new List<IDictionary<string, IEnumerable<string>>>();
+                //if (bearerAuthRequired)
+                //{
+                //    // Apply Bearer Authentication
+                //    if (operation.security == null)
+                //        operation.security = new List<IDictionary<string, IEnumerable<string>>>();
 
-					var bearerAuth = new Dictionary<string, IEnumerable<string>>
-					{
-						{ "BearerToken", new string[] { } }
-					};
+                //    var bearerAuth = new Dictionary<string, IEnumerable<string>>
+                //    {
+                //        { "BearerToken", new string[] { } }
+                //    };
 
-					operation.security.Add(bearerAuth);
-				}
-			}
-		}
+                //    operation.security.Add(bearerAuth);
+                //}
+                if (operation.security == null)
+                    operation.security = new List<IDictionary<string, IEnumerable<string>>>();
 
-	}
+                var basicAuth = new Dictionary<string, IEnumerable<string>>
+                    {
+                        { "basic", new string[] { } }
+                    };
+
+                operation.security.Add(basicAuth);
+            }
+        }
+
+    }
 }

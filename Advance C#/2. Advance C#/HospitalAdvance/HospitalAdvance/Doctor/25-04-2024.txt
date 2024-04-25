@@ -1,0 +1,38 @@
+[
+  {
+    "F01F01": 1,
+    "F01F02": "PrafulArora",
+    "F01F03": "MBBS",
+    "F01F04": "Sunday"
+  },
+  {
+    "F01F01": 2,
+    "F01F02": "RajeshSinha",
+    "F01F03": "BDS",
+    "F01F04": "Wednesday"
+  },
+  {
+    "F01F01": 3,
+    "F01F02": "SwetaSharma",
+    "F01F03": "BUMS",
+    "F01F04": "Friday"
+  },
+  {
+    "F01F01": 4,
+    "F01F02": "Kirit KANANI",
+    "F01F03": "BHMS",
+    "F01F04": "Saturday"
+  },
+  {
+    "F01F01": 5,
+    "F01F02": "Rahul Shetty",
+    "F01F03": "BYMS",
+    "F01F04": "Saturday"
+  },
+  {
+    "F01F01": 6,
+    "F01F02": "Rajen Roy",
+    "F01F03": "BHMS",
+    "F01F04": "Friday"
+  }
+]

@@ -1,0 +1,2 @@
+Patient id, Patient name, Patient mobile number, Dieases name
+1 | RitaSingh | 1212121212 | pneumonia | 

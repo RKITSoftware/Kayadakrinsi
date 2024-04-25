@@ -21,6 +21,7 @@ public class Program
         AES01 objAES = new AES01();
         DES01 objDES = new DES01();
         RSA01 objRSA = new RSA01(); 
+        AESMAnaged obj = new AESMAnaged();
 
         Console.WriteLine("\nAdvance data Encryption standard...");
         objAES.CryptographyUsingAES();
@@ -30,6 +31,10 @@ public class Program
 
         Console.WriteLine("\nRSA...");
         objRSA.CryptographyUsingRSA();
+
+        Console.WriteLine("Pswd : ");
+        string pswd = obj.EncryptAes("123");
+        Console.Write(pswd);
     }
 
 }

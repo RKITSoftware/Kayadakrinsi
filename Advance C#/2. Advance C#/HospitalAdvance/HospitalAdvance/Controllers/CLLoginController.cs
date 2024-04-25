@@ -1,26 +1,25 @@
-﻿using System.Linq;
-using System.Web.Http;
+﻿using System.Web.Http;
 using HospitalAdvance.Auth;
 using HospitalAdvance.BusinessLogic;
 
 namespace HospitalAdvance.Controllers
 {
-	/// <summary>
-	/// Logs in user after authenticate
-	/// </summary>
-	public class CLLoginController : ApiController
+    /// <summary>
+    /// Logs in user after authenticate
+    /// </summary>
+    public class CLLoginController : ApiController
 	{
 		/// <summary>
-		/// Declares object of class BLUser
+		/// Declares object of class BLUSR01Handler
 		/// </summary>
-		public BLUSR01 objBLUser;
+		public BLUSR01Handler objBLUSR01Handler;
 
 		/// <summary>
 		/// Initializes objects
 		/// </summary>
         public CLLoginController()
         {
-			objBLUser = new BLUSR01();
+			objBLUSR01Handler = new BLUSR01Handler();
         }
 
         /// <summary>
@@ -33,12 +32,12 @@ namespace HospitalAdvance.Controllers
         [Route("api/CLLogin/token")]
 		public IHttpActionResult GetToken()
 		{
-			string[] usernamepassword = objBLUser.GetUsernamePassword(Request);
+			string[] usernamepassword = objBLUSR01Handler.GetUsernamePassword(Request);
 			string username = usernamepassword[0];
 			string password = usernamepassword[1];
-			var userDetails = objBLUser.Select().FirstOrDefault(user => user.R01F02.Equals(username) && user.R01F03 == password);
-
-			return Ok(BLTokenManager.GenerateToken(userDetails));
+			var userDetails = objBLUSR01Handler.GetUser(username, password);
+			
+			return Ok(BLTokenHandler.GenerateToken(userDetails));
 
 		}
 	}

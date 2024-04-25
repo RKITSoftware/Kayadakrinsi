@@ -4,37 +4,42 @@ using System.Web;
 using System.Web.Http;
 using HospitalAdvance.Auth;
 using HospitalAdvance.BusinessLogic;
+using HospitalAdvance.Enums;
 using HospitalAdvance.Models;
 
 namespace HospitalAdvance.Controllers
 {
-	public class CLDIS01Controller : ApiController
+    /// <summary>
+    /// Handles HTTP request for operations on dieases
+    /// </summary>
+    [RoutePrefix("api/CLDIS01")]
+    public class CLDIS01Controller : ApiController
     {
 
-		#region Public Members
+        #region Public Members
 
-		/// <summary>
-		/// Declares object of BLDieases class
-		/// </summary>
-		public BLDIS01 objBLDieases;
+        /// <summary>
+        /// Declares object of BLDIS01Handler class
+        /// </summary>
+        public BLDIS01Handler objBLDIS01Handler;
 
-		/// <summary>
-		/// Declares object of Stopwatch class
-		/// </summary>
-		public static Stopwatch stopwatch;
+        /// <summary>
+        /// Declares object of Stopwatch class
+        /// </summary>
+        public Stopwatch stopwatch;
 
-		#endregion
+        #endregion
 
-		#region Constructors
+        #region Constructors
 
-		/// <summary>
-		/// Intializes objects
-		/// </summary>
-		public CLDIS01Controller()
-		{
-			objBLDieases = new BLDIS01();
-			stopwatch = Stopwatch.StartNew();
-		}
+        /// <summary>
+        /// Intializes objects
+        /// </summary>
+        public CLDIS01Controller()
+        {
+            objBLDIS01Handler = new BLDIS01Handler();
+            stopwatch = Stopwatch.StartNew();
+        }
 
         #endregion
 
@@ -45,82 +50,77 @@ namespace HospitalAdvance.Controllers
         /// </summary>
         /// <returns>List of dieases</returns>
         [HttpGet]
-		[BearerAuthentication]
-		[Authorize(Roles = "Manager")]
-		[Route("api/CLDieases/GetDieasess")]
-		public IHttpActionResult GetDieasess()
-		{
-			var data = objBLDieases.Select();
+        [Authorize(Roles = "M")]
+        [Route("GetDieasess")]
+        public IHttpActionResult GetDieasess()
+        {
+            Response response = objBLDIS01Handler.Select();
 
-			stopwatch.Stop();
-			long responseTime = stopwatch.ElapsedTicks;
+            stopwatch.Stop();
+            long responseTime = stopwatch.ElapsedTicks;
 
-			HttpContext.Current.Response.AddHeader("Response-time", responseTime.ToString());
+            HttpContext.Current.Response.AddHeader("Response-time", responseTime.ToString());
 
-			return Ok(data);
-		}
+            return Ok(response);
+        }
 
-		/// <summary>
-		/// Downloads file of dieases data
-		/// </summary>
-		/// <returns>Downloaded text file</returns>
-		[HttpGet]
-		[BearerAuthentication]
-		[Authorize(Roles = "Manager")]
-		[Route("api/CLDieases/GetDieasesFile")]
-		public HttpResponseMessage GetDieasesFile()
-		{
-			return objBLDieases.Download();
-		}
+        /// <summary>
+        /// Downloads file of dieases response
+        /// </summary>
+        /// <returns>Downloaded text file</returns>
+        [HttpGet]
+        [Authorize(Roles = "M")]
+        [Route("GetDieasesFile")]
+        public HttpResponseMessage GetDieasesFile()
+        {
+            return objBLDIS01Handler.Download();
+        }
 
-		/// <summary>
-		/// Adds new dieases
-		/// </summary>
-		/// <param name="objDIS01">Dieases to be added</param>
-		/// <returns>Appropriate message</returns>
-		[HttpPost]
-		[BearerAuthentication]
-		[Authorize(Roles = "Manager")]
-		[Route("api/CLDieases/AddDieases")]
-		public IHttpActionResult AddDieases(DIS01 objDIS01)
-		{
-			if (objBLDieases.validation(objDIS01))
-			{
-				return Ok(objBLDieases.Insert(objDIS01));
-			}
-			return BadRequest("Invalid data");
-		}
+        /// <summary>
+        /// Adds new dieases
+        /// </summary>
+        /// <param name="objDTODIS01">Object of DIS01 class</param>
+        /// <returns>Appropriate message</returns>
+        [HttpPost]
+        [Authorize(Roles = "M")]
+        [Route("AddDieases")]
+        public IHttpActionResult AddDieases(DTODIS01 objDTODIS01)
+        {
+            objBLDIS01Handler.ObjOperations = enmOperations.I;
 
-		/// <summary>
-		/// Write data into file
-		/// </summary>
-		/// <returns>Appropriate Message</returns>
-		[HttpPost]
-		[BearerAuthentication]
-		[Authorize(Roles = "Manager")]
-		[Route("api/CLDieases/WriteFile")]
-		public IHttpActionResult WriteFile()
-		{
-			return Ok(objBLDieases.WriteData());
-		}
+            objBLDIS01Handler.PreSave(objDTODIS01);
 
-		/// <summary>
-		/// Updates dieases
-		/// </summary>
-		/// <param name="objDIS01">Dieases to be updated</param>
-		/// <returns>Appropriate message</returns>
-		[HttpPut]
-		[BearerAuthentication]
-		[Authorize(Roles = "Manager")]
-		[Route("api/CLDieases/EditDieases")]
-		public IHttpActionResult EditDieases(DIS01 objDIS01)
-		{
-            if (objBLDieases.validation(objDIS01))
+            Response response = objBLDIS01Handler.Validation();
+
+            if (!response.isError)
             {
-				return Ok(objBLDieases.Update(objDIS01));
+                response = objBLDIS01Handler.Save();
             }
-            return BadRequest("Invalid data");
-		}
+            return Ok(response);
+        }
+
+        /// <summary>
+        /// Updates dieases
+        /// </summary>
+        /// <param name="objDTODIS01">Object of DIS01 class</param>
+        /// <returns>Appropriate message</returns>
+        [HttpPut]
+        [Authorize(Roles = "M")]
+        [Route("EditDieases")]
+        public IHttpActionResult EditDieases(DTODIS01 objDTODIS01)
+        {
+            objBLDIS01Handler.ObjOperations = enmOperations.U;
+
+            objBLDIS01Handler.PreSave(objDTODIS01);
+
+            Response response = objBLDIS01Handler.Validation();
+
+            if (!response.isError)
+            {
+                response = objBLDIS01Handler.Save();
+            }
+            return Ok(response);
+        }
 
         #endregion
 

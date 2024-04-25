@@ -2,31 +2,35 @@
 using System.Net.Http;
 using System.Web;
 using System.Web.Http;
-using HospitalAdvance.Auth;
 using HospitalAdvance.BusinessLogic;
+using HospitalAdvance.Enums;
 using HospitalAdvance.Models;
 
 namespace HospitalAdvance.Controllers
 {
+    /// <summary>
+    /// Handles methods to perform operations related to patients
+    /// </summary>
+    [RoutePrefix("api/CLPTN01")]
     public class CLPTN01Controller : ApiController
     {
 
         #region Public Members
 
         /// <summary>
-        /// Declares object of BLPatient class
+        /// Declares object of BLPTN01Handler class
         /// </summary>
-        public BLPTN01 objBLPatient;
+        public BLPTN01Handler objBLPTN01Handler;
 
         /// <summary>
         /// Declares object of Stopwatch class
         /// </summary>
-        public static Stopwatch stopwatch;
+        public Stopwatch stopwatch;
 
         /// <summary>
-        /// Declares object of class BLUser
+        /// Declares object of class BLUSR01Handler
         /// </summary>
-        public BLUSR01 objBLUser;
+        public BLUSR01Handler objBLUSR01Handler;
 
         #endregion
 
@@ -37,8 +41,8 @@ namespace HospitalAdvance.Controllers
         /// </summary>
         public CLPTN01Controller()
         {
-            objBLPatient = new BLPTN01();
-            objBLUser = new BLUSR01();
+            objBLPTN01Handler = new BLPTN01Handler();
+            objBLUSR01Handler = new BLUSR01Handler();
             stopwatch = Stopwatch.StartNew();
         }
 
@@ -47,22 +51,22 @@ namespace HospitalAdvance.Controllers
         #region Public Methods
 
         /// <summary>
-        /// Displays patient information
+        /// Displays patients information
         /// </summary>
-        /// <returns></returns>
+        /// <returns>List of patients</returns>
         [HttpGet]
-        [BearerAuthentication]
-        [Authorize(Roles = "Manager,patient")]
-        [Route("api/CLPatient/GetPatients")]
+        [Authorize(Roles = "M")]
+        [Route("GetPatients")]
         public IHttpActionResult GetPatients()
         {
-            var data = objBLPatient.Select();
+            Response response = objBLPTN01Handler.Select();
+
             stopwatch.Stop();
             long responseTime = stopwatch.ElapsedTicks;
 
             HttpContext.Current.Response.AddHeader("Response-time", responseTime.ToString());
 
-            return Ok(data);
+            return Ok(response);
         }
 
         /// <summary>
@@ -70,12 +74,24 @@ namespace HospitalAdvance.Controllers
         /// </summary>
         /// <returns>Downloaded text file</returns>
         [HttpGet]
-        [BearerAuthentication]
-        [Authorize(Roles = "Manager")]
-        [Route("api/CLPatient/GetPatientsFile")]
-        public HttpResponseMessage GetPatientsFile()
+        [Authorize(Roles = "M")]
+        [Route("GetFile")]
+        public HttpResponseMessage GetFile()
         {
-            return objBLPatient.Download();
+            return objBLPTN01Handler.Download();
+        }
+
+        /// <summary>
+        /// Downloads file of current logged in patient's data
+        /// </summary>
+        /// <returns>Downloaded text file</returns>
+        [HttpGet]
+        [Authorize(Roles = "P")]
+        [Route("GetMyFile")]
+        public HttpResponseMessage GetMyFile()
+        {
+            USR01 user = objBLUSR01Handler.GetUser();
+            return objBLPTN01Handler.DownloadMyFile(user);
         }
 
         /// <summary>
@@ -83,89 +99,80 @@ namespace HospitalAdvance.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        [BearerAuthentication]
-        [Authorize(Roles = "Patient")]
-        [Route("api/CLPatient/GetMyRecipt")]
+        [Authorize(Roles = "P")]
+        [Route("GetMyRecipt")]
         public IHttpActionResult GetMyRecipt()
         {
-            var user = objBLUser.GetUser(ActionContext);
-            return Ok(objBLPatient.GetMyRecipt(user));
-        }
-
-        /// <summary>
-        /// Downloads file of doctor's data
-        /// </summary>
-        /// <returns>Downloaded text file</returns>
-        [HttpGet]
-        [BearerAuthentication]
-        [Authorize(Roles = "patient")]
-        [Route("api/CLPatient/GetMyFile")]
-        public HttpResponseMessage GetMyFile()
-        {
-            var user = objBLUser.GetUser(ActionContext);
-            return objBLPatient.DownloadMyFile(user);
-        }
-
-        /// <summary>
-        /// Write data into file
-        /// </summary>
-        /// <returns>Appropriate Message</returns>
-        [HttpPost]
-        [BearerAuthentication]
-        [Authorize(Roles = "patient")]
-        [Route("api/CLPatient/WriteMyFile")]
-        public IHttpActionResult WriteMyFile()
-        {
-            var user = objBLUser.GetUser(ActionContext);
-            return Ok(objBLPatient.WriteMyFile(user));
+            var user = objBLUSR01Handler.GetUser();
+            return Ok(objBLPTN01Handler.GetMyRecipt(user));
         }
 
         /// <summary>
         /// Adds patient information
         /// </summary>
-        /// <returns>Appropriate Message</returns>
+        /// <param name="objDTOPTN01">Object of DTOPTN01 class</param>
+        /// <returns>Appropriate message</returns>
         [HttpPost]
-        [BearerAuthentication]
-        [Authorize(Roles = "Manager")]
-        [Route("api/CLPatient/AddPatient")]
-        public IHttpActionResult AddPatient(PTN01 objPTN01)
+        [Authorize(Roles = "M")]
+        [Route("AddPatient")]
+        public IHttpActionResult AddPatient(DTOPTN01 objDTOPTN01)
         {
-            if (objBLPatient.validationInsert(objPTN01))
-            {
-                return Ok(objBLPatient.Insert(objPTN01));
-            }
-            return BadRequest("Invalid data");
-        }
+            objBLPTN01Handler.ObjOperations = enmOperations.I;
 
-        /// <summary>
-        /// Write data into file
-        /// </summary>
-        /// <returns>Appropriate Message</returns>
-        [HttpPost]
-        [BearerAuthentication]
-        [Authorize(Roles = "Manager")]
-        [Route("api/CLPatient/WriteFile")]
-        public IHttpActionResult WriteFile()
-        {
-            return Ok(objBLPatient.WriteData());
+            objBLPTN01Handler.PreSave(objDTOPTN01);
+
+            Response response = objBLPTN01Handler.Validation();
+
+            if (!response.isError)
+            {
+                response = objBLPTN01Handler.Save();
+            }
+
+            return Ok(response);
         }
 
         /// <summary>
         /// Updates patient information
         /// </summary>
-        /// <param name="objPTN01">Patient information to be updated</param>
+        /// <param name="objDTOPTN01">Object of DTOPTN01 class</param>
         /// <returns>Appropriate message</returns>
         [HttpPut]
-        [BearerAuthentication]
-        [Authorize(Roles = "Manager")]
-        [Route("api/CLPatient/UpdatePatients")]
-        public IHttpActionResult UpdatePatients(PTN01 objPTN01)
+        [Authorize(Roles = "M")]
+        [Route("UpdatePatient")]
+        public IHttpActionResult UpdatePatient(DTOPTN01 objDTOPTN01)
         {
-            if (objBLPatient.validationUpdate(objPTN01))
+            objBLPTN01Handler.ObjOperations = enmOperations.U;
+
+            objBLPTN01Handler.PreSave(objDTOPTN01);
+
+            Response response = objBLPTN01Handler.Validation();
+
+            if (!response.isError)
             {
-                return Ok(objBLPatient.Update(objPTN01));
+                response = objBLPTN01Handler.Save();
             }
-            return BadRequest("Invalid data");
+
+            return Ok(response);
+        }
+
+        /// <summary>
+        /// Deletes PTN01 object
+        /// </summary>
+        /// <param name="id">Id of patient to be delete</param>
+        /// <returns>Appropriate message</returns>
+        [HttpDelete]
+        [Authorize(Roles = "M")]
+        [Route("DeletePatient")]
+        public IHttpActionResult DeletePatient(int id)
+        {
+            Response response = objBLPTN01Handler.ValidationDelete(id);
+
+            if (!response.isError)
+            {
+                response = objBLPTN01Handler.Delete(id);
+            }
+
+            return Ok(response);
         }
 
         #endregion

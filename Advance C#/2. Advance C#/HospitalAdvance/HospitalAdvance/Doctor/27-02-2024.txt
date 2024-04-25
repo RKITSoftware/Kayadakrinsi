@@ -1,6 +1,0 @@
-Doctor id, Doctor name, Doctor qualification, Working days, User id of doctor, IsActive
-1, kunal patil, MBBS, Tuesday, 2, False
-2, praful arora, BAMS, Weekdays, 3, True
-3, rajesh sinha, BDS, Weekend, 4, True
-4, kirit kanani, BUMS, Weekdays, 9, True
-5, sujata agarwal, BYNS, Tuesday, Wednesday, 10, True

@@ -2,31 +2,35 @@
 using System.Net.Http;
 using System.Web;
 using System.Web.Http;
-using HospitalAdvance.Auth;
 using HospitalAdvance.BusinessLogic;
+using HospitalAdvance.Enums;
 using HospitalAdvance.Models;
 
 namespace HospitalAdvance.Controllers
 {
-	public class CLSTF01Controller : ApiController
+    /// <summary>
+    /// Handles methods to perform operations related to doctor
+    /// </summary>
+    [RoutePrefix("api/CLSTF01")]
+    public class CLSTF01Controller : ApiController
     {
 
-		#region Public Members
-
-		/// <summary>
-		/// Declares object of BLDoctor class
-		/// </summary>
-		public BLSTF01 objBLDoctor;
-
-		/// <summary>
-		/// Declares object of Stopwatch class
-		/// </summary>
-		public static Stopwatch stopwatch;
+        #region Public Members
 
         /// <summary>
-        /// Declares object of class BLUser
+        /// Declares object of BLSTF01Handler class
         /// </summary>
-        public BLUSR01 objBLUser;
+        public BLSTF01Handler objBLSTF01Handler;
+
+        /// <summary>
+        /// Declares object of Stopwatch class
+        /// </summary>
+        public Stopwatch stopwatch;
+
+        /// <summary>
+        /// Declares object of class BLUSR01Handler
+        /// </summary>
+        public BLUSR01Handler objBLUSR01Handler;
 
         #endregion
 
@@ -36,11 +40,11 @@ namespace HospitalAdvance.Controllers
         /// Initializes object of BLDoctor class
         /// </summary>
         public CLSTF01Controller()
-		{
-			objBLDoctor = new BLSTF01();
-			objBLUser = new BLUSR01();
-			stopwatch = Stopwatch.StartNew();
-		}
+        {
+            objBLSTF01Handler = new BLSTF01Handler();
+            objBLUSR01Handler = new BLUSR01Handler();
+            stopwatch = Stopwatch.StartNew();
+        }
 
         #endregion
 
@@ -51,92 +55,114 @@ namespace HospitalAdvance.Controllers
         /// </summary>
         /// <returns>List of doctors</returns>
         [HttpGet]
-		[BearerAuthentication]
-		[Authorize(Roles = "Manager,doctor")]
-		[Route("api/CLDoctor/GetDoctors")]
-		public IHttpActionResult GetDoctors()
-		{
-			var data = objBLDoctor.Select();
+        [Authorize(Roles = "M")]
+        [Route("GetDoctors")]
+        public IHttpActionResult GetDoctors()
+        {
+            Response response = objBLSTF01Handler.Select();
 
-			stopwatch.Stop();
-			long responseTime = stopwatch.ElapsedTicks;
+            stopwatch.Stop();
+            long responseTime = stopwatch.ElapsedTicks;
 
-			HttpContext.Current.Response.AddHeader("Response-time", responseTime.ToString());
+            HttpContext.Current.Response.AddHeader("Response-time", responseTime.ToString());
 
-			return Ok(data);
-		}
+            return Ok(response);
+        }
 
-		/// <summary>
-		/// Downloads file of doctor's data
-		/// </summary>
-		/// <returns>Downloaded text file</returns>
-		[HttpGet]
-		[BearerAuthentication]
-		[Authorize(Roles = "Manager")]
-		[Route("api/CLDoctor/GetFile")]
-		public HttpResponseMessage GetFile()
-		{
-			return objBLDoctor.Download();
-		}
+        /// <summary>
+        /// Downloads file of doctor's data
+        /// </summary>
+        /// <returns>Downloaded text file</returns>
+        [HttpGet]
+        [Authorize(Roles = "M")]
+        [Route("GetFile")]
+        public HttpResponseMessage GetFile()
+        {
+            return objBLSTF01Handler.Download();
+        }
 
-		/// <summary>
-		/// Downloads file of doctor's data
-		/// </summary>
-		/// <returns>Downloaded text file</returns>
-		[HttpGet]
-		[BearerAuthentication]
-		[Authorize(Roles = "doctor")]
-		[Route("api/CLDoctor/GetMyFile")]
-		public HttpResponseMessage GetMyFile()
-		{
-			var user = objBLUser.GetUser(ActionContext);
-			return objBLDoctor.DownloadMyFile(user);
-		}
+        /// <summary>
+        /// Downloads file of current logged in doctor's data
+        /// </summary>
+        /// <returns>Downloaded text file</returns>
+        [HttpGet]
+        [Authorize(Roles = "D")]
+        [Route("GetMyFile")]
+        public HttpResponseMessage GetMyFile()
+        {
+            USR01 user = objBLUSR01Handler.GetUser();
+            return objBLSTF01Handler.DownloadMyFile(user);
+        }
 
-		/// <summary>
-		/// Write data into file
-		/// </summary>
-		/// <returns>Appropriate Message</returns>
-		[HttpPost]
-		[BearerAuthentication]
-		[Authorize(Roles = "doctor")]
-		[Route("api/CLDoctor/WriteMyFile")]
-		public IHttpActionResult WriteMyFile()
-		{
-			var user = objBLUser.GetUser(ActionContext);
-			return Ok(objBLDoctor.WriteMyFile(user));
-		}
+        /// <summary>
+        /// Adds doctor information
+        /// </summary>
+        /// <param name="objDTOSTF01">Object of DTOSTF01 class</param>
+        /// <returns>Appropriate message</returns>
+        [HttpPost]
+        [Authorize(Roles = "M")]
+        [Route("AddDoctor")]
+        public  IHttpActionResult AddDoctor(DTOSTF01 objDTOSTF01)
+        {
+            objBLSTF01Handler.ObjOperations = enmOperations.I;
 
-		/// <summary>
-		/// Write data into file
-		/// </summary>
-		/// <returns>Appropriate Message</returns>
-		[HttpPost]
-		[BearerAuthentication]
-		[Authorize(Roles = "Manager")]
-		[Route("api/CLDoctor/WriteFile")]
-		public IHttpActionResult WriteFile()
-		{
-			return Ok(objBLDoctor.WriteData());
-		}
+            objBLSTF01Handler.PreSave(objDTOSTF01);
 
-		/// <summary>
-		/// Updates doctor information
-		/// </summary>
-		/// <param name="objSTF01">Doctor information to be updated</param>
-		/// <returns>Appropriate message</returns>
-		[HttpPut]
-		[BearerAuthentication]
-		[Authorize(Roles = "Manager")]
-		[Route("api/CLDoctor/UpdateDoctors")]
-		public IHttpActionResult UpdateDoctors(STF01 objSTF01) 
-		{ 
-			if(objBLDoctor.validationUpdate(objSTF01))
-			{
-				return Ok(objBLDoctor.Update(objSTF01));
-			}
-			return BadRequest("Not found");
-		}
+            Response response = objBLSTF01Handler.Validation();
+
+            if (!response.isError)
+            {
+                response = objBLSTF01Handler.Save();
+            }
+
+            return Ok(response);
+        }
+
+        /// <summary>
+        /// Updates doctor information
+        /// </summary>
+        /// <param name="objDTOSTF01">Object of DTOSTF01 class</param>
+        /// <returns>Appropriate message</returns>
+        [HttpPut]
+        [Authorize(Roles = "M")]
+        [Route("UpdateDoctor")]
+        public  IHttpActionResult UpdateDoctor(DTOSTF01 objDTOSTF01)
+        {
+            objBLSTF01Handler.ObjOperations = enmOperations.U;
+
+            objBLSTF01Handler.PreSave(objDTOSTF01);
+
+            Response response = objBLSTF01Handler.Validation();
+
+            if (!response.isError)
+            {
+                response =  objBLSTF01Handler.Save();
+            }
+
+            return Ok(response);
+        }
+
+        /// <summary>
+        /// Deletes STF01 object
+        /// </summary>
+        /// <param name="id">Id of doctor to be delete</param>
+        /// <returns>Appropriate message</returns>
+        [HttpDelete]
+        [Authorize(Roles = "M")]
+        [Route("DeleteDoctor")]
+        public IHttpActionResult DeleteDoctor(int id)
+        {
+
+            Response response = objBLSTF01Handler.ValidationDelete(id);
+
+            if (!response.isError)
+            {
+                response = objBLSTF01Handler.Delete(id);
+            }
+
+            return Ok(response);
+        }
+
 
         #endregion
 

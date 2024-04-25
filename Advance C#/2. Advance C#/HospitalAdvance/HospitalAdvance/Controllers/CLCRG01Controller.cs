@@ -8,33 +8,38 @@ using HospitalAdvance.Models;
 
 namespace HospitalAdvance.Controllers
 {
-	public class CLCRG01Controller : ApiController
+    /// <summary>
+    /// Handles HTTP request for operations on charges
+    /// </summary>
+    [BearerAuthentication]
+    [RoutePrefix("api/CLCRG01")]
+    public class CLCRG01Controller : ApiController
     {
 
-		#region Public Members
+        #region Public Members
 
-		/// <summary>
-		/// Declares object of class BLCharge
-		/// </summary>
-		public BLCRG01 objBLCharge;
+        /// <summary>
+        /// Declares object of class BLCRG01Handler
+        /// </summary>
+        public BLCRG01Handler objBLCRG01Handler;
 
-		/// <summary>
-		/// Declares object of Stopwatch class
-		/// </summary>
-		public static Stopwatch stopwatch;
+        /// <summary>
+        /// Declares object of Stopwatch class
+        /// </summary>
+        public Stopwatch stopwatch;
 
-		#endregion
+        #endregion
 
-		#region Constructors
+        #region Constructors
 
-		/// <summary>
-		/// Intializes objects
-		/// </summary>
-		public CLCRG01Controller()
+        /// <summary>
+        /// Intializes objects
+        /// </summary>
+        public CLCRG01Controller()
         {
-			objBLCharge = new BLCRG01();
-			stopwatch = Stopwatch.StartNew();
-		}
+            objBLCRG01Handler = new BLCRG01Handler();
+            stopwatch = Stopwatch.StartNew();
+        }
 
         #endregion
 
@@ -45,83 +50,81 @@ namespace HospitalAdvance.Controllers
         /// </summary>
         /// <returns>List of charges</returns>
         [HttpGet]
-		[BearerAuthentication]
-		[Authorize(Roles = "Manager")]
-		[Route("api/CLCharge/GetCharges")]
+        [Authorize(Roles = "Manager")]
+        [Route("GetCharges")]
         public IHttpActionResult GetCharges()
         {
-			var data = objBLCharge.Select();
+            Response response = new Response();
 
-			stopwatch.Stop();
-			long responseTime = stopwatch.ElapsedTicks;
+            response = objBLCRG01Handler.Select();
 
-			HttpContext.Current.Response.AddHeader("Response-time", responseTime.ToString());
+            stopwatch.Stop();
+            long responseTime = stopwatch.ElapsedTicks;
 
-			return Ok(data);
+            HttpContext.Current.Response.AddHeader("Response-time", responseTime.ToString());
+
+            return Ok(response);
         }
 
-		/// <summary>
-		/// Downloads file of charges data
-		/// </summary>
-		/// <returns>Downloaded text file</returns>
-		[HttpGet]
-		[BearerAuthentication]
-		[Authorize(Roles = "Manager")]
-		[Route("api/CLCharge/GetChargesFile")]
-		public HttpResponseMessage GetChargesFile()
-		{
-			return objBLCharge.Download();
-		}
-
-		/// <summary>
-		/// Adds new charge
-		/// </summary>
-		/// <param name="objCRG01">Charge to be added</param>
-		/// <returns>Appropriate message</returns>
-		[HttpPost]
-        [BearerAuthentication]
+        /// <summary>
+        /// Downloads file of charges data
+        /// </summary>
+        /// <returns>Downloaded text file</returns>
+        [HttpGet]
         [Authorize(Roles = "Manager")]
-		[Route("api/CLCharge/AddCharge")]
-		public IHttpActionResult AddCharge(CRG01 objCRG01)
-		{
-			if (objBLCharge.validation(objCRG01))
-			{
-				return Ok(objBLCharge.Insert(objCRG01));
-			}
-			return BadRequest("Invalid data");
-		}
+        [Route("GetChargesFile")]
+        public HttpResponseMessage GetChargesFile()
+        {
+            return objBLCRG01Handler.Download();
+        }
 
-		/// <summary>
-		/// Write data into file
-		/// </summary>
-		/// <returns>Appropriate Message</returns>
-		[HttpPost]
-		[BearerAuthentication]
-		[Authorize(Roles = "Manager")]
-		[Route("api/CLCharge/WriteFile")]
-		public IHttpActionResult WriteFile()
-		{
-			return Ok(objBLCharge.WriteData());
-		}
+        /// <summary>
+        /// Adds new charge
+        /// </summary>
+        /// <param name="objCRG01">Charge to be added</param>
+        /// <returns>Appropriate message</returns>
+        [HttpPost]
+        [Authorize(Roles = "Manager")]
+        [Route("AddCharge")]
+        public IHttpActionResult AddCharge(DTOCRG01 objDTOCRG01)
+        {
+            objBLCRG01Handler.ObjOperations = enmOperations.I;
 
-		/// <summary>
-		/// Updates charge
-		/// </summary>
-		/// <param name="objCRG01">Charge to be updated</param>
-		/// <returns>Appropriate message</returns>
-		[HttpPut]
-		[BearerAuthentication]
-		[Authorize(Roles = "Manager")]
-		[Route("api/CLCharge/EditCharge")]
-		public IHttpActionResult EditCharge(CRG01 objCRG01)
-		{
-            if (objBLCharge.validation(objCRG01))
+            objBLCRG01Handler.PreSave(objDTOCRG01);
+
+            Response response = objBLCRG01Handler.Validation();
+
+            if (!response.isError)
             {
-                return Ok(objBLCharge.Update(objCRG01));
+                response = objBLCRG01Handler.Save();
             }
-            return BadRequest("Invalid data");
-            
-		}
+
+            return Ok(response);
+        }
+
+        /// <summary>
+        /// Updates charge
+        /// </summary>
+        /// <param name="objCRG01">Charge to be updated</param>
+        /// <returns>Appropriate message</returns>
+        [HttpPut]
+        [Authorize(Roles = "Manager")]
+        [Route("EditCharge")]
+        public IHttpActionResult EditCharge(DTOCRG01 objDTOCRG01)
+        {
+            objBLCRG01Handler.ObjOperations = enmOperations.U;
+
+            objBLCRG01Handler.PreSave(objDTOCRG01);
+
+            Response response = objBLCRG01Handler.Validation();
+
+            if (!response.isError)
+            {
+                response = objBLCRG01Handler.Save();
+            }
+
+            return Ok(response);
+        }
 
         #endregion
 

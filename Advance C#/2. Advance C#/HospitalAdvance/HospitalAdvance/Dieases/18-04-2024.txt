@@ -1,0 +1,11 @@
+Dieases id     | Dieases name  
+1              | pneumonia     
+2              | cholera       
+3              | cancer        
+4              | typhoid       
+5              | alzer         
+6              | asthma        
+7              | diabetes      
+8              | tooth erosion 
+9              | fungal infection
+10             | heart dieases 

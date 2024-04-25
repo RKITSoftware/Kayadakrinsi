@@ -1,72 +1,124 @@
-﻿using System.Diagnostics.Contracts;
+﻿using System;
+using System.Diagnostics.Contracts;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Security.Claims;
+using System.Security.Principal;
 using System.Threading;
+using System.Web;
 using System.Web.Http;
 using System.Web.Http.Controllers;
 using System.Web.Http.Filters;
 using HospitalAdvance.BusinessLogic;
+using HospitalAdvance.Models;
 
 namespace HospitalAdvance.Auth
 {
     /// <summary>
-    /// Authenticates user who wants to get JWT token
+    /// Authenticates user 
     /// </summary>
-    public class BasicAuthentication : ActionFilterAttribute
+    public class BasicAuthentication : AuthorizationFilterAttribute
     {
-        /// <summary>
-        /// Declares object of class BLUser
-        /// </summary>
-        public BLUSR01 objBLUser = new BLUSR01();
+        #region Public Members
 
         /// <summary>
-        /// Authenticates user and creates response accordingly
+        /// Instance of BLLogin class
         /// </summary>
-        /// <param name="actionContext">Information about executing cintext</param>
-        public override void OnActionExecuting(HttpActionContext actionContext)
+        public BLLogin objBLLogin;
+
+        /// <summary>
+        /// Instance of USR01
+        /// </summary>
+        public static USR01 objUSR01;
+
+        /// <summary>
+        /// Flag defines whether token is generated or not
+        /// </summary>
+        public static bool isTokenGenerated = false;
+
+        #endregion
+
+        #region Constructors
+
+        /// <summary>
+        /// Initializes instances
+        /// </summary>
+        public BasicAuthentication()
         {
-            if (SkipAuthorization(actionContext)) return;
+            objBLLogin = new BLLogin();
+        }
 
-            // Authorization header
-            var authHeader = actionContext.Request.Headers.Authorization;
+        #endregion
 
-            if (authHeader == null)
+        #region Public Methods
+
+        /// <summary>
+        /// Authenticates user and generates token if user is authentiocated
+        /// </summary>
+        /// <param name="context">Context of authorization filter</param>
+        public override void OnAuthorization(HttpActionContext context)
+        {
+            if (SkipAuthorization(context)) return;
+
+            var authHeader = context.Request.Headers.Authorization;
+
+            if (authHeader != null && authHeader.Scheme == "Basic")
             {
-                actionContext.Response = actionContext.Request.CreateErrorResponse(HttpStatusCode.Unauthorized,
-                                         "Invalid headers");
-            }
-            else if (authHeader.Scheme == "Basic")
-            {
-
-                string[] usernamePassword = objBLUser.GetUsernamePassword(actionContext.Request);
+                string[] usernamePassword = objBLLogin.GetUsernamePassword(context.Request);
 
                 //Extracts username and password from the decoded token.
                 string username = usernamePassword[0];
                 string password = usernamePassword[1];
 
-                var user = objBLUser.Select().FirstOrDefault(u => u.R01F02 == username && u.R01F03 == password);
-
+                USR01 user = objBLLogin.ValidateUser(username, password);
                 if (user != null)
                 {
-                    // Generates token
-                    var token = BLTokenManager.GenerateToken(user);
+                    objUSR01 = user;
 
-                    // Attaches principal to token
-                    var principal = BLTokenManager.GetPrincipal(token);
+                    var identity = new GenericIdentity(username);
+                    identity.AddClaim(new Claim(ClaimTypes.Name, objUSR01.R01F02));
+                    identity.AddClaim(new Claim("Id", Convert.ToString(objUSR01.R01F01)));
 
-                    if (principal == null)
-                    {
-                        actionContext.Response = actionContext.Request.CreateResponse(HttpStatusCode.Unauthorized,
-                                                 "Invalid token");
-                    }
+                    IPrincipal principal = new GenericPrincipal(identity, objUSR01.R01F04.ToString().Split(','));
 
-                    //Set the current principal for the request
                     Thread.CurrentPrincipal = principal;
 
-                    actionContext.Response = actionContext.Request.CreateResponse(HttpStatusCode.OK, token);
+                    HttpContext.Current.User = (ClaimsPrincipal)principal;
+
+                    if (isTokenGenerated == false)
+                    {
+                        BLTokenHandler.GenerateToken(objUSR01);
+                        isTokenGenerated = true;
+                        return;
+                    }
+
+                    var token = BLTokenHandler.cache.Get("JWTToken_" + objUSR01.R01F02);
+
+                    if (token != null)
+                    {
+                        token = BLTokenHandler.RefreshToken(objUSR01);
+
+                        if (token == null)
+                        {
+                            context.Response = context.Request.CreateResponse(HttpStatusCode.InternalServerError, "Error while producing token");
+                        }
+                        return;
+                    }
+                    else
+                    {
+                        context.Response = context.Request.CreateResponse(HttpStatusCode.InternalServerError, "Error while producing token");
+                        isTokenGenerated = false;
+                    }
                 }
-                base.OnActionExecuting(actionContext);
+                else
+                {
+                    context.Response = context.Request.CreateResponse(HttpStatusCode.BadRequest, "User Not Found");
+                }
+            }
+            else
+            {
+                context.Response = context.Request.CreateResponse(HttpStatusCode.BadRequest, "Invalid Headers");
             }
         }
 
@@ -84,5 +136,8 @@ namespace HospitalAdvance.Auth
             return actionContext.ActionDescriptor.GetCustomAttributes<AllowAnonymousAttribute>().Any()
                        || actionContext.ControllerContext.ControllerDescriptor.GetCustomAttributes<AllowAnonymousAttribute>().Any();
         }
+
+        #endregion
+
     }
 }

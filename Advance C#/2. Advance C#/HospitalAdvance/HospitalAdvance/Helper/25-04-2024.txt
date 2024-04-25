@@ -1,0 +1,6 @@
+Helper id, Helper name, Role of helper, Working days
+1,NinaRaj,Nurse,Sunday
+2,Raj Rathod,Clinical Assistant,Tuesday
+3,Shila Gupta,Ward Clerks,Wednesday
+4,Hetal Patel,Volunteer,Tuesday
+5,Gajendra Malik,Ward Clerks,Weekends

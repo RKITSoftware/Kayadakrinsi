@@ -75,8 +75,8 @@ namespace ORM.BusinessLogic
             using (var db = BLConnection.dbFactory.OpenDbConnection())
             {
                 db.CreateTableIfNotExists(typeof(CMP01));
+                db.ChangeDatabase("movies");
                 LstCMP01 = db.Select<CMP01>();
-
                 ObjRES01.isError = false;
                 ObjRES01.message = "Success";
                 ObjRES01.response = objBLConvertor.ToDataTable(LstCMP01);
@@ -135,7 +135,7 @@ namespace ORM.BusinessLogic
             {
                 db.CreateTableIfNotExists(typeof(CMP01));
                 db.InsertOnly<CMP01>(new CMP01 { P01F02 = "RKIT"}, c => c.P01F02);
-
+                
                 ObjRES01.isError = false;
                 ObjRES01.message = "Success";
 
@@ -205,6 +205,7 @@ namespace ORM.BusinessLogic
         {
             using (var db = BLConnection.dbFactory.OpenDbConnection())
             {
+                ObjCMP01.P01F01 = id;
                 db.Update<CMP01>(ObjCMP01, c => c.P01F01 == id);
 
                 ObjRES01.isError = false;

@@ -1,0 +1,6 @@
+Helper id      | Helper name    | Role of helper | Working days   | User id of helper
+1              | sweta sharma   | NURSE          | Tuesday        | 5             
+2              | dilip doshi    | PATIENT_SERVICE_ASSISTANT | Weekdays       | 6             
+3              | rita singh     | PATIENT_SERVICE_ASSISTANT | Sunday, Monday | 11            
+4              | jigar jani     | WARD_CLERKS    | Monday         | 12            
+5              | amit dave      | PATIENT_SERVICE_ASSISTANT | Sunday         | 13            

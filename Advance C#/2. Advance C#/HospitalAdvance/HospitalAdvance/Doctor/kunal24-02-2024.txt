@@ -1,2 +1,0 @@
-Doctor id, Doctor name, Doctor qualification, Working days, User id of doctor, IsActive
-1, kunal patil, MBBS, Tuesday, 2, False

@@ -251,42 +251,45 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Auth\BasicAuthentication.cs" />
     <Compile Include="Auth\BearerAuthentication.cs" />
-    <Compile Include="BusinessLogic\BLCRG01.cs" />
-    <Compile Include="BusinessLogic\BLDIS01.cs" />
-    <Compile Include="BusinessLogic\BLSTF02.cs" />
+    <Compile Include="BusinessLogic\BLCommonHandler.cs" />
+    <Compile Include="BusinessLogic\BLLogin.cs" />
     <Compile Include="BusinessLogic\BLMapper.cs" />
-    <Compile Include="BusinessLogic\BLPTN01.cs" />
-    <Compile Include="BusinessLogic\BLRCD01.cs" />
-    <Compile Include="BusinessLogic\BLSecurity.cs" />
-    <Compile Include="BusinessLogic\BLSTF01.cs" />
-    <Compile Include="BusinessLogic\BLSerialize.cs" />
-    <Compile Include="BusinessLogic\BLTokenManager.cs" />
-    <Compile Include="BusinessLogic\BLUSR01.cs" />
-    <Compile Include="Controllers\CLCRG01Controller.cs" />
+    <Compile Include="BusinessLogic\BLDIS01Handler.cs" />
+    <Compile Include="BusinessLogic\BLSTF02Handler.cs" />
+    <Compile Include="BusinessLogic\BLPTN01Handler.cs" />
+    <Compile Include="BusinessLogic\BLRCD01Handler.cs" />
+    <Compile Include="BusinessLogic\BLSTF01Handler.cs" />
+    <Compile Include="BusinessLogic\BLTokenHandler.cs" />
+    <Compile Include="BusinessLogic\BLUSR01Handler.cs" />
     <Compile Include="Controllers\CLDIS01Controller.cs" />
     <Compile Include="Controllers\CLSTF01Controller.cs" />
     <Compile Include="Controllers\CLSTF02Controller.cs" />
-    <Compile Include="Controllers\CLLoginController.cs" />
     <Compile Include="Controllers\CLPTN01Controller.cs" />
     <Compile Include="Controllers\CLRCD01Controller.cs" />
     <Compile Include="Controllers\CLUSR01Controller.cs" />
-    <Compile Include="DataBase\DL.cs" />
-    <Compile Include="Enums\enmDaysOfWeek.cs" />
-    <Compile Include="Enums\enmRole.cs" />
-    <Compile Include="Enums\enmUserRole.cs" />
+    <Compile Include="DataBase\DBDIS01Context.cs" />
+    <Compile Include="DataBase\DBSTF01Context.cs" />
+    <Compile Include="DataBase\DBSTF02Context.cs" />
+    <Compile Include="DataBase\DBUSR01Context.cs" />
+    <Compile Include="DataBase\DBPTN01Context .cs" />
+    <Compile Include="DataBase\DBRCD01Context.cs" />
+    <Compile Include="Enums\Enum.cs" />
     <Compile Include="Filter\CustomExceptionFilterAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\POCO\CRG01.cs" />
+    <Compile Include="Models\DTO\DTODIS01.cs" />
+    <Compile Include="Models\DTO\DTOPTN01.cs" />
+    <Compile Include="Models\DTO\DTORCD01.cs" />
+    <Compile Include="Models\DTO\DTOSTF01.cs" />
+    <Compile Include="Models\DTO\DTOSTF02.cs" />
     <Compile Include="Models\POCO\DIS01.cs" />
     <Compile Include="Models\POCO\PTN01.cs" />
     <Compile Include="Models\POCO\RCD01.cs" />
     <Compile Include="Models\POCO\STF01.cs" />
     <Compile Include="Models\POCO\STF02.cs" />
     <Compile Include="Models\POCO\USR01.cs" />
-    <Compile Include="Models\DTO\USR02.cs" />
-    <Compile Include="Models\RES01.cs" />
+    <Compile Include="Models\Response.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -300,7 +303,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Charge\" />
     <Folder Include="Dieases\" />
     <Folder Include="Doctor\" />
     <Folder Include="Helper\" />

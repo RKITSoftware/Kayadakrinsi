@@ -1,2 +1,0 @@
-Helper id, Helper name, Role of helper, Working days, User id, IsActive
-3, rita singh, 12, Sunday, Monday, 11, True

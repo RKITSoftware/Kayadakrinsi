@@ -1,0 +1,8 @@
+Patient id, Patient name, Patient mobile number, Dieases name
+1,NileshRay,1111111111,pneumonia
+2,Rohit Shah,1111111781,typhoid
+4,Jay Patel,1452312323,asthma
+5,Vimal Verma,3456789021,tooth erosion
+3,Sakina Meman,1112312323,fungal infection
+7,Kitan Kohli,1234123556,heart dieases
+6,Nisha Sharma,1234567890,Flu

@@ -1,5 +1,6 @@
 ﻿using System.Web.Http;
 using System.Web.Http.Cors;
+using HospitalAdvance.Auth;
 using HospitalAdvance.Filter;
 
 namespace HospitalAdvance
@@ -22,7 +23,10 @@ namespace HospitalAdvance
                 defaults: new { id = RouteParameter.Optional }
             );
 
+            // Registers and applys custom filters globally sequence matters
             config.Filters.Add(new CustomExceptionFilterAttribute());
+            config.Filters.Add(new BasicAuthentication());
+            config.Filters.Add(new BearerAuthentication());
         }
     }
 }

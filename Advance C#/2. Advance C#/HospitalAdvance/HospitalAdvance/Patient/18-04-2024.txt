@@ -1,0 +1,7 @@
+Patient id, Patient name, Patient mobile number, Dieases name, User id
+1, sohil shah, 1234567890, pneumonia, 7
+2, vimal varma, 1299567890, cancer, 8
+3, nilesh ray, 2345234567, heart dieases, 14
+4, jay patel, 2345444567, tooth erosion, 15
+5, rahul shetty, 1115444567, asthma, 16
+6, nisha sharma, 1111444167, diabetes, 17

@@ -2,39 +2,43 @@
 using System.Net.Http;
 using System.Web;
 using System.Web.Http;
-using HospitalAdvance.Auth;
 using HospitalAdvance.BusinessLogic;
+using HospitalAdvance.Enums;
 using HospitalAdvance.Models;
 
 namespace HospitalAdvance.Controllers
 {
-	public class CLRCD01Controller : ApiController
+    /// <summary>
+    /// Handles methods to preform operations related to record
+    /// </summary>
+    [RoutePrefix("api/CLRCD01")]
+    public class CLRCD01Controller : ApiController
     {
 
-		#region Public Members
+        #region Public Members
 
-		/// <summary>
-		/// Declares object of BLRecord
-		/// </summary>
-		public BLRCD01 objBLRecord;
+        /// <summary>
+        /// Declares object of BLRCD01Handler
+        /// </summary>
+        public BLRCD01Handler objBLRCD01;
 
-		/// <summary>
-		/// Declares object of Stopwatch class
-		/// </summary>
-		public static Stopwatch stopwatch;
+        /// <summary>
+        /// Declares object of Stopwatch class
+        /// </summary>
+        public Stopwatch stopwatch;
 
-		#endregion
+        #endregion
 
-		#region Constructors
-		
-		/// <summary>
-		/// Initializes objects
-		/// </summary>
-		public CLRCD01Controller()
+        #region Constructors
+
+        /// <summary>
+        /// Initializes objects
+        /// </summary>
+        public CLRCD01Controller()
         {
-            objBLRecord = new BLRCD01();
-			stopwatch = Stopwatch.StartNew();
-		}
+            objBLRCD01 = new BLRCD01Handler();
+            stopwatch = Stopwatch.StartNew();
+        }
 
         #endregion
 
@@ -43,81 +47,91 @@ namespace HospitalAdvance.Controllers
         /// <summary>
         /// Displays records
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Appropriate Response object</returns>
         [HttpGet]
-        [BearerAuthentication]
-        [Authorize(Roles ="Manager,Doctor,Helper,Patient")]
-        [Route("api/CLRecord/GetRecords")]
+        [Authorize(Roles = "M,D,H,P")]
+        [Route("GetRecords")]
         public IHttpActionResult GetRecords()
         {
-			var data = objBLRecord.Select();
+            Response response = objBLRCD01.Select();
 
-			stopwatch.Stop();
-			long responseTime = stopwatch.ElapsedTicks;
+            stopwatch.Stop();
+            long responseTime = stopwatch.ElapsedTicks;
 
-			HttpContext.Current.Response.AddHeader("Response-time", responseTime.ToString());
+            HttpContext.Current.Response.AddHeader("Response-time", responseTime.ToString());
 
-			return Ok(data);
+            return Ok(response);
         }
 
-		[HttpGet]
-		[BearerAuthentication]
-		[Authorize(Roles = "Manager,Doctor,Helper,Patient")]
-		[AllowAnonymous]
-		[Route("api/CLRecord/GetDetailedRecords")]
-		public IHttpActionResult GetDetailedRecords()
-		{
-			return Ok(objBLRecord.SelectAllDetails());
-		}
+        /// <summary>
+        /// Downloads file of record's response
+        /// </summary>
+        /// <returns>Downloaded text file</returns>
+        [HttpGet]
+        [Authorize(Roles = "M,D,H,P")]
+        [Route("GetFile")]
+        public HttpResponseMessage GetFile()
+        {
+            return objBLRCD01.Download();
+        }
 
-		/// <summary>
-		/// Downloads file of record's data
-		/// </summary>
-		/// <returns>Downloaded text file</returns>
-		[HttpGet]
-		[BearerAuthentication]
-		[Authorize(Roles = "Manager,Doctor,Helper,Patient")]
-		[Route("api/CLRecord/GetFile")]
-		public HttpResponseMessage GetFile()
-		{
-			return objBLRecord.Download();
-		}
-		
-		/// <summary>
-		/// Adds records
-		/// </summary>
-		/// <param name="objRCD01">Record to be added</param>
-		/// <returns>Appropriate message</returns>
-		[HttpPost]
-		[BearerAuthentication]
-		[Authorize(Roles = "Manager")]
-		[AllowAnonymous]
-		[Route("api/CLRecord/AddRecord")]
-		public IHttpActionResult AddRecord(RCD01 objRCD01)
-		{
-			if(objBLRecord.preValidation(objRCD01))
-			{
-				objRCD01 = objBLRecord.preSave(objRCD01);
-				if (objBLRecord.validation(objRCD01))
-				{
-					return Ok(objBLRecord.Insert(objRCD01));
-				}
-			}
-			return BadRequest("Invalid data");
-		}
+        /// <summary>
+        /// Adds record information
+        /// </summary>
+        /// <param name="objDTORCD01">Object of DTORCD01 class</param>
+        /// <returns>Appropriate message</returns>
+        [HttpPost]
+        [Authorize(Roles = "M")]
+        [Route("AddRecord")]
+        public IHttpActionResult AddRecord(DTORCD01 objDTORCD01)
+        {
+            Response response = objBLRCD01.PreValidation(objDTORCD01);
 
-		/// <summary>
-		/// Write data into file
-		/// </summary>
-		/// <returns>Appropriate Message</returns>
-		[HttpPost]
-		[BearerAuthentication]
-		[Authorize(Roles = "Manager")]
-		[Route("api/CLRecord/WriteFile")]
-		public IHttpActionResult WriteFile()
-		{
-			return Ok(objBLRecord.WriteData());
-		}
+            if (!response.isError)
+            {
+                objBLRCD01.ObjOperations = enmOperations.I;
+
+                objBLRCD01.PreSave(objDTORCD01);
+
+                response = objBLRCD01.Validation();
+
+                if (!response.isError)
+                {
+                    response = objBLRCD01.Save();
+                }
+            }
+
+            return Ok(response);
+        }
+
+        /// <summary>
+        /// Updates record information
+        /// </summary>
+        /// <param name="objDTORCD01">Object of DTORCD01 class</param>
+        /// <returns>Appropriate message</returns>
+        [HttpPut]
+        [Authorize(Roles = "M")]
+        [Route("EditRecord")]
+        public IHttpActionResult EditRecord(DTORCD01 objDTORCD01)
+        {
+            Response response = objBLRCD01.PreValidation(objDTORCD01);
+
+            if (!response.isError)
+            {
+                objBLRCD01.ObjOperations = enmOperations.U;
+
+                objBLRCD01.PreSave(objDTORCD01);
+
+                response = objBLRCD01.Validation();
+
+                if (!response.isError)
+                {
+                    response = objBLRCD01.Save();
+                }
+            }
+
+            return Ok(response);
+        }
 
         #endregion
 

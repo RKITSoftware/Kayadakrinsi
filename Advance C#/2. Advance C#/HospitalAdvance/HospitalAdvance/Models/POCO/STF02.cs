@@ -3,47 +3,35 @@ using ServiceStack.DataAnnotations;
 
 namespace HospitalAdvance.Models
 {
-
     /// <summary>
     /// Helper class
     /// </summary>
-    [Alias("STF02")]
 	public class STF02
 	{
 		/// <summary>
 		/// Helper id
 		/// </summary>
-		[PrimaryKey, AutoIncrement]
+		[PrimaryKey]
 		public int F02F01 { get; set; }
 
 		/// <summary>
 		/// Helper name
 		/// </summary>
-		[Required]
         public string F02F02 { get; set; }
 
-		/// <summary>
-		/// Role of helper
-		/// </summary>
-		[Required]
-		public enmRole F02F03 { get; set; }
+        /// <summary>
+        /// Role of helper 
+		/// (Nurse = "NU", Clinical Assistant = "CA", Personal Service Assistant = "PSA", Ward Clerks = "WC"
+		/// , Volunteer = "VO")
+        /// </summary>
+        public enmRole F02F03 { get; set; }
 
 		/// <summary>
 		/// Working days of helper
+		/// (Sunday = "Su", Monday = "Mo", Tuesday = "Tu", Wednesday = "Wd", Thursday = "Th", Friday = "Fr"
+		/// , Saturday = "Sa", All Days = "Al", Week Days = "Wk", Week ends = "We")
 		/// </summary>
-		[Required]
 		public enmDaysOfWeek F02F04 { get; set; }
 
-		/// <summary>
-		/// User id 
-		/// </summary>
-		[References(typeof(USR01))]
-		public int F02F05 { get; set; }
-
-		/// <summary>
-		/// Weather user part of hospital or not
-		/// </summary>
-		[System.ComponentModel.DataAnnotations.Required]
-		public bool F02F06 { get; set; } = true;
 	}
 }

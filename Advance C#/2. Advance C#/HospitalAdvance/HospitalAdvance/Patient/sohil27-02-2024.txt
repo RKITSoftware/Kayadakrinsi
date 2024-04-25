@@ -1,2 +1,0 @@
-Patient id, Patient name, Patient mobile number, Dieases name, User id, IsActive
-1, sohil shah, 1234567890, pneumonia, 7, True
