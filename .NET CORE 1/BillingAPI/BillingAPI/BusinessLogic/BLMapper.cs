@@ -1,67 +1,47 @@
-﻿using Newtonsoft.Json;
-using System.Reflection;
-
-namespace BillingAPI.BusinessLogic
+﻿namespace BillingAPI.BusinessLogic
 {
-     /// <summary>
-     /// Contains logic for mapping DTO model to POCO model
-     /// </summary>
-     /// <typeparam name="Tdto">Type of DTO model</typeparam>
-     /// <typeparam name="Tpoco">Type of POCO model</typeparam>
-    public class BLMapper<Tdto, Tpoco> where Tdto : class where Tpoco : class, new()
+    /// <summary>
+    /// Contains mapper method
+    /// </summary>
+    public static class BLMapper
     {
         /// <summary>
-        /// Maps DTO model into POCO model
+        /// Maps properties from a source object to a target object.
         /// </summary>
-        /// <param name="objDto">Instance of DTO model</param>
-        /// <returns>Instance of POCO model mapped from DTO model</returns>
-        /// <exception cref="ArgumentNullException">Null Argument Exception</exception>
-        public Tpoco Map(Tdto objDto)
+        /// <typeparam name="Tdto">The type of the source object.</typeparam>
+        /// <typeparam name="Tpoco">The type of the target object.</typeparam>
+        /// <param name="source">The source object to map from.</param>
+        /// <returns>The target object with mapped properties.</returns>
+        public static Tpoco Map<Tdto, Tpoco>(this Tdto source) where Tpoco : new()
         {
-            if (objDto == null)
-                throw new ArgumentNullException();
+            var target = new Tpoco();
 
-            Tpoco objPoco = new Tpoco();
-
-            foreach (PropertyInfo dtoProperty in typeof(Tdto).GetProperties())
+            // Iterate over properties of the source object
+            foreach (var sourceProperty in typeof(Tdto).GetProperties())
             {
-                PropertyInfo pocoProperty = GetPropertyByJsonName(typeof(Tpoco), dtoProperty.Name);
-
-                if (pocoProperty != null && pocoProperty.CanWrite)
+                // Find corresponding property in the target object
+                var targetProperty = typeof(Tpoco).GetProperty(sourceProperty.Name);
+                if (targetProperty != null && targetProperty.CanWrite)
                 {
-                    object value = dtoProperty.GetValue(objDto);
-                    pocoProperty.SetValue(objPoco, value);
+                    var value = sourceProperty.GetValue(source);
+                    if (value != null)
+                    {
+                        // Check if the property types are compatible or assignable
+                        if (targetProperty.PropertyType.IsAssignableFrom(sourceProperty.PropertyType))
+                        {
+                            targetProperty.SetValue(target, value);
+                        }
+                        else
+                        {
+                            // Try converting the value to the target property type
+                            var convertedValue = Convert.ChangeType(value, targetProperty.PropertyType);
+                            targetProperty.SetValue(target, convertedValue);
+                        }
+                    }
                 }
             }
 
-            return objPoco;
-        }
-
-        /// <summary>
-        /// Retrives property of POCO model from JsonProperty attribute given in DTO model
-        /// </summary>
-        /// <param name="type">Type of model</param>
-        /// <param name="jsonPropertyName">Name of JsonProperty</param>
-        /// <returns>PropertyInfo of given JsonProperty</returns>
-        public PropertyInfo GetPropertyByJsonName(Type type, string jsonPropertyName)
-        {
-            // Get all properties of the class
-            PropertyInfo[] properties = type.GetProperties();
-
-            foreach (PropertyInfo property in properties)
-            {
-                // Check if the property has a JsonProperty attribute
-                JsonPropertyAttribute attribute = (JsonPropertyAttribute)property.GetCustomAttribute(typeof(JsonPropertyAttribute), true);
-
-                if (attribute != null && attribute.PropertyName == jsonPropertyName)
-                {
-                    // Return the property if it matches the JSON property name
-                    return property;
-                }
-            }
-
-            // Return null if property not found
-            return null;
+            return target;
         }
     }
 }

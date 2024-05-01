@@ -1,0 +1,158 @@
+2024-05-01 09:36:52.1860 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/swagger/index.html - -
+2024-05-01 09:36:54.0820 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/swagger/index.html - - - 200 - text/html;charset=utf-8 1895.6768ms
+2024-05-01 09:36:54.7047 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/_framework/aspnetcore-browser-refresh.js - -
+2024-05-01 09:36:54.7047 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/_vs/browserLink - -
+2024-05-01 09:36:54.7630 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 61.2963ms
+2024-05-01 09:36:55.3697 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 665.3196ms
+2024-05-01 09:36:55.5556 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/swagger/v1/swagger.json - -
+2024-05-01 09:36:56.2385 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 681.3934ms
+2024-05-01 09:37:27.0093 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 POST https://localhost:7082/api/CLBIL01/ShareBill?id=1 - 0
+2024-05-01 09:37:27.0651 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'BillingAPI.Controllers.CLBIL01Controller.ShareBill (BillingAPI)'
+2024-05-01 09:37:27.1065 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "ShareBill", controller = "CLBIL01"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ShareBill(Int32) on controller BillingAPI.Controllers.CLBIL01Controller (BillingAPI).
+2024-05-01 09:37:29.1448 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method BillingAPI.Controllers.CLBIL01Controller.ShareBill (BillingAPI) - Validation state: Valid
+2024-05-01 09:37:32.7655 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method BillingAPI.Controllers.CLBIL01Controller.ShareBill (BillingAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3607.4946ms.
+2024-05-01 09:37:32.7707 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'System.String'.
+2024-05-01 09:37:32.7931 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action BillingAPI.Controllers.CLBIL01Controller.ShareBill (BillingAPI) in 5672.9115ms
+2024-05-01 09:37:32.7931 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'BillingAPI.Controllers.CLBIL01Controller.ShareBill (BillingAPI)'
+2024-05-01 09:37:32.7931 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 POST https://localhost:7082/api/CLBIL01/ShareBill?id=1 - 0 - 200 - text/plain;+charset=utf-8 5779.6317ms
+2024-05-01 09:38:02.9953 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 POST https://localhost:7082/api/CLBIL01/ShareBill?id=1 - 0
+2024-05-01 09:38:02.9953 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'BillingAPI.Controllers.CLBIL01Controller.ShareBill (BillingAPI)'
+2024-05-01 09:38:02.9953 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "ShareBill", controller = "CLBIL01"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ShareBill(Int32) on controller BillingAPI.Controllers.CLBIL01Controller (BillingAPI).
+2024-05-01 09:38:03.0232 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method BillingAPI.Controllers.CLBIL01Controller.ShareBill (BillingAPI) - Validation state: Valid
+2024-05-01 09:38:16.8998 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method BillingAPI.Controllers.CLBIL01Controller.ShareBill (BillingAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 13871.9534ms.
+2024-05-01 09:38:16.8998 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'System.String'.
+2024-05-01 09:38:16.8998 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action BillingAPI.Controllers.CLBIL01Controller.ShareBill (BillingAPI) in 13900.6511ms
+2024-05-01 09:38:16.8998 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'BillingAPI.Controllers.CLBIL01Controller.ShareBill (BillingAPI)'
+2024-05-01 09:38:16.8998 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 POST https://localhost:7082/api/CLBIL01/ShareBill?id=1 - 0 - 200 - text/plain;+charset=utf-8 13905.1572ms
+2024-05-01 09:38:18.7137 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/swagger/index.html - -
+2024-05-01 09:38:18.7412 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/swagger/index.html - - - 200 - text/html;charset=utf-8 27.5119ms
+2024-05-01 09:38:18.7412 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/_framework/aspnetcore-browser-refresh.js - -
+2024-05-01 09:38:18.7412 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/_vs/browserLink - -
+2024-05-01 09:38:18.7553 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 2.7831ms
+2024-05-01 09:38:18.8182 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 64.4446ms
+2024-05-01 09:38:18.9640 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/swagger/v1/swagger.json - -
+2024-05-01 09:38:18.9812 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 16.7210ms
+2024-05-01 09:38:33.4839 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/swagger/index.html - -
+2024-05-01 09:38:33.9767 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/swagger/index.html - - - 200 - text/html;charset=utf-8 496.0576ms
+2024-05-01 09:38:34.6067 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/_framework/aspnetcore-browser-refresh.js - -
+2024-05-01 09:38:34.6151 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/_vs/browserLink - -
+2024-05-01 09:38:34.6313 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 24.5931ms
+2024-05-01 09:38:34.6484 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 40.9890ms
+2024-05-01 09:38:34.8012 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/swagger/v1/swagger.json - -
+2024-05-01 09:38:35.0805 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 279.5225ms
+2024-05-01 09:38:46.8886 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 POST https://localhost:7082/api/CLBIL01/ShareBill?id=1 - 0
+2024-05-01 09:38:46.9431 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'BillingAPI.Controllers.CLBIL01Controller.ShareBill (BillingAPI)'
+2024-05-01 09:38:46.9868 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "ShareBill", controller = "CLBIL01"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ShareBill(Int32) on controller BillingAPI.Controllers.CLBIL01Controller (BillingAPI).
+2024-05-01 09:38:48.0053 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method BillingAPI.Controllers.CLBIL01Controller.ShareBill (BillingAPI) - Validation state: Valid
+2024-05-01 09:39:35.0242 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method BillingAPI.Controllers.CLBIL01Controller.ShareBill (BillingAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 47000.4277ms.
+2024-05-01 09:39:35.0373 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'System.String'.
+2024-05-01 09:39:35.0373 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action BillingAPI.Controllers.CLBIL01Controller.ShareBill (BillingAPI) in 48050.6424ms
+2024-05-01 09:39:35.0373 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'BillingAPI.Controllers.CLBIL01Controller.ShareBill (BillingAPI)'
+2024-05-01 09:39:35.0373 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 POST https://localhost:7082/api/CLBIL01/ShareBill?id=1 - 0 - 200 - text/plain;+charset=utf-8 48155.8834ms
+2024-05-01 09:40:12.7736 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 POST https://localhost:7082/api/CLBIL01/ShareBill?id=1 - 0
+2024-05-01 09:40:12.7736 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'BillingAPI.Controllers.CLBIL01Controller.ShareBill (BillingAPI)'
+2024-05-01 09:40:12.7736 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "ShareBill", controller = "CLBIL01"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ShareBill(Int32) on controller BillingAPI.Controllers.CLBIL01Controller (BillingAPI).
+2024-05-01 09:40:18.6261 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method BillingAPI.Controllers.CLBIL01Controller.ShareBill (BillingAPI) - Validation state: Valid
+2024-05-01 09:40:58.7869 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method BillingAPI.Controllers.CLBIL01Controller.ShareBill (BillingAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 40157.7307ms.
+2024-05-01 09:40:58.7876 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'System.String'.
+2024-05-01 09:40:58.7876 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action BillingAPI.Controllers.CLBIL01Controller.ShareBill (BillingAPI) in 46009.7864ms
+2024-05-01 09:40:58.7876 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'BillingAPI.Controllers.CLBIL01Controller.ShareBill (BillingAPI)'
+2024-05-01 09:40:58.7876 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 POST https://localhost:7082/api/CLBIL01/ShareBill?id=1 - 0 - 200 - text/plain;+charset=utf-8 46014.7656ms
+2024-05-01 09:41:17.6475 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://127.0.0.1:7082/Bills/Bill_1_01-05-2024.pdf - -
+2024-05-01 09:41:18.4766 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://127.0.0.1:7082/favicon.ico - -
+2024-05-01 09:41:18.4766 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://127.0.0.1:7082/favicon.ico - - - 404 0 - 1.2890ms
+2024-05-01 09:41:18.4766 | INFO | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | Sending file. Request path: '/Bills/Bill_1_01-05-2024.pdf'. Physical path: 'F:\Krinsi - 379\New folder\.NET CORE 1\BillingAPI\BillingAPI\wwwroot\Bills\Bill_1_01-05-2024.pdf'
+2024-05-01 09:41:18.5045 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://127.0.0.1:7082/Bills/Bill_1_01-05-2024.pdf - - - 200 2085 application/pdf 856.2728ms
+2024-05-01 09:45:48.3402 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/swagger/index.html - -
+2024-05-01 09:45:49.5415 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/swagger/index.html - - - 200 - text/html;charset=utf-8 1191.8624ms
+2024-05-01 09:45:50.7006 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/_framework/aspnetcore-browser-refresh.js - -
+2024-05-01 09:45:50.7199 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/_vs/browserLink - -
+2024-05-01 09:45:50.8284 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 128.6752ms
+2024-05-01 09:45:51.1048 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 377.7316ms
+2024-05-01 09:45:51.2860 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/swagger/v1/swagger.json - -
+2024-05-01 09:45:51.6047 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 317.1507ms
+2024-05-01 09:46:02.4223 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://127.0.0.1:7082/Bills/Bill_1_01-05-2024.pdf - -
+2024-05-01 09:46:02.5942 | INFO | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | Sending file. Request path: '/Bills/Bill_1_01-05-2024.pdf'. Physical path: 'F:\Krinsi - 379\New folder\.NET CORE 1\BillingAPI\BillingAPI\wwwroot\Bills\Bill_1_01-05-2024.pdf'
+2024-05-01 09:46:02.5942 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://127.0.0.1:7082/Bills/Bill_1_01-05-2024.pdf - - - 200 2085 application/pdf 178.0642ms
+2024-05-01 09:46:11.4527 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://127.0.0.1:7082/Bills/Bill_1_01-05-2024 - -
+2024-05-01 09:46:11.4527 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://127.0.0.1:7082/Bills/Bill_1_01-05-2024 - - - 404 0 - 3.3492ms
+2024-05-01 09:46:13.9546 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://127.0.0.1:7082/Bills/Bill_1_01-05-2024 - -
+2024-05-01 09:46:13.9546 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://127.0.0.1:7082/Bills/Bill_1_01-05-2024 - - - 404 0 - 2.3200ms
+2024-05-01 09:46:20.7310 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://127.0.0.1:7082/Bills/Bill_1_01-05-2024.pdf - -
+2024-05-01 09:46:20.7528 | INFO | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | Sending file. Request path: '/Bills/Bill_1_01-05-2024.pdf'. Physical path: 'F:\Krinsi - 379\New folder\.NET CORE 1\BillingAPI\BillingAPI\wwwroot\Bills\Bill_1_01-05-2024.pdf'
+2024-05-01 09:46:20.7528 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://127.0.0.1:7082/Bills/Bill_1_01-05-2024.pdf - - - 200 2085 application/pdf 18.3859ms
+2024-05-01 09:48:57.3107 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/swagger/index.html - -
+2024-05-01 09:48:57.4112 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/swagger/index.html - - - 200 - text/html;charset=utf-8 90.3138ms
+2024-05-01 09:48:57.4681 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/_framework/aspnetcore-browser-refresh.js - -
+2024-05-01 09:48:57.4681 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 1.3239ms
+2024-05-01 09:48:57.5167 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/_vs/browserLink - -
+2024-05-01 09:48:57.5922 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 88.2703ms
+2024-05-01 09:48:57.9101 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/swagger/v1/swagger.json - -
+2024-05-01 09:48:57.9386 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 28.9151ms
+2024-05-01 09:49:30.0259 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/swagger/index.html - -
+2024-05-01 09:49:30.0691 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/swagger/index.html - - - 200 - text/html;charset=utf-8 43.2372ms
+2024-05-01 09:49:30.0875 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/_framework/aspnetcore-browser-refresh.js - -
+2024-05-01 09:49:30.0875 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 0.5945ms
+2024-05-01 09:49:30.1170 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/_vs/browserLink - -
+2024-05-01 09:49:30.1430 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 31.0760ms
+2024-05-01 09:49:30.3282 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/swagger/v1/swagger.json - -
+2024-05-01 09:49:31.6577 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/swagger/v1/swagger.json - - - 500 - text/plain;+charset=utf-8 1329.9085ms
+2024-05-01 09:49:49.9086 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/swagger/index.html - -
+2024-05-01 09:49:50.4702 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/swagger/index.html - - - 200 - text/html;charset=utf-8 569.2285ms
+2024-05-01 09:49:51.2268 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/_framework/aspnetcore-browser-refresh.js - -
+2024-05-01 09:49:51.2268 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/_vs/browserLink - -
+2024-05-01 09:49:51.2397 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 12.7854ms
+2024-05-01 09:49:51.2802 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 55.9714ms
+2024-05-01 09:49:51.4886 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/swagger/v1/swagger.json - -
+2024-05-01 09:49:51.9161 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 427.2036ms
+2024-05-01 09:50:07.5959 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 POST https://localhost:7082/api/CLBIL01/ShareBill?id=1 - 0
+2024-05-01 09:50:07.6555 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'BillingAPI.Controllers.CLBIL01Controller.ShareBill (BillingAPI)'
+2024-05-01 09:50:07.7456 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "ShareBill", controller = "CLBIL01"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ShareBill(Int32) on controller BillingAPI.Controllers.CLBIL01Controller (BillingAPI).
+2024-05-01 09:50:09.3821 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method BillingAPI.Controllers.CLBIL01Controller.ShareBill (BillingAPI) - Validation state: Valid
+2024-05-01 09:50:22.3688 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method BillingAPI.Controllers.CLBIL01Controller.ShareBill (BillingAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 12979.1134ms.
+2024-05-01 09:50:22.4345 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'System.String'.
+2024-05-01 09:50:22.4897 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action BillingAPI.Controllers.CLBIL01Controller.ShareBill (BillingAPI) in 14699.5757ms
+2024-05-01 09:50:22.4897 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'BillingAPI.Controllers.CLBIL01Controller.ShareBill (BillingAPI)'
+2024-05-01 09:50:22.4897 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 POST https://localhost:7082/api/CLBIL01/ShareBill?id=1 - 0 - 200 - text/plain;+charset=utf-8 14900.3059ms
+2024-05-01 09:51:35.6441 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 POST https://localhost:7082/api/CLBIL01/ShareBill?id=1 - 0
+2024-05-01 09:51:35.6441 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'BillingAPI.Controllers.CLBIL01Controller.ShareBill (BillingAPI)'
+2024-05-01 09:51:35.6441 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "ShareBill", controller = "CLBIL01"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ShareBill(Int32) on controller BillingAPI.Controllers.CLBIL01Controller (BillingAPI).
+2024-05-01 09:51:35.6908 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method BillingAPI.Controllers.CLBIL01Controller.ShareBill (BillingAPI) - Validation state: Valid
+2024-05-01 09:51:37.1804 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method BillingAPI.Controllers.CLBIL01Controller.ShareBill (BillingAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1444.2104ms.
+2024-05-01 09:51:37.1804 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'System.String'.
+2024-05-01 09:51:37.1804 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action BillingAPI.Controllers.CLBIL01Controller.ShareBill (BillingAPI) in 1527.8033ms
+2024-05-01 09:51:37.1804 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'BillingAPI.Controllers.CLBIL01Controller.ShareBill (BillingAPI)'
+2024-05-01 09:51:37.1804 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 POST https://localhost:7082/api/CLBIL01/ShareBill?id=1 - 0 - 200 - text/plain;+charset=utf-8 1534.0666ms
+2024-05-01 09:58:21.5767 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/swagger/index.html - -
+2024-05-01 09:58:23.5188 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/swagger/index.html - - - 200 - text/html;charset=utf-8 1943.0666ms
+2024-05-01 09:58:23.8901 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/_vs/browserLink - -
+2024-05-01 09:58:23.8901 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/_framework/aspnetcore-browser-refresh.js - -
+2024-05-01 09:58:23.9227 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 30.4759ms
+2024-05-01 09:58:24.0704 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 182.3197ms
+2024-05-01 09:58:24.3539 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/swagger/v1/swagger.json - -
+2024-05-01 09:58:24.9331 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 574.0409ms
+2024-05-01 09:59:40.7904 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 POST https://localhost:7082/api/CLBIL01/ShareBill?id=1 - 0
+2024-05-01 09:59:40.8374 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'BillingAPI.Controllers.CLBIL01Controller.ShareBill (BillingAPI)'
+2024-05-01 09:59:40.8770 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "ShareBill", controller = "CLBIL01"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ShareBill(Int32) on controller BillingAPI.Controllers.CLBIL01Controller (BillingAPI).
+2024-05-01 09:59:42.0894 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method BillingAPI.Controllers.CLBIL01Controller.ShareBill (BillingAPI) - Validation state: Valid
+2024-05-01 09:59:44.0346 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method BillingAPI.Controllers.CLBIL01Controller.ShareBill (BillingAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1932.4484ms.
+2024-05-01 09:59:44.0415 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'System.String'.
+2024-05-01 09:59:44.0415 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action BillingAPI.Controllers.CLBIL01Controller.ShareBill (BillingAPI) in 3164.5154ms
+2024-05-01 09:59:44.0415 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'BillingAPI.Controllers.CLBIL01Controller.ShareBill (BillingAPI)'
+2024-05-01 09:59:44.0415 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 POST https://localhost:7082/api/CLBIL01/ShareBill?id=1 - 0 - 200 - text/plain;+charset=utf-8 3258.7345ms
+2024-05-01 10:00:28.2294 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/swagger/index.html - -
+2024-05-01 10:00:28.2699 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/swagger/index.html - - - 200 - text/html;charset=utf-8 41.9026ms
+2024-05-01 10:00:28.2813 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/_framework/aspnetcore-browser-refresh.js - -
+2024-05-01 10:00:28.2813 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/_vs/browserLink - -
+2024-05-01 10:00:28.2813 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 0.6169ms
+2024-05-01 10:00:28.2915 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 18.7059ms
+2024-05-01 10:00:28.6147 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/swagger/v1/swagger.json - -
+2024-05-01 10:00:28.6252 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 10.4434ms
+2024-05-01 10:00:34.6569 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/swagger/index.html - -
+2024-05-01 10:00:34.6796 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/swagger/index.html - - - 200 - text/html;charset=utf-8 23.0780ms
+2024-05-01 10:00:34.6898 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/_framework/aspnetcore-browser-refresh.js - -
+2024-05-01 10:00:34.6898 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 0.3413ms
+2024-05-01 10:00:34.6898 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/_vs/browserLink - -
+2024-05-01 10:00:34.7449 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 48.3580ms
+2024-05-01 10:00:34.8825 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/swagger/v1/swagger.json - -
+2024-05-01 10:00:34.8996 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 17.1006ms

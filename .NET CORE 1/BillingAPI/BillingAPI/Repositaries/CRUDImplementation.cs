@@ -1,163 +1,176 @@
 ﻿using BillingAPI.BusinessLogic;
+using BillingAPI.Enums;
 using BillingAPI.Interfaces;
 using BillingAPI.Models;
-using BillingAPI.Models.POCO;
 using ServiceStack.OrmLite;
 
 namespace BillingAPI.Repositaries
 {
-    public class CRUDImplementation<T> : ICRUD where T : class
+    /// <summary>
+    /// Impelements ICommonService interface
+    /// </summary>
+    /// <typeparam name="T">Type</typeparam>
+    public class CRUDImplementation<T> : ICRUDService<T> where T : class
     {
-        public static BLConvertor objBLConvertor = new BLConvertor();
+        #region Private Members
 
         /// <summary>
-        /// Db factory
+        /// Instance of OrmLiteConnectionFactory
         /// </summary>
-        private readonly OrmLiteConnectionFactory dbFactory;
+        private readonly OrmLiteConnectionFactory _dbFactory;
 
+        #endregion
+
+        #region Public Members
+
+        /// <summary>
+        /// Declares variable to store connection string
+        /// </summary>
         public static string connectionString;
 
+        /// <summary>
+        /// Instance of type T
+        /// </summary>
         public T obj { get; set; }
 
-        public RES01 objRES01 = new RES01();
+        /// <summary>
+        /// Type of operation to be perform
+        /// </summary>
+        public enmOperations Operations {get; set; }
 
+        /// <summary>
+        /// Instance of DBCommonContext DB context class
+        /// </summary>
+        public DBCommonContext<T> objDBCommonContext = new DBCommonContext<T>();
+
+        #endregion
+
+        #region Constructors
+
+        /// <summary>
+        /// Establishes connection with database
+        /// </summary>
         public CRUDImplementation()
         {
-            connectionString = GetConnectionString();
-            dbFactory = new OrmLiteConnectionFactory(connectionString, MySqlDialect.Provider);
+            connectionString = BLCommon.GetConnectionString();
+            _dbFactory = new OrmLiteConnectionFactory(connectionString, MySqlDialect.Provider);
         }
 
-        public string GetConnectionString()
+        #endregion
+
+        #region Public Methods
+
+        /// <summary>
+        /// Checks weather object exist or not
+        /// </summary>
+        /// <param name="id">Id of object to be check</param>
+        /// <returns>True if exist, False otherwise</returns>
+        public bool IsExists(int id)
         {
-            var builder = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
+            T obj;
 
-            IConfigurationRoot configuration = builder.Build();
+            using (var db = _dbFactory.OpenDbConnection())
+            {
+                obj = db.SingleById<T>(id);
+            }
 
-            // Replace "DefaultConnection" with the key used in appsettings.json for your connection string
-            string connectionString = configuration.GetConnectionString("DefaultConnection");
-            return connectionString;
+            return obj == null ? false : true;
         }
 
-        public RES01 CreateTable()
+        /// <summary>
+        /// Retrives all objects of type T
+        /// </summary>
+        /// <returns>Response containing all objects of type T</returns>
+        public Response Select()
         {
+            Response response = new Response();
+
             try
             {
-                using (var db = dbFactory.OpenDbConnection())
+                response.response = objDBCommonContext.Select();
+
+                return response;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
+        ///  Retrieves all objects of type T
+        /// </summary>
+        /// <returns>List containing all objects of type T</returns>
+        public List<T> SelectList()
+        {
+            List<T> lst = objDBCommonContext.SelectList();
+
+            return lst;
+        }
+
+        /// <summary>
+        /// Save object into the database
+        /// </summary>
+        /// <returns>Response containing value of Save operation</returns>
+        public Response Save()
+        {
+            Response response = new Response();
+
+            try
+            {
+                if (Operations == enmOperations.I)
                 {
-                    if (db.TableExists<T>())
+                    using (var db = _dbFactory.OpenDbConnection())
                     {
-                        db.CreateTable<T>();
-                        objRES01.isError = false;
-                        objRES01.message = String.Format(@"Table {0} created successfully.", typeof(T).Name);
+                        db.Insert<T>(obj);
                     }
-                    else
+
+                    response.message = "Inserted successfully";
+                }
+                else if (Operations == enmOperations.U)
+                {
+                    using (var db = _dbFactory.OpenDbConnection())
                     {
-                        objRES01.isError = true;
-                        objRES01.message = "Table exist already";
+                        db.Update<T>(obj);
                     }
+
+                    response.message = "Updated successfully";
                 }
-                return objRES01;
+
+                return response;
             }
             catch (Exception ex)
             {
-                objRES01.isError = true;
-                objRES01.message = ex.Message;
-                return objRES01;
+                throw ex;
             }
         }
 
-        public RES01 Select()
+        /// <summary>
+        /// Deletes object from database
+        /// </summary>
+        /// <param name="id">Id of object to be delete</param>
+        /// <returns>Response containing value of Delete operation</returns>
+        public Response Delete(int id)
         {
+            Response response = new Response();
+
             try
             {
-                using (var db = dbFactory.OpenDbConnection())
+                using (var db = _dbFactory.OpenDbConnection())
                 {
-                    List<T> data = db.Select<T>();
 
-                    objBLConvertor.ConvertUnsupportedTypes<T>(data);
-
-                    objRES01.isError = false;
-                    objRES01.message = "Success";
-                    objRES01.response = objBLConvertor.ListToDataTable<T>(data);
-                }
-                return objRES01;
-            }
-            catch (Exception ex)
-            {
-                objRES01.isError = true;
-                objRES01.message = ex.Message;
-                return objRES01;
-            }
-        }
-
-        public RES01 Add()
-        {
-            try
-            {
-                using (var db = dbFactory.OpenDbConnection())
-                {
-                    if (!db.TableExists<USR01>())
-                    {
-                        db.CreateTable<USR01>();
-                    }
-                    db.Insert<T>(obj);
-
-                    objRES01.isError = false;
-                    objRES01.message = "Success";
-                }
-                return objRES01;
-            }
-            catch (Exception ex)
-            {
-                objRES01.isError = true;
-                objRES01.message = ex.Message;
-                return objRES01;
-            }
-        }
-
-        public RES01 Update()
-        {
-            try
-            {
-                using (var db = dbFactory.OpenDbConnection())
-                {
-                    db.Update<T>(obj);
-
-                    objRES01.isError = false;
-                    objRES01.message = "Success";
-                }
-                return objRES01;
-            }
-            catch (Exception ex)
-            {
-                objRES01.isError = true;
-                objRES01.message = ex.Message;
-                return objRES01;
-            }
-        }
-
-        public RES01 Delete(int id)
-        {
-            try
-            {
-                using (var db = dbFactory.OpenDbConnection())
-                {
                     db.DeleteById<T>(id);
 
-                    objRES01.isError = false;
-                    objRES01.message = "Success";
+                    response.message = "Deleted Successfully";
                 }
-                return objRES01;
+                return response;
             }
             catch (Exception ex)
             {
-                objRES01.isError = true;
-                objRES01.message = ex.Message;
-                return objRES01;
+                throw ex;
             }
         }
 
+        #endregion
     }
 }

@@ -1,0 +1,33 @@
+{
+  "Files": [
+    {
+      "Id": "F:\\Krinsi - 379\\New folder\\.NET CORE 1\\BillingAPI\\BillingAPI\\wwwroot\\Bills\\Bill_1_01-05-2024.pdf",
+      "PackagePath": "staticwebassets\\Bills\\Bill_1_01-05-2024.pdf"
+    },
+    {
+      "Id": "F:\\Krinsi - 379\\New folder\\.NET CORE 1\\BillingAPI\\BillingAPI\\wwwroot\\Bills\\Bill_1_12-04-2024.pdf",
+      "PackagePath": "staticwebassets\\Bills\\Bill_1_12-04-2024.pdf"
+    },
+    {
+      "Id": "F:\\Krinsi - 379\\New folder\\.NET CORE 1\\BillingAPI\\BillingAPI\\wwwroot\\Bills\\Bill_1_30-04-2024.pdf",
+      "PackagePath": "staticwebassets\\Bills\\Bill_1_30-04-2024.pdf"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.BillingAPI.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.BillingAPI.props",
+      "PackagePath": "build\\BillingAPI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.BillingAPI.props",
+      "PackagePath": "buildMultiTargeting\\BillingAPI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.BillingAPI.props",
+      "PackagePath": "buildTransitive\\BillingAPI.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

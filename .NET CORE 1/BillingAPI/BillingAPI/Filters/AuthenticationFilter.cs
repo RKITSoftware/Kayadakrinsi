@@ -1,5 +1,4 @@
-﻿using System.Diagnostics;
-using System.Diagnostics.Contracts;
+﻿using System.Diagnostics.Contracts;
 using System.Net.Http.Headers;
 using System.Security.Claims;
 using System.Security.Principal;
@@ -18,51 +17,30 @@ namespace BillingAPI.Filters
     /// </summary>
     public class AuthenticationFilter : Attribute, IAuthorizationFilter
     {
+        #region Public Members
+
         /// <summary>
         /// Declares object of class BLUser
         /// </summary>
-        public BLUSR01 objBLUser = new BLUSR01();
-
-        public BLTokenManager objBLTokenManager = new BLTokenManager();
-
-        public BLConvertor objBLConvertor = new BLConvertor();
-
-        public static USR01 objUSR01;
-
-        public static bool isTokenGenerated = false;
+        public BLLogin objBLLogin = new BLLogin();
 
         /// <summary>
-        /// Validates user
+        /// Instance of BLTokenManager class
         /// </summary>
-        /// <param name="username">Username of user</param>
-        /// <param name="password">Password of user</param>
-        /// <returns>True if user is valid, false otherwise</returns>
-        private USR01? ValidateUser(string username, string password)
-        {
-            List<USR01> lstUSR01 = objBLConvertor.DataTableToList<USR01>(objBLUser.Select().response);
-            var user = lstUSR01.FirstOrDefault(u => u.R01F02 == username && u.R01F03 == password);
+        public BLTokenManager objBLTokenManager = new BLTokenManager();
 
-            if (user != null)
-            {
-                return user;
-            }
+        /// <summary>
+        /// Instance of USR01 class
+        /// </summary>
+        public static USR01 objUSR01;
 
-            return null;
-        }
+        /// <summary>
+        /// Defines flag indicating whether token is generated or not
+        /// Checks if token is being generating for first time or already generated
+        /// </summary>
+        public static bool isTokenGenerated = false;
 
-        ///// <summary>
-        ///// Returns user with current credential
-        ///// </summary>
-        ///// <param name="username">Username of user</param>
-        ///// <param name="password">Password of user</param>
-        ///// <returns>Object of class USR01</returns>
-        //private USR01 UserDetails(string username, string password)
-        //{
-        //    List<USR01> lstUSR01 = objBLConvertor.DataTableToList<USR01>(objBLUser.Select().response);
-        //    var user = lstUSR01.FirstOrDefault(u => u.R01F02 == username && u.R01F03 == password);
-
-        //    return user;
-        //}
+        #endregion
 
         /// <summary>
         /// Authenticates user
@@ -85,10 +63,12 @@ namespace BillingAPI.Filters
                     string[] userInfo = credentials.Split(':');
                     string username = userInfo[0];
                     string password = userInfo[1];
-                    var user = ValidateUser(username, password);
+
+                    var user = objBLLogin.ValidateUser(username, password);
+
                     if (user!=null)
                     {
-                        objUSR01 = user;
+                        objUSR01 = user; // Sets current logged in user
 
                         var identity = new GenericIdentity(username);
                         identity.AddClaim(new Claim(ClaimTypes.Name, objUSR01.R01F02));
@@ -100,12 +80,16 @@ namespace BillingAPI.Filters
 
                         context.HttpContext.User = (ClaimsPrincipal)principal;
 
+                        // Checks if token is generated before
                         if (isTokenGenerated == false)
                         {
                             objBLTokenManager.GenerateToken(objUSR01);
+
                             isTokenGenerated = true;
+
                             return;
                         }
+
 
                         var token = BLTokenManager.cache.Get("JWTToken_" + objUSR01.R01F02);
 
@@ -115,19 +99,19 @@ namespace BillingAPI.Filters
 
                             if (token == null)
                             {
-                                context.Result = new UnauthorizedResult();
+                                context.Result = new StatusCodeResult(StatusCodes.Status500InternalServerError);
                             }
                             return;
                         }
                         else
                         {
-                            context.Result = new UnauthorizedResult();
+                            context.Result = new StatusCodeResult(StatusCodes.Status500InternalServerError);
                             isTokenGenerated = false;
                         }
                     }
                     else
                     {
-                        context.Result = new UnauthorizedResult();
+                        context.Result = new StatusCodeResult(StatusCodes.Status406NotAcceptable);
                     }
                 }
                 catch (FormatException)
@@ -138,7 +122,7 @@ namespace BillingAPI.Filters
             }
             else
             {
-                context.Result = new UnauthorizedResult();
+                context.Result = new StatusCodeResult(StatusCodes.Status400BadRequest);
             }
         }
 

@@ -1,21 +1,40 @@
 ﻿using BillingAPI.Enums;
 using Newtonsoft.Json;
-using ServiceStack.DataAnnotations;
+using System.ComponentModel.DataAnnotations;
 
 namespace BillingAPI.Models.DTO
 {
+    /// <summary>
+    /// User model for clientside
+    /// </summary>
     public class DTOUSR01
     {
-        [Required,Unique]
-        [JsonProperty("R01F01")]
-        public string R01101 { get; set; }
+        /// <summary>
+        /// Id of the user
+        /// </summary>
+        [Required(ErrorMessage = "Id is required")]
+        [JsonProperty("R01101")]
+        public int R01F01 { get; set; }
 
-        [Required]
-        [JsonProperty("R01F02")]
-        public string R01102 { get; set; }
+        /// <summary>
+        /// Name of the user
+        /// </summary>
+        [Required(ErrorMessage = "User name is required")]
+        [JsonProperty("R01102")]
+        public string R01F02 { get; set; }
 
-        [Required]
-        [JsonProperty("R01F03")]
-        public enmRoles R01103 { get; set; }
+        /// <summary>
+        /// Password of the user
+        /// </summary>
+        [Required(ErrorMessage = "Password is required")]
+        [JsonProperty("R01103")]
+        public string R01F03 { get; set; }
+
+        /// <summary>
+        /// Role of user
+        /// </summary>
+        [Required(ErrorMessage = "User role is required")]
+        [JsonProperty("R01104")]
+        public enmRoles R01F04 { get; set; }
     }
 }

@@ -13,6 +13,8 @@ namespace BillingAPI.BusinessLogic
     /// </summary>
     public class BLTokenManager
     {
+        #region Public Members
+
         /// <summary>
         /// Secret key for hashing
         /// </summary>
@@ -27,6 +29,10 @@ namespace BillingAPI.BusinessLogic
         /// MemoryCache object 
         /// </summary>
         public static MemoryCache cache = MemoryCache.Default;
+
+        #endregion
+
+        #region Public Methods
 
         /// <summary>
         /// Generates access tokens
@@ -159,8 +165,24 @@ namespace BillingAPI.BusinessLogic
             }
         }
 
+        /// <summary>
+        /// Checks token is expired or not
+        /// </summary>
+        /// <param name="token">Token entered by user</param>
+        /// <returns>True if token is expired otherwise false</returns>
+        public bool IsTokenExpired(string token)
+        {
 
-       
+            JwtSecurityTokenHandler tokenHandler = new JwtSecurityTokenHandler();
+
+            JwtSecurityToken jwtToken = (JwtSecurityToken)tokenHandler.ReadToken(token);
+
+            var expiration = jwtToken.ValidTo;
+
+            return expiration < DateTime.UtcNow;
+        }
+
+        #endregion
     }
 }
 

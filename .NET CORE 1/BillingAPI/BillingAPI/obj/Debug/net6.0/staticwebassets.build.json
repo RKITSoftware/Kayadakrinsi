@@ -1,11 +1,71 @@
 {
   "Version": 1,
-  "Hash": "gfXHd532mjmSOXGMhA89soR7Z3vZuuDQRDW5i9BJ1QM=",
+  "Hash": "SJ6Z8DQT60iPqt+7ADKUQQv+NlzpSoxpiEwgX4L5nqE=",
   "Source": "BillingAPI",
   "BasePath": "_content/BillingAPI",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "BillingAPI\\wwwroot",
+      "Source": "BillingAPI",
+      "ContentRoot": "F:\\Krinsi - 379\\New folder\\.NET CORE 1\\BillingAPI\\BillingAPI\\wwwroot\\",
+      "BasePath": "_content/BillingAPI",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "F:\\Krinsi - 379\\New folder\\.NET CORE 1\\BillingAPI\\BillingAPI\\wwwroot\\Bills\\Bill_1_01-05-2024.pdf",
+      "SourceId": "BillingAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\Krinsi - 379\\New folder\\.NET CORE 1\\BillingAPI\\BillingAPI\\wwwroot\\",
+      "BasePath": "_content/BillingAPI",
+      "RelativePath": "Bills/Bill_1_01-05-2024.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Bills\\Bill_1_01-05-2024.pdf"
+    },
+    {
+      "Identity": "F:\\Krinsi - 379\\New folder\\.NET CORE 1\\BillingAPI\\BillingAPI\\wwwroot\\Bills\\Bill_1_12-04-2024.pdf",
+      "SourceId": "BillingAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\Krinsi - 379\\New folder\\.NET CORE 1\\BillingAPI\\BillingAPI\\wwwroot\\",
+      "BasePath": "_content/BillingAPI",
+      "RelativePath": "Bills/Bill_1_12-04-2024.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Bills\\Bill_1_12-04-2024.pdf"
+    },
+    {
+      "Identity": "F:\\Krinsi - 379\\New folder\\.NET CORE 1\\BillingAPI\\BillingAPI\\wwwroot\\Bills\\Bill_1_30-04-2024.pdf",
+      "SourceId": "BillingAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\Krinsi - 379\\New folder\\.NET CORE 1\\BillingAPI\\BillingAPI\\wwwroot\\",
+      "BasePath": "_content/BillingAPI",
+      "RelativePath": "Bills/Bill_1_30-04-2024.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Bills\\Bill_1_30-04-2024.pdf"
+    }
+  ]
 }

@@ -1,0 +1,470 @@
+2024-05-01 09:36:41.5048 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Hosting starting
+2024-05-01 09:36:45.4396 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory | Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider
+2024-05-01 09:36:47.2582 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer | Using development certificate: CN=localhost (Thumbprint: 4A3F19302DC503DCF872708C86F161CC3D96CF0F)
+2024-05-01 09:36:47.5465 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Hosting started
+2024-05-01 09:36:47.5465 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Loaded hosting startup assembly BillingAPI
+2024-05-01 09:36:47.5465 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-05-01 09:36:47.5465 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-05-01 09:36:47.7986 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39IGFHS6SL" accepted.
+2024-05-01 09:36:47.7986 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39IGFHS6SM" accepted.
+2024-05-01 09:36:47.8083 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39IGFHS6SL" started.
+2024-05-01 09:36:47.8083 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39IGFHS6SM" started.
+2024-05-01 09:36:51.5344 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39IGFHS6SN" accepted.
+2024-05-01 09:36:51.6051 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39IGFHS6SN" started.
+2024-05-01 09:36:51.9274 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Connection 0HN39IGFHS6SN established using the following protocol: Tls12
+2024-05-01 09:36:52.1904 | DEBUG | Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware | Wildcard detected, all requests with hosts will be allowed.
+2024-05-01 09:36:52.5866 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware | Response markup is scheduled to include browser refresh script injection.
+2024-05-01 09:36:54.0389 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware | Response markup was updated to include browser refresh script injection.
+2024-05-01 09:36:57.9744 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39IGFHS6SN" received FIN.
+2024-05-01 09:36:57.9744 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN39IGFHS6SN" is closed. The last processed stream ID was 7.
+2024-05-01 09:36:57.9744 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39IGFHS6SN" sending FIN because: "The client closed the connection."
+2024-05-01 09:36:58.0028 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39IGFHS6SN" stopped.
+2024-05-01 09:36:58.0259 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Authentication of the HTTPS connection timed out.
+2024-05-01 09:36:58.0259 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Authentication of the HTTPS connection timed out.
+2024-05-01 09:36:58.0259 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39IGFHS6SM" stopped.
+2024-05-01 09:36:58.0259 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39IGFHS6SL" stopped.
+2024-05-01 09:36:58.0259 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39IGFHS6SL" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-05-01 09:36:58.0259 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39IGFHS6SM" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-05-01 09:37:26.9792 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39IGFHS6SO" accepted.
+2024-05-01 09:37:26.9894 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39IGFHS6SO" started.
+2024-05-01 09:37:27.0093 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Connection 0HN39IGFHS6SO established using the following protocol: Tls12
+2024-05-01 09:37:27.0194 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | POST requests are not supported
+2024-05-01 09:37:27.0612 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | 1 candidate(s) found for the request path '/api/CLBIL01/ShareBill'
+2024-05-01 09:37:27.0612 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | Endpoint 'BillingAPI.Controllers.CLBIL01Controller.ShareBill (BillingAPI)' with route pattern 'api/CLBIL01/ShareBill' is valid for the request path '/api/CLBIL01/ShareBill'
+2024-05-01 09:37:27.0651 | DEBUG | Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware | Request matched endpoint 'BillingAPI.Controllers.CLBIL01Controller.ShareBill (BillingAPI)'
+2024-05-01 09:37:27.0651 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | Static files was skipped as the request already matched an endpoint.
+2024-05-01 09:37:27.1065 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of authorization filters (in the following order): BillingAPI.Filters.AuthenticationFilter, BillingAPI.Filters.AuthorizationFilter
+2024-05-01 09:37:27.1065 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of resource filters (in the following order): None
+2024-05-01 09:37:27.1065 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-05-01 09:37:27.1065 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of exception filters (in the following order): None
+2024-05-01 09:37:27.1065 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-05-01 09:37:29.1095 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing controller factory for controller BillingAPI.Controllers.CLBIL01Controller (BillingAPI)
+2024-05-01 09:37:29.1095 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed controller factory for controller BillingAPI.Controllers.CLBIL01Controller (BillingAPI)
+2024-05-01 09:37:29.1359 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to bind parameter 'id' of type 'System.Int32' ...
+2024-05-01 09:37:29.1359 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder | Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ...
+2024-05-01 09:37:29.1359 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder | Done attempting to bind parameter 'id' of type 'System.Int32'.
+2024-05-01 09:37:29.1359 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to bind parameter 'id' of type 'System.Int32'.
+2024-05-01 09:37:29.1359 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to validate the bound parameter 'id' of type 'System.Int32' ...
+2024-05-01 09:37:29.1359 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to validate the bound parameter 'id' of type 'System.Int32'.
+2024-05-01 09:37:32.7707 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter
+2024-05-01 09:37:32.7707 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | No information found on request to perform content negotiation.
+2024-05-01 09:37:32.7707 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-05-01 09:37:32.7707 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | Attempting to select the first formatter in the output formatters list which can write the result.
+2024-05-01 09:37:32.7707 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter' and content type 'text/plain' to write the response.
+2024-05-01 09:38:02.9953 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | POST requests are not supported
+2024-05-01 09:38:02.9953 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | 1 candidate(s) found for the request path '/api/CLBIL01/ShareBill'
+2024-05-01 09:38:02.9953 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | Endpoint 'BillingAPI.Controllers.CLBIL01Controller.ShareBill (BillingAPI)' with route pattern 'api/CLBIL01/ShareBill' is valid for the request path '/api/CLBIL01/ShareBill'
+2024-05-01 09:38:02.9953 | DEBUG | Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware | Request matched endpoint 'BillingAPI.Controllers.CLBIL01Controller.ShareBill (BillingAPI)'
+2024-05-01 09:38:02.9953 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | Static files was skipped as the request already matched an endpoint.
+2024-05-01 09:38:02.9953 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of authorization filters (in the following order): BillingAPI.Filters.AuthenticationFilter, BillingAPI.Filters.AuthorizationFilter
+2024-05-01 09:38:02.9953 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of resource filters (in the following order): None
+2024-05-01 09:38:02.9953 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-05-01 09:38:02.9953 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of exception filters (in the following order): None
+2024-05-01 09:38:02.9953 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-05-01 09:38:03.0232 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing controller factory for controller BillingAPI.Controllers.CLBIL01Controller (BillingAPI)
+2024-05-01 09:38:03.0232 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed controller factory for controller BillingAPI.Controllers.CLBIL01Controller (BillingAPI)
+2024-05-01 09:38:03.0232 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to bind parameter 'id' of type 'System.Int32' ...
+2024-05-01 09:38:03.0232 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder | Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ...
+2024-05-01 09:38:03.0232 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder | Done attempting to bind parameter 'id' of type 'System.Int32'.
+2024-05-01 09:38:03.0232 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to bind parameter 'id' of type 'System.Int32'.
+2024-05-01 09:38:03.0232 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to validate the bound parameter 'id' of type 'System.Int32' ...
+2024-05-01 09:38:03.0232 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to validate the bound parameter 'id' of type 'System.Int32'.
+2024-05-01 09:38:16.8998 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter
+2024-05-01 09:38:16.8998 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | No information found on request to perform content negotiation.
+2024-05-01 09:38:16.8998 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-05-01 09:38:16.8998 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | Attempting to select the first formatter in the output formatters list which can write the result.
+2024-05-01 09:38:16.8998 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter' and content type 'text/plain' to write the response.
+2024-05-01 09:38:18.7249 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware | Response markup is scheduled to include browser refresh script injection.
+2024-05-01 09:38:18.7412 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware | Response markup was updated to include browser refresh script injection.
+2024-05-01 09:38:22.4816 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39IGFHS6SO" received FIN.
+2024-05-01 09:38:22.4816 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN39IGFHS6SO" is closed. The last processed stream ID was 11.
+2024-05-01 09:38:22.4816 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39IGFHS6SO" sending FIN because: "The client closed the connection."
+2024-05-01 09:38:22.4816 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39IGFHS6SO" stopped.
+2024-05-01 09:38:30.4862 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Hosting starting
+2024-05-01 09:38:31.0548 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory | Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider
+2024-05-01 09:38:31.6306 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer | Using development certificate: CN=localhost (Thumbprint: 4A3F19302DC503DCF872708C86F161CC3D96CF0F)
+2024-05-01 09:38:31.7238 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Hosting started
+2024-05-01 09:38:31.7238 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Loaded hosting startup assembly BillingAPI
+2024-05-01 09:38:31.7238 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-05-01 09:38:31.7238 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-05-01 09:38:31.8277 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39IHEI0GCR" accepted.
+2024-05-01 09:38:31.8277 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39IHEI0GCR" started.
+2024-05-01 09:38:31.8371 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39IHEI0GCR" received FIN.
+2024-05-01 09:38:31.8535 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Failed to authenticate HTTPS connection.
+2024-05-01 09:38:31.8535 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39IHEI0GCR" stopped.
+2024-05-01 09:38:31.8654 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39IHEI0GCR" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-05-01 09:38:33.3012 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39IHEI0GCS" accepted.
+2024-05-01 09:38:33.3012 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39IHEI0GCS" started.
+2024-05-01 09:38:33.3860 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Connection 0HN39IHEI0GCS established using the following protocol: Tls12
+2024-05-01 09:38:33.4839 | DEBUG | Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware | Wildcard detected, all requests with hosts will be allowed.
+2024-05-01 09:38:33.7486 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware | Response markup is scheduled to include browser refresh script injection.
+2024-05-01 09:38:33.9706 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware | Response markup was updated to include browser refresh script injection.
+2024-05-01 09:38:37.1731 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39IHEI0GCS" received FIN.
+2024-05-01 09:38:37.1801 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN39IHEI0GCS" is closed. The last processed stream ID was 7.
+2024-05-01 09:38:37.1801 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39IHEI0GCS" sending FIN because: "The client closed the connection."
+2024-05-01 09:38:37.1801 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39IHEI0GCS" stopped.
+2024-05-01 09:38:46.8752 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39IHEI0GCT" accepted.
+2024-05-01 09:38:46.8752 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39IHEI0GCT" started.
+2024-05-01 09:38:46.8886 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Connection 0HN39IHEI0GCT established using the following protocol: Tls12
+2024-05-01 09:38:46.8886 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | POST requests are not supported
+2024-05-01 09:38:46.9360 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | 1 candidate(s) found for the request path '/api/CLBIL01/ShareBill'
+2024-05-01 09:38:46.9360 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | Endpoint 'BillingAPI.Controllers.CLBIL01Controller.ShareBill (BillingAPI)' with route pattern 'api/CLBIL01/ShareBill' is valid for the request path '/api/CLBIL01/ShareBill'
+2024-05-01 09:38:46.9360 | DEBUG | Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware | Request matched endpoint 'BillingAPI.Controllers.CLBIL01Controller.ShareBill (BillingAPI)'
+2024-05-01 09:38:46.9431 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | Static files was skipped as the request already matched an endpoint.
+2024-05-01 09:38:46.9868 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of authorization filters (in the following order): BillingAPI.Filters.AuthenticationFilter, BillingAPI.Filters.AuthorizationFilter
+2024-05-01 09:38:46.9868 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of resource filters (in the following order): None
+2024-05-01 09:38:46.9868 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-05-01 09:38:46.9883 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of exception filters (in the following order): None
+2024-05-01 09:38:46.9883 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-05-01 09:38:47.9737 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing controller factory for controller BillingAPI.Controllers.CLBIL01Controller (BillingAPI)
+2024-05-01 09:38:47.9737 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed controller factory for controller BillingAPI.Controllers.CLBIL01Controller (BillingAPI)
+2024-05-01 09:38:47.9996 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to bind parameter 'id' of type 'System.Int32' ...
+2024-05-01 09:38:47.9996 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder | Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ...
+2024-05-01 09:38:47.9996 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder | Done attempting to bind parameter 'id' of type 'System.Int32'.
+2024-05-01 09:38:47.9996 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to bind parameter 'id' of type 'System.Int32'.
+2024-05-01 09:38:47.9996 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to validate the bound parameter 'id' of type 'System.Int32' ...
+2024-05-01 09:38:48.0053 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to validate the bound parameter 'id' of type 'System.Int32'.
+2024-05-01 09:39:18.6014 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39IHEI0GCU" accepted.
+2024-05-01 09:39:18.6014 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39IHEI0GCU" started.
+2024-05-01 09:39:19.0485 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39IHEI0GCV" accepted.
+2024-05-01 09:39:20.8157 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39IHEI0GCV" started.
+2024-05-01 09:39:22.2219 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39IHEI0GCV" received FIN.
+2024-05-01 09:39:22.8859 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39IHEI0GCU" received FIN.
+2024-05-01 09:39:24.2188 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Failed to authenticate HTTPS connection.
+2024-05-01 09:39:24.2188 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39IHEI0GCU" stopped.
+2024-05-01 09:39:24.2251 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39IHEI0GCU" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-05-01 09:39:24.3263 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Failed to authenticate HTTPS connection.
+2024-05-01 09:39:24.3263 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39IHEI0GCV" stopped.
+2024-05-01 09:39:24.3263 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39IHEI0GCV" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-05-01 09:39:35.0242 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter
+2024-05-01 09:39:35.0373 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | No information found on request to perform content negotiation.
+2024-05-01 09:39:35.0373 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-05-01 09:39:35.0373 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | Attempting to select the first formatter in the output formatters list which can write the result.
+2024-05-01 09:39:35.0373 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter' and content type 'text/plain' to write the response.
+2024-05-01 09:39:48.0873 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39IHEI0GCT" received FIN.
+2024-05-01 09:39:48.0873 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN39IHEI0GCT" is closed. The last processed stream ID was 1.
+2024-05-01 09:39:48.0873 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39IHEI0GCT" sending FIN because: "The client closed the connection."
+2024-05-01 09:39:48.0873 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39IHEI0GCT" stopped.
+2024-05-01 09:40:12.7069 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39IHEI0GD0" accepted.
+2024-05-01 09:40:12.7069 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39IHEI0GD0" started.
+2024-05-01 09:40:12.7432 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Connection 0HN39IHEI0GD0 established using the following protocol: Tls12
+2024-05-01 09:40:12.7736 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | POST requests are not supported
+2024-05-01 09:40:12.7736 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | 1 candidate(s) found for the request path '/api/CLBIL01/ShareBill'
+2024-05-01 09:40:12.7736 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | Endpoint 'BillingAPI.Controllers.CLBIL01Controller.ShareBill (BillingAPI)' with route pattern 'api/CLBIL01/ShareBill' is valid for the request path '/api/CLBIL01/ShareBill'
+2024-05-01 09:40:12.7736 | DEBUG | Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware | Request matched endpoint 'BillingAPI.Controllers.CLBIL01Controller.ShareBill (BillingAPI)'
+2024-05-01 09:40:12.7736 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | Static files was skipped as the request already matched an endpoint.
+2024-05-01 09:40:12.7736 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of authorization filters (in the following order): BillingAPI.Filters.AuthenticationFilter, BillingAPI.Filters.AuthorizationFilter
+2024-05-01 09:40:12.7736 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of resource filters (in the following order): None
+2024-05-01 09:40:12.7736 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-05-01 09:40:12.7736 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of exception filters (in the following order): None
+2024-05-01 09:40:12.7736 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-05-01 09:40:18.6261 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing controller factory for controller BillingAPI.Controllers.CLBIL01Controller (BillingAPI)
+2024-05-01 09:40:18.6261 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed controller factory for controller BillingAPI.Controllers.CLBIL01Controller (BillingAPI)
+2024-05-01 09:40:18.6261 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to bind parameter 'id' of type 'System.Int32' ...
+2024-05-01 09:40:18.6261 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder | Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ...
+2024-05-01 09:40:18.6261 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder | Done attempting to bind parameter 'id' of type 'System.Int32'.
+2024-05-01 09:40:18.6261 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to bind parameter 'id' of type 'System.Int32'.
+2024-05-01 09:40:18.6261 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to validate the bound parameter 'id' of type 'System.Int32' ...
+2024-05-01 09:40:18.6261 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to validate the bound parameter 'id' of type 'System.Int32'.
+2024-05-01 09:40:58.7876 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter
+2024-05-01 09:40:58.7876 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | No information found on request to perform content negotiation.
+2024-05-01 09:40:58.7876 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-05-01 09:40:58.7876 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | Attempting to select the first formatter in the output formatters list which can write the result.
+2024-05-01 09:40:58.7876 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter' and content type 'text/plain' to write the response.
+2024-05-01 09:41:06.6701 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39IHEI0GD1" accepted.
+2024-05-01 09:41:06.6701 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39IHEI0GD1" started.
+2024-05-01 09:41:06.6839 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39IHEI0GD2" accepted.
+2024-05-01 09:41:06.6839 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39IHEI0GD2" started.
+2024-05-01 09:41:06.7017 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39IHEI0GD1" received FIN.
+2024-05-01 09:41:06.7017 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39IHEI0GD2" received FIN.
+2024-05-01 09:41:06.7017 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Failed to authenticate HTTPS connection.
+2024-05-01 09:41:06.7017 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39IHEI0GD1" stopped.
+2024-05-01 09:41:06.7017 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39IHEI0GD1" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-05-01 09:41:06.7121 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Failed to authenticate HTTPS connection.
+2024-05-01 09:41:06.7121 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39IHEI0GD2" stopped.
+2024-05-01 09:41:06.7121 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39IHEI0GD2" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-05-01 09:41:17.5983 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39IHEI0GD3" accepted.
+2024-05-01 09:41:17.5983 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39IHEI0GD3" started.
+2024-05-01 09:41:17.5983 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39IHEI0GD4" accepted.
+2024-05-01 09:41:17.5983 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39IHEI0GD4" started.
+2024-05-01 09:41:17.6059 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39IHEI0GD4" received FIN.
+2024-05-01 09:41:17.6059 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39IHEI0GD5" accepted.
+2024-05-01 09:41:17.6059 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39IHEI0GD5" started.
+2024-05-01 09:41:17.6059 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Failed to authenticate HTTPS connection.
+2024-05-01 09:41:17.6289 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39IHEI0GD4" stopped.
+2024-05-01 09:41:17.6449 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39IHEI0GD3" received FIN.
+2024-05-01 09:41:17.6449 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39IHEI0GD4" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-05-01 09:41:17.6449 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Failed to authenticate HTTPS connection.
+2024-05-01 09:41:17.6449 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39IHEI0GD3" stopped.
+2024-05-01 09:41:17.6449 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39IHEI0GD3" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-05-01 09:41:17.6475 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Connection 0HN39IHEI0GD5 established using the following protocol: Tls12
+2024-05-01 09:41:17.6475 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | The request path  does not match the path filter
+2024-05-01 09:41:17.6475 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | No candidates found for the request path '/Bills/Bill_1_01-05-2024.pdf'
+2024-05-01 09:41:17.6475 | DEBUG | Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware | Request did not match any endpoints
+2024-05-01 09:41:18.4766 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | The request path  does not match the path filter
+2024-05-01 09:41:18.4766 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | No candidates found for the request path '/favicon.ico'
+2024-05-01 09:41:18.4766 | DEBUG | Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware | Request did not match any endpoints
+2024-05-01 09:41:18.4766 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | The request path /favicon.ico does not match an existing file
+2024-05-01 09:42:39.7929 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39IHEI0GD0" received FIN.
+2024-05-01 09:42:39.7929 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN39IHEI0GD0" is closed. The last processed stream ID was 1.
+2024-05-01 09:42:39.7929 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39IHEI0GD0" sending FIN because: "The client closed the connection."
+2024-05-01 09:42:39.7929 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39IHEI0GD0" stopped.
+2024-05-01 09:42:42.0304 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Hosting shutdown
+2024-05-01 09:42:42.0563 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN39IHEI0GD5" is closing.
+2024-05-01 09:42:42.0563 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN39IHEI0GD5" is closed. The last processed stream ID was 3.
+2024-05-01 09:42:42.0563 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39IHEI0GD5" received FIN.
+2024-05-01 09:42:42.0563 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39IHEI0GD5" sending FIN because: "The client closed the connection."
+2024-05-01 09:42:42.0563 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39IHEI0GD5" stopped.
+2024-05-01 09:45:44.1384 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Hosting starting
+2024-05-01 09:45:44.6096 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory | Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider
+2024-05-01 09:45:44.9689 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer | Using development certificate: CN=localhost (Thumbprint: 4A3F19302DC503DCF872708C86F161CC3D96CF0F)
+2024-05-01 09:45:45.0129 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Hosting started
+2024-05-01 09:45:45.0129 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Loaded hosting startup assembly BillingAPI
+2024-05-01 09:45:45.0129 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-05-01 09:45:45.0129 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-05-01 09:45:45.4698 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39ILFPHI4B" received FIN.
+2024-05-01 09:45:45.4698 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39ILFPHI4B" accepted.
+2024-05-01 09:45:45.4698 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39ILFPHI4B" started.
+2024-05-01 09:45:45.5163 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Failed to authenticate HTTPS connection.
+2024-05-01 09:45:45.5163 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39ILFPHI4B" stopped.
+2024-05-01 09:45:45.5309 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39ILFPHI4B" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-05-01 09:45:47.8064 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39ILFPHI4C" accepted.
+2024-05-01 09:45:47.8064 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39ILFPHI4C" started.
+2024-05-01 09:45:48.0459 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Connection 0HN39ILFPHI4C established using the following protocol: Tls12
+2024-05-01 09:45:48.3402 | DEBUG | Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware | Wildcard detected, all requests with hosts will be allowed.
+2024-05-01 09:45:48.9372 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware | Response markup is scheduled to include browser refresh script injection.
+2024-05-01 09:45:49.5186 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware | Response markup was updated to include browser refresh script injection.
+2024-05-01 09:45:51.9002 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39ILFPHI4C" received FIN.
+2024-05-01 09:45:51.9150 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN39ILFPHI4C" is closed. The last processed stream ID was 7.
+2024-05-01 09:45:51.9150 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39ILFPHI4C" sending FIN because: "The client closed the connection."
+2024-05-01 09:45:51.9195 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39ILFPHI4C" stopped.
+2024-05-01 09:46:02.3861 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39ILFPHI4D" accepted.
+2024-05-01 09:46:02.3861 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39ILFPHI4D" started.
+2024-05-01 09:46:02.3861 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39ILFPHI4D" received FIN.
+2024-05-01 09:46:02.3861 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39ILFPHI4E" accepted.
+2024-05-01 09:46:02.3861 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39ILFPHI4E" started.
+2024-05-01 09:46:02.4034 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Failed to authenticate HTTPS connection.
+2024-05-01 09:46:02.4034 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39ILFPHI4D" stopped.
+2024-05-01 09:46:02.4034 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39ILFPHI4D" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-05-01 09:46:02.4034 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Connection 0HN39ILFPHI4E established using the following protocol: Tls12
+2024-05-01 09:46:02.4223 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | The request path  does not match the path filter
+2024-05-01 09:46:02.4923 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | No candidates found for the request path '/Bills/Bill_1_01-05-2024.pdf'
+2024-05-01 09:46:02.4923 | DEBUG | Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware | Request did not match any endpoints
+2024-05-01 09:46:04.0415 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39ILFPHI4E" received FIN.
+2024-05-01 09:46:04.0415 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN39ILFPHI4E" is closed. The last processed stream ID was 1.
+2024-05-01 09:46:04.0415 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39ILFPHI4E" sending FIN because: "The client closed the connection."
+2024-05-01 09:46:04.0442 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39ILFPHI4E" stopped.
+2024-05-01 09:46:11.4269 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39ILFPHI4F" accepted.
+2024-05-01 09:46:11.4269 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39ILFPHI4F" started.
+2024-05-01 09:46:11.4269 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39ILFPHI4F" received FIN.
+2024-05-01 09:46:11.4269 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Failed to authenticate HTTPS connection.
+2024-05-01 09:46:11.4269 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39ILFPHI4F" stopped.
+2024-05-01 09:46:11.4269 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39ILFPHI4F" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-05-01 09:46:11.4343 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39ILFPHI4G" accepted.
+2024-05-01 09:46:11.4343 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39ILFPHI4G" started.
+2024-05-01 09:46:11.4343 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39ILFPHI4G" received FIN.
+2024-05-01 09:46:11.4343 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39ILFPHI4H" accepted.
+2024-05-01 09:46:11.4343 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39ILFPHI4H" started.
+2024-05-01 09:46:11.4343 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Failed to authenticate HTTPS connection.
+2024-05-01 09:46:11.4343 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39ILFPHI4G" stopped.
+2024-05-01 09:46:11.4343 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39ILFPHI4G" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-05-01 09:46:11.4527 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Connection 0HN39ILFPHI4H established using the following protocol: Tls12
+2024-05-01 09:46:11.4527 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | The request path  does not match the path filter
+2024-05-01 09:46:11.4527 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | No candidates found for the request path '/Bills/Bill_1_01-05-2024'
+2024-05-01 09:46:11.4527 | DEBUG | Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware | Request did not match any endpoints
+2024-05-01 09:46:11.4527 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | The request path /Bills/Bill_1_01-05-2024 does not match a supported file type
+2024-05-01 09:46:13.9546 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | The request path  does not match the path filter
+2024-05-01 09:46:13.9546 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | No candidates found for the request path '/Bills/Bill_1_01-05-2024'
+2024-05-01 09:46:13.9546 | DEBUG | Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware | Request did not match any endpoints
+2024-05-01 09:46:13.9546 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | The request path /Bills/Bill_1_01-05-2024 does not match a supported file type
+2024-05-01 09:46:14.0387 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39ILFPHI4H" received FIN.
+2024-05-01 09:46:14.0387 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN39ILFPHI4H" is closed. The last processed stream ID was 3.
+2024-05-01 09:46:14.0387 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39ILFPHI4H" sending FIN because: "The client closed the connection."
+2024-05-01 09:46:14.0387 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39ILFPHI4H" stopped.
+2024-05-01 09:46:20.6893 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39ILFPHI4I" accepted.
+2024-05-01 09:46:20.6893 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39ILFPHI4I" started.
+2024-05-01 09:46:20.6893 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39ILFPHI4I" received FIN.
+2024-05-01 09:46:20.7005 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39ILFPHI4J" accepted.
+2024-05-01 09:46:20.7005 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39ILFPHI4J" started.
+2024-05-01 09:46:20.7005 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39ILFPHI4J" received FIN.
+2024-05-01 09:46:20.7005 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Failed to authenticate HTTPS connection.
+2024-05-01 09:46:20.7005 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Failed to authenticate HTTPS connection.
+2024-05-01 09:46:20.7005 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39ILFPHI4J" stopped.
+2024-05-01 09:46:20.7005 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39ILFPHI4I" stopped.
+2024-05-01 09:46:20.7005 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39ILFPHI4I" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-05-01 09:46:20.7005 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39ILFPHI4J" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-05-01 09:46:20.7005 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39ILFPHI4K" accepted.
+2024-05-01 09:46:20.7005 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39ILFPHI4K" started.
+2024-05-01 09:46:20.7289 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Connection 0HN39ILFPHI4K established using the following protocol: Tls12
+2024-05-01 09:46:20.7310 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | The request path  does not match the path filter
+2024-05-01 09:46:20.7310 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | No candidates found for the request path '/Bills/Bill_1_01-05-2024.pdf'
+2024-05-01 09:46:20.7310 | DEBUG | Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware | Request did not match any endpoints
+2024-05-01 09:46:30.3675 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39ILFPHI4K" received FIN.
+2024-05-01 09:46:30.3675 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN39ILFPHI4K" is closed. The last processed stream ID was 1.
+2024-05-01 09:46:30.3675 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39ILFPHI4K" sending FIN because: "The client closed the connection."
+2024-05-01 09:46:30.3675 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39ILFPHI4K" stopped.
+2024-05-01 09:48:57.3107 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39ILFPHI4L" accepted.
+2024-05-01 09:48:57.3107 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39ILFPHI4L" started.
+2024-05-01 09:48:57.3107 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Connection 0HN39ILFPHI4L established using the following protocol: Tls12
+2024-05-01 09:48:57.3313 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware | Response markup is scheduled to include browser refresh script injection.
+2024-05-01 09:48:57.3895 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware | Response markup was updated to include browser refresh script injection.
+2024-05-01 09:49:07.0878 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39ILFPHI4L" received FIN.
+2024-05-01 09:49:07.0878 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN39ILFPHI4L" is closed. The last processed stream ID was 7.
+2024-05-01 09:49:07.0878 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39ILFPHI4L" sending FIN because: "The client closed the connection."
+2024-05-01 09:49:07.0878 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39ILFPHI4L" stopped.
+2024-05-01 09:49:30.0110 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39ILFPHI4M" accepted.
+2024-05-01 09:49:30.0110 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39ILFPHI4M" started.
+2024-05-01 09:49:30.0259 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Connection 0HN39ILFPHI4M established using the following protocol: Tls12
+2024-05-01 09:49:30.0384 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware | Response markup is scheduled to include browser refresh script injection.
+2024-05-01 09:49:30.0691 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware | Response markup was updated to include browser refresh script injection.
+2024-05-01 09:49:33.1225 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39ILFPHI4M" received FIN.
+2024-05-01 09:49:33.1225 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN39ILFPHI4M" is closed. The last processed stream ID was 7.
+2024-05-01 09:49:33.1225 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39ILFPHI4M" sending FIN because: "The client closed the connection."
+2024-05-01 09:49:33.2179 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39ILFPHI4M" stopped.
+2024-05-01 09:49:46.4928 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Hosting starting
+2024-05-01 09:49:46.9307 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory | Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider
+2024-05-01 09:49:47.2225 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer | Using development certificate: CN=localhost (Thumbprint: 4A3F19302DC503DCF872708C86F161CC3D96CF0F)
+2024-05-01 09:49:47.2793 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Hosting started
+2024-05-01 09:49:47.2793 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Loaded hosting startup assembly BillingAPI
+2024-05-01 09:49:47.2800 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-05-01 09:49:47.2800 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-05-01 09:49:47.3036 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39INNRSGGD" received FIN.
+2024-05-01 09:49:47.3165 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39INNRSGGD" accepted.
+2024-05-01 09:49:47.3165 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39INNRSGGD" started.
+2024-05-01 09:49:47.3425 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Failed to authenticate HTTPS connection.
+2024-05-01 09:49:47.3526 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39INNRSGGD" stopped.
+2024-05-01 09:49:47.3602 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39INNRSGGD" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-05-01 09:49:49.6055 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39INNRSGGE" accepted.
+2024-05-01 09:49:49.6055 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39INNRSGGE" started.
+2024-05-01 09:49:49.7433 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Connection 0HN39INNRSGGE established using the following protocol: Tls12
+2024-05-01 09:49:49.9086 | DEBUG | Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware | Wildcard detected, all requests with hosts will be allowed.
+2024-05-01 09:49:50.2174 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware | Response markup is scheduled to include browser refresh script injection.
+2024-05-01 09:49:50.4667 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware | Response markup was updated to include browser refresh script injection.
+2024-05-01 09:49:53.4324 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39INNRSGGE" received FIN.
+2024-05-01 09:49:53.4489 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN39INNRSGGE" is closed. The last processed stream ID was 7.
+2024-05-01 09:49:53.4489 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39INNRSGGE" sending FIN because: "The client closed the connection."
+2024-05-01 09:49:53.4537 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39INNRSGGE" stopped.
+2024-05-01 09:50:07.5804 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39INNRSGGF" accepted.
+2024-05-01 09:50:07.5804 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39INNRSGGF" started.
+2024-05-01 09:50:07.5804 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Connection 0HN39INNRSGGF established using the following protocol: Tls12
+2024-05-01 09:50:07.5959 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | POST requests are not supported
+2024-05-01 09:50:07.6504 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | 1 candidate(s) found for the request path '/api/CLBIL01/ShareBill'
+2024-05-01 09:50:07.6504 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | Endpoint 'BillingAPI.Controllers.CLBIL01Controller.ShareBill (BillingAPI)' with route pattern 'api/CLBIL01/ShareBill' is valid for the request path '/api/CLBIL01/ShareBill'
+2024-05-01 09:50:07.6555 | DEBUG | Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware | Request matched endpoint 'BillingAPI.Controllers.CLBIL01Controller.ShareBill (BillingAPI)'
+2024-05-01 09:50:07.6555 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | Static files was skipped as the request already matched an endpoint.
+2024-05-01 09:50:07.7456 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of authorization filters (in the following order): BillingAPI.Filters.AuthenticationFilter, BillingAPI.Filters.AuthorizationFilter
+2024-05-01 09:50:07.7456 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of resource filters (in the following order): None
+2024-05-01 09:50:07.7456 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-05-01 09:50:07.7456 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of exception filters (in the following order): None
+2024-05-01 09:50:07.7456 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-05-01 09:50:09.3087 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing controller factory for controller BillingAPI.Controllers.CLBIL01Controller (BillingAPI)
+2024-05-01 09:50:09.3087 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed controller factory for controller BillingAPI.Controllers.CLBIL01Controller (BillingAPI)
+2024-05-01 09:50:09.3532 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to bind parameter 'id' of type 'System.Int32' ...
+2024-05-01 09:50:09.3532 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder | Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ...
+2024-05-01 09:50:09.3600 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder | Done attempting to bind parameter 'id' of type 'System.Int32'.
+2024-05-01 09:50:09.3600 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to bind parameter 'id' of type 'System.Int32'.
+2024-05-01 09:50:09.3600 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to validate the bound parameter 'id' of type 'System.Int32' ...
+2024-05-01 09:50:09.3600 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to validate the bound parameter 'id' of type 'System.Int32'.
+2024-05-01 09:50:22.4094 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter
+2024-05-01 09:50:22.4345 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | No information found on request to perform content negotiation.
+2024-05-01 09:50:22.4345 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-05-01 09:50:22.4345 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | Attempting to select the first formatter in the output formatters list which can write the result.
+2024-05-01 09:50:22.4345 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter' and content type 'text/plain' to write the response.
+2024-05-01 09:50:23.4200 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39INNRSGGF" received FIN.
+2024-05-01 09:50:23.4200 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN39INNRSGGF" is closed. The last processed stream ID was 1.
+2024-05-01 09:50:23.4200 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39INNRSGGF" sending FIN because: "The client closed the connection."
+2024-05-01 09:50:23.4200 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39INNRSGGF" stopped.
+2024-05-01 09:51:35.5976 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39INNRSGGG" accepted.
+2024-05-01 09:51:35.5976 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39INNRSGGG" started.
+2024-05-01 09:51:35.6441 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Connection 0HN39INNRSGGG established using the following protocol: Tls12
+2024-05-01 09:51:35.6441 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | POST requests are not supported
+2024-05-01 09:51:35.6441 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | 1 candidate(s) found for the request path '/api/CLBIL01/ShareBill'
+2024-05-01 09:51:35.6441 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | Endpoint 'BillingAPI.Controllers.CLBIL01Controller.ShareBill (BillingAPI)' with route pattern 'api/CLBIL01/ShareBill' is valid for the request path '/api/CLBIL01/ShareBill'
+2024-05-01 09:51:35.6441 | DEBUG | Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware | Request matched endpoint 'BillingAPI.Controllers.CLBIL01Controller.ShareBill (BillingAPI)'
+2024-05-01 09:51:35.6441 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | Static files was skipped as the request already matched an endpoint.
+2024-05-01 09:51:35.6441 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of authorization filters (in the following order): BillingAPI.Filters.AuthenticationFilter, BillingAPI.Filters.AuthorizationFilter
+2024-05-01 09:51:35.6441 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of resource filters (in the following order): None
+2024-05-01 09:51:35.6441 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-05-01 09:51:35.6441 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of exception filters (in the following order): None
+2024-05-01 09:51:35.6441 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-05-01 09:51:35.6908 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing controller factory for controller BillingAPI.Controllers.CLBIL01Controller (BillingAPI)
+2024-05-01 09:51:35.6908 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed controller factory for controller BillingAPI.Controllers.CLBIL01Controller (BillingAPI)
+2024-05-01 09:51:35.6908 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to bind parameter 'id' of type 'System.Int32' ...
+2024-05-01 09:51:35.6908 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder | Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ...
+2024-05-01 09:51:35.6908 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder | Done attempting to bind parameter 'id' of type 'System.Int32'.
+2024-05-01 09:51:35.6908 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to bind parameter 'id' of type 'System.Int32'.
+2024-05-01 09:51:35.6908 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to validate the bound parameter 'id' of type 'System.Int32' ...
+2024-05-01 09:51:35.6908 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to validate the bound parameter 'id' of type 'System.Int32'.
+2024-05-01 09:51:37.1804 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter
+2024-05-01 09:51:37.1804 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | No information found on request to perform content negotiation.
+2024-05-01 09:51:37.1804 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-05-01 09:51:37.1804 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | Attempting to select the first formatter in the output formatters list which can write the result.
+2024-05-01 09:51:37.1804 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter' and content type 'text/plain' to write the response.
+2024-05-01 09:51:43.4606 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39INNRSGGG" received FIN.
+2024-05-01 09:51:43.4606 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN39INNRSGGG" is closed. The last processed stream ID was 1.
+2024-05-01 09:51:43.4606 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39INNRSGGG" sending FIN because: "The client closed the connection."
+2024-05-01 09:51:43.4606 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39INNRSGGG" stopped.
+2024-05-01 09:58:16.0427 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Hosting starting
+2024-05-01 09:58:17.7403 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory | Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider
+2024-05-01 09:58:18.3472 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer | Using development certificate: CN=localhost (Thumbprint: 4A3F19302DC503DCF872708C86F161CC3D96CF0F)
+2024-05-01 09:58:18.7392 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Hosting started
+2024-05-01 09:58:18.7392 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Loaded hosting startup assembly BillingAPI
+2024-05-01 09:58:18.7392 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-05-01 09:58:18.7392 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-05-01 09:58:18.7447 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39ISG9BTNJ" received FIN.
+2024-05-01 09:58:18.8562 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39ISG9BTNJ" accepted.
+2024-05-01 09:58:18.8562 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39ISG9BTNJ" started.
+2024-05-01 09:58:19.0981 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Failed to authenticate HTTPS connection.
+2024-05-01 09:58:19.1086 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39ISG9BTNJ" stopped.
+2024-05-01 09:58:19.1696 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39ISG9BTNJ" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-05-01 09:58:21.1774 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39ISG9BTNK" accepted.
+2024-05-01 09:58:21.1774 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39ISG9BTNK" started.
+2024-05-01 09:58:21.3901 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Connection 0HN39ISG9BTNK established using the following protocol: Tls12
+2024-05-01 09:58:21.5767 | DEBUG | Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware | Wildcard detected, all requests with hosts will be allowed.
+2024-05-01 09:58:22.0404 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware | Response markup is scheduled to include browser refresh script injection.
+2024-05-01 09:58:23.4419 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware | Response markup was updated to include browser refresh script injection.
+2024-05-01 09:58:28.4399 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39ISG9BTNK" received FIN.
+2024-05-01 09:58:28.4482 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN39ISG9BTNK" is closed. The last processed stream ID was 7.
+2024-05-01 09:58:28.4482 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39ISG9BTNK" sending FIN because: "The client closed the connection."
+2024-05-01 09:58:28.4482 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39ISG9BTNK" stopped.
+2024-05-01 09:59:40.7487 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39ISG9BTNL" accepted.
+2024-05-01 09:59:40.7641 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39ISG9BTNL" started.
+2024-05-01 09:59:40.7871 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Connection 0HN39ISG9BTNL established using the following protocol: Tls12
+2024-05-01 09:59:40.7904 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | POST requests are not supported
+2024-05-01 09:59:40.8337 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | 1 candidate(s) found for the request path '/api/CLBIL01/ShareBill'
+2024-05-01 09:59:40.8337 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | Endpoint 'BillingAPI.Controllers.CLBIL01Controller.ShareBill (BillingAPI)' with route pattern 'api/CLBIL01/ShareBill' is valid for the request path '/api/CLBIL01/ShareBill'
+2024-05-01 09:59:40.8374 | DEBUG | Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware | Request matched endpoint 'BillingAPI.Controllers.CLBIL01Controller.ShareBill (BillingAPI)'
+2024-05-01 09:59:40.8374 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | Static files was skipped as the request already matched an endpoint.
+2024-05-01 09:59:40.8770 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of authorization filters (in the following order): BillingAPI.Filters.AuthenticationFilter, BillingAPI.Filters.AuthorizationFilter
+2024-05-01 09:59:40.8770 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of resource filters (in the following order): None
+2024-05-01 09:59:40.8770 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-05-01 09:59:40.8770 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of exception filters (in the following order): None
+2024-05-01 09:59:40.8770 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-05-01 09:59:42.0549 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing controller factory for controller BillingAPI.Controllers.CLBIL01Controller (BillingAPI)
+2024-05-01 09:59:42.0572 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed controller factory for controller BillingAPI.Controllers.CLBIL01Controller (BillingAPI)
+2024-05-01 09:59:42.0811 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to bind parameter 'id' of type 'System.Int32' ...
+2024-05-01 09:59:42.0811 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder | Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ...
+2024-05-01 09:59:42.0811 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder | Done attempting to bind parameter 'id' of type 'System.Int32'.
+2024-05-01 09:59:42.0811 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to bind parameter 'id' of type 'System.Int32'.
+2024-05-01 09:59:42.0811 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to validate the bound parameter 'id' of type 'System.Int32' ...
+2024-05-01 09:59:42.0811 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to validate the bound parameter 'id' of type 'System.Int32'.
+2024-05-01 09:59:44.0346 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter
+2024-05-01 09:59:44.0415 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | No information found on request to perform content negotiation.
+2024-05-01 09:59:44.0415 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-05-01 09:59:44.0415 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | Attempting to select the first formatter in the output formatters list which can write the result.
+2024-05-01 09:59:44.0415 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter' and content type 'text/plain' to write the response.
+2024-05-01 09:59:55.4323 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39ISG9BTNL" received FIN.
+2024-05-01 09:59:55.4323 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN39ISG9BTNL" is closed. The last processed stream ID was 1.
+2024-05-01 09:59:55.4323 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39ISG9BTNL" sending FIN because: "The client closed the connection."
+2024-05-01 09:59:55.4323 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39ISG9BTNL" stopped.
+2024-05-01 10:00:28.2227 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39ISG9BTNM" accepted.
+2024-05-01 10:00:28.2227 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39ISG9BTNM" started.
+2024-05-01 10:00:28.2227 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Connection 0HN39ISG9BTNM established using the following protocol: Tls12
+2024-05-01 10:00:28.2294 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware | Response markup is scheduled to include browser refresh script injection.
+2024-05-01 10:00:28.2699 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware | Response markup was updated to include browser refresh script injection.
+2024-05-01 10:00:34.6569 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware | Response markup is scheduled to include browser refresh script injection.
+2024-05-01 10:00:34.6796 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware | Response markup was updated to include browser refresh script injection.
+2024-05-01 10:00:45.4560 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39ISG9BTNM" received FIN.
+2024-05-01 10:00:45.4560 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN39ISG9BTNM" is closed. The last processed stream ID was 15.
+2024-05-01 10:00:45.4560 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN39ISG9BTNM" sending FIN because: "The client closed the connection."
+2024-05-01 10:00:45.4560 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN39ISG9BTNM" stopped.

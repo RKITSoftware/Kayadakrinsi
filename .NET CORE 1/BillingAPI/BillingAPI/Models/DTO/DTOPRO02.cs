@@ -1,5 +1,6 @@
 ﻿using BillingAPI.Models.POCO;
-using ServiceStack.DataAnnotations;
+using Newtonsoft.Json;
+using System.ComponentModel.DataAnnotations;
 
 namespace BillingAPI.Models.DTO
 {
@@ -11,13 +12,15 @@ namespace BillingAPI.Models.DTO
         /// <summary>
         /// Product id
         /// </summary>
-        [References(typeof(PRO01))]
-        public int O02201 { get; set; }
+        [Required(ErrorMessage = "Product id is required")]
+        [JsonProperty("O02201")]
+        public int O02F01 { get; set; }
 
         /// <summary>
         /// Product quantity
         /// </summary>
-        [Default(1)]
-        public int O02202 { get; set; }
+        [Required(ErrorMessage = "Quantity is required")]
+        [JsonProperty("O02202")]
+        public int O02F03 { get; set; }
     }
 }

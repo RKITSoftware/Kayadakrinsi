@@ -1,4 +1,5 @@
-﻿using BillingAPI.Interfaces;
+﻿using BillingAPI.Filters;
+using BillingAPI.Interfaces;
 using BillingAPI.Models.POCO;
 using BillingAPI.Repositaries;
 using Microsoft.OpenApi.Models;
@@ -50,14 +51,26 @@ namespace BillingAPI
                 //c.ToJson();
             });
 
-            services.AddControllers();
+            services.AddControllers(config =>
+            {
+                // Applies filter globally
+                config.Filters.Add(new AuthenticationFilter());
+            });
 
             services.AddLogging(logging =>
             {
                 logging.AddEventLog();
             });
 
-            services.AddTransient<ICRUD, CRUDImplementation<USR01>>();
+            // Registers interface service and their implementation
+            services.AddTransient<ICRUDService<PRO01>, CRUDImplementation<PRO01>>();
+            services.AddTransient<ICRUDService<CMP01>, CRUDImplementation<CMP01>>();
+            services.AddTransient<ICRUDService<BIL01>, CRUDImplementation<BIL01>>();
+            services.AddTransient<IBIL01Service, DbBIL01Context>();
+            // services.AddSingleton<ResourceFilter>
+            // services.AddTransient<ICRUD<USR01>, CRUDImplementation<USR01>>();
+            // services.AddTransient<IActionFilter, ActionExecutedFilter>();
+
         }
 
         /// <summary>
@@ -79,6 +92,8 @@ namespace BillingAPI
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseStaticFiles();
 
             app.UseEndpoints(endpoints =>
                 {
