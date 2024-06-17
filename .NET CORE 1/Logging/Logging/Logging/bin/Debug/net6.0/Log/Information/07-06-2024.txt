@@ -1,0 +1,4 @@
+2024-06-07 09:49:45.3706 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://localhost:5000/ - -
+2024-06-07 09:49:45.3834 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://localhost:5000/ - - - 307 0 - 21.9641ms
+2024-06-07 09:49:45.4755 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:5001/ - -
+2024-06-07 09:49:45.5211 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:5001/ - - - 404 0 - 47.2003ms

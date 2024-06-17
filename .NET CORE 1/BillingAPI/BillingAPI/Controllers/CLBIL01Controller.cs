@@ -128,6 +128,7 @@ namespace BillingAPI.Controllers
         /// <returns>Appropriate message</returns>
         [HttpPost]
         [Route("AddBill")]
+        [BillingAPI.Filters.AuthorizationFilter(roles: "AD,AC")]
         public IActionResult AddBill(DTOBIL01 objDTOBIL01)
         {
             objBLBIL01.objCRUDBIL01.Operations = Enums.enmOperations.I;
@@ -151,6 +152,7 @@ namespace BillingAPI.Controllers
         /// <returns>Appropriate message</returns>
         [HttpPut]
         [Route("EditBill")]
+        [BillingAPI.Filters.AuthorizationFilter(roles: "AD,AC")]
         public IActionResult EditBill(DTOBIL01 objDTOBIL01)
         {
             objBLBIL01.objCRUDBIL01.Operations = Enums.enmOperations.U;
@@ -174,6 +176,7 @@ namespace BillingAPI.Controllers
         /// <returns>Appropriate message</returns>
         [HttpDelete]
         [Route("DeleteBill")]
+        [BillingAPI.Filters.AuthorizationFilter(roles: "AD")]
         public IActionResult DeleteBill(int id)
         {
             Response response = objBLBIL01.ValidationDelete(id);

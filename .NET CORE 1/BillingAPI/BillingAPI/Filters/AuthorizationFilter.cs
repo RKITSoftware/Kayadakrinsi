@@ -1,9 +1,10 @@
-﻿using System.Security.Claims;
+﻿using System.Net;
+using System.Security.Claims;
 using System.Security.Principal;
 using System.Text;
 using BillingAPI.BusinessLogic;
-using BillingAPI.Enums;
 using BillingAPI.Models.POCO;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Newtonsoft.Json.Linq;
@@ -53,72 +54,110 @@ namespace BillingAPI.Filters
         /// Authenticates user using user's JWT token
         /// </summary>
         /// <param name="actionContext">Information of executing context</param>
-        public void OnAuthorization(AuthorizationFilterContext actionContext)
+        public void OnAuthorization(AuthorizationFilterContext context)
         {
-            if (AuthenticationFilter.SkipAuthorization(actionContext)) return;
+            // Retrieve the endpoint information
+            var endpoint = context.HttpContext.GetEndpoint();
 
-            // Retrives token from cache
-            string token = BLTokenManager.cache.Get("JWTToken_" + AuthenticationFilter.objUSR01.R01F02).ToString();
-
-            // Validates token
-            if (token != null && !objBLTokenManager.IsTokenExpired(token) && objBLTokenManager.ValidateToken(token))
+            // Check if the endpoint is excluded from authentication
+            if (endpoint?.Metadata?.GetMetadata<IAllowAnonymous>() != null)
             {
-                // get jwt payload
-                string jwtEncodedPayload = token.Split('.')[1];
+                return; // Skip authentication for this endpoint
+            }
 
-                // pad jwtEncodedPayload
-                jwtEncodedPayload = jwtEncodedPayload.Replace('+', '-')
-                                                     .Replace('/', '_')
-                                                     .Replace("=", "");
+            var authorizationHeader = context.HttpContext.Request.Headers["Authorization"].FirstOrDefault();
 
-                int padding = jwtEncodedPayload.Length % 4;
+            if (!string.IsNullOrEmpty(authorizationHeader) && authorizationHeader.StartsWith("Bearer "))
+            {
+                // Extract token from Authorization header
+                var token = authorizationHeader.Substring("Bearer ".Length);
 
-                if (padding != 0)
+                if (objBLTokenManager.IsTokenExpired(token))
                 {
-                    jwtEncodedPayload += new string('=', 4 - padding);
+                    context.Result = new ContentResult
+                    {
+                        Content = "Token has expired",
+                        StatusCode = (int)HttpStatusCode.Unauthorized
+                    };
+                    return;
                 }
 
-                // decode the jwt payload
-                byte[] decodedPayloadBytes = Convert.FromBase64String(jwtEncodedPayload);
-
-                string decodedPayload = Encoding.UTF8.GetString(decodedPayloadBytes);
-
-                JObject json = JObject.Parse(decodedPayload);
-
-                USR01 user = objBLLogin.GetUsers().FirstOrDefault(u => u.R01F02 == json["unique_name"].ToString());
-
-                string[] userRoles = Roles.ToString().Split(',');
-
-                if (!userRoles.Contains(user.R01F04.ToString()))
+                // Validate JWT token
+                if (token != null && objBLTokenManager.ValidateToken(token))
                 {
-                    actionContext.Result = new StatusCodeResult(StatusCodes.Status403Forbidden);
+                    string jwtEncodedPayload = token.Split('.')[1];
+
+                    // Pad jwtEncodedPayload
+                    jwtEncodedPayload = jwtEncodedPayload.Replace('-', '+').Replace('_', '/');
+                    int padding = 4 - (jwtEncodedPayload.Length % 4);
+                    if (padding != 4)
+                    {
+                        jwtEncodedPayload += new string('=', padding);
+                    }
+
+                    // Decode the jwt payload
+                    byte[] decodedPayloadBytes = Convert.FromBase64String(jwtEncodedPayload);
+                    string decodedPayload = Encoding.UTF8.GetString(decodedPayloadBytes);
+                    JObject json = JObject.Parse(decodedPayload);
+
+                    USR01 user = objBLLogin.GetUsers().FirstOrDefault(u => u.R01F02 == json["unique_name"].ToString());
+
+                    if (user == null)
+                    {
+                        context.Result = new ContentResult
+                        {
+                            Content = "User not found",
+                            StatusCode = (int)HttpStatusCode.Unauthorized
+                        };
+                        return;
+                    }
+
+                    string[] userRoles = Roles.Split(',');
+
+                    if (userRoles.Contains(user.R01F04.ToString()))
+                    {
+                        
+                        // Create an identity => i.e., attach username which is used to identify the user
+                        GenericIdentity identity = new GenericIdentity(user.R01F02);
+
+                        // Add claims for the identity => a claim has (claim_type, value)
+                        identity.AddClaim(new Claim("Id", Convert.ToString(user.R01F01)));
+
+                        // Create a principal that represents a user => it has an (identity object + roles)
+                        IPrincipal principal = new GenericPrincipal(identity, user.R01F04.ToString().Split(','));
+
+                        // Now associate the user/principal with the thread
+                        Thread.CurrentPrincipal = principal;
+
+                        context.HttpContext.User = (ClaimsPrincipal)principal;
+                    }
+                    else
+                    {
+                        context.Result = new ContentResult
+                        {
+                            Content = "Authorization denied",
+                            StatusCode = (int)HttpStatusCode.Unauthorized
+                        };
+                        return;
+                    }
                 }
-                else if(user != null)
+                else
                 {
-                    // create an identity => i.e., attach username which is used to identify the user
-                    GenericIdentity identity = new GenericIdentity(user.R01F02);
-
-                    // add claims for the identity => a claim has (claim_type, value)
-                    
-                    identity.AddClaim(new Claim("Id", Convert.ToString(user.R01F01)));
-
-                    string[] roles = user.R01F04.ToString().Split(',');
-
-                    // create a principal that represent a user => it has an (identity object + roles)
-                    IPrincipal principal = new GenericPrincipal(identity, roles);
-
-                    // now associate the user/principal with the thread
-                    Thread.CurrentPrincipal = principal;
-
-
-                    actionContext.HttpContext.User = (ClaimsPrincipal)principal;
-
+                    context.Result = new ContentResult
+                    {
+                        Content = "Authorization denied",
+                        StatusCode = (int)HttpStatusCode.Unauthorized
+                    };
                     return;
                 }
             }
             else
             {
-                actionContext.Result = new StatusCodeResult(StatusCodes.Status400BadRequest);
+                context.Result = new ContentResult
+                {
+                    Content = "Authorization header is missing or not in the correct format",
+                    StatusCode = (int)HttpStatusCode.BadRequest
+                };
             }
         }
     }

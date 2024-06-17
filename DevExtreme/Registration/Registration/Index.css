@@ -1,0 +1,82 @@
+﻿body {
+    /*background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyKGB-KGeHk2D-UJADSdIlWLQjb-Hy5KQw5g&usqp=CAU") no-repeat;*/
+    /*background: linear-gradient( #000000,#55606a) no-repeat;*/
+    background: black;
+    background-size: cover;
+    margin: 0%;
+    padding: 0%;
+}
+
+#heading {
+    color: whitesmoke;
+    /*text-shadow: 3px 3px rgba(0,0,0,0.8);*/
+    width: 80vw;
+    text-align: center;
+}
+
+.container {
+    margin: auto;
+    width: 80vw;
+    /*height: 100vh;*/
+   /* display: flex;
+    align-items: center;
+    justify-content: center;*/
+}
+
+#registratiopnForm {
+    border-radius: 1%;
+    background-color: white;
+    display: flex;
+    height: 80vh;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /*column-gap: 5%;*/
+}
+
+.labels:after {
+    content: " *";
+    color: red;
+}
+
+.left, .right {
+    width: 40vw;
+    padding: 2%;
+}
+
+.elements{
+    padding:2.35%;
+}
+
+hr {
+    border: 0.1px solid #0080806b;
+}
+
+#genders {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    column-gap:2%;
+}
+
+#contact {
+    display: flex;
+    flex-direction: row;
+    column-gap: 2%;
+}
+
+#countryCode{
+ width:5vw;
+}
+
+#contactNumber{
+    width:30vw;
+}
+
+#submit {
+    margin-left: 12vw;
+    width: 10vw;
+}
+
+.dx-datebox-calendar.dx-dropdowneditor .dx-dropdowneditor-icon::before, .dx-datebox-calendar.dx-dropdowneditor.dx-dropdowneditor-active .dx-dropdowneditor-icon::before {
+    content: "";
+}

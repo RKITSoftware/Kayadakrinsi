@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Registration Form</title>
+
+    <link href="Index.css" rel="stylesheet" />
+
+    <script src="Scripts/jquery-3.5.1.js"></script>
+
+    <script src="Scripts/dx.all.debug.js"></script>
+
+    <link href="Content/dx.material.teal.light.css" rel="stylesheet" />
+    <!--<link href="Content/dx.light.css" rel="stylesheet" />-->
+   
+    <script type="module" src="Index.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <h1 id="heading">Registration Form</h1>
+        <form action="https://www.google.com/" method="post" id="registratiopnForm">
+            <div class="left">
+                <div>
+                    <span style="color:red;">* indicates required fields</span>
+                </div>
+                <div class="elements">
+                    <!--<label class="labels" for="name">Name : </label>-->
+                    <span class="labels">Name :</span>
+                    <div id="name"></div>
+                </div>
+                <div class="elements" id="genders">
+                    <span class="labels">Gender :</span>
+                    <div id="gender"></div>
+                </div>
+                <div class="elements">
+                    <span class="labels">Birth Date :</span>
+                    <div id="birthDate"></div>
+                </div>
+                <div class="elements">
+                    <span class="labels">Country :</span>
+                    <div id="country"></div>
+                </div>
+                <div class="elements">
+                    <span class="labels">Contact Number :</span>
+                    <div id="contact">
+                        <div id="countryCode"></div>
+                        <div id="contactNumber"></div>
+                    </div>
+                </div>
+                <div class="elements">
+                    <span class="labels">Address :</span>
+                    <div id="address"></div>
+                </div>
+            </div>
+            <hr />
+            <div class="right">
+                <div class="elements">
+                    <span class="labels">Email :</span>
+                    <div id="email"></div>
+                </div>
+                <div class="elements">
+                    <span class="labels">Password :</span>
+                    <div id="password"></div>
+                </div>
+                <div class="elements">
+                    <span class="labels">Confirm password :</span>
+                    <div id="confirmPassword"></div>
+                </div>
+                <div class="elements">
+                    <span>Profile Picture :</span>
+                    <div id="picture"></div>
+                </div>
+                <div class="elements">
+                    <div id="terms"></div>
+                </div>
+                <div class="elements">
+                    <div id="submit"></div>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

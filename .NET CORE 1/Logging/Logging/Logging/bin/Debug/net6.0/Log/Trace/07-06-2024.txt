@@ -1,0 +1,10 @@
+2024-06-07 09:49:45.3706 | TRACE | Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware | All hosts are allowed.
+2024-06-07 09:49:45.4669 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN46L47T912T" sending SETTINGS frame for stream ID 0 with length 18 and flags NONE.
+2024-06-07 09:49:45.4669 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN46L47T912T" sending WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0.
+2024-06-07 09:49:45.4669 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN46L47T912T" received SETTINGS frame for stream ID 0 with length 24 and flags NONE.
+2024-06-07 09:49:45.4669 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN46L47T912T" sending SETTINGS frame for stream ID 0 with length 0 and flags ACK.
+2024-06-07 09:49:45.4669 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN46L47T912T" received WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0.
+2024-06-07 09:49:45.4669 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN46L47T912T" received HEADERS frame for stream ID 1 with length 454 and flags END_STREAM, END_HEADERS, PRIORITY.
+2024-06-07 09:49:45.4755 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN46L47T912T" received SETTINGS frame for stream ID 0 with length 0 and flags ACK.
+2024-06-07 09:49:45.4755 | TRACE | Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware | All hosts are allowed.
+2024-06-07 09:49:45.5211 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN46L47T912T" sending HEADERS frame for stream ID 1 with length 45 and flags END_STREAM, END_HEADERS.

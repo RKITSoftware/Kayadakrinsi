@@ -1,4 +1,5 @@
 ﻿using BillingAPI.BusinessLogic;
+using BillingAPI.Filters;
 using BillingAPI.Models;
 using BillingAPI.Models.DTO;
 using Microsoft.AspNetCore.Mvc;
@@ -9,6 +10,7 @@ namespace BillingAPI.Controllers
     /// Handles http request for user operations
     /// </summary>
     [Route("api/[controller]")]
+    [AuthorizationFilter("AD")]
     [ApiController]
     public class CLUSR01Controller : ControllerBase
     {
@@ -23,6 +25,7 @@ namespace BillingAPI.Controllers
         /// <returns>Response containing all users data</returns>
         [HttpGet]
         [Route("GetUsers")]
+        [BillingAPI.Filters.AuthorizationFilter(roles: "AD")]
         public IActionResult GetUsers()
         {
             Response response = new Response();
@@ -39,6 +42,7 @@ namespace BillingAPI.Controllers
         /// <returns>Appropriate message</returns>
         [HttpPost]
         [Route("AddUser")]
+        [BillingAPI.Filters.AuthorizationFilter(roles: "AD")]
         public IActionResult AddUser(DTOUSR01 objDTOUSR01)
         {
             objBLUSR01.Operations = Enums.enmOperations.I;
@@ -62,6 +66,7 @@ namespace BillingAPI.Controllers
         /// <returns>Appropriate message</returns>
         [HttpPut]
         [Route("EditUser")]
+        [BillingAPI.Filters.AuthorizationFilter(roles: "AD")]
         public IActionResult EditUser(DTOUSR01 objDTOUSR01)
         {
             objBLUSR01.Operations = Enums.enmOperations.U;
@@ -85,6 +90,7 @@ namespace BillingAPI.Controllers
         /// <returns>Appropriate message</returns>
         [HttpDelete]
         [Route("DeleteUser")]
+        [BillingAPI.Filters.AuthorizationFilter(roles: "AD")]
         public IActionResult DeleteUser(int id)
         {
             Response response = new Response();

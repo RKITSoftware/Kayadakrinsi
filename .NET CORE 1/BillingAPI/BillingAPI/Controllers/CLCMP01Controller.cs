@@ -34,7 +34,7 @@ namespace BillingAPI.Controllers
         /// <returns>Response containing all companies data</returns>
         [HttpGet]
         [Route("GetCompanies")]
-        [AuthorizationFilter("GU")]
+        [AuthorizationFilter("GU,AC,AD")]
         public IActionResult GetCompanies()
         {
             Response response = objBLCMP01.objCRUDCMP01.Select();
@@ -51,6 +51,7 @@ namespace BillingAPI.Controllers
         //[ServiceFilter(typeof(ResourceFilter))]
         [ActionExecutedFilter]
         [Route("AddCompany")]
+        [BillingAPI.Filters.AuthorizationFilter(roles: "AD,AC")]
         public IActionResult AddCompany(DTOCMP01 objDTOCMP01)
         {
             objBLCMP01.objCRUDCMP01.Operations = Enums.enmOperations.I;
@@ -75,6 +76,7 @@ namespace BillingAPI.Controllers
         //[ServiceFilter(typeof(ResourceFilter))]
         [ActionExecutedFilter]
         [Route("EditCompany")]
+        [BillingAPI.Filters.AuthorizationFilter(roles: "AD,AC")]
         public IActionResult EditCompany(DTOCMP01 objDTOCMP01)
         {
             objBLCMP01.objCRUDCMP01.Operations = Enums.enmOperations.U;
@@ -97,6 +99,7 @@ namespace BillingAPI.Controllers
         /// <returns>Appropriate message</returns>
         [HttpPut]
         [Route("SetCurrentCompany")]
+        [BillingAPI.Filters.AuthorizationFilter(roles: "AD,AC")]
         public IActionResult SetCurrentCompany(int id)
         {
             Response response = objBLCMP01.ValidationDelete(id);
@@ -115,6 +118,7 @@ namespace BillingAPI.Controllers
         /// <returns>Appropriate message</returns>
         [HttpDelete]
         [Route("DeleteCompany")]
+        [BillingAPI.Filters.AuthorizationFilter(roles: "AD")]
         public IActionResult DeleteCompany(int id)
         {
             Response response = objBLCMP01.ValidationDelete(id);

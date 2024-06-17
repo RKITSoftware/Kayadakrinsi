@@ -1,4 +1,5 @@
-﻿using BillingAPI.BusinessLogic;
+﻿using System.Security.Claims;
+using BillingAPI.BusinessLogic;
 using BillingAPI.Interfaces;
 using BillingAPI.Models;
 using BillingAPI.Models.POCO;
@@ -33,6 +34,7 @@ namespace BillingAPI.Controllers
         /// </summary>
         /// <returns>Response containing all products data</returns>
         [HttpGet]
+        [BillingAPI.Filters.AuthorizationFilter(roles: "AD,AC")]
         [Route("GetProducts")]
         public IActionResult GetProducts()
         {
@@ -49,12 +51,17 @@ namespace BillingAPI.Controllers
         /// <param name="objDTOPRO01">Instance of DTOPRO01 class</param>
         /// <returns>Appropriate message</returns>
         [HttpPost]
+        [BillingAPI.Filters.AuthorizationFilter(roles:"AD,AC")]
         [Route("AddProduct")]
         public IActionResult AddProduct(DTOPRO01 objDTOPRO01)
         {
+            var userId = HttpContext.User.FindFirstValue("Id"); 
+
+            //var userId = HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
+
             objBLPRO01.objCRUDPRO01.Operations = Enums.enmOperations.I;
 
-            objBLPRO01.PreSave(objDTOPRO01);
+            objBLPRO01.PreSave(objDTOPRO01,userId);
 
             Response response = objBLPRO01.Validation();
 
@@ -72,12 +79,15 @@ namespace BillingAPI.Controllers
         /// <param name="objDTOPRO01">Instance of DTOPRO01 class</param>
         /// <returns>Appropriate message</returns>
         [HttpPut]
+        [BillingAPI.Filters.AuthorizationFilter(roles: "AD,AC")]
         [Route("EditProduct")]
         public IActionResult EditProduct(DTOPRO01 objDTOPRO01)
         {
+            var userId = HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
+
             objBLPRO01.objCRUDPRO01.Operations = Enums.enmOperations.U;
 
-            objBLPRO01.PreSave(objDTOPRO01);
+            objBLPRO01.PreSave(objDTOPRO01, userId);
 
             Response response = objBLPRO01.Validation();
 
@@ -95,6 +105,7 @@ namespace BillingAPI.Controllers
         /// <param name="id">Id of product to be delete</param>
         /// <returns>Appropriate message</returns>
         [HttpDelete]
+        [BillingAPI.Filters.AuthorizationFilter(roles: "AD")]
         [Route("DeleteProduct")]
         public IActionResult DeleteProduct(int id)
         {

@@ -116,6 +116,10 @@ namespace ActionMethods.Controllers
         {
             return new JsonResult(BLComputer.lstCOM01[0]);
         }
+        //public ActionResult GetJsonResult()
+        //{
+        //    return new JsonResult(BLComputer.lstCOM01[0]);
+        //}
 
         /// <summary>
         /// Get computer's list

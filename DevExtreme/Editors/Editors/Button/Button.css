@@ -1,0 +1,18 @@
+﻿.buttonContainer{
+    margin:0%;
+    width:100vw;
+    display:flex;
+    flex-direction:column;
+    row-gap:20px;
+    align-items:center;
+    justify-content:space-evenly;
+    margin-top:20vh;
+}
+
+.buttons{
+    padding-top:10px;
+}
+
+.dx-button {
+    margin-right: 20px;
+}

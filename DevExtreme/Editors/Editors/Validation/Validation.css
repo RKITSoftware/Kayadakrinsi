@@ -1,0 +1,14 @@
+﻿.validationContainer {
+    margin: auto;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    justify-content: space-evenly;
+    margin-top: 5vh;
+}
+
+#asyncValidation {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}

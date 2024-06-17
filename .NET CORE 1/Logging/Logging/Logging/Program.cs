@@ -1,4 +1,3 @@
-using System.Diagnostics;
 using Logging;
 using Microsoft.AspNetCore;
 using NLog.Web;
@@ -15,7 +14,7 @@ internal class Program
     /// <param name="args"></param>
     private static void Main(string[] args)
     {
-        var logger = NLogBuilder.ConfigureNLog("nlog.config").GetCurrentClassLogger();
+        NLog.Logger logger = NLogBuilder.ConfigureNLog("nlog.config").GetCurrentClassLogger();
         
         try
         {

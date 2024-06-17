@@ -1,0 +1,1 @@
+2024-06-14 12:05:26.3328 | FATAL | Microsoft.AspNetCore.Hosting.Diagnostics | Application startup exception

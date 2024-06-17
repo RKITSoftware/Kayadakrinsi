@@ -1,5 +1,7 @@
-﻿using BillingAPI.Filters;
+﻿using BillingAPI.Extentions;
+using BillingAPI.Filters;
 using BillingAPI.Interfaces;
+using BillingAPI.Middlewares;
 using BillingAPI.Models.POCO;
 using BillingAPI.Repositaries;
 using Microsoft.OpenApi.Models;
@@ -22,14 +24,19 @@ namespace BillingAPI
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Billing", Version = "v1" });
-                c.AddSecurityDefinition("basic", new OpenApiSecurityScheme
+
+                // Bearer Authentication
+                c.AddSecurityDefinition("bearer", new OpenApiSecurityScheme
                 {
                     Name = "Authorization",
                     Type = SecuritySchemeType.Http,
-                    Scheme = "basic",
+                    Scheme = "bearer",
+                    BearerFormat = "JWT",
                     In = ParameterLocation.Header,
-                    Description = "Basic Authorization header using the Bearer scheme."
+                    Description = "JWT Authorization header using the Bearer scheme."
                 });
+
+                // Security Requirements
                 c.AddSecurityRequirement(new OpenApiSecurityRequirement
                 {
                     {
@@ -38,24 +45,20 @@ namespace BillingAPI
                             Reference = new OpenApiReference
                             {
                                 Type = ReferenceType.SecurityScheme,
-                                Id = "basic"
+                                Id = "bearer"
                             }
                         },
                         new string[] {}
                     }
                 });
-
-                //// Use Newtonsoft.Json for Swagger JSON serialization
-                //c.CustomSchemaIds(type => type.FullName);
-                ////c.UseNewtonsoftJson();
-                //c.ToJson();
             });
+
 
             services.AddControllers(config =>
             {
                 // Applies filter globally
-                config.Filters.Add(new AuthenticationFilter());
-            });
+                config.Filters.Add(typeof(Filters.CustomExceptionFilter));
+            }).AddNewtonsoftJson();
 
             services.AddLogging(logging =>
             {
@@ -63,14 +66,9 @@ namespace BillingAPI
             });
 
             // Registers interface service and their implementation
-            services.AddTransient<ICRUDService<PRO01>, CRUDImplementation<PRO01>>();
-            services.AddTransient<ICRUDService<CMP01>, CRUDImplementation<CMP01>>();
-            services.AddTransient<ICRUDService<BIL01>, CRUDImplementation<BIL01>>();
-            services.AddTransient<IBIL01Service, DbBIL01Context>();
-            // services.AddSingleton<ResourceFilter>
-            // services.AddTransient<ICRUD<USR01>, CRUDImplementation<USR01>>();
-            // services.AddTransient<IActionFilter, ActionExecutedFilter>();
+            services.AddCustomServices();
 
+            services.AddSwaggerGenNewtonsoftSupport();
         }
 
         /// <summary>
@@ -90,6 +88,8 @@ namespace BillingAPI
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseMalwareDetectionMiddleware();
 
             app.UseAuthorization();
 

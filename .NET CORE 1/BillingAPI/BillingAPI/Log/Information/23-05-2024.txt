@@ -1,0 +1,52 @@
+2024-05-23 10:28:16.9535 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/swagger/index.html - -
+2024-05-23 10:28:17.8272 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/swagger/index.html - - - 200 - text/html;charset=utf-8 868.7924ms
+2024-05-23 10:28:18.4761 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/_framework/aspnetcore-browser-refresh.js - -
+2024-05-23 10:28:18.4761 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/_vs/browserLink - -
+2024-05-23 10:28:18.4761 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 13.0340ms
+2024-05-23 10:28:18.9287 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 460.0583ms
+2024-05-23 10:28:19.0338 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/swagger/v1/swagger.json - -
+2024-05-23 10:28:19.6371 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 602.9435ms
+2024-05-23 10:28:36.1236 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/api/CLBIL01/GetBills - -
+2024-05-23 10:28:36.1662 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'BillingAPI.Controllers.CLBIL01Controller.GetBills (BillingAPI)'
+2024-05-23 10:28:36.1877 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "GetBills", controller = "CLBIL01"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetBills() on controller BillingAPI.Controllers.CLBIL01Controller (BillingAPI).
+2024-05-23 10:28:44.0401 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method BillingAPI.Controllers.CLBIL01Controller.GetBills (BillingAPI) - Validation state: Valid
+2024-05-23 10:28:47.6656 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method BillingAPI.Controllers.CLBIL01Controller.GetBills (BillingAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3618.5515ms.
+2024-05-23 10:28:47.6656 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'BillingAPI.Models.Response'.
+2024-05-23 10:28:51.6379 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action BillingAPI.Controllers.CLBIL01Controller.GetBills (BillingAPI) in 15441.7147ms
+2024-05-23 10:28:51.6379 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'BillingAPI.Controllers.CLBIL01Controller.GetBills (BillingAPI)'
+2024-05-23 10:28:51.6379 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/api/CLBIL01/GetBills - - - 200 641 application/json;+charset=utf-8 15513.2511ms
+2024-05-23 10:29:05.2907 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 POST https://localhost:7082/api/CLUSR01/AddUser application/json-patch+json 76
+2024-05-23 10:29:05.2907 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'BillingAPI.Controllers.CLUSR01Controller.AddUser (BillingAPI)'
+2024-05-23 10:29:05.3208 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "AddUser", controller = "CLUSR01"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddUser(BillingAPI.Models.DTO.DTOUSR01) on controller BillingAPI.Controllers.CLUSR01Controller (BillingAPI).
+2024-05-23 10:29:05.4680 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method BillingAPI.Controllers.CLUSR01Controller.AddUser (BillingAPI) - Validation state: Valid
+2024-05-23 10:29:05.7920 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method BillingAPI.Controllers.CLUSR01Controller.AddUser (BillingAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 321.0753ms.
+2024-05-23 10:29:05.7920 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'BillingAPI.Models.Response'.
+2024-05-23 10:29:05.7920 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action BillingAPI.Controllers.CLUSR01Controller.AddUser (BillingAPI) in 471.7817ms
+2024-05-23 10:29:05.7920 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'BillingAPI.Controllers.CLUSR01Controller.AddUser (BillingAPI)'
+2024-05-23 10:29:05.7920 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 POST https://localhost:7082/api/CLUSR01/AddUser application/json-patch+json 76 - 200 132 application/json;+charset=utf-8 492.3928ms
+2024-05-23 10:29:19.8444 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 POST https://localhost:7082/api/CLUSR01/AddUser application/json-patch+json 81
+2024-05-23 10:29:19.8444 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'BillingAPI.Controllers.CLUSR01Controller.AddUser (BillingAPI)'
+2024-05-23 10:29:19.8444 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "AddUser", controller = "CLUSR01"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddUser(BillingAPI.Models.DTO.DTOUSR01) on controller BillingAPI.Controllers.CLUSR01Controller (BillingAPI).
+2024-05-23 10:29:19.8631 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method BillingAPI.Controllers.CLUSR01Controller.AddUser (BillingAPI) - Validation state: Valid
+2024-05-23 10:29:19.9281 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method BillingAPI.Controllers.CLUSR01Controller.AddUser (BillingAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 60.9057ms.
+2024-05-23 10:29:19.9281 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'BillingAPI.Models.Response'.
+2024-05-23 10:29:19.9281 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action BillingAPI.Controllers.CLUSR01Controller.AddUser (BillingAPI) in 79.3386ms
+2024-05-23 10:29:19.9281 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'BillingAPI.Controllers.CLUSR01Controller.AddUser (BillingAPI)'
+2024-05-23 10:29:19.9281 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 POST https://localhost:7082/api/CLUSR01/AddUser application/json-patch+json 81 - 200 67 application/json;+charset=utf-8 82.0668ms
+2024-05-23 12:20:10.4023 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/swagger/index.html - -
+2024-05-23 12:20:11.0256 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/swagger/index.html - - - 200 - text/html;charset=utf-8 632.9224ms
+2024-05-23 12:20:11.6342 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/_framework/aspnetcore-browser-refresh.js - -
+2024-05-23 12:20:11.6342 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/_vs/browserLink - -
+2024-05-23 12:20:11.6515 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 12.9534ms
+2024-05-23 12:20:11.8721 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 234.4276ms
+2024-05-23 12:20:11.9806 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/swagger/v1/swagger.json - -
+2024-05-23 12:20:13.1434 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 1162.1795ms
+2024-05-23 12:20:30.5449 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:7082/api/CLBIL01/GetBills - -
+2024-05-23 12:20:30.6049 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'BillingAPI.Controllers.CLBIL01Controller.GetBills (BillingAPI)'
+2024-05-23 12:20:30.6203 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Route matched with {action = "GetBills", controller = "CLBIL01"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetBills() on controller BillingAPI.Controllers.CLBIL01Controller (BillingAPI).
+2024-05-23 12:20:36.3227 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method BillingAPI.Controllers.CLBIL01Controller.GetBills (BillingAPI) - Validation state: Valid
+2024-05-23 12:20:37.4649 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action method BillingAPI.Controllers.CLBIL01Controller.GetBills (BillingAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1124.332ms.
+2024-05-23 12:20:37.4649 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor | Executing OkObjectResult, writing value of type 'BillingAPI.Models.Response'.
+2024-05-23 12:20:39.1720 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed action BillingAPI.Controllers.CLBIL01Controller.GetBills (BillingAPI) in 8543.344ms
+2024-05-23 12:20:39.1720 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'BillingAPI.Controllers.CLBIL01Controller.GetBills (BillingAPI)'
+2024-05-23 12:20:39.1720 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:7082/api/CLBIL01/GetBills - - - 200 641 application/json;+charset=utf-8 8617.2009ms

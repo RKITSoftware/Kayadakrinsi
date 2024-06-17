@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Retyped.jspdf</name>
+    </assembly>
+    <members>
+        <member name="M:Retyped.jspdf.jspdf2.jsPDF.addHTML(System.Object,System.Double,System.Double,System.Object,Retyped.es5.Function)">
+            <summary>
+            jsPDF plugins below:
+            - AddHTML
+            - AddImage
+            - Annotations
+            - AutoPrint
+            - Canvas
+            - Cell
+            - Context2D
+            - FromHTML
+            - JavaScript
+            - PNG
+            - split_text_to_size
+            - SVG
+            - total_pages
+            </summary>
+        </member>
+        <member name="M:Retyped.jspdf.jspdf2.jsPDF.addHTML(System.Object,System.Double,System.Double,System.Object,System.Action)">
+            <summary>
+            jsPDF plugins below:
+            - AddHTML
+            - AddImage
+            - Annotations
+            - AutoPrint
+            - Canvas
+            - Cell
+            - Context2D
+            - FromHTML
+            - JavaScript
+            - PNG
+            - split_text_to_size
+            - SVG
+            - total_pages
+            </summary>
+        </member>
+        <member name="M:Retyped.jspdf.jspdf2.jsPDF.addHTML(System.Object,System.Double,System.Double,System.Object,System.Func{System.Object})">
+            <summary>
+            jsPDF plugins below:
+            - AddHTML
+            - AddImage
+            - Annotations
+            - AutoPrint
+            - Canvas
+            - Cell
+            - Context2D
+            - FromHTML
+            - JavaScript
+            - PNG
+            - split_text_to_size
+            - SVG
+            - total_pages
+            </summary>
+        </member>
+        <member name="M:Retyped.jspdf.jspdf2.jsPDF.addHTML(System.Object,Retyped.es5.Function)">
+            <summary>
+            jsPDF plugins below:
+            - AddHTML
+            - AddImage
+            - Annotations
+            - AutoPrint
+            - Canvas
+            - Cell
+            - Context2D
+            - FromHTML
+            - JavaScript
+            - PNG
+            - split_text_to_size
+            - SVG
+            - total_pages
+            </summary>
+        </member>
+        <member name="M:Retyped.jspdf.jspdf2.jsPDF.addHTML(System.Object,System.Action)">
+            <summary>
+            jsPDF plugins below:
+            - AddHTML
+            - AddImage
+            - Annotations
+            - AutoPrint
+            - Canvas
+            - Cell
+            - Context2D
+            - FromHTML
+            - JavaScript
+            - PNG
+            - split_text_to_size
+            - SVG
+            - total_pages
+            </summary>
+        </member>
+        <member name="M:Retyped.jspdf.jspdf2.jsPDF.addHTML(System.Object,System.Func{System.Object})">
+            <summary>
+            jsPDF plugins below:
+            - AddHTML
+            - AddImage
+            - Annotations
+            - AutoPrint
+            - Canvas
+            - Cell
+            - Context2D
+            - FromHTML
+            - JavaScript
+            - PNG
+            - split_text_to_size
+            - SVG
+            - total_pages
+            </summary>
+        </member>
+    </members>
+</doc>

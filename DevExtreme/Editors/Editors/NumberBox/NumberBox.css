@@ -1,0 +1,13 @@
+﻿.numberBoxContainer {
+    margin: auto;
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.numberBoxContainer {
+    margin-top: 20vh;
+}

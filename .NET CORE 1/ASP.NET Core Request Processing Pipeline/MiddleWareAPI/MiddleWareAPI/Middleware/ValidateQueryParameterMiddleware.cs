@@ -51,6 +51,9 @@ namespace MiddleWareAPI.Middleware
     /// </summary>
     public static class MiddlewareExtensions
     {
+        /// <summary>
+        /// Adds the middleware to the HTTP request pipeline.
+        /// </summary>
         public static IApplicationBuilder UseValidateQueryParameterMiddleware(this IApplicationBuilder builder)
         {
             return builder.UseMiddleware<ValidateQueryParameterMiddleware>();

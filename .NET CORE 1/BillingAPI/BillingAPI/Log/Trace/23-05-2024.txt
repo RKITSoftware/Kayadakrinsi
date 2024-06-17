@@ -1,0 +1,329 @@
+2024-05-23 10:28:16.8745 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending SETTINGS frame for stream ID 0 with length 18 and flags NONE.
+2024-05-23 10:28:16.8745 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0.
+2024-05-23 10:28:16.8827 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" received SETTINGS frame for stream ID 0 with length 24 and flags NONE.
+2024-05-23 10:28:16.8827 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending SETTINGS frame for stream ID 0 with length 0 and flags ACK.
+2024-05-23 10:28:16.8827 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" received WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0.
+2024-05-23 10:28:16.8827 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" received HEADERS frame for stream ID 1 with length 454 and flags END_STREAM, END_HEADERS, PRIORITY.
+2024-05-23 10:28:16.9252 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" received SETTINGS frame for stream ID 0 with length 0 and flags ACK.
+2024-05-23 10:28:16.9535 | TRACE | Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware | All hosts are allowed.
+2024-05-23 10:28:17.3690 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending HEADERS frame for stream ID 1 with length 66 and flags END_HEADERS.
+2024-05-23 10:28:17.7897 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 1 with length 1024 and flags NONE.
+2024-05-23 10:28:17.7897 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 1 with length 1024 and flags NONE.
+2024-05-23 10:28:17.7897 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 1 with length 1024 and flags NONE.
+2024-05-23 10:28:17.7897 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 1 with length 1024 and flags NONE.
+2024-05-23 10:28:17.7897 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 1 with length 992 and flags NONE.
+2024-05-23 10:28:17.7897 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 1 with length 65 and flags NONE.
+2024-05-23 10:28:17.7897 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 1 with length 16 and flags NONE.
+2024-05-23 10:28:17.8117 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 1 with length 0 and flags END_STREAM.
+2024-05-23 10:28:18.4710 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" received HEADERS frame for stream ID 3 with length 109 and flags END_STREAM, END_HEADERS, PRIORITY.
+2024-05-23 10:28:18.4761 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" received HEADERS frame for stream ID 5 with length 57 and flags END_STREAM, END_HEADERS, PRIORITY.
+2024-05-23 10:28:18.4761 | TRACE | Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware | All hosts are allowed.
+2024-05-23 10:28:18.4761 | TRACE | Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware | All hosts are allowed.
+2024-05-23 10:28:18.4761 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending HEADERS frame for stream ID 3 with length 90 and flags END_HEADERS.
+2024-05-23 10:28:18.4761 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 3 with length 11990 and flags NONE.
+2024-05-23 10:28:18.4761 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 3 with length 0 and flags END_STREAM.
+2024-05-23 10:28:18.7168 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending HEADERS frame for stream ID 5 with length 119 and flags END_HEADERS.
+2024-05-23 10:28:18.7168 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 9986 and flags NONE.
+2024-05-23 10:28:18.7168 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.7168 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.7168 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.7168 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.7168 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.7168 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.7168 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.7168 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.7168 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.7168 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.7168 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.7168 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.8396 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.8396 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.8396 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.8396 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.8396 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.8396 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.8396 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.9208 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.9208 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.9208 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.9208 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.9208 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.9208 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.9208 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.9208 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.9208 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.9287 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.9287 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.9287 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.9287 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.9287 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.9287 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.9287 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.9287 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.9287 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.9287 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.9287 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.9287 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.9287 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.9287 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.9287 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.9287 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.9287 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.9287 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.9287 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.9287 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.9287 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.9287 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.9287 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.9287 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.9287 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.9287 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.9287 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.9287 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.9287 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.9287 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.9287 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.9287 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.9287 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.9287 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.9287 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.9287 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.9287 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.9287 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.9287 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.9287 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.9287 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.9287 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.9287 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.9287 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 10:28:18.9287 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 9517 and flags NONE.
+2024-05-23 10:28:18.9287 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 5 with length 0 and flags END_STREAM.
+2024-05-23 10:28:19.0338 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" received HEADERS frame for stream ID 7 with length 66 and flags END_STREAM, END_HEADERS, PRIORITY.
+2024-05-23 10:28:19.0338 | TRACE | Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware | All hosts are allowed.
+2024-05-23 10:28:19.6371 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending HEADERS frame for stream ID 7 with length 65 and flags END_HEADERS.
+2024-05-23 10:28:19.6371 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 7 with length 14970 and flags NONE.
+2024-05-23 10:28:19.6371 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPB" sending DATA frame for stream ID 7 with length 0 and flags END_STREAM.
+2024-05-23 10:28:36.1236 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPC" sending SETTINGS frame for stream ID 0 with length 18 and flags NONE.
+2024-05-23 10:28:36.1236 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPC" sending WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0.
+2024-05-23 10:28:36.1236 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPC" received SETTINGS frame for stream ID 0 with length 24 and flags NONE.
+2024-05-23 10:28:36.1236 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPC" sending SETTINGS frame for stream ID 0 with length 0 and flags ACK.
+2024-05-23 10:28:36.1236 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPC" received WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0.
+2024-05-23 10:28:36.1236 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPC" received HEADERS frame for stream ID 1 with length 372 and flags END_STREAM, END_HEADERS, PRIORITY.
+2024-05-23 10:28:36.1236 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPC" received SETTINGS frame for stream ID 0 with length 0 and flags ACK.
+2024-05-23 10:28:36.1236 | TRACE | Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware | All hosts are allowed.
+2024-05-23 10:28:36.1877 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Authorization Filter: Before executing OnAuthorization on filter BillingAPI.Filters.AuthenticationFilter.
+2024-05-23 10:28:38.5140 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Authorization Filter: After executing OnAuthorization on filter BillingAPI.Filters.AuthenticationFilter.
+2024-05-23 10:28:38.5140 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Authorization Filter: Before executing OnAuthorization on filter BillingAPI.Filters.AuthorizationFilter.
+2024-05-23 10:28:44.0261 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Authorization Filter: After executing OnAuthorization on filter BillingAPI.Filters.AuthorizationFilter.
+2024-05-23 10:28:44.0261 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-05-23 10:28:44.0261 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-05-23 10:28:44.0261 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-05-23 10:28:44.0261 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-05-23 10:28:47.6656 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-05-23 10:28:47.6656 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-05-23 10:28:47.6656 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-05-23 10:28:47.6656 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-05-23 10:28:47.6656 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-05-23 10:28:47.6656 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-05-23 10:28:47.6656 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult.
+2024-05-23 10:28:51.6297 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPC" sending HEADERS frame for stream ID 1 with length 80 and flags END_HEADERS.
+2024-05-23 10:28:51.6297 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPC" sending DATA frame for stream ID 1 with length 641 and flags NONE.
+2024-05-23 10:28:51.6297 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult.
+2024-05-23 10:28:51.6297 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-05-23 10:28:51.6297 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-05-23 10:28:51.6297 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPC" received WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0.
+2024-05-23 10:28:51.6297 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPC" received WINDOW_UPDATE frame for stream ID 1 with length 4 and flags 0x0.
+2024-05-23 10:28:51.6379 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPC" sending DATA frame for stream ID 1 with length 0 and flags END_STREAM.
+2024-05-23 10:29:05.2907 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPD" sending SETTINGS frame for stream ID 0 with length 18 and flags NONE.
+2024-05-23 10:29:05.2907 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPD" sending WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0.
+2024-05-23 10:29:05.2907 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPD" received SETTINGS frame for stream ID 0 with length 24 and flags NONE.
+2024-05-23 10:29:05.2907 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPD" sending SETTINGS frame for stream ID 0 with length 0 and flags ACK.
+2024-05-23 10:29:05.2907 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPD" received WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0.
+2024-05-23 10:29:05.2907 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPD" received HEADERS frame for stream ID 1 with length 421 and flags END_HEADERS, PRIORITY.
+2024-05-23 10:29:05.2907 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPD" received DATA frame for stream ID 1 with length 76 and flags END_STREAM.
+2024-05-23 10:29:05.2907 | TRACE | Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware | All hosts are allowed.
+2024-05-23 10:29:05.2907 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPD" received SETTINGS frame for stream ID 0 with length 0 and flags ACK.
+2024-05-23 10:29:05.3208 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Authorization Filter: Before executing OnAuthorization on filter BillingAPI.Filters.AuthenticationFilter.
+2024-05-23 10:29:05.3448 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Authorization Filter: After executing OnAuthorization on filter BillingAPI.Filters.AuthenticationFilter.
+2024-05-23 10:29:05.4680 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-05-23 10:29:05.4680 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-05-23 10:29:05.4680 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-05-23 10:29:05.4680 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-05-23 10:29:05.4680 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method BillingAPI.Controllers.CLUSR01Controller.AddUser (BillingAPI) with arguments (BillingAPI.Models.DTO.DTOUSR01)
+2024-05-23 10:29:05.7920 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-05-23 10:29:05.7920 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-05-23 10:29:05.7920 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-05-23 10:29:05.7920 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-05-23 10:29:05.7920 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-05-23 10:29:05.7920 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-05-23 10:29:05.7920 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult.
+2024-05-23 10:29:05.7920 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPD" sending HEADERS frame for stream ID 1 with length 80 and flags END_HEADERS.
+2024-05-23 10:29:05.7920 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPD" sending DATA frame for stream ID 1 with length 132 and flags NONE.
+2024-05-23 10:29:05.7920 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult.
+2024-05-23 10:29:05.7920 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-05-23 10:29:05.7920 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-05-23 10:29:05.7920 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPD" sending DATA frame for stream ID 1 with length 0 and flags END_STREAM.
+2024-05-23 10:29:19.8444 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPE" sending SETTINGS frame for stream ID 0 with length 18 and flags NONE.
+2024-05-23 10:29:19.8444 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPE" sending WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0.
+2024-05-23 10:29:19.8444 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPE" received SETTINGS frame for stream ID 0 with length 24 and flags NONE.
+2024-05-23 10:29:19.8444 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPE" sending SETTINGS frame for stream ID 0 with length 0 and flags ACK.
+2024-05-23 10:29:19.8444 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPE" received WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0.
+2024-05-23 10:29:19.8444 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPE" received HEADERS frame for stream ID 1 with length 421 and flags END_HEADERS, PRIORITY.
+2024-05-23 10:29:19.8444 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPE" received DATA frame for stream ID 1 with length 81 and flags END_STREAM.
+2024-05-23 10:29:19.8444 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPE" received SETTINGS frame for stream ID 0 with length 0 and flags ACK.
+2024-05-23 10:29:19.8444 | TRACE | Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware | All hosts are allowed.
+2024-05-23 10:29:19.8444 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Authorization Filter: Before executing OnAuthorization on filter BillingAPI.Filters.AuthenticationFilter.
+2024-05-23 10:29:19.8631 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Authorization Filter: After executing OnAuthorization on filter BillingAPI.Filters.AuthenticationFilter.
+2024-05-23 10:29:19.8631 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-05-23 10:29:19.8631 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-05-23 10:29:19.8631 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-05-23 10:29:19.8631 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-05-23 10:29:19.8631 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing action method BillingAPI.Controllers.CLUSR01Controller.AddUser (BillingAPI) with arguments (BillingAPI.Models.DTO.DTOUSR01)
+2024-05-23 10:29:19.9281 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-05-23 10:29:19.9281 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-05-23 10:29:19.9281 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-05-23 10:29:19.9281 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-05-23 10:29:19.9281 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-05-23 10:29:19.9281 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-05-23 10:29:19.9281 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult.
+2024-05-23 10:29:19.9281 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPE" sending HEADERS frame for stream ID 1 with length 79 and flags END_HEADERS.
+2024-05-23 10:29:19.9281 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPE" sending DATA frame for stream ID 1 with length 67 and flags NONE.
+2024-05-23 10:29:19.9281 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult.
+2024-05-23 10:29:19.9281 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-05-23 10:29:19.9281 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-05-23 10:29:19.9281 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QSJPSHKPE" sending DATA frame for stream ID 1 with length 0 and flags END_STREAM.
+2024-05-23 12:20:10.2393 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending SETTINGS frame for stream ID 0 with length 18 and flags NONE.
+2024-05-23 12:20:10.2619 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0.
+2024-05-23 12:20:10.2619 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" received SETTINGS frame for stream ID 0 with length 24 and flags NONE.
+2024-05-23 12:20:10.2619 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending SETTINGS frame for stream ID 0 with length 0 and flags ACK.
+2024-05-23 12:20:10.2619 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" received WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0.
+2024-05-23 12:20:10.2619 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" received HEADERS frame for stream ID 1 with length 454 and flags END_STREAM, END_HEADERS, PRIORITY.
+2024-05-23 12:20:10.3120 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" received SETTINGS frame for stream ID 0 with length 0 and flags ACK.
+2024-05-23 12:20:10.4023 | TRACE | Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware | All hosts are allowed.
+2024-05-23 12:20:10.7419 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending HEADERS frame for stream ID 1 with length 66 and flags END_HEADERS.
+2024-05-23 12:20:11.0038 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 1 with length 1024 and flags NONE.
+2024-05-23 12:20:11.0038 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 1 with length 1024 and flags NONE.
+2024-05-23 12:20:11.0038 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 1 with length 1024 and flags NONE.
+2024-05-23 12:20:11.0038 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 1 with length 1024 and flags NONE.
+2024-05-23 12:20:11.0038 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 1 with length 992 and flags NONE.
+2024-05-23 12:20:11.0038 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 1 with length 65 and flags NONE.
+2024-05-23 12:20:11.0038 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 1 with length 16 and flags NONE.
+2024-05-23 12:20:11.0256 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 1 with length 0 and flags END_STREAM.
+2024-05-23 12:20:11.6342 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" received HEADERS frame for stream ID 3 with length 109 and flags END_STREAM, END_HEADERS, PRIORITY.
+2024-05-23 12:20:11.6342 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" received HEADERS frame for stream ID 5 with length 58 and flags END_STREAM, END_HEADERS, PRIORITY.
+2024-05-23 12:20:11.6342 | TRACE | Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware | All hosts are allowed.
+2024-05-23 12:20:11.6342 | TRACE | Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware | All hosts are allowed.
+2024-05-23 12:20:11.6342 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending HEADERS frame for stream ID 3 with length 90 and flags END_HEADERS.
+2024-05-23 12:20:11.6515 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 3 with length 11990 and flags NONE.
+2024-05-23 12:20:11.6515 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 3 with length 0 and flags END_STREAM.
+2024-05-23 12:20:11.8530 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending HEADERS frame for stream ID 5 with length 119 and flags END_HEADERS.
+2024-05-23 12:20:11.8530 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 9986 and flags NONE.
+2024-05-23 12:20:11.8530 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8530 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8530 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8530 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8530 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8530 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8530 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8530 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8530 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8530 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8530 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8530 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8530 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8530 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8530 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8530 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8530 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8530 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8530 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8530 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8530 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8530 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8530 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8530 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8530 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8530 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8530 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8530 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8530 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8530 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8530 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8530 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8530 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8530 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8530 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8530 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8530 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8530 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8530 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8530 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8530 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8530 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8530 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8530 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8721 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8721 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8721 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8721 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8721 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8721 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8721 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8721 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8721 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8721 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8721 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8721 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8721 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8721 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8721 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8721 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8721 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8721 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8721 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8721 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8721 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8721 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8721 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8721 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8721 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8721 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8721 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8721 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 10240 and flags NONE.
+2024-05-23 12:20:11.8721 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 9517 and flags NONE.
+2024-05-23 12:20:11.8721 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 5 with length 0 and flags END_STREAM.
+2024-05-23 12:20:11.9806 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" received HEADERS frame for stream ID 7 with length 66 and flags END_STREAM, END_HEADERS, PRIORITY.
+2024-05-23 12:20:11.9806 | TRACE | Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware | All hosts are allowed.
+2024-05-23 12:20:13.1434 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending HEADERS frame for stream ID 7 with length 65 and flags END_HEADERS.
+2024-05-23 12:20:13.1434 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 7 with length 14970 and flags NONE.
+2024-05-23 12:20:13.1434 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05D" sending DATA frame for stream ID 7 with length 0 and flags END_STREAM.
+2024-05-23 12:20:30.5449 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05E" sending SETTINGS frame for stream ID 0 with length 18 and flags NONE.
+2024-05-23 12:20:30.5449 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05E" sending WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0.
+2024-05-23 12:20:30.5449 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05E" received SETTINGS frame for stream ID 0 with length 24 and flags NONE.
+2024-05-23 12:20:30.5449 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05E" sending SETTINGS frame for stream ID 0 with length 0 and flags ACK.
+2024-05-23 12:20:30.5449 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05E" received WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0.
+2024-05-23 12:20:30.5449 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05E" received HEADERS frame for stream ID 1 with length 372 and flags END_STREAM, END_HEADERS, PRIORITY.
+2024-05-23 12:20:30.5449 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05E" received SETTINGS frame for stream ID 0 with length 0 and flags ACK.
+2024-05-23 12:20:30.5449 | TRACE | Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware | All hosts are allowed.
+2024-05-23 12:20:30.6203 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Authorization Filter: Before executing OnAuthorization on filter BillingAPI.Filters.AuthenticationFilter.
+2024-05-23 12:20:31.8401 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Authorization Filter: After executing OnAuthorization on filter BillingAPI.Filters.AuthenticationFilter.
+2024-05-23 12:20:31.8401 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Authorization Filter: Before executing OnAuthorization on filter BillingAPI.Filters.AuthorizationFilter.
+2024-05-23 12:20:36.2550 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Authorization Filter: After executing OnAuthorization on filter BillingAPI.Filters.AuthorizationFilter.
+2024-05-23 12:20:36.2550 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-05-23 12:20:36.3227 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-05-23 12:20:36.3227 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-05-23 12:20:36.3227 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-05-23 12:20:37.4649 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-05-23 12:20:37.4649 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2024-05-23 12:20:37.4649 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-05-23 12:20:37.4649 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2024-05-23 12:20:37.4649 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-05-23 12:20:37.4649 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-05-23 12:20:37.4649 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult.
+2024-05-23 12:20:39.1583 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05E" sending HEADERS frame for stream ID 1 with length 80 and flags END_HEADERS.
+2024-05-23 12:20:39.1583 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05E" sending DATA frame for stream ID 1 with length 641 and flags NONE.
+2024-05-23 12:20:39.1583 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult.
+2024-05-23 12:20:39.1583 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-05-23 12:20:39.1583 | TRACE | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2024-05-23 12:20:39.1720 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05E" sending DATA frame for stream ID 1 with length 0 and flags END_STREAM.
+2024-05-23 12:20:39.1720 | TRACE | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN3QUIAMN05E" received WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0.

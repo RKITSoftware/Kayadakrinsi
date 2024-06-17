@@ -1,0 +1,12 @@
+﻿body{
+    margin:0%;
+    padding:0%;
+}
+
+.main-row {
+    border-top: 1px solid #ddd;
+}
+
+.notes-row {
+    border-bottom: 1px solid #ddd;
+}

@@ -45,7 +45,7 @@
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{Controller}/{Action}/{id?}"
+                    pattern: "api/{Controller}/{Action}/{id?}"
                     );
             });
         }

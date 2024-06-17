@@ -19,6 +19,11 @@ namespace BillingAPI.Repositaries
         /// </summary>
         private readonly OrmLiteConnectionFactory _dbFactory;
 
+        /// <summary>
+        /// Instance of IConfiguration
+        /// </summary>
+        private IConfiguration _config;
+
         #endregion
 
         #region Public Members
@@ -50,10 +55,22 @@ namespace BillingAPI.Repositaries
         /// <summary>
         /// Establishes connection with database
         /// </summary>
+        //public CRUDImplementation(IConfiguration config)
+        //{
+        //    _dbFactory = new OrmLiteConnectionFactory(connectionString, MySqlDialect.Provider);
+        //    _config = config;
+        //    connectionString = BLCommon.GetConnectionString();
+        //    //connectionString = _config["ConnectionStrings:DefaultConnection"];
+        //}
+        
+        /// <summary>
+        /// Establishes connection with database
+        /// </summary>
         public CRUDImplementation()
         {
-            connectionString = BLCommon.GetConnectionString();
             _dbFactory = new OrmLiteConnectionFactory(connectionString, MySqlDialect.Provider);
+            connectionString = BLCommon.GetConnectionString();
+            //connectionString = _config["ConnectionStrings:DefaultConnection"];
         }
 
         #endregion

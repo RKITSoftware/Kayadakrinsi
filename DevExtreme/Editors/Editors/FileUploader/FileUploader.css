@@ -1,0 +1,12 @@
+﻿.fileUploaderContainer {
+    margin:0%;
+    width:50vw;
+    margin-top:12vh;
+    margin-left:25vw;
+}
+
+.dx-fileuploader{
+    border: 2px solid grey;
+    margin-top:10px;
+    margin-bottom: 20px;
+}

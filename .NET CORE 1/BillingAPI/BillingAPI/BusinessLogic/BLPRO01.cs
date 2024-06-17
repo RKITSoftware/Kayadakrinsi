@@ -1,7 +1,9 @@
 ﻿using BillingAPI.Enums;
+using BillingAPI.Extentions;
 using BillingAPI.Interfaces;
 using BillingAPI.Models;
 using BillingAPI.Models.POCO;
+using NLog;
 
 namespace BillingAPI.BusinessLogic
 {
@@ -20,12 +22,17 @@ namespace BillingAPI.BusinessLogic
         /// <summary>
         /// Instance of PRO01 class
         /// </summary>
-        public PRO01 ObjUSR01 { get; set; }
+        public PRO01 ObjPRO01 { get; set; }
 
         /// <summary>
         /// Type of operation to be perform
         /// </summary>
         public enmOperations Operations { get; set; }
+
+        /// <summary>
+        /// Instance of Nlog Logger
+        /// </summary>
+        private static readonly Logger _logger = LogManager.GetCurrentClassLogger();
 
         #endregion
 
@@ -48,11 +55,19 @@ namespace BillingAPI.BusinessLogic
         /// PreProcesses object before saving
         /// </summary>
         /// <param name="objDTOPRO01"></param>
-        public void PreSave(DTOPRO01 objDTOPRO01)
+        public void PreSave(DTOPRO01 objDTOPRO01,string id)
         {
-            ObjUSR01 = objDTOPRO01.Map<DTOPRO01, PRO01>();
-            objCRUDPRO01.obj = ObjUSR01;
+            ObjPRO01 = objDTOPRO01.Map<DTOPRO01, PRO01>();
+            objCRUDPRO01.obj = ObjPRO01;
             objCRUDPRO01.Operations = Operations;
+
+            string userId = id; 
+            string newFilePath = $"{System.IO.Directory.GetCurrentDirectory()}\\Log\\Model\\{userId}\\{DateTime.Now:dd-MM-yyyy}.txt";
+            
+            LogManager.LogFactory.ChangeTargetFilePath("Model", newFilePath);
+
+            // Log the information
+            _logger.Info($"Model : \'Product => ID : {ObjPRO01.O01F01}, Name : {ObjPRO01.O01F02}, Price : {ObjPRO01.O01F03}\'");
         }
 
         /// <summary>
@@ -65,7 +80,7 @@ namespace BillingAPI.BusinessLogic
 
             if (Operations == enmOperations.I)
             {
-                if (objCRUDPRO01.IsExists(ObjUSR01.O01F01))
+                if (objCRUDPRO01.IsExists(ObjPRO01.O01F01))
                 {
                     response.isError = true;
                     response.message = "Product already exist";
@@ -73,7 +88,7 @@ namespace BillingAPI.BusinessLogic
             }
             else if (Operations == enmOperations.U)
             {
-                if (!objCRUDPRO01.IsExists(ObjUSR01.O01F01))
+                if (!objCRUDPRO01.IsExists(ObjPRO01.O01F01))
                 {
                     response.isError = true;
                     response.message = "Product not found";

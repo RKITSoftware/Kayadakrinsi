@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .myButton{
+            display: block;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" value="endregion" onclick="CopyToClipboard('#endregion')" class="myButton">
+    <input type="button" value="Private Fields" onclick="CopyToClipboard('#region Private Fields')" class="myButton">
+    <input type="button" value="Public Properties" onclick="CopyToClipboard('#region Public Properties')" class="myButton">
+    <input type="button" value="Constructors" onclick="CopyToClipboard('#region Constructors')" class="myButton">
+    <input type="button" value="Public Methods" onclick="CopyToClipboard('#region Public Methods')" class="myButton">
+    <input type="button" value="Private Methods" onclick="CopyToClipboard('#region Private Methods')" class="myButton">
+    <script>
+        function CopyToClipboard(copyText){
+            navigator.clipboard.writeText(copyText);
+        }
+    </script>
+</body>
+</html>

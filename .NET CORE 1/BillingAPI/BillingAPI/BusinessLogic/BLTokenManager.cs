@@ -39,7 +39,7 @@ namespace BillingAPI.BusinessLogic
         /// </summary>
         /// <param name="user">object of USR01</param>
         /// <returns>Token</returns>
-        public void GenerateToken(USR01 user)
+        public string GenerateToken(USR01 user)
         {
             var tokenHandler = new JwtSecurityTokenHandler();
             var key = Encoding.UTF8.GetBytes(Secret);
@@ -48,6 +48,7 @@ namespace BillingAPI.BusinessLogic
             {
                 Subject = new ClaimsIdentity(new[]
                 {
+                    new Claim("Id", Convert.ToString(user.R01F01)),
                     new Claim(ClaimTypes.Name, user.R01F02),
                     new Claim(ClaimTypes.Role, user.R01F04.ToString()) // Add roles as claims
  
@@ -61,6 +62,8 @@ namespace BillingAPI.BusinessLogic
             string cacheKey = CachePrefix + user.R01F02;
 
             cache.Set(cacheKey, tokenString, new CacheItemPolicy { AbsoluteExpiration = DateTime.UtcNow.AddMinutes(20) });
+
+            return tokenString;
         }
 
         /// <summary>

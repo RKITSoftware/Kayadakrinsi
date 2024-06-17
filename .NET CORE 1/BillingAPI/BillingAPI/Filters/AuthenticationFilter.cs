@@ -1,13 +1,13 @@
 ﻿using System.Diagnostics.Contracts;
 using System.Net.Http.Headers;
-using System.Security.Claims;
-using System.Security.Principal;
+using System.Runtime.Caching;
 using System.Text;
 using BillingAPI.BusinessLogic;
 using BillingAPI.Models.POCO;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Controllers;
+
 using Microsoft.AspNetCore.Mvc.Filters;
 
 namespace BillingAPI.Filters
@@ -17,6 +17,7 @@ namespace BillingAPI.Filters
     /// </summary>
     public class AuthenticationFilter : Attribute, IAuthorizationFilter
     {
+
         #region Public Members
 
         /// <summary>
@@ -35,12 +36,18 @@ namespace BillingAPI.Filters
         public static USR01 objUSR01;
 
         /// <summary>
-        /// Defines flag indicating whether token is generated or not
-        /// Checks if token is being generating for first time or already generated
+        /// Cache prefix to store tokens
         /// </summary>
-        public static bool isTokenGenerated = false;
+        public const string CachePrefix = "tokenGenerated_";
+
+        /// <summary>
+        /// Flag defines whether token is generated or not
+        /// </summary>
+        public static MemoryCache tokenGenerated = MemoryCache.Default;
 
         #endregion
+
+        #region Public Methods
 
         /// <summary>
         /// Authenticates user
@@ -48,7 +55,14 @@ namespace BillingAPI.Filters
         /// <param name="context">Context of authorization filter</param>
         public void OnAuthorization(AuthorizationFilterContext context)
         {
-            if (SkipAuthorization(context)) return;
+            // Retrieve the endpoint information
+            var endpoint = context.HttpContext.GetEndpoint();
+
+            // Check if the endpoint is excluded from authentication
+            if (endpoint?.Metadata?.GetMetadata<IAllowAnonymous>() != null)
+            {
+                return; // Skip authentication for this endpoint
+            }
 
             string authHeader = context.HttpContext.Request.Headers["Authorization"];
 
@@ -66,66 +80,74 @@ namespace BillingAPI.Filters
 
                     var user = objBLLogin.ValidateUser(username, password);
 
-                    if (user!=null)
+                    if (user != null)
                     {
-                        objUSR01 = user; // Sets current logged in user
+                        // Generates token
+                        var token = objBLTokenManager.GenerateToken(user);
 
-                        var identity = new GenericIdentity(username);
-                        identity.AddClaim(new Claim(ClaimTypes.Name, objUSR01.R01F02));
-                        identity.AddClaim(new Claim("Id", Convert.ToString(objUSR01.R01F01)));
+                        // Attaches principal to token
+                        var principal = objBLTokenManager.GetPrincipal(token);
 
-                        IPrincipal principal = new GenericPrincipal(identity, objUSR01.R01F04.ToString().Split(','));
+                        if (principal == null)
+                        {
+                            context.Result = new StatusCodeResult(StatusCodes.Status401Unauthorized);
+                            return;
+                        }
 
+                        //Set the current principal for the request
                         Thread.CurrentPrincipal = principal;
 
-                        context.HttpContext.User = (ClaimsPrincipal)principal;
-
-                        // Checks if token is generated before
-                        if (isTokenGenerated == false)
+                        // Set the token as the result (if needed)
+                        context.Result = new ContentResult
                         {
-                            objBLTokenManager.GenerateToken(objUSR01);
-
-                            isTokenGenerated = true;
-
-                            return;
-                        }
-
-
-                        var token = BLTokenManager.cache.Get("JWTToken_" + objUSR01.R01F02);
-
-                        if (token != null)
-                        {
-                            token = objBLTokenManager.RefreshToken(objUSR01);
-
-                            if (token == null)
-                            {
-                                context.Result = new StatusCodeResult(StatusCodes.Status500InternalServerError);
-                            }
-                            return;
-                        }
-                        else
-                        {
-                            context.Result = new StatusCodeResult(StatusCodes.Status500InternalServerError);
-                            isTokenGenerated = false;
-                        }
+                            Content = token,
+                            ContentType = "text/plain",
+                            StatusCode = StatusCodes.Status200OK
+                        };
+                        return;
                     }
                     else
                     {
-                        context.Result = new StatusCodeResult(StatusCodes.Status406NotAcceptable);
+                        // User validation failed
+                        context.Result = new ContentResult
+                        {
+                            Content = "Invalid username or password.",
+                            ContentType = "text/plain",
+                            StatusCode = StatusCodes.Status401Unauthorized
+                        };
+                        return;
                     }
                 }
                 catch (FormatException)
                 {
                     // Credentials were not formatted correctly.
-                    context.HttpContext.Response.StatusCode = 401;
+                    context.Result = new ContentResult
+                    {
+                        Content = "Invalid Authorization header format.",
+                        ContentType = "text/plain",
+                        StatusCode = StatusCodes.Status401Unauthorized
+                    };
+                    return;
                 }
             }
             else
             {
-                context.Result = new StatusCodeResult(StatusCodes.Status400BadRequest);
+                // No or invalid authorization header
+                context.Result = new ContentResult
+                {
+                    Content = "Authorization header is missing or not in the correct format.",
+                    ContentType = "text/plain",
+                    StatusCode = StatusCodes.Status400BadRequest
+                };
+                return;
             }
         }
 
+        /// <summary>
+        /// Skips authentication process when AllowAnonymous is applied
+        /// </summary>
+        /// <param name="context">Authorization filter context</param>
+        /// <returns>True or false</returns>
         public static bool SkipAuthorization(AuthorizationFilterContext context)
         {
             Contract.Assert(context != null);
@@ -133,9 +155,12 @@ namespace BillingAPI.Filters
             {
                 var actionAttributes =
                    descriptor.MethodInfo.GetCustomAttributes(inherit: true);
-                if (actionAttributes.FirstOrDefault(a => a.GetType() == typeof(AllowAnonymousAttribute)) != null) return true;
+                if (actionAttributes.FirstOrDefault(a => a.GetType() == typeof(AllowAnonymousAttribute)) != null)
+                    return true;
             }
             return false;
         }
+
+        #endregion
     }
 }

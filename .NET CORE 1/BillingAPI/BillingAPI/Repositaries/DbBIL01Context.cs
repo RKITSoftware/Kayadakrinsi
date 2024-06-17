@@ -181,7 +181,6 @@ namespace BillingAPI.Repositaries
                             clientDetails.Add(new Phrase("Client Name: ", new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.BOLD)));
                             clientDetails.Add(new Phrase(client.P01F02 + "\n", new Font(Font.FontFamily.TIMES_ROMAN, 12)));
                             clientDetails.Add(new Phrase("Client Address: ", new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.BOLD)));
-
                             clientDetails.Add(new Phrase(client.P01F04 + "\n", new Font(Font.FontFamily.TIMES_ROMAN, 12)));
                             clientDetails.Add(new Phrase("Client GST: ", new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.BOLD)));
                             clientDetails.Add(new Phrase(client.P01F03 + "\n", new Font(Font.FontFamily.TIMES_ROMAN, 12)));

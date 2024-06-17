@@ -1,0 +1,853 @@
+2024-06-07 10:32:20.1254 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Hosting starting
+2024-06-07 10:32:20.9707 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory | Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider
+2024-06-07 10:32:22.8798 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer | Using development certificate: CN=localhost (Thumbprint: 4A3F19302DC503DCF872708C86F161CC3D96CF0F)
+2024-06-07 10:32:22.9509 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Hosting started
+2024-06-07 10:32:22.9509 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Loaded hosting startup assembly BillingAPI
+2024-06-07 10:32:22.9509 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-06-07 10:32:22.9509 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-06-07 10:32:23.3566 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46LS28Q1EM" accepted.
+2024-06-07 10:32:23.3566 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46LS28Q1EM" started.
+2024-06-07 10:32:23.3884 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46LS28Q1EN" accepted.
+2024-06-07 10:32:23.3884 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46LS28Q1EN" started.
+2024-06-07 10:32:25.3217 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46LS28Q1EO" accepted.
+2024-06-07 10:32:25.3217 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46LS28Q1EO" started.
+2024-06-07 10:32:25.4104 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Connection 0HN46LS28Q1EO established using the following protocol: Tls12
+2024-06-07 10:32:25.5676 | DEBUG | Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware | Wildcard detected, all requests with hosts will be allowed.
+2024-06-07 10:32:25.8287 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware | Response markup is scheduled to include browser refresh script injection.
+2024-06-07 10:32:26.2069 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware | Response markup was updated to include browser refresh script injection.
+2024-06-07 10:32:30.3304 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN46LS28Q1EO" received FIN.
+2024-06-07 10:32:30.3304 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN46LS28Q1EO" is closed. The last processed stream ID was 7.
+2024-06-07 10:32:30.3304 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN46LS28Q1EO" sending FIN because: "The client closed the connection."
+2024-06-07 10:32:30.3517 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46LS28Q1EO" stopped.
+2024-06-07 10:32:33.3786 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Authentication of the HTTPS connection timed out.
+2024-06-07 10:32:33.3786 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46LS28Q1EM" stopped.
+2024-06-07 10:32:33.3786 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN46LS28Q1EM" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-06-07 10:32:33.3786 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Authentication of the HTTPS connection timed out.
+2024-06-07 10:32:33.3786 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46LS28Q1EN" stopped.
+2024-06-07 10:32:33.3786 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN46LS28Q1EN" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-06-07 10:33:07.3660 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46LS28Q1EP" accepted.
+2024-06-07 10:33:07.3905 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46LS28Q1EP" started.
+2024-06-07 10:33:07.4399 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Connection 0HN46LS28Q1EP established using the following protocol: Tls12
+2024-06-07 10:33:07.4399 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | POST requests are not supported
+2024-06-07 10:33:07.4920 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | 1 candidate(s) found for the request path '/api/CLLogin/GenerateToken'
+2024-06-07 10:33:07.4920 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | Endpoint 'BillingAPI.Controllers.CLLogin.GenerateToken (BillingAPI)' with route pattern 'api/CLLogin/GenerateToken' is valid for the request path '/api/CLLogin/GenerateToken'
+2024-06-07 10:33:07.4920 | DEBUG | Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware | Request matched endpoint 'BillingAPI.Controllers.CLLogin.GenerateToken (BillingAPI)'
+2024-06-07 10:33:07.5477 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | Static files was skipped as the request already matched an endpoint.
+2024-06-07 10:33:07.5916 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of authorization filters (in the following order): None
+2024-06-07 10:33:07.5916 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of resource filters (in the following order): None
+2024-06-07 10:33:07.5916 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-06-07 10:33:07.5916 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of exception filters (in the following order): None
+2024-06-07 10:33:07.5916 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-06-07 10:33:07.5916 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing controller factory for controller BillingAPI.Controllers.CLLogin (BillingAPI)
+2024-06-07 10:33:07.5916 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed controller factory for controller BillingAPI.Controllers.CLLogin (BillingAPI)
+2024-06-07 10:33:07.6053 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to bind parameter 'username' of type 'System.String' ...
+2024-06-07 10:33:07.6053 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder | Attempting to bind parameter 'username' of type 'System.String' using the name 'username' in request data ...
+2024-06-07 10:33:07.6053 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder | Done attempting to bind parameter 'username' of type 'System.String'.
+2024-06-07 10:33:07.6053 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to bind parameter 'username' of type 'System.String'.
+2024-06-07 10:33:07.6053 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to validate the bound parameter 'username' of type 'System.String' ...
+2024-06-07 10:33:07.6228 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to validate the bound parameter 'username' of type 'System.String'.
+2024-06-07 10:33:07.6228 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to bind parameter 'password' of type 'System.String' ...
+2024-06-07 10:33:07.6228 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder | Attempting to bind parameter 'password' of type 'System.String' using the name 'password' in request data ...
+2024-06-07 10:33:07.6228 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder | Done attempting to bind parameter 'password' of type 'System.String'.
+2024-06-07 10:33:07.6228 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to bind parameter 'password' of type 'System.String'.
+2024-06-07 10:33:07.6228 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to validate the bound parameter 'password' of type 'System.String' ...
+2024-06-07 10:33:07.6228 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to validate the bound parameter 'password' of type 'System.String'.
+2024-06-07 10:33:10.2794 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter
+2024-06-07 10:33:10.2848 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | No information found on request to perform content negotiation.
+2024-06-07 10:33:10.2848 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-06-07 10:33:10.2848 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | Attempting to select the first formatter in the output formatters list which can write the result.
+2024-06-07 10:33:10.2848 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter' and content type 'text/plain' to write the response.
+2024-06-07 10:33:42.8877 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | POST requests are not supported
+2024-06-07 10:33:42.8877 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | 1 candidate(s) found for the request path '/api/CLPRO01/AddProduct'
+2024-06-07 10:33:42.8877 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | Endpoint 'BillingAPI.Controllers.CLPRO01Controller.AddProduct (BillingAPI)' with route pattern 'api/CLPRO01/AddProduct' is valid for the request path '/api/CLPRO01/AddProduct'
+2024-06-07 10:33:42.8877 | DEBUG | Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware | Request matched endpoint 'BillingAPI.Controllers.CLPRO01Controller.AddProduct (BillingAPI)'
+2024-06-07 10:33:42.8877 | DEBUG | Microsoft.AspNetCore.Server.Kestrel | Connection id "0HN46LS28Q1EP", Request id "0HN46LS28Q1EP:00000003": started reading request body.
+2024-06-07 10:33:42.8877 | DEBUG | Microsoft.AspNetCore.Server.Kestrel | Connection id "0HN46LS28Q1EP", Request id "0HN46LS28Q1EP:00000003": done reading request body.
+2024-06-07 10:33:42.8957 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | Static files was skipped as the request already matched an endpoint.
+2024-06-07 10:33:42.8957 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of authorization filters (in the following order): None
+2024-06-07 10:33:42.8957 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of resource filters (in the following order): None
+2024-06-07 10:33:42.8957 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-06-07 10:33:42.8957 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of exception filters (in the following order): None
+2024-06-07 10:33:42.8957 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-06-07 10:33:42.8957 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing controller factory for controller BillingAPI.Controllers.CLPRO01Controller (BillingAPI)
+2024-06-07 10:33:42.8957 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed controller factory for controller BillingAPI.Controllers.CLPRO01Controller (BillingAPI)
+2024-06-07 10:33:42.8957 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to bind parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01' ...
+2024-06-07 10:33:42.8957 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder | Attempting to bind parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01' using the name '' in request data ...
+2024-06-07 10:33:42.8957 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder | Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json-patch+json'.
+2024-06-07 10:33:42.8957 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder | Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json-patch+json'.
+2024-06-07 10:33:42.9997 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder | Done attempting to bind parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01'.
+2024-06-07 10:33:42.9997 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to bind parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01'.
+2024-06-07 10:33:42.9997 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to validate the bound parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01' ...
+2024-06-07 10:33:43.0041 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to validate the bound parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01'.
+2024-06-07 10:33:57.4768 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN46LS28Q1EP" received FIN.
+2024-06-07 10:33:57.4768 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN46LS28Q1EP" is closed. The last processed stream ID was 3.
+2024-06-07 10:33:57.4768 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN46LS28Q1EP" sending FIN because: "The client closed the connection."
+2024-06-07 10:33:57.4768 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46LS28Q1EP" stopped.
+2024-06-07 10:34:44.5511 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46LS28Q1EQ" accepted.
+2024-06-07 10:34:44.5511 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46LS28Q1EQ" started.
+2024-06-07 10:34:44.5741 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Connection 0HN46LS28Q1EQ established using the following protocol: Tls12
+2024-06-07 10:34:44.5741 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | POST requests are not supported
+2024-06-07 10:34:44.5741 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | 1 candidate(s) found for the request path '/api/CLPRO01/AddProduct'
+2024-06-07 10:34:44.5741 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | Endpoint 'BillingAPI.Controllers.CLPRO01Controller.AddProduct (BillingAPI)' with route pattern 'api/CLPRO01/AddProduct' is valid for the request path '/api/CLPRO01/AddProduct'
+2024-06-07 10:34:44.5741 | DEBUG | Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware | Request matched endpoint 'BillingAPI.Controllers.CLPRO01Controller.AddProduct (BillingAPI)'
+2024-06-07 10:34:44.5741 | DEBUG | Microsoft.AspNetCore.Server.Kestrel | Connection id "0HN46LS28Q1EQ", Request id "0HN46LS28Q1EQ:00000001": started reading request body.
+2024-06-07 10:34:44.5741 | DEBUG | Microsoft.AspNetCore.Server.Kestrel | Connection id "0HN46LS28Q1EQ", Request id "0HN46LS28Q1EQ:00000001": done reading request body.
+2024-06-07 10:34:44.5741 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | Static files was skipped as the request already matched an endpoint.
+2024-06-07 10:34:44.5741 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of authorization filters (in the following order): None
+2024-06-07 10:34:44.5741 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of resource filters (in the following order): None
+2024-06-07 10:34:44.5741 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-06-07 10:34:44.5741 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of exception filters (in the following order): None
+2024-06-07 10:34:44.5741 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-06-07 10:34:44.5741 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing controller factory for controller BillingAPI.Controllers.CLPRO01Controller (BillingAPI)
+2024-06-07 10:34:44.5741 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed controller factory for controller BillingAPI.Controllers.CLPRO01Controller (BillingAPI)
+2024-06-07 10:34:44.5741 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to bind parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01' ...
+2024-06-07 10:34:44.5741 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder | Attempting to bind parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01' using the name '' in request data ...
+2024-06-07 10:34:44.5741 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder | Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json-patch+json'.
+2024-06-07 10:34:44.5741 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder | Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json-patch+json'.
+2024-06-07 10:34:44.5741 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder | Done attempting to bind parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01'.
+2024-06-07 10:34:44.5741 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to bind parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01'.
+2024-06-07 10:34:44.5741 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to validate the bound parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01' ...
+2024-06-07 10:34:44.5741 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to validate the bound parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01'.
+2024-06-07 10:34:45.0227 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter
+2024-06-07 10:34:45.0227 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | No information found on request to perform content negotiation.
+2024-06-07 10:34:45.0227 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-06-07 10:34:45.0227 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | Attempting to select the first formatter in the output formatters list which can write the result.
+2024-06-07 10:34:45.0227 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-06-07 10:36:28.0884 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN46LS28Q1EQ" received FIN.
+2024-06-07 10:36:28.0884 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN46LS28Q1EQ" is closed. The last processed stream ID was 1.
+2024-06-07 10:36:28.0884 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN46LS28Q1EQ" sending FIN because: "The client closed the connection."
+2024-06-07 10:36:28.0884 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46LS28Q1EQ" stopped.
+2024-06-07 10:49:37.0210 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Hosting starting
+2024-06-07 10:49:38.8497 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory | Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider
+2024-06-07 10:49:40.3800 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer | Using development certificate: CN=localhost (Thumbprint: 4A3F19302DC503DCF872708C86F161CC3D96CF0F)
+2024-06-07 10:49:40.4414 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Hosting started
+2024-06-07 10:49:40.4414 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Loaded hosting startup assembly BillingAPI
+2024-06-07 10:49:40.4414 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-06-07 10:49:40.4414 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-06-07 10:49:40.6027 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN46M5NCOIO9" received FIN.
+2024-06-07 10:49:40.6027 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46M5NCOIO9" accepted.
+2024-06-07 10:49:40.6142 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46M5NCOIO9" started.
+2024-06-07 10:49:40.6526 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Failed to authenticate HTTPS connection.
+2024-06-07 10:49:40.6617 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46M5NCOIO9" stopped.
+2024-06-07 10:49:40.6617 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN46M5NCOIO9" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-06-07 10:49:43.2526 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46M5NCOIOA" accepted.
+2024-06-07 10:49:43.2526 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46M5NCOIOA" started.
+2024-06-07 10:49:43.3926 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Connection 0HN46M5NCOIOA established using the following protocol: Tls12
+2024-06-07 10:49:43.5612 | DEBUG | Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware | Wildcard detected, all requests with hosts will be allowed.
+2024-06-07 10:49:43.8471 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware | Response markup is scheduled to include browser refresh script injection.
+2024-06-07 10:49:44.8884 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware | Response markup was updated to include browser refresh script injection.
+2024-06-07 10:49:48.3650 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN46M5NCOIOA" received FIN.
+2024-06-07 10:49:48.3650 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN46M5NCOIOA" is closed. The last processed stream ID was 7.
+2024-06-07 10:49:48.3650 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN46M5NCOIOA" sending FIN because: "The client closed the connection."
+2024-06-07 10:49:48.3777 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46M5NCOIOA" stopped.
+2024-06-07 10:50:01.3559 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46M5NCOIOB" accepted.
+2024-06-07 10:50:01.3559 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46M5NCOIOB" started.
+2024-06-07 10:50:01.3559 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Connection 0HN46M5NCOIOB established using the following protocol: Tls12
+2024-06-07 10:50:01.3642 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | POST requests are not supported
+2024-06-07 10:50:01.4461 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | 1 candidate(s) found for the request path '/api/CLLogin/GenerateToken'
+2024-06-07 10:50:01.4461 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | Endpoint 'BillingAPI.Controllers.CLLogin.GenerateToken (BillingAPI)' with route pattern 'api/CLLogin/GenerateToken' is valid for the request path '/api/CLLogin/GenerateToken'
+2024-06-07 10:50:01.4461 | DEBUG | Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware | Request matched endpoint 'BillingAPI.Controllers.CLLogin.GenerateToken (BillingAPI)'
+2024-06-07 10:50:01.4895 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | Static files was skipped as the request already matched an endpoint.
+2024-06-07 10:50:01.5221 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of authorization filters (in the following order): None
+2024-06-07 10:50:01.5221 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of resource filters (in the following order): None
+2024-06-07 10:50:01.5221 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-06-07 10:50:01.5221 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of exception filters (in the following order): None
+2024-06-07 10:50:01.5221 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-06-07 10:50:01.5221 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing controller factory for controller BillingAPI.Controllers.CLLogin (BillingAPI)
+2024-06-07 10:50:01.5221 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed controller factory for controller BillingAPI.Controllers.CLLogin (BillingAPI)
+2024-06-07 10:50:01.5221 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to bind parameter 'username' of type 'System.String' ...
+2024-06-07 10:50:01.5358 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder | Attempting to bind parameter 'username' of type 'System.String' using the name 'username' in request data ...
+2024-06-07 10:50:01.5358 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder | Done attempting to bind parameter 'username' of type 'System.String'.
+2024-06-07 10:50:01.5358 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to bind parameter 'username' of type 'System.String'.
+2024-06-07 10:50:01.5358 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to validate the bound parameter 'username' of type 'System.String' ...
+2024-06-07 10:50:01.5358 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to validate the bound parameter 'username' of type 'System.String'.
+2024-06-07 10:50:01.5358 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to bind parameter 'password' of type 'System.String' ...
+2024-06-07 10:50:01.5358 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder | Attempting to bind parameter 'password' of type 'System.String' using the name 'password' in request data ...
+2024-06-07 10:50:01.5358 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder | Done attempting to bind parameter 'password' of type 'System.String'.
+2024-06-07 10:50:01.5358 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to bind parameter 'password' of type 'System.String'.
+2024-06-07 10:50:01.5358 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to validate the bound parameter 'password' of type 'System.String' ...
+2024-06-07 10:50:01.5358 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to validate the bound parameter 'password' of type 'System.String'.
+2024-06-07 10:50:04.4457 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter
+2024-06-07 10:50:04.4457 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | No information found on request to perform content negotiation.
+2024-06-07 10:50:04.4457 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-06-07 10:50:04.4457 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | Attempting to select the first formatter in the output formatters list which can write the result.
+2024-06-07 10:50:04.4457 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter' and content type 'text/plain' to write the response.
+2024-06-07 10:50:12.4634 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN46M5NCOIOB" received FIN.
+2024-06-07 10:50:12.4634 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN46M5NCOIOB" is closed. The last processed stream ID was 1.
+2024-06-07 10:50:12.4634 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN46M5NCOIOB" sending FIN because: "The client closed the connection."
+2024-06-07 10:50:12.4634 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46M5NCOIOB" stopped.
+2024-06-07 10:50:33.6230 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46M5NCOIOC" accepted.
+2024-06-07 10:50:33.6230 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46M5NCOIOC" started.
+2024-06-07 10:50:33.6314 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Connection 0HN46M5NCOIOC established using the following protocol: Tls12
+2024-06-07 10:50:33.6314 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | POST requests are not supported
+2024-06-07 10:50:33.6521 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | 1 candidate(s) found for the request path '/api/CLPRO01/AddProduct'
+2024-06-07 10:50:33.6521 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | Endpoint 'BillingAPI.Controllers.CLPRO01Controller.AddProduct (BillingAPI)' with route pattern 'api/CLPRO01/AddProduct' is valid for the request path '/api/CLPRO01/AddProduct'
+2024-06-07 10:50:33.6521 | DEBUG | Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware | Request matched endpoint 'BillingAPI.Controllers.CLPRO01Controller.AddProduct (BillingAPI)'
+2024-06-07 10:50:33.6521 | DEBUG | Microsoft.AspNetCore.Server.Kestrel | Connection id "0HN46M5NCOIOC", Request id "0HN46M5NCOIOC:00000001": started reading request body.
+2024-06-07 10:50:33.6521 | DEBUG | Microsoft.AspNetCore.Server.Kestrel | Connection id "0HN46M5NCOIOC", Request id "0HN46M5NCOIOC:00000001": done reading request body.
+2024-06-07 10:50:33.6521 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | Static files was skipped as the request already matched an endpoint.
+2024-06-07 10:50:33.6611 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of authorization filters (in the following order): None
+2024-06-07 10:50:33.6611 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of resource filters (in the following order): None
+2024-06-07 10:50:33.6611 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-06-07 10:50:33.6611 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of exception filters (in the following order): None
+2024-06-07 10:50:33.6611 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-06-07 10:50:33.6611 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing controller factory for controller BillingAPI.Controllers.CLPRO01Controller (BillingAPI)
+2024-06-07 10:50:33.6611 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed controller factory for controller BillingAPI.Controllers.CLPRO01Controller (BillingAPI)
+2024-06-07 10:50:33.6611 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to bind parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01' ...
+2024-06-07 10:50:33.6611 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder | Attempting to bind parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01' using the name '' in request data ...
+2024-06-07 10:50:33.6611 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder | Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json-patch+json'.
+2024-06-07 10:50:33.6611 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder | Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json-patch+json'.
+2024-06-07 10:50:33.7562 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder | Done attempting to bind parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01'.
+2024-06-07 10:50:33.7562 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to bind parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01'.
+2024-06-07 10:50:33.7562 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to validate the bound parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01' ...
+2024-06-07 10:50:33.7562 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to validate the bound parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01'.
+2024-06-07 10:53:59.7741 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Hosting starting
+2024-06-07 10:53:59.8883 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory | Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider
+2024-06-07 10:54:00.1089 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer | Using development certificate: CN=localhost (Thumbprint: 4A3F19302DC503DCF872708C86F161CC3D96CF0F)
+2024-06-07 10:54:00.1554 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Hosting started
+2024-06-07 10:54:00.1554 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Loaded hosting startup assembly BillingAPI
+2024-06-07 10:54:00.1554 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-06-07 10:54:00.1554 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-06-07 10:54:00.6355 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46M84SKK1U" accepted.
+2024-06-07 10:54:00.6355 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46M84SKK1T" accepted.
+2024-06-07 10:54:00.6355 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46M84SKK1U" started.
+2024-06-07 10:54:00.6355 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46M84SKK1T" started.
+2024-06-07 10:54:05.4050 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Hosting starting
+2024-06-07 10:54:05.6216 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory | Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider
+2024-06-07 10:54:05.9624 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer | Using development certificate: CN=localhost (Thumbprint: 4A3F19302DC503DCF872708C86F161CC3D96CF0F)
+2024-06-07 10:54:06.0074 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Hosting started
+2024-06-07 10:54:06.0074 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Loaded hosting startup assembly BillingAPI
+2024-06-07 10:54:06.0074 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-06-07 10:54:06.0074 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-06-07 10:54:06.3766 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46M86JC2M9" accepted.
+2024-06-07 10:54:06.3766 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46M86JC2M9" started.
+2024-06-07 10:54:06.3927 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN46M86JC2M9" received FIN.
+2024-06-07 10:54:06.4017 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Failed to authenticate HTTPS connection.
+2024-06-07 10:54:06.4017 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46M86JC2M9" stopped.
+2024-06-07 10:54:06.4017 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN46M86JC2M9" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-06-07 10:54:07.5363 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46M86JC2MA" accepted.
+2024-06-07 10:54:07.5363 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46M86JC2MA" started.
+2024-06-07 10:54:07.6916 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Connection 0HN46M86JC2MA established using the following protocol: Tls12
+2024-06-07 10:54:07.8430 | DEBUG | Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware | Wildcard detected, all requests with hosts will be allowed.
+2024-06-07 10:54:08.1797 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware | Response markup is scheduled to include browser refresh script injection.
+2024-06-07 10:54:08.4358 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware | Response markup was updated to include browser refresh script injection.
+2024-06-07 10:54:11.4972 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN46M86JC2MA" received FIN.
+2024-06-07 10:54:11.4972 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN46M86JC2MA" is closed. The last processed stream ID was 7.
+2024-06-07 10:54:11.4972 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN46M86JC2MA" sending FIN because: "The client closed the connection."
+2024-06-07 10:54:11.5086 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46M86JC2MA" stopped.
+2024-06-07 11:00:18.1971 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46M86JC2MB" accepted.
+2024-06-07 11:00:18.2246 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46M86JC2MB" started.
+2024-06-07 11:00:18.2880 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Connection 0HN46M86JC2MB established using the following protocol: Tls12
+2024-06-07 11:00:18.3339 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | POST requests are not supported
+2024-06-07 11:00:18.4091 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | 1 candidate(s) found for the request path '/api/CLLogin/GenerateToken'
+2024-06-07 11:00:18.4091 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | Endpoint 'BillingAPI.Controllers.CLLogin.GenerateToken (BillingAPI)' with route pattern 'api/CLLogin/GenerateToken' is valid for the request path '/api/CLLogin/GenerateToken'
+2024-06-07 11:00:18.4091 | DEBUG | Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware | Request matched endpoint 'BillingAPI.Controllers.CLLogin.GenerateToken (BillingAPI)'
+2024-06-07 11:00:18.4640 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | Static files was skipped as the request already matched an endpoint.
+2024-06-07 11:00:18.5041 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of authorization filters (in the following order): None
+2024-06-07 11:00:18.5041 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of resource filters (in the following order): None
+2024-06-07 11:00:18.5041 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-06-07 11:00:18.5041 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of exception filters (in the following order): None
+2024-06-07 11:00:18.5041 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-06-07 11:00:18.5041 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing controller factory for controller BillingAPI.Controllers.CLLogin (BillingAPI)
+2024-06-07 11:00:18.5041 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed controller factory for controller BillingAPI.Controllers.CLLogin (BillingAPI)
+2024-06-07 11:00:18.5184 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to bind parameter 'username' of type 'System.String' ...
+2024-06-07 11:00:18.5184 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder | Attempting to bind parameter 'username' of type 'System.String' using the name 'username' in request data ...
+2024-06-07 11:00:18.5184 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder | Done attempting to bind parameter 'username' of type 'System.String'.
+2024-06-07 11:00:18.5184 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to bind parameter 'username' of type 'System.String'.
+2024-06-07 11:00:18.5184 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to validate the bound parameter 'username' of type 'System.String' ...
+2024-06-07 11:00:18.5388 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to validate the bound parameter 'username' of type 'System.String'.
+2024-06-07 11:00:18.5388 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to bind parameter 'password' of type 'System.String' ...
+2024-06-07 11:00:18.5388 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder | Attempting to bind parameter 'password' of type 'System.String' using the name 'password' in request data ...
+2024-06-07 11:00:18.5388 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder | Done attempting to bind parameter 'password' of type 'System.String'.
+2024-06-07 11:00:18.5388 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to bind parameter 'password' of type 'System.String'.
+2024-06-07 11:00:18.5388 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to validate the bound parameter 'password' of type 'System.String' ...
+2024-06-07 11:00:18.5388 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to validate the bound parameter 'password' of type 'System.String'.
+2024-06-07 11:00:20.5788 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter
+2024-06-07 11:00:20.6163 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | No information found on request to perform content negotiation.
+2024-06-07 11:00:20.6163 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-06-07 11:00:20.6163 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | Attempting to select the first formatter in the output formatters list which can write the result.
+2024-06-07 11:00:20.6163 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter' and content type 'text/plain' to write the response.
+2024-06-07 11:01:16.2260 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | POST requests are not supported
+2024-06-07 11:01:16.2440 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | 1 candidate(s) found for the request path '/api/CLPRO01/AddProduct'
+2024-06-07 11:01:16.2440 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | Endpoint 'BillingAPI.Controllers.CLPRO01Controller.AddProduct (BillingAPI)' with route pattern 'api/CLPRO01/AddProduct' is valid for the request path '/api/CLPRO01/AddProduct'
+2024-06-07 11:01:16.2440 | DEBUG | Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware | Request matched endpoint 'BillingAPI.Controllers.CLPRO01Controller.AddProduct (BillingAPI)'
+2024-06-07 11:01:16.2440 | DEBUG | Microsoft.AspNetCore.Server.Kestrel | Connection id "0HN46M86JC2MB", Request id "0HN46M86JC2MB:00000003": started reading request body.
+2024-06-07 11:01:16.2480 | DEBUG | Microsoft.AspNetCore.Server.Kestrel | Connection id "0HN46M86JC2MB", Request id "0HN46M86JC2MB:00000003": done reading request body.
+2024-06-07 11:01:16.2480 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | Static files was skipped as the request already matched an endpoint.
+2024-06-07 11:01:16.2480 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of authorization filters (in the following order): None
+2024-06-07 11:01:16.2480 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of resource filters (in the following order): None
+2024-06-07 11:01:16.2480 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-06-07 11:01:16.2480 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of exception filters (in the following order): None
+2024-06-07 11:01:16.2480 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-06-07 11:01:16.2480 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing controller factory for controller BillingAPI.Controllers.CLPRO01Controller (BillingAPI)
+2024-06-07 11:01:16.2480 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed controller factory for controller BillingAPI.Controllers.CLPRO01Controller (BillingAPI)
+2024-06-07 11:01:16.2480 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to bind parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01' ...
+2024-06-07 11:01:16.2480 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder | Attempting to bind parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01' using the name '' in request data ...
+2024-06-07 11:01:16.2480 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder | Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json-patch+json'.
+2024-06-07 11:01:16.2480 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder | Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json-patch+json'.
+2024-06-07 11:01:16.3766 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder | Done attempting to bind parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01'.
+2024-06-07 11:01:16.3766 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to bind parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01'.
+2024-06-07 11:01:16.3766 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to validate the bound parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01' ...
+2024-06-07 11:01:16.3766 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to validate the bound parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01'.
+2024-06-07 11:05:57.4856 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Hosting starting
+2024-06-07 11:05:57.8467 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory | Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider
+2024-06-07 11:05:58.3736 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer | Using development certificate: CN=localhost (Thumbprint: 4A3F19302DC503DCF872708C86F161CC3D96CF0F)
+2024-06-07 11:05:58.7606 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Hosting started
+2024-06-07 11:05:58.7606 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Loaded hosting startup assembly BillingAPI
+2024-06-07 11:05:58.7606 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-06-07 11:05:58.7606 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-06-07 11:05:58.7806 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN46MEQTE1MF" received FIN.
+2024-06-07 11:05:58.8004 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MEQTE1MF" accepted.
+2024-06-07 11:05:58.8004 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MEQTE1MF" started.
+2024-06-07 11:05:58.8308 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Failed to authenticate HTTPS connection.
+2024-06-07 11:05:58.8386 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MEQTE1MF" stopped.
+2024-06-07 11:05:58.8386 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN46MEQTE1MF" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-06-07 11:06:00.1812 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MEQTE1MG" accepted.
+2024-06-07 11:06:00.1812 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MEQTE1MG" started.
+2024-06-07 11:06:00.2539 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Connection 0HN46MEQTE1MG established using the following protocol: Tls12
+2024-06-07 11:06:00.3628 | DEBUG | Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware | Wildcard detected, all requests with hosts will be allowed.
+2024-06-07 11:06:00.6911 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware | Response markup is scheduled to include browser refresh script injection.
+2024-06-07 11:06:02.3744 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware | Response markup was updated to include browser refresh script injection.
+2024-06-07 11:06:06.3439 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN46MEQTE1MG" received FIN.
+2024-06-07 11:06:06.3568 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN46MEQTE1MG" is closed. The last processed stream ID was 7.
+2024-06-07 11:06:06.3568 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN46MEQTE1MG" sending FIN because: "The client closed the connection."
+2024-06-07 11:06:06.3637 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MEQTE1MG" stopped.
+2024-06-07 11:06:54.7079 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MEQTE1MH" accepted.
+2024-06-07 11:06:54.7079 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MEQTE1MH" started.
+2024-06-07 11:06:54.7322 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Connection 0HN46MEQTE1MH established using the following protocol: Tls12
+2024-06-07 11:06:54.7382 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | POST requests are not supported
+2024-06-07 11:06:54.7785 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | 1 candidate(s) found for the request path '/api/CLLogin/GenerateToken'
+2024-06-07 11:06:54.7785 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | Endpoint 'BillingAPI.Controllers.CLLogin.GenerateToken (BillingAPI)' with route pattern 'api/CLLogin/GenerateToken' is valid for the request path '/api/CLLogin/GenerateToken'
+2024-06-07 11:06:54.7785 | DEBUG | Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware | Request matched endpoint 'BillingAPI.Controllers.CLLogin.GenerateToken (BillingAPI)'
+2024-06-07 11:06:54.8071 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | Static files was skipped as the request already matched an endpoint.
+2024-06-07 11:06:54.8358 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of authorization filters (in the following order): None
+2024-06-07 11:06:54.8358 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of resource filters (in the following order): None
+2024-06-07 11:06:54.8358 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-06-07 11:06:54.8358 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of exception filters (in the following order): None
+2024-06-07 11:06:54.8358 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-06-07 11:06:54.8358 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing controller factory for controller BillingAPI.Controllers.CLLogin (BillingAPI)
+2024-06-07 11:06:54.8358 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed controller factory for controller BillingAPI.Controllers.CLLogin (BillingAPI)
+2024-06-07 11:06:54.8358 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to bind parameter 'username' of type 'System.String' ...
+2024-06-07 11:06:54.8358 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder | Attempting to bind parameter 'username' of type 'System.String' using the name 'username' in request data ...
+2024-06-07 11:06:54.8358 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder | Done attempting to bind parameter 'username' of type 'System.String'.
+2024-06-07 11:06:54.8358 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to bind parameter 'username' of type 'System.String'.
+2024-06-07 11:06:54.8358 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to validate the bound parameter 'username' of type 'System.String' ...
+2024-06-07 11:06:54.8532 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to validate the bound parameter 'username' of type 'System.String'.
+2024-06-07 11:06:54.8532 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to bind parameter 'password' of type 'System.String' ...
+2024-06-07 11:06:54.8532 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder | Attempting to bind parameter 'password' of type 'System.String' using the name 'password' in request data ...
+2024-06-07 11:06:54.8532 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder | Done attempting to bind parameter 'password' of type 'System.String'.
+2024-06-07 11:06:54.8532 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to bind parameter 'password' of type 'System.String'.
+2024-06-07 11:06:54.8532 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to validate the bound parameter 'password' of type 'System.String' ...
+2024-06-07 11:06:54.8532 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to validate the bound parameter 'password' of type 'System.String'.
+2024-06-07 11:06:55.9346 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter
+2024-06-07 11:06:55.9428 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | No information found on request to perform content negotiation.
+2024-06-07 11:06:55.9428 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-06-07 11:06:55.9428 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | Attempting to select the first formatter in the output formatters list which can write the result.
+2024-06-07 11:06:55.9428 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter' and content type 'text/plain' to write the response.
+2024-06-07 11:07:23.0401 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | POST requests are not supported
+2024-06-07 11:07:23.0401 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | 1 candidate(s) found for the request path '/api/CLPRO01/AddProduct'
+2024-06-07 11:07:23.0401 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | Endpoint 'BillingAPI.Controllers.CLPRO01Controller.AddProduct (BillingAPI)' with route pattern 'api/CLPRO01/AddProduct' is valid for the request path '/api/CLPRO01/AddProduct'
+2024-06-07 11:07:23.0401 | DEBUG | Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware | Request matched endpoint 'BillingAPI.Controllers.CLPRO01Controller.AddProduct (BillingAPI)'
+2024-06-07 11:07:23.0401 | DEBUG | Microsoft.AspNetCore.Server.Kestrel | Connection id "0HN46MEQTE1MH", Request id "0HN46MEQTE1MH:00000003": started reading request body.
+2024-06-07 11:07:23.0401 | DEBUG | Microsoft.AspNetCore.Server.Kestrel | Connection id "0HN46MEQTE1MH", Request id "0HN46MEQTE1MH:00000003": done reading request body.
+2024-06-07 11:07:23.0401 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | Static files was skipped as the request already matched an endpoint.
+2024-06-07 11:07:23.0401 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of authorization filters (in the following order): None
+2024-06-07 11:07:23.0401 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of resource filters (in the following order): None
+2024-06-07 11:07:23.0401 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-06-07 11:07:23.0401 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of exception filters (in the following order): None
+2024-06-07 11:07:23.0401 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-06-07 11:07:23.0401 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing controller factory for controller BillingAPI.Controllers.CLPRO01Controller (BillingAPI)
+2024-06-07 11:07:23.0530 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed controller factory for controller BillingAPI.Controllers.CLPRO01Controller (BillingAPI)
+2024-06-07 11:07:23.0530 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to bind parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01' ...
+2024-06-07 11:07:23.0530 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder | Attempting to bind parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01' using the name '' in request data ...
+2024-06-07 11:07:23.0530 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder | Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json-patch+json'.
+2024-06-07 11:07:23.0530 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder | Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json-patch+json'.
+2024-06-07 11:07:23.1273 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder | Done attempting to bind parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01'.
+2024-06-07 11:07:23.1273 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to bind parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01'.
+2024-06-07 11:07:23.1273 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to validate the bound parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01' ...
+2024-06-07 11:07:23.1300 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to validate the bound parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01'.
+2024-06-07 11:07:49.4293 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | POST requests are not supported
+2024-06-07 11:07:49.4293 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | 1 candidate(s) found for the request path '/api/CLPRO01/AddProduct'
+2024-06-07 11:07:49.4293 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | Endpoint 'BillingAPI.Controllers.CLPRO01Controller.AddProduct (BillingAPI)' with route pattern 'api/CLPRO01/AddProduct' is valid for the request path '/api/CLPRO01/AddProduct'
+2024-06-07 11:07:49.4293 | DEBUG | Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware | Request matched endpoint 'BillingAPI.Controllers.CLPRO01Controller.AddProduct (BillingAPI)'
+2024-06-07 11:07:49.4293 | DEBUG | Microsoft.AspNetCore.Server.Kestrel | Connection id "0HN46MEQTE1MH", Request id "0HN46MEQTE1MH:00000005": started reading request body.
+2024-06-07 11:07:49.4293 | DEBUG | Microsoft.AspNetCore.Server.Kestrel | Connection id "0HN46MEQTE1MH", Request id "0HN46MEQTE1MH:00000005": done reading request body.
+2024-06-07 11:07:49.4293 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | Static files was skipped as the request already matched an endpoint.
+2024-06-07 11:07:49.4293 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of authorization filters (in the following order): None
+2024-06-07 11:07:49.4293 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of resource filters (in the following order): None
+2024-06-07 11:07:49.4293 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-06-07 11:07:49.4293 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of exception filters (in the following order): None
+2024-06-07 11:07:49.4293 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-06-07 11:07:49.4293 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing controller factory for controller BillingAPI.Controllers.CLPRO01Controller (BillingAPI)
+2024-06-07 11:07:49.4293 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed controller factory for controller BillingAPI.Controllers.CLPRO01Controller (BillingAPI)
+2024-06-07 11:07:49.4293 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to bind parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01' ...
+2024-06-07 11:07:49.4293 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder | Attempting to bind parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01' using the name '' in request data ...
+2024-06-07 11:07:49.4293 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder | Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json-patch+json'.
+2024-06-07 11:07:49.4293 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder | Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json-patch+json'.
+2024-06-07 11:07:49.4293 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder | Done attempting to bind parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01'.
+2024-06-07 11:07:49.4293 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to bind parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01'.
+2024-06-07 11:07:49.4293 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to validate the bound parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01' ...
+2024-06-07 11:07:49.4293 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to validate the bound parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01'.
+2024-06-07 11:08:28.0995 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter
+2024-06-07 11:08:28.0995 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | No information found on request to perform content negotiation.
+2024-06-07 11:08:28.0995 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-06-07 11:08:28.0995 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | Attempting to select the first formatter in the output formatters list which can write the result.
+2024-06-07 11:08:28.0995 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-06-07 11:08:32.2974 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | POST requests are not supported
+2024-06-07 11:08:32.2974 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | 1 candidate(s) found for the request path '/api/CLPRO01/AddProduct'
+2024-06-07 11:08:32.2974 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | Endpoint 'BillingAPI.Controllers.CLPRO01Controller.AddProduct (BillingAPI)' with route pattern 'api/CLPRO01/AddProduct' is valid for the request path '/api/CLPRO01/AddProduct'
+2024-06-07 11:08:32.2974 | DEBUG | Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware | Request matched endpoint 'BillingAPI.Controllers.CLPRO01Controller.AddProduct (BillingAPI)'
+2024-06-07 11:08:32.2974 | DEBUG | Microsoft.AspNetCore.Server.Kestrel | Connection id "0HN46MEQTE1MH", Request id "0HN46MEQTE1MH:00000007": started reading request body.
+2024-06-07 11:08:32.2974 | DEBUG | Microsoft.AspNetCore.Server.Kestrel | Connection id "0HN46MEQTE1MH", Request id "0HN46MEQTE1MH:00000007": done reading request body.
+2024-06-07 11:08:32.2974 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | Static files was skipped as the request already matched an endpoint.
+2024-06-07 11:08:32.2974 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of authorization filters (in the following order): None
+2024-06-07 11:08:32.2974 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of resource filters (in the following order): None
+2024-06-07 11:08:32.2974 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-06-07 11:08:32.2974 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of exception filters (in the following order): None
+2024-06-07 11:08:32.2974 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-06-07 11:08:32.2974 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing controller factory for controller BillingAPI.Controllers.CLPRO01Controller (BillingAPI)
+2024-06-07 11:08:32.3029 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed controller factory for controller BillingAPI.Controllers.CLPRO01Controller (BillingAPI)
+2024-06-07 11:08:32.3029 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to bind parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01' ...
+2024-06-07 11:08:32.3029 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder | Attempting to bind parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01' using the name '' in request data ...
+2024-06-07 11:08:32.3029 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder | Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json-patch+json'.
+2024-06-07 11:08:32.3029 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder | Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json-patch+json'.
+2024-06-07 11:08:32.3029 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder | Done attempting to bind parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01'.
+2024-06-07 11:08:32.3029 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to bind parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01'.
+2024-06-07 11:08:32.3029 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to validate the bound parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01' ...
+2024-06-07 11:08:32.3029 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to validate the bound parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01'.
+2024-06-07 11:12:51.9247 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Hosting starting
+2024-06-07 11:12:52.2210 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory | Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider
+2024-06-07 11:12:52.8279 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer | Using development certificate: CN=localhost (Thumbprint: 4A3F19302DC503DCF872708C86F161CC3D96CF0F)
+2024-06-07 11:12:53.0788 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Hosting started
+2024-06-07 11:12:53.0788 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Loaded hosting startup assembly BillingAPI
+2024-06-07 11:12:53.0788 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-06-07 11:12:53.0788 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-06-07 11:12:53.0926 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN46MIMCK0P2" received FIN.
+2024-06-07 11:12:53.0926 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN46MIMCK0P3" received FIN.
+2024-06-07 11:12:53.1262 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MIMCK0P2" accepted.
+2024-06-07 11:12:53.1262 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MIMCK0P3" accepted.
+2024-06-07 11:12:53.1262 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MIMCK0P3" started.
+2024-06-07 11:12:53.1262 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MIMCK0P2" started.
+2024-06-07 11:12:53.1603 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Failed to authenticate HTTPS connection.
+2024-06-07 11:12:53.1603 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Failed to authenticate HTTPS connection.
+2024-06-07 11:12:53.1683 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MIMCK0P3" stopped.
+2024-06-07 11:12:53.1683 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MIMCK0P2" stopped.
+2024-06-07 11:12:53.1683 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN46MIMCK0P2" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-06-07 11:12:53.1683 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN46MIMCK0P3" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-06-07 11:12:54.5175 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MIMCK0P4" accepted.
+2024-06-07 11:12:54.5175 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MIMCK0P4" started.
+2024-06-07 11:12:54.6581 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Connection 0HN46MIMCK0P4 established using the following protocol: Tls12
+2024-06-07 11:12:54.7829 | DEBUG | Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware | Wildcard detected, all requests with hosts will be allowed.
+2024-06-07 11:12:55.1642 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware | Response markup is scheduled to include browser refresh script injection.
+2024-06-07 11:12:56.0318 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware | Response markup was updated to include browser refresh script injection.
+2024-06-07 11:12:59.7514 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN46MIMCK0P4" received FIN.
+2024-06-07 11:12:59.7677 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN46MIMCK0P4" is closed. The last processed stream ID was 7.
+2024-06-07 11:12:59.7677 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN46MIMCK0P4" sending FIN because: "The client closed the connection."
+2024-06-07 11:12:59.7677 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MIMCK0P4" stopped.
+2024-06-07 11:13:11.4638 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MIMCK0P5" accepted.
+2024-06-07 11:13:11.4638 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MIMCK0P5" started.
+2024-06-07 11:13:11.4638 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Connection 0HN46MIMCK0P5 established using the following protocol: Tls12
+2024-06-07 11:13:11.4638 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | POST requests are not supported
+2024-06-07 11:13:11.5152 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | 1 candidate(s) found for the request path '/api/CLLogin/GenerateToken'
+2024-06-07 11:13:11.5152 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | Endpoint 'BillingAPI.Controllers.CLLogin.GenerateToken (BillingAPI)' with route pattern 'api/CLLogin/GenerateToken' is valid for the request path '/api/CLLogin/GenerateToken'
+2024-06-07 11:13:11.5152 | DEBUG | Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware | Request matched endpoint 'BillingAPI.Controllers.CLLogin.GenerateToken (BillingAPI)'
+2024-06-07 11:13:11.5469 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | Static files was skipped as the request already matched an endpoint.
+2024-06-07 11:13:11.5727 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of authorization filters (in the following order): None
+2024-06-07 11:13:11.5727 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of resource filters (in the following order): None
+2024-06-07 11:13:11.5727 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-06-07 11:13:11.5727 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of exception filters (in the following order): None
+2024-06-07 11:13:11.5727 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-06-07 11:13:11.5727 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing controller factory for controller BillingAPI.Controllers.CLLogin (BillingAPI)
+2024-06-07 11:13:11.6007 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed controller factory for controller BillingAPI.Controllers.CLLogin (BillingAPI)
+2024-06-07 11:13:11.6065 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to bind parameter 'username' of type 'System.String' ...
+2024-06-07 11:13:11.6065 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder | Attempting to bind parameter 'username' of type 'System.String' using the name 'username' in request data ...
+2024-06-07 11:13:11.6065 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder | Done attempting to bind parameter 'username' of type 'System.String'.
+2024-06-07 11:13:11.6065 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to bind parameter 'username' of type 'System.String'.
+2024-06-07 11:13:11.6065 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to validate the bound parameter 'username' of type 'System.String' ...
+2024-06-07 11:13:11.6195 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to validate the bound parameter 'username' of type 'System.String'.
+2024-06-07 11:13:11.6195 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to bind parameter 'password' of type 'System.String' ...
+2024-06-07 11:13:11.6195 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder | Attempting to bind parameter 'password' of type 'System.String' using the name 'password' in request data ...
+2024-06-07 11:13:11.6195 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder | Done attempting to bind parameter 'password' of type 'System.String'.
+2024-06-07 11:13:11.6195 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to bind parameter 'password' of type 'System.String'.
+2024-06-07 11:13:11.6195 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to validate the bound parameter 'password' of type 'System.String' ...
+2024-06-07 11:13:11.6195 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to validate the bound parameter 'password' of type 'System.String'.
+2024-06-07 11:13:13.2297 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter
+2024-06-07 11:13:13.2297 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | No information found on request to perform content negotiation.
+2024-06-07 11:13:13.2297 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-06-07 11:13:13.2297 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | Attempting to select the first formatter in the output formatters list which can write the result.
+2024-06-07 11:13:13.2297 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter' and content type 'text/plain' to write the response.
+2024-06-07 11:13:30.2879 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | POST requests are not supported
+2024-06-07 11:13:30.2879 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | 1 candidate(s) found for the request path '/api/CLPRO01/AddProduct'
+2024-06-07 11:13:30.2879 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | Endpoint 'BillingAPI.Controllers.CLPRO01Controller.AddProduct (BillingAPI)' with route pattern 'api/CLPRO01/AddProduct' is valid for the request path '/api/CLPRO01/AddProduct'
+2024-06-07 11:13:30.2879 | DEBUG | Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware | Request matched endpoint 'BillingAPI.Controllers.CLPRO01Controller.AddProduct (BillingAPI)'
+2024-06-07 11:13:30.2922 | DEBUG | Microsoft.AspNetCore.Server.Kestrel | Connection id "0HN46MIMCK0P5", Request id "0HN46MIMCK0P5:00000003": started reading request body.
+2024-06-07 11:13:30.2922 | DEBUG | Microsoft.AspNetCore.Server.Kestrel | Connection id "0HN46MIMCK0P5", Request id "0HN46MIMCK0P5:00000003": done reading request body.
+2024-06-07 11:13:30.2922 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | Static files was skipped as the request already matched an endpoint.
+2024-06-07 11:13:30.2922 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of authorization filters (in the following order): BillingAPI.Filters.AuthenticationFilter, BillingAPI.Filters.AuthorizationFilter
+2024-06-07 11:13:30.2922 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of resource filters (in the following order): None
+2024-06-07 11:13:30.2922 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-06-07 11:13:30.2922 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of exception filters (in the following order): None
+2024-06-07 11:13:30.2922 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-06-07 11:14:12.9709 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Hosting starting
+2024-06-07 11:14:14.3097 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory | Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider
+2024-06-07 11:14:16.1791 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer | Using development certificate: CN=localhost (Thumbprint: 4A3F19302DC503DCF872708C86F161CC3D96CF0F)
+2024-06-07 11:14:16.2276 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Hosting started
+2024-06-07 11:14:16.2276 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Loaded hosting startup assembly BillingAPI
+2024-06-07 11:14:16.2276 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-06-07 11:14:16.2276 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-06-07 11:14:16.4927 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MJF7U46S" accepted.
+2024-06-07 11:14:16.4927 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MJF7U46S" started.
+2024-06-07 11:14:16.4983 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MJF7U46T" accepted.
+2024-06-07 11:14:16.4983 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MJF7U46T" started.
+2024-06-07 11:14:16.5129 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN46MJF7U46T" received FIN.
+2024-06-07 11:14:16.5129 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN46MJF7U46S" received FIN.
+2024-06-07 11:14:16.5288 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Failed to authenticate HTTPS connection.
+2024-06-07 11:14:16.5288 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Failed to authenticate HTTPS connection.
+2024-06-07 11:14:16.5288 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MJF7U46S" stopped.
+2024-06-07 11:14:16.5288 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MJF7U46T" stopped.
+2024-06-07 11:14:16.5288 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN46MJF7U46S" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-06-07 11:14:16.5288 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN46MJF7U46T" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-06-07 11:14:17.6084 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MJF7U46U" accepted.
+2024-06-07 11:14:17.6084 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MJF7U46U" started.
+2024-06-07 11:14:17.6970 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Connection 0HN46MJF7U46U established using the following protocol: Tls12
+2024-06-07 11:14:17.8026 | DEBUG | Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware | Wildcard detected, all requests with hosts will be allowed.
+2024-06-07 11:14:18.1794 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware | Response markup is scheduled to include browser refresh script injection.
+2024-06-07 11:14:18.4531 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware | Response markup was updated to include browser refresh script injection.
+2024-06-07 11:14:21.8165 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN46MJF7U46U" received FIN.
+2024-06-07 11:14:21.8304 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN46MJF7U46U" is closed. The last processed stream ID was 7.
+2024-06-07 11:14:21.8304 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN46MJF7U46U" sending FIN because: "The client closed the connection."
+2024-06-07 11:14:21.8304 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MJF7U46U" stopped.
+2024-06-07 11:14:46.9549 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MJF7U46V" accepted.
+2024-06-07 11:14:46.9549 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MJF7U46V" started.
+2024-06-07 11:14:46.9841 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Connection 0HN46MJF7U46V established using the following protocol: Tls12
+2024-06-07 11:14:46.9841 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | POST requests are not supported
+2024-06-07 11:14:47.0268 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | 1 candidate(s) found for the request path '/api/CLLogin/GenerateToken'
+2024-06-07 11:14:47.0311 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | Endpoint 'BillingAPI.Controllers.CLLogin.GenerateToken (BillingAPI)' with route pattern 'api/CLLogin/GenerateToken' is valid for the request path '/api/CLLogin/GenerateToken'
+2024-06-07 11:14:47.0311 | DEBUG | Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware | Request matched endpoint 'BillingAPI.Controllers.CLLogin.GenerateToken (BillingAPI)'
+2024-06-07 11:14:47.0584 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | Static files was skipped as the request already matched an endpoint.
+2024-06-07 11:14:47.0819 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of authorization filters (in the following order): None
+2024-06-07 11:14:47.0819 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of resource filters (in the following order): None
+2024-06-07 11:14:47.0819 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-06-07 11:14:47.0819 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of exception filters (in the following order): None
+2024-06-07 11:14:47.0819 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-06-07 11:14:47.0819 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing controller factory for controller BillingAPI.Controllers.CLLogin (BillingAPI)
+2024-06-07 11:14:47.0819 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed controller factory for controller BillingAPI.Controllers.CLLogin (BillingAPI)
+2024-06-07 11:14:47.0913 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to bind parameter 'username' of type 'System.String' ...
+2024-06-07 11:14:47.0913 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder | Attempting to bind parameter 'username' of type 'System.String' using the name 'username' in request data ...
+2024-06-07 11:14:47.0913 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder | Done attempting to bind parameter 'username' of type 'System.String'.
+2024-06-07 11:14:47.0913 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to bind parameter 'username' of type 'System.String'.
+2024-06-07 11:14:47.0913 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to validate the bound parameter 'username' of type 'System.String' ...
+2024-06-07 11:14:47.0913 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to validate the bound parameter 'username' of type 'System.String'.
+2024-06-07 11:14:47.0913 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to bind parameter 'password' of type 'System.String' ...
+2024-06-07 11:14:47.0913 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder | Attempting to bind parameter 'password' of type 'System.String' using the name 'password' in request data ...
+2024-06-07 11:14:47.0913 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder | Done attempting to bind parameter 'password' of type 'System.String'.
+2024-06-07 11:14:47.0913 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to bind parameter 'password' of type 'System.String'.
+2024-06-07 11:14:47.0913 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to validate the bound parameter 'password' of type 'System.String' ...
+2024-06-07 11:14:47.0913 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to validate the bound parameter 'password' of type 'System.String'.
+2024-06-07 11:14:48.3906 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter
+2024-06-07 11:14:48.3906 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | No information found on request to perform content negotiation.
+2024-06-07 11:14:48.3906 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-06-07 11:14:48.3906 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | Attempting to select the first formatter in the output formatters list which can write the result.
+2024-06-07 11:14:48.3906 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter' and content type 'text/plain' to write the response.
+2024-06-07 11:15:07.2529 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | POST requests are not supported
+2024-06-07 11:15:07.2529 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | 1 candidate(s) found for the request path '/api/CLPRO01/AddProduct'
+2024-06-07 11:15:07.2529 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | Endpoint 'BillingAPI.Controllers.CLPRO01Controller.AddProduct (BillingAPI)' with route pattern 'api/CLPRO01/AddProduct' is valid for the request path '/api/CLPRO01/AddProduct'
+2024-06-07 11:15:07.2529 | DEBUG | Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware | Request matched endpoint 'BillingAPI.Controllers.CLPRO01Controller.AddProduct (BillingAPI)'
+2024-06-07 11:15:07.2529 | DEBUG | Microsoft.AspNetCore.Server.Kestrel | Connection id "0HN46MJF7U46V", Request id "0HN46MJF7U46V:00000003": started reading request body.
+2024-06-07 11:15:07.2529 | DEBUG | Microsoft.AspNetCore.Server.Kestrel | Connection id "0HN46MJF7U46V", Request id "0HN46MJF7U46V:00000003": done reading request body.
+2024-06-07 11:15:07.2529 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | Static files was skipped as the request already matched an endpoint.
+2024-06-07 11:15:07.2641 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of authorization filters (in the following order): BillingAPI.Filters.AuthorizationFilter
+2024-06-07 11:15:07.2641 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of resource filters (in the following order): None
+2024-06-07 11:15:07.2641 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-06-07 11:15:07.2641 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of exception filters (in the following order): None
+2024-06-07 11:15:07.2641 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-06-07 11:15:52.9931 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing controller factory for controller BillingAPI.Controllers.CLPRO01Controller (BillingAPI)
+2024-06-07 11:16:29.9494 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed controller factory for controller BillingAPI.Controllers.CLPRO01Controller (BillingAPI)
+2024-06-07 11:16:30.0854 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to bind parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01' ...
+2024-06-07 11:16:30.1517 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder | Attempting to bind parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01' using the name '' in request data ...
+2024-06-07 11:16:30.1517 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder | Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json-patch+json'.
+2024-06-07 11:16:30.1517 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder | Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json-patch+json'.
+2024-06-07 11:16:30.2353 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder | Done attempting to bind parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01'.
+2024-06-07 11:16:30.2353 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to bind parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01'.
+2024-06-07 11:16:30.2353 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to validate the bound parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01' ...
+2024-06-07 11:16:30.2353 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to validate the bound parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01'.
+2024-06-07 11:16:47.2652 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | POST requests are not supported
+2024-06-07 11:16:47.2652 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | 1 candidate(s) found for the request path '/api/CLPRO01/AddProduct'
+2024-06-07 11:16:47.2652 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | Endpoint 'BillingAPI.Controllers.CLPRO01Controller.AddProduct (BillingAPI)' with route pattern 'api/CLPRO01/AddProduct' is valid for the request path '/api/CLPRO01/AddProduct'
+2024-06-07 11:16:47.2652 | DEBUG | Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware | Request matched endpoint 'BillingAPI.Controllers.CLPRO01Controller.AddProduct (BillingAPI)'
+2024-06-07 11:16:47.2652 | DEBUG | Microsoft.AspNetCore.Server.Kestrel | Connection id "0HN46MJF7U46V", Request id "0HN46MJF7U46V:00000005": started reading request body.
+2024-06-07 11:16:47.2652 | DEBUG | Microsoft.AspNetCore.Server.Kestrel | Connection id "0HN46MJF7U46V", Request id "0HN46MJF7U46V:00000005": done reading request body.
+2024-06-07 11:16:47.2652 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | Static files was skipped as the request already matched an endpoint.
+2024-06-07 11:16:47.2652 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of authorization filters (in the following order): BillingAPI.Filters.AuthorizationFilter
+2024-06-07 11:16:47.2652 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of resource filters (in the following order): None
+2024-06-07 11:16:47.2652 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-06-07 11:16:47.2652 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of exception filters (in the following order): None
+2024-06-07 11:16:47.2652 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-06-07 11:16:48.8960 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing controller factory for controller BillingAPI.Controllers.CLPRO01Controller (BillingAPI)
+2024-06-07 11:16:48.8960 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed controller factory for controller BillingAPI.Controllers.CLPRO01Controller (BillingAPI)
+2024-06-07 11:16:48.8960 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to bind parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01' ...
+2024-06-07 11:16:48.8960 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder | Attempting to bind parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01' using the name '' in request data ...
+2024-06-07 11:16:48.8960 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder | Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json-patch+json'.
+2024-06-07 11:16:48.8960 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder | Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json-patch+json'.
+2024-06-07 11:16:48.8960 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder | Done attempting to bind parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01'.
+2024-06-07 11:16:48.8960 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to bind parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01'.
+2024-06-07 11:16:48.8960 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to validate the bound parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01' ...
+2024-06-07 11:16:48.8960 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to validate the bound parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01'.
+2024-06-07 11:16:50.7843 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter
+2024-06-07 11:16:50.7843 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | No information found on request to perform content negotiation.
+2024-06-07 11:16:50.7843 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-06-07 11:16:50.7843 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | Attempting to select the first formatter in the output formatters list which can write the result.
+2024-06-07 11:16:50.7843 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-06-07 11:17:07.3500 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN46MJF7U46V" received FIN.
+2024-06-07 11:17:07.3500 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN46MJF7U46V" is closed. The last processed stream ID was 5.
+2024-06-07 11:17:07.3500 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN46MJF7U46V" sending FIN because: "The client closed the connection."
+2024-06-07 11:17:07.3500 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MJF7U46V" stopped.
+2024-06-07 11:26:14.0093 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Hosting starting
+2024-06-07 11:26:14.3262 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory | Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider
+2024-06-07 11:26:14.7719 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer | Using development certificate: CN=localhost (Thumbprint: 4A3F19302DC503DCF872708C86F161CC3D96CF0F)
+2024-06-07 11:26:14.8228 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Hosting started
+2024-06-07 11:26:14.8228 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Loaded hosting startup assembly BillingAPI
+2024-06-07 11:26:14.8228 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-06-07 11:26:14.8228 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-06-07 11:26:15.0334 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN46MQ5CGV0E" received FIN.
+2024-06-07 11:26:15.0464 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MQ5CGV0E" accepted.
+2024-06-07 11:26:15.0464 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MQ5CGV0E" started.
+2024-06-07 11:26:15.1089 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Failed to authenticate HTTPS connection.
+2024-06-07 11:26:15.1311 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MQ5CGV0E" stopped.
+2024-06-07 11:26:15.1502 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN46MQ5CGV0E" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-06-07 11:26:16.4970 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MQ5CGV0F" accepted.
+2024-06-07 11:26:16.4970 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MQ5CGV0F" started.
+2024-06-07 11:26:16.5661 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Connection 0HN46MQ5CGV0F established using the following protocol: Tls12
+2024-06-07 11:26:16.6847 | DEBUG | Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware | Wildcard detected, all requests with hosts will be allowed.
+2024-06-07 11:26:16.9626 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware | Response markup is scheduled to include browser refresh script injection.
+2024-06-07 11:26:17.1643 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware | Response markup was updated to include browser refresh script injection.
+2024-06-07 11:26:17.6697 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN46MQ5CGV0F" received FIN.
+2024-06-07 11:26:17.6697 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN46MQ5CGV0F" is closed. The last processed stream ID was 1.
+2024-06-07 11:26:17.6697 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN46MQ5CGV0F" sending FIN because: "The client closed the connection."
+2024-06-07 11:26:17.6802 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MQ5CGV0F" stopped.
+2024-06-07 11:26:43.8124 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Hosting starting
+2024-06-07 11:26:44.7528 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory | Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider
+2024-06-07 11:26:45.1554 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer | Using development certificate: CN=localhost (Thumbprint: 4A3F19302DC503DCF872708C86F161CC3D96CF0F)
+2024-06-07 11:26:45.2859 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Hosting started
+2024-06-07 11:26:45.2859 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Loaded hosting startup assembly BillingAPI
+2024-06-07 11:26:45.2859 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-06-07 11:26:45.2859 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-06-07 11:26:45.4904 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MQEEREDE" accepted.
+2024-06-07 11:26:45.4904 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MQEEREDD" accepted.
+2024-06-07 11:26:45.4904 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN46MQEEREDE" received FIN.
+2024-06-07 11:26:45.4904 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN46MQEEREDD" received FIN.
+2024-06-07 11:26:45.4925 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MQEEREDD" started.
+2024-06-07 11:26:45.4925 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MQEEREDE" started.
+2024-06-07 11:26:45.5403 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Failed to authenticate HTTPS connection.
+2024-06-07 11:26:45.5403 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Failed to authenticate HTTPS connection.
+2024-06-07 11:26:45.5403 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MQEEREDE" stopped.
+2024-06-07 11:26:45.5403 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MQEEREDD" stopped.
+2024-06-07 11:26:45.5403 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN46MQEEREDD" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-06-07 11:26:45.5403 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN46MQEEREDE" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-06-07 11:26:46.9783 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MQEEREDF" accepted.
+2024-06-07 11:26:46.9783 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MQEEREDF" started.
+2024-06-07 11:26:47.1506 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Connection 0HN46MQEEREDF established using the following protocol: Tls12
+2024-06-07 11:26:47.2659 | DEBUG | Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware | Wildcard detected, all requests with hosts will be allowed.
+2024-06-07 11:26:47.6619 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware | Response markup is scheduled to include browser refresh script injection.
+2024-06-07 11:26:49.3896 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware | Response markup was updated to include browser refresh script injection.
+2024-06-07 11:26:55.7644 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN46MQEEREDF" received FIN.
+2024-06-07 11:26:55.7816 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN46MQEEREDF" is closed. The last processed stream ID was 7.
+2024-06-07 11:26:55.7816 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN46MQEEREDF" sending FIN because: "The client closed the connection."
+2024-06-07 11:26:55.7816 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MQEEREDF" stopped.
+2024-06-07 11:27:11.8176 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MQEEREDG" accepted.
+2024-06-07 11:27:11.8176 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MQEEREDG" started.
+2024-06-07 11:27:11.8251 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Connection 0HN46MQEEREDG established using the following protocol: Tls12
+2024-06-07 11:27:11.8420 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | POST requests are not supported
+2024-06-07 11:27:11.8859 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | 1 candidate(s) found for the request path '/api/CLLogin/GenerateToken'
+2024-06-07 11:27:11.8859 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | Endpoint 'BillingAPI.Controllers.CLLogin.GenerateToken (BillingAPI)' with route pattern 'api/CLLogin/GenerateToken' is valid for the request path '/api/CLLogin/GenerateToken'
+2024-06-07 11:27:11.8859 | DEBUG | Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware | Request matched endpoint 'BillingAPI.Controllers.CLLogin.GenerateToken (BillingAPI)'
+2024-06-07 11:27:11.9249 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | Static files was skipped as the request already matched an endpoint.
+2024-06-07 11:27:11.9561 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of authorization filters (in the following order): None
+2024-06-07 11:27:11.9561 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of resource filters (in the following order): None
+2024-06-07 11:27:11.9561 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-06-07 11:27:11.9561 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of exception filters (in the following order): None
+2024-06-07 11:27:11.9561 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-06-07 11:27:11.9561 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing controller factory for controller BillingAPI.Controllers.CLLogin (BillingAPI)
+2024-06-07 11:27:11.9561 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed controller factory for controller BillingAPI.Controllers.CLLogin (BillingAPI)
+2024-06-07 11:27:11.9657 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to bind parameter 'username' of type 'System.String' ...
+2024-06-07 11:27:11.9657 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder | Attempting to bind parameter 'username' of type 'System.String' using the name 'username' in request data ...
+2024-06-07 11:27:11.9657 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder | Done attempting to bind parameter 'username' of type 'System.String'.
+2024-06-07 11:27:11.9657 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to bind parameter 'username' of type 'System.String'.
+2024-06-07 11:27:11.9657 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to validate the bound parameter 'username' of type 'System.String' ...
+2024-06-07 11:27:11.9779 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to validate the bound parameter 'username' of type 'System.String'.
+2024-06-07 11:27:11.9779 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to bind parameter 'password' of type 'System.String' ...
+2024-06-07 11:27:11.9779 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder | Attempting to bind parameter 'password' of type 'System.String' using the name 'password' in request data ...
+2024-06-07 11:27:11.9779 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder | Done attempting to bind parameter 'password' of type 'System.String'.
+2024-06-07 11:27:11.9779 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to bind parameter 'password' of type 'System.String'.
+2024-06-07 11:27:11.9779 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to validate the bound parameter 'password' of type 'System.String' ...
+2024-06-07 11:27:11.9779 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to validate the bound parameter 'password' of type 'System.String'.
+2024-06-07 11:27:12.9328 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter
+2024-06-07 11:27:12.9328 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | No information found on request to perform content negotiation.
+2024-06-07 11:27:12.9328 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-06-07 11:27:12.9328 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | Attempting to select the first formatter in the output formatters list which can write the result.
+2024-06-07 11:27:12.9328 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter' and content type 'text/plain' to write the response.
+2024-06-07 11:27:26.8069 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | POST requests are not supported
+2024-06-07 11:27:26.8069 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | 1 candidate(s) found for the request path '/api/CLPRO01/AddProduct'
+2024-06-07 11:27:26.8069 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | Endpoint 'BillingAPI.Controllers.CLPRO01Controller.AddProduct (BillingAPI)' with route pattern 'api/CLPRO01/AddProduct' is valid for the request path '/api/CLPRO01/AddProduct'
+2024-06-07 11:27:26.8069 | DEBUG | Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware | Request matched endpoint 'BillingAPI.Controllers.CLPRO01Controller.AddProduct (BillingAPI)'
+2024-06-07 11:27:26.8069 | DEBUG | Microsoft.AspNetCore.Server.Kestrel | Connection id "0HN46MQEEREDG", Request id "0HN46MQEEREDG:00000003": started reading request body.
+2024-06-07 11:27:26.8069 | DEBUG | Microsoft.AspNetCore.Server.Kestrel | Connection id "0HN46MQEEREDG", Request id "0HN46MQEEREDG:00000003": done reading request body.
+2024-06-07 11:27:26.8069 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | Static files was skipped as the request already matched an endpoint.
+2024-06-07 11:27:26.8069 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of authorization filters (in the following order): BillingAPI.Filters.AuthorizationFilter
+2024-06-07 11:27:26.8069 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of resource filters (in the following order): None
+2024-06-07 11:27:26.8069 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-06-07 11:27:26.8069 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of exception filters (in the following order): None
+2024-06-07 11:27:26.8069 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-06-07 11:27:30.2416 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing controller factory for controller BillingAPI.Controllers.CLPRO01Controller (BillingAPI)
+2024-06-07 11:27:30.2416 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed controller factory for controller BillingAPI.Controllers.CLPRO01Controller (BillingAPI)
+2024-06-07 11:27:30.2439 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to bind parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01' ...
+2024-06-07 11:27:30.2439 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder | Attempting to bind parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01' using the name '' in request data ...
+2024-06-07 11:27:30.2439 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder | Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json-patch+json'.
+2024-06-07 11:27:30.2439 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder | Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json-patch+json'.
+2024-06-07 11:27:30.3040 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder | Done attempting to bind parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01'.
+2024-06-07 11:27:30.3040 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to bind parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01'.
+2024-06-07 11:27:30.3040 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to validate the bound parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01' ...
+2024-06-07 11:27:30.3089 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to validate the bound parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01'.
+2024-06-07 11:27:35.2796 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | POST requests are not supported
+2024-06-07 11:27:35.2796 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | 1 candidate(s) found for the request path '/api/CLPRO01/AddProduct'
+2024-06-07 11:27:35.2796 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | Endpoint 'BillingAPI.Controllers.CLPRO01Controller.AddProduct (BillingAPI)' with route pattern 'api/CLPRO01/AddProduct' is valid for the request path '/api/CLPRO01/AddProduct'
+2024-06-07 11:27:35.2796 | DEBUG | Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware | Request matched endpoint 'BillingAPI.Controllers.CLPRO01Controller.AddProduct (BillingAPI)'
+2024-06-07 11:27:35.2796 | DEBUG | Microsoft.AspNetCore.Server.Kestrel | Connection id "0HN46MQEEREDG", Request id "0HN46MQEEREDG:00000005": started reading request body.
+2024-06-07 11:27:35.2796 | DEBUG | Microsoft.AspNetCore.Server.Kestrel | Connection id "0HN46MQEEREDG", Request id "0HN46MQEEREDG:00000005": done reading request body.
+2024-06-07 11:27:35.2796 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | Static files was skipped as the request already matched an endpoint.
+2024-06-07 11:27:35.2796 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of authorization filters (in the following order): BillingAPI.Filters.AuthorizationFilter
+2024-06-07 11:27:35.2796 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of resource filters (in the following order): None
+2024-06-07 11:27:35.2796 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-06-07 11:27:35.2796 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of exception filters (in the following order): None
+2024-06-07 11:27:35.2796 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-06-07 11:27:35.2796 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing controller factory for controller BillingAPI.Controllers.CLPRO01Controller (BillingAPI)
+2024-06-07 11:27:35.2796 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed controller factory for controller BillingAPI.Controllers.CLPRO01Controller (BillingAPI)
+2024-06-07 11:27:35.2796 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to bind parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01' ...
+2024-06-07 11:27:35.2796 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder | Attempting to bind parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01' using the name '' in request data ...
+2024-06-07 11:27:35.2796 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder | Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json-patch+json'.
+2024-06-07 11:27:35.2796 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder | Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json-patch+json'.
+2024-06-07 11:27:35.2796 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder | Done attempting to bind parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01'.
+2024-06-07 11:27:35.2796 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to bind parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01'.
+2024-06-07 11:27:35.2796 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to validate the bound parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01' ...
+2024-06-07 11:27:35.2796 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to validate the bound parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01'.
+2024-06-07 11:27:46.4490 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN46MQEEREDG" received FIN.
+2024-06-07 11:27:46.4490 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN46MQEEREDG" is closed. The last processed stream ID was 5.
+2024-06-07 11:27:46.4490 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN46MQEEREDG" sending FIN because: "The client closed the connection."
+2024-06-07 11:27:46.4490 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MQEEREDG" stopped.
+2024-06-07 11:28:02.5380 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MQEEREDH" accepted.
+2024-06-07 11:28:02.5433 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MQEEREDH" started.
+2024-06-07 11:28:02.5433 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Connection 0HN46MQEEREDH established using the following protocol: Tls12
+2024-06-07 11:28:02.5433 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | POST requests are not supported
+2024-06-07 11:28:02.5433 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | 1 candidate(s) found for the request path '/api/CLPRO01/AddProduct'
+2024-06-07 11:28:02.5433 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | Endpoint 'BillingAPI.Controllers.CLPRO01Controller.AddProduct (BillingAPI)' with route pattern 'api/CLPRO01/AddProduct' is valid for the request path '/api/CLPRO01/AddProduct'
+2024-06-07 11:28:02.5433 | DEBUG | Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware | Request matched endpoint 'BillingAPI.Controllers.CLPRO01Controller.AddProduct (BillingAPI)'
+2024-06-07 11:28:02.5433 | DEBUG | Microsoft.AspNetCore.Server.Kestrel | Connection id "0HN46MQEEREDH", Request id "0HN46MQEEREDH:00000001": started reading request body.
+2024-06-07 11:28:02.5433 | DEBUG | Microsoft.AspNetCore.Server.Kestrel | Connection id "0HN46MQEEREDH", Request id "0HN46MQEEREDH:00000001": done reading request body.
+2024-06-07 11:28:02.5433 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | Static files was skipped as the request already matched an endpoint.
+2024-06-07 11:28:02.5433 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of authorization filters (in the following order): BillingAPI.Filters.AuthorizationFilter
+2024-06-07 11:28:02.5433 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of resource filters (in the following order): None
+2024-06-07 11:28:02.5433 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-06-07 11:28:02.5433 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of exception filters (in the following order): None
+2024-06-07 11:28:02.5433 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-06-07 11:28:02.5433 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing controller factory for controller BillingAPI.Controllers.CLPRO01Controller (BillingAPI)
+2024-06-07 11:28:02.5433 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed controller factory for controller BillingAPI.Controllers.CLPRO01Controller (BillingAPI)
+2024-06-07 11:28:02.5433 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to bind parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01' ...
+2024-06-07 11:28:02.5433 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder | Attempting to bind parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01' using the name '' in request data ...
+2024-06-07 11:28:02.5433 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder | Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json-patch+json'.
+2024-06-07 11:28:02.5433 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder | Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json-patch+json'.
+2024-06-07 11:28:02.5433 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder | Done attempting to bind parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01'.
+2024-06-07 11:28:02.5433 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to bind parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01'.
+2024-06-07 11:28:02.5433 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to validate the bound parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01' ...
+2024-06-07 11:28:02.5433 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to validate the bound parameter 'objDTOPRO01' of type 'BillingAPI.Models.POCO.DTOPRO01'.
+2024-06-07 11:28:02.5626 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter
+2024-06-07 11:28:02.5626 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | No information found on request to perform content negotiation.
+2024-06-07 11:28:02.5626 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-06-07 11:28:02.5626 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | Attempting to select the first formatter in the output formatters list which can write the result.
+2024-06-07 11:28:02.5626 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-06-07 11:28:06.4459 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN46MQEEREDH" received FIN.
+2024-06-07 11:28:06.4459 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN46MQEEREDH" is closed. The last processed stream ID was 1.
+2024-06-07 11:28:06.4459 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN46MQEEREDH" sending FIN because: "The client closed the connection."
+2024-06-07 11:28:06.4459 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MQEEREDH" stopped.
+2024-06-07 11:36:24.8137 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Hosting starting
+2024-06-07 11:36:25.8686 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory | Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider
+2024-06-07 11:36:28.8019 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer | Using development certificate: CN=localhost (Thumbprint: 4A3F19302DC503DCF872708C86F161CC3D96CF0F)
+2024-06-07 11:36:29.0948 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Hosting started
+2024-06-07 11:36:29.0955 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Loaded hosting startup assembly BillingAPI
+2024-06-07 11:36:29.0955 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-06-07 11:36:29.0955 | DEBUG | Microsoft.AspNetCore.Hosting.Diagnostics | Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-06-07 11:36:29.1154 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN46MVSCRRT9" received FIN.
+2024-06-07 11:36:29.1301 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MVSCRRT9" accepted.
+2024-06-07 11:36:29.1301 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MVSCRRT9" started.
+2024-06-07 11:36:29.2121 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Failed to authenticate HTTPS connection.
+2024-06-07 11:36:29.2215 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MVSCRRT9" stopped.
+2024-06-07 11:36:29.2215 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN46MVSCRRT9" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-06-07 11:36:31.0759 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MVSCRRTA" accepted.
+2024-06-07 11:36:31.0807 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MVSCRRTA" started.
+2024-06-07 11:36:31.2256 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Connection 0HN46MVSCRRTA established using the following protocol: Tls12
+2024-06-07 11:36:31.5449 | DEBUG | Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware | Wildcard detected, all requests with hosts will be allowed.
+2024-06-07 11:36:31.9038 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware | Response markup is scheduled to include browser refresh script injection.
+2024-06-07 11:36:32.2770 | DEBUG | Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware | Response markup was updated to include browser refresh script injection.
+2024-06-07 11:36:35.0804 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN46MVSCRRTA" received FIN.
+2024-06-07 11:36:35.0874 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN46MVSCRRTA" is closed. The last processed stream ID was 7.
+2024-06-07 11:36:35.0874 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN46MVSCRRTA" sending FIN because: "The client closed the connection."
+2024-06-07 11:36:35.0874 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MVSCRRTA" stopped.
+2024-06-07 11:36:45.5137 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MVSCRRTB" accepted.
+2024-06-07 11:36:45.5137 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MVSCRRTB" started.
+2024-06-07 11:36:45.5137 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Connection 0HN46MVSCRRTB established using the following protocol: Tls12
+2024-06-07 11:36:45.5181 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | POST requests are not supported
+2024-06-07 11:36:45.5665 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | 1 candidate(s) found for the request path '/api/CLLogin/GenerateToken'
+2024-06-07 11:36:45.5665 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | Endpoint 'BillingAPI.Controllers.CLLogin.GenerateToken (BillingAPI)' with route pattern 'api/CLLogin/GenerateToken' is valid for the request path '/api/CLLogin/GenerateToken'
+2024-06-07 11:36:45.5665 | DEBUG | Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware | Request matched endpoint 'BillingAPI.Controllers.CLLogin.GenerateToken (BillingAPI)'
+2024-06-07 11:36:45.6114 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | Static files was skipped as the request already matched an endpoint.
+2024-06-07 11:36:45.6484 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of authorization filters (in the following order): None
+2024-06-07 11:36:45.6484 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of resource filters (in the following order): None
+2024-06-07 11:36:45.6484 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-06-07 11:36:45.6484 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of exception filters (in the following order): None
+2024-06-07 11:36:45.6484 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-06-07 11:36:45.6484 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing controller factory for controller BillingAPI.Controllers.CLLogin (BillingAPI)
+2024-06-07 11:36:45.6484 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed controller factory for controller BillingAPI.Controllers.CLLogin (BillingAPI)
+2024-06-07 11:36:45.6647 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to bind parameter 'username' of type 'System.String' ...
+2024-06-07 11:36:45.6647 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder | Attempting to bind parameter 'username' of type 'System.String' using the name 'username' in request data ...
+2024-06-07 11:36:45.6647 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder | Done attempting to bind parameter 'username' of type 'System.String'.
+2024-06-07 11:36:45.6647 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to bind parameter 'username' of type 'System.String'.
+2024-06-07 11:36:45.6647 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to validate the bound parameter 'username' of type 'System.String' ...
+2024-06-07 11:36:45.6848 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to validate the bound parameter 'username' of type 'System.String'.
+2024-06-07 11:36:45.6848 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to bind parameter 'password' of type 'System.String' ...
+2024-06-07 11:36:45.6848 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder | Attempting to bind parameter 'password' of type 'System.String' using the name 'password' in request data ...
+2024-06-07 11:36:45.6848 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder | Done attempting to bind parameter 'password' of type 'System.String'.
+2024-06-07 11:36:45.6848 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to bind parameter 'password' of type 'System.String'.
+2024-06-07 11:36:45.6848 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Attempting to validate the bound parameter 'password' of type 'System.String' ...
+2024-06-07 11:36:45.6848 | DEBUG | Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder | Done attempting to validate the bound parameter 'password' of type 'System.String'.
+2024-06-07 11:36:48.1765 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter
+2024-06-07 11:36:48.1765 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | No information found on request to perform content negotiation.
+2024-06-07 11:36:48.1765 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-06-07 11:36:48.1765 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | Attempting to select the first formatter in the output formatters list which can write the result.
+2024-06-07 11:36:48.1765 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter' and content type 'text/plain' to write the response.
+2024-06-07 11:36:55.0824 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN46MVSCRRTB" received FIN.
+2024-06-07 11:36:55.0824 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN46MVSCRRTB" is closed. The last processed stream ID was 1.
+2024-06-07 11:36:55.0824 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN46MVSCRRTB" sending FIN because: "The client closed the connection."
+2024-06-07 11:36:55.0824 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MVSCRRTB" stopped.
+2024-06-07 11:37:04.4623 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MVSCRRTC" accepted.
+2024-06-07 11:37:04.4623 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MVSCRRTC" started.
+2024-06-07 11:37:04.4754 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware | Connection 0HN46MVSCRRTC established using the following protocol: Tls12
+2024-06-07 11:37:04.4754 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | The request path  does not match the path filter
+2024-06-07 11:37:04.4754 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | 1 candidate(s) found for the request path '/api/CLBIL01/GetBills'
+2024-06-07 11:37:04.4754 | DEBUG | Microsoft.AspNetCore.Routing.Matching.DfaMatcher | Endpoint 'BillingAPI.Controllers.CLBIL01Controller.GetBills (BillingAPI)' with route pattern 'api/CLBIL01/GetBills' is valid for the request path '/api/CLBIL01/GetBills'
+2024-06-07 11:37:04.4754 | DEBUG | Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware | Request matched endpoint 'BillingAPI.Controllers.CLBIL01Controller.GetBills (BillingAPI)'
+2024-06-07 11:37:04.4754 | DEBUG | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | Static files was skipped as the request already matched an endpoint.
+2024-06-07 11:37:04.4895 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of authorization filters (in the following order): BillingAPI.Filters.AuthorizationFilter
+2024-06-07 11:37:04.4895 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of resource filters (in the following order): None
+2024-06-07 11:37:04.4895 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2024-06-07 11:37:04.4895 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of exception filters (in the following order): None
+2024-06-07 11:37:04.4895 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2024-06-07 11:37:04.6698 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executing controller factory for controller BillingAPI.Controllers.CLBIL01Controller (BillingAPI)
+2024-06-07 11:37:04.6698 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker | Executed controller factory for controller BillingAPI.Controllers.CLBIL01Controller (BillingAPI)
+2024-06-07 11:37:04.7492 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter
+2024-06-07 11:37:04.7492 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | No information found on request to perform content negotiation.
+2024-06-07 11:37:04.7492 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-06-07 11:37:04.7492 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | Attempting to select the first formatter in the output formatters list which can write the result.
+2024-06-07 11:37:04.7492 | DEBUG | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector | Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-06-07 11:37:05.0884 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN46MVSCRRTC" received FIN.
+2024-06-07 11:37:05.0884 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Http2 | Connection id "0HN46MVSCRRTC" is closed. The last processed stream ID was 1.
+2024-06-07 11:37:05.0884 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets | Connection id "0HN46MVSCRRTC" sending FIN because: "The client closed the connection."
+2024-06-07 11:37:05.0884 | DEBUG | Microsoft.AspNetCore.Server.Kestrel.Connections | Connection id "0HN46MVSCRRTC" stopped.
