@@ -186,6 +186,10 @@
     <Content Include="Scripts\vectormap-utils\dx.vectormaputils.debug.js" />
     <Content Include="Scripts\vectormap-utils\dx.vectormaputils.js" />
     <Content Include="Scripts\vectormap-utils\dx.vectormaputils.node.js" />
+    <Content Include="Test\Data.js" />
+    <Content Include="Test\Test.css" />
+    <Content Include="Test\Test.html" />
+    <Content Include="Test\Test.js" />
     <Content Include="Toast\Toast.html" />
     <Content Include="Toast\Toast.js" />
     <Content Include="TreeView\Data.js" />

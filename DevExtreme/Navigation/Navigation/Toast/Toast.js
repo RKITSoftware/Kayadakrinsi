@@ -16,7 +16,10 @@
         closeOnClick: true,
         closeOnOutsideClick: true,
         closeOnSwipe: true,
-        //contentTemplate,
+        contentTemplate(e) {
+            const message = toast.option("message");
+            e[0].innerText = `✉ ${message}`;
+        },
         deferRendering: true, // Default
         displayTime: 2000, // Default:4000(material), 2000
         focusStateEnabled: true,
